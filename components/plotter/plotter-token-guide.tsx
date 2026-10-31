@@ -78,7 +78,7 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
     >
       <div className="mb-8 flex max-w-2xl flex-col gap-3">
         <h2
-          className="font-heading font-semibold text-2xl [font-variation-settings:'GEOM'_50]"
+          className="font-heading font-medium text-2xl [font-variation-settings:'GEOM'_50]"
           id="plotter-tokens-heading"
         >
           Make it fit your page
@@ -162,7 +162,7 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
               </div>
             </div>
             <textarea
-              className="w-full resize-none rounded-lg border bg-muted/40 p-4 font-mono text-xs leading-6 outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="w-full resize-none rounded-lg border bg-transparent p-4 font-mono text-xs leading-6 outline-none focus-visible:ring-2 focus-visible:ring-ring"
               id={`${id}-css`}
               readOnly
               ref={cssRef}
@@ -186,7 +186,7 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
         <figure className="min-w-0">
           <div
             aria-label="Assembly line with adjustable drawing tokens"
-            className="overflow-x-auto rounded-lg border bg-sidebar p-4 outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="overflow-x-auto rounded-lg border p-4 outline-none focus-visible:ring-2 focus-visible:ring-ring"
             role="img"
             style={previewStyle}
             // biome-ignore lint/a11y/noNoninteractiveTabindex: Native-size drawings need keyboard scrolling on narrow screens.

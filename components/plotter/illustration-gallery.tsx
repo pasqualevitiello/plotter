@@ -106,7 +106,7 @@ export function IllustrationGallery({
             <figure>
               <div
                 aria-label={`${item.title} illustration`}
-                className="overflow-x-auto rounded-lg border border-border/64 bg-sidebar p-4 outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="overflow-x-auto rounded-lg border border-border/64 p-4 outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 role="img"
                 // biome-ignore lint/a11y/noNoninteractiveTabindex: Native-size drawings need keyboard scrolling on narrow screens.
                 tabIndex={0}

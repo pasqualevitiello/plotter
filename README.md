@@ -13,7 +13,7 @@ bun install
 bun run dev
 ```
 
-The development site uses port `4100`. The homepage presents Plotter’s drawings and workflows. `/proto` contains the design exploration. Documentation covers [installation](content/docs/installation.md), [drawing](content/docs/drawing.md), [animation](content/docs/animation.md), and [customization](content/docs/customization.md).
+The development site uses port `3000`. The homepage uses the selected Manual direction. The former `/proto` links redirect to the homepage. Documentation covers [installation](content/docs/installation.md), [drawing](content/docs/drawing.md), [animation](content/docs/animation.md), and [customization](content/docs/customization.md).
 
 ## Install the skill
 

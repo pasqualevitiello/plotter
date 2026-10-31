@@ -34,7 +34,7 @@ function Prompt({ text }: { text: string }) {
   }
 
   return (
-    <div className="flex flex-col gap-4 rounded-lg border bg-background p-5">
+    <div className="flex flex-col gap-4 rounded-lg border p-5">
       <p className="whitespace-pre-wrap text-pretty text-sm leading-relaxed">
         {text}
       </p>
@@ -106,7 +106,7 @@ export function PlotterPrompts({
             <figure className="flex min-w-0 flex-col gap-4">
               <div
                 aria-label="Agent registration, editable SVG example"
-                className="overflow-x-auto rounded-lg border bg-sidebar p-4 outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="overflow-x-auto rounded-lg border p-4 outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 role="img"
                 // biome-ignore lint/a11y/noNoninteractiveTabindex: Native-size drawings need keyboard scrolling on narrow screens.
                 tabIndex={0}
@@ -171,7 +171,7 @@ export function PlotterPrompts({
             <figure className="flex min-w-0 flex-col gap-4">
               <div
                 aria-label="Assembly line, editable animation example"
-                className="overflow-x-auto rounded-lg border bg-sidebar outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="overflow-x-auto rounded-lg border outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 role="region"
                 // biome-ignore lint/a11y/noNoninteractiveTabindex: Native-size drawings need keyboard scrolling on narrow screens.
                 tabIndex={0}

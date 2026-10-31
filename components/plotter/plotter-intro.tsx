@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 export function PlotterIntro() {
   return (
     <header className="flex flex-col items-start gap-5 py-12 md:py-16 lg:py-20">
-      <h1 className="text-balance font-bold font-heading text-[clamp(2.25rem,5vw,4rem)] leading-none [font-variation-settings:'GEOM'_50]">
+      <h1 className="text-balance font-medium font-heading text-[clamp(2.25rem,5vw,4rem)] leading-none [font-variation-settings:'GEOM'_50]">
         Plotter illustrations
       </h1>
       <p className="max-w-2xl text-pretty text-lg text-muted-foreground">

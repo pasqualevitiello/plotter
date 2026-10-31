@@ -11,7 +11,7 @@ export function VisualGrammar() {
     >
       <div className="mb-8 space-y-3">
         <h2
-          className="font-heading font-semibold text-2xl [font-variation-settings:'GEOM'_50]"
+          className="font-heading font-medium text-2xl [font-variation-settings:'GEOM'_50]"
           id="visual-grammar-heading"
         >
           Visual grammar

@@ -37,7 +37,7 @@ export function GrammarComparison({
       <div
         aria-describedby={instructionId}
         aria-label={`${title}. ${caption}`}
-        className={`${styles.drawing} overflow-x-auto rounded-lg border border-border/64 bg-sidebar p-4 outline-none focus-visible:ring-2 focus-visible:ring-ring`}
+        className={`${styles.drawing} overflow-x-auto rounded-lg border border-border/64 p-4 outline-none focus-visible:ring-2 focus-visible:ring-ring`}
         data-isolated={isolated ? "" : undefined}
         id={drawingId}
         role="img"

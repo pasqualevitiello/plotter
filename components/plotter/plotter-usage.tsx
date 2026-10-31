@@ -22,7 +22,7 @@ export function PlotterUsage() {
     >
       <div className="flex max-w-2xl flex-col gap-3">
         <h2
-          className="font-heading font-semibold text-3xl [font-variation-settings:'GEOM'_50]"
+          className="font-heading font-medium text-3xl [font-variation-settings:'GEOM'_50]"
           id="use-plotter-heading"
         >
           Use Plotter
@@ -58,7 +58,7 @@ export function PlotterUsage() {
             shared tokens, helpers, and examples. No coss checkout required.
           </p>
         </div>
-        <div className="flex min-w-0 flex-col gap-4 rounded-lg border bg-background p-5 sm:p-6">
+        <div className="flex min-w-0 flex-col gap-4 rounded-lg border p-5 sm:p-6">
           <p className="flex items-center gap-2 font-medium text-sm">
             <FolderIcon
               aria-hidden="true"

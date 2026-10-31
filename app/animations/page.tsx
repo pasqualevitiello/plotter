@@ -22,17 +22,17 @@ export default function AnimationsPage() {
         >
           <div className="mb-6 flex items-baseline justify-between gap-4">
             <h2
-              className="font-heading font-semibold text-2xl [font-variation-settings:'GEOM'_50]"
+              className="font-heading font-medium text-2xl [font-variation-settings:'GEOM'_50]"
               id="animations-heading"
             >
               Animations
             </h2>
             <p className="text-muted-foreground text-xs">6 examples</p>
           </div>
-          <div className="grid overflow-hidden rounded-lg border border-border/64 bg-sidebar lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
+          <div className="grid overflow-hidden rounded-lg border border-border/64 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
             <div className="flex flex-col items-start justify-center gap-4 p-6 sm:p-8">
               <p className="text-muted-foreground text-xs">Foundations / M01</p>
-              <h3 className="font-heading font-semibold text-2xl [font-variation-settings:'GEOM'_50]">
+              <h3 className="font-heading font-medium text-2xl [font-variation-settings:'GEOM'_50]">
                 Changing geometry
               </h3>
               <p className="max-w-sm text-pretty text-muted-foreground text-sm">
@@ -49,13 +49,13 @@ export default function AnimationsPage() {
           </div>
           <article
             aria-labelledby="particles-animation-title"
-            className="mt-6 grid scroll-mt-20 overflow-hidden rounded-lg border border-border/64 bg-sidebar lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]"
+            className="mt-6 grid scroll-mt-20 overflow-hidden rounded-lg border border-border/64 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]"
             id="particles-animation"
           >
             <div className="flex flex-col items-start justify-center gap-4 p-6 sm:p-8">
               <p className="text-muted-foreground text-xs">Particles / C03</p>
               <h3
-                className="font-heading font-semibold text-2xl [font-variation-settings:'GEOM'_50]"
+                className="font-heading font-medium text-2xl [font-variation-settings:'GEOM'_50]"
                 id="particles-animation-title"
               >
                 Three assemblies
@@ -74,7 +74,7 @@ export default function AnimationsPage() {
           </article>
           <article
             aria-labelledby="not-found-animation-title"
-            className="mt-6 grid scroll-mt-20 overflow-hidden rounded-lg border border-border/64 bg-sidebar lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]"
+            className="mt-6 grid scroll-mt-20 overflow-hidden rounded-lg border border-border/64 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]"
             id="not-found-animation"
           >
             <div className="flex flex-col items-start justify-center gap-4 p-6 sm:p-8">
@@ -82,7 +82,7 @@ export default function AnimationsPage() {
                 Empty states / M03
               </p>
               <h3
-                className="font-heading font-semibold text-2xl [font-variation-settings:'GEOM'_50]"
+                className="font-heading font-medium text-2xl [font-variation-settings:'GEOM'_50]"
                 id="not-found-animation-title"
               >
                 An unreachable destination
@@ -99,13 +99,13 @@ export default function AnimationsPage() {
           </article>
           <article
             aria-labelledby="production-chain-animation-title"
-            className="mt-6 grid scroll-mt-20 overflow-hidden rounded-lg border border-border/64 bg-sidebar lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]"
+            className="mt-6 grid scroll-mt-20 overflow-hidden rounded-lg border border-border/64 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]"
             id="production-chain-animation"
           >
             <div className="flex flex-col items-start justify-center gap-4 p-6 sm:p-8">
               <p className="text-muted-foreground text-xs">Systems / W05</p>
               <h3
-                className="font-heading font-semibold text-2xl [font-variation-settings:'GEOM'_50]"
+                className="font-heading font-medium text-2xl [font-variation-settings:'GEOM'_50]"
                 id="production-chain-animation-title"
               >
                 An assembly line in motion
@@ -126,13 +126,13 @@ export default function AnimationsPage() {
           </article>
           <article
             aria-labelledby="newtons-cradle-animation-title"
-            className="mt-6 grid scroll-mt-20 overflow-hidden rounded-lg border border-border/64 bg-sidebar lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]"
+            className="mt-6 grid scroll-mt-20 overflow-hidden rounded-lg border border-border/64 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]"
             id="newtons-cradle-animation"
           >
             <div className="flex flex-col items-start justify-center gap-4 p-6 sm:p-8">
               <p className="text-muted-foreground text-xs">Objects / O07</p>
               <h3
-                className="font-heading font-semibold text-2xl [font-variation-settings:'GEOM'_50]"
+                className="font-heading font-medium text-2xl [font-variation-settings:'GEOM'_50]"
                 id="newtons-cradle-animation-title"
               >
                 One swing, passed along
@@ -153,13 +153,13 @@ export default function AnimationsPage() {
           </article>
           <article
             aria-labelledby="orbits-animation-title"
-            className="mt-6 grid scroll-mt-20 overflow-hidden rounded-lg border border-border/64 bg-sidebar lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]"
+            className="mt-6 grid scroll-mt-20 overflow-hidden rounded-lg border border-border/64 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]"
             id="orbits-animation"
           >
             <div className="flex flex-col items-start justify-center gap-4 p-6 sm:p-8">
               <p className="text-muted-foreground text-xs">Nature / M04</p>
               <h3
-                className="font-heading font-semibold text-2xl [font-variation-settings:'GEOM'_50]"
+                className="font-heading font-medium text-2xl [font-variation-settings:'GEOM'_50]"
                 id="orbits-animation-title"
               >
                 Three orbits, three speeds

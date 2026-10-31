@@ -27,7 +27,7 @@ export function CossConcepts() {
     >
       <div className="mb-8 space-y-3">
         <h2
-          className="font-heading font-semibold text-2xl [font-variation-settings:'GEOM'_50]"
+          className="font-heading font-medium text-2xl [font-variation-settings:'GEOM'_50]"
           id="coss-concepts-heading"
         >
           coss.com concepts
@@ -40,7 +40,7 @@ export function CossConcepts() {
       <div className="grid gap-6 lg:grid-cols-2">
         {concepts.map(({ code, title, description, Drawing }) => (
           <figure
-            className="overflow-hidden rounded-lg border border-border/64 bg-sidebar"
+            className="overflow-hidden rounded-lg border border-border/64"
             key={code}
           >
             <div className="mx-auto max-w-160 p-2 sm:p-4">
