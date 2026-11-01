@@ -8,7 +8,15 @@ Identify the subject, intended placement/size, deliverable, and the one relation
 
 Choose the nearest bundled construction reference. Write a short mapping in the working notes: what supplies the focal form, how parts relate, and what its guides explain. Borrow those decisions, rather than its subject alone. For service concepts, state the limited metaphor; verify any actual product-behavior claim against current primary evidence.
 
-**Complete when:** the intended relationship, reference, output format/size, and scope of any factual claims are explicit. A generic subject such as “agents” is not yet a composition.
+## Offer options for an open brief
+
+When the brief names an idea but no form, such as “agent handoff” or “collaboration”, and the user can be asked, let the user choose between options before you finish one. Drawings vary a lot from attempt to attempt, and picking from real options beats describing taste in words.
+
+Make three nearly finished options at `560 × 440`, each a different relationship rather than a variation of one, ideally each from a different reference. Each option carries its main forms, its essential labels, and the key construction and dimension that make the relationship exact, so the user judges what they would actually get; final polish and secondary marks wait for the chosen one. Place the three side by side on one sheet, numbered, with a one-line description under each, render it, and show it. Ask the user to pick one, combine two, or ask for new options. Finish only the chosen option, through the rest of this workflow.
+
+Skip this step for a specific brief, a refinement of an existing drawing, or when the user asks you to proceed; then choose the relationship yourself and name it in the handoff.
+
+**Complete when:** the user has chosen an option or the step was skipped, and the intended relationship, reference, output format/size, and scope of any factual claims are explicit. A generic subject such as “agents” is not yet a composition.
 
 ## Compose the static drawing
 
