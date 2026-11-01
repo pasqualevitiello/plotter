@@ -412,5 +412,35 @@
     "file": "play-balance.svg",
     "reference": "GEO-04, GEO-01",
     "construction": "Conceptual ideal lever. Fulcrum x248; weight centersx152 and392 give arms96 and144, withu=48. Identical72×24 blocks represent one mass unitm. Hatching identifies one equal unit on each side. Geometry illustrates equal moments only, not structural capacity or real-world calibration."
+  },
+  {
+    "id": "geo-return-to-balance",
+    "code": "GEO-11",
+    "title": "Return to balance",
+    "description": "A displaced disc returns to the low point of a shared circular cradle.",
+    "category": "Geometry",
+    "file": "geo-return-to-balance.svg",
+    "reference": "GEO-01",
+    "construction": "Mode: conceptual diagram. Circular tangency is a limited metaphor for recovering balance, not a simulation or physical stability guarantee. Reference: GEO-01, shared circular construction and tangency. Cradle centre C=(280,112), R=176; disc r=32. Both disc centres lie on radius R−r=144 at 90° and 38°. The dashed disc is a previous displaced state. The dimension R176 is in SVG construction units. No physical scale. Arrow is a conceptual return."
+  },
+  {
+    "id": "system-resilient-route",
+    "code": "SYS-06",
+    "title": "Keep a way through",
+    "description": "An alternate route keeps two terminals connected around a break in the direct path.",
+    "category": "Systems",
+    "file": "system-resilient-route.svg",
+    "reference": "EMP-03",
+    "construction": "Mode: conceptual diagram. Alternative routing is a limited resilience metaphor; no network product or availability guarantee is depicted. Reference: EMP-03, absence interrupts a route. Local coordinates are SVG construction units. Nodes: A circle centre(112,268), left junction(176,268), right junction(384,268), B circle centre(448,268). Undirected edges mean conceptual continuity: A right port(128,268) to left junction; left junction through upper route to right junction; right junction to B left port(432,268). Two stubs terminate at(256,268) and(304,268), leaving 48 units absent. T contacts are connected; there are no crossings. Upper turns are exact R40 fillets. The missing direct connection is deliberately not drawn."
+  },
+  {
+    "id": "craft-repair-key",
+    "code": "CRF-06",
+    "title": "Rejoin",
+    "description": "An exactly matched repair key spans a seam and restores the connection between two parts.",
+    "category": "Craft",
+    "file": "craft-repair-key.svg",
+    "reference": "INT-02",
+    "construction": "Mode: conceptual diagram. A repair key across a fracture is a limited metaphor for rebuilding after damage. This is not a joinery specification, load calculation, material claim, or manufacturability claim. Reference: INT-02, preserved fragments align into one assembled form. The loose and assembled keys are identical, separated by translation (0,160). Key width=64, height=48, each waist inset=16 SVG construction units. Projection guides follow the exact left and right extrema, stopping 10 units below the loose key and 10 units above the assembled rectangle. The seam is interrupted by the fitted key and shares no overlapping line segment with it."
   }
 ]

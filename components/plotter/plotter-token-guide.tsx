@@ -259,10 +259,10 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
               <p>
                 These variables apply to inline SVG with the packaged role
                 stylesheet, a <code>data-plotter</code> root, and named{" "}
-                <code>data-plotter-role</code> marks. In this catalogue, AGT-01
-                and MEC-05 use that foundation. Other drawings keep their
-                existing styles. CSS on a page cannot reach into an SVG loaded
-                as an image.
+                <code>data-plotter-role</code> marks. In this catalogue, AGT-01,
+                MEC-05, GEO-11, SYS-06, and CRF-06 use that foundation. Other
+                drawings keep their existing styles. CSS on a page cannot reach
+                into an SVG loaded as an image.
               </p>
               <p>
                 Start with{" "}

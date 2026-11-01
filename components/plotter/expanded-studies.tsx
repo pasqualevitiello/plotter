@@ -7100,6 +7100,258 @@ function DrawingPlayBalance() {
   );
 }
 
+function DrawingGeoReturnToBalance() {
+  return (
+    <BlueprintDrawing roles>
+      <g
+        fill={"none"}
+        strokeLinecap={"butt"}
+        strokeLinejoin={"round"}
+        style={{
+          fontOpticalSizing: "auto",
+          fontSynthesis: "none",
+          fontVariationSettings: "'GEOM' 25",
+          fontWeight: "400",
+        }}
+      >
+        <g data-plotter-role={"centerline"}>
+          <path d={"M280 88V216 M280 298V312 M264 112H296"} />
+        </g>
+        <g data-plotter-role={"primary"}>
+          <path d={"M456 112 A176 176 0 0 1 104 112"} />
+          <circle cx={"280"} cy={"256"} r={"32"} />
+        </g>
+        <g data-plotter-role={"absent"}>
+          <circle cx={"393.473549"} cy={"200.655252"} r={"32"} />
+        </g>
+        <g data-plotter-role={"secondary"}>
+          <path
+            d={
+              "M280 112 L233.865357 144.303825 M189.172421 175.598155 L135.82924 212.949453"
+            }
+          />
+        </g>
+        <text
+          x={"211"}
+          y={"153"}
+          fill={"currentColor"}
+          stroke={"none"}
+          fontSize={"10"}
+          opacity={"0.5"}
+          textAnchor={"middle"}
+          transform={"rotate(-35 211 153)"}
+        >
+          {"R176"}
+        </text>
+        <g data-plotter-role={"transfer"}>
+          <path
+            d={"M317.269942 251.093319 A144 144 0 0 0 362.595007 229.957894"}
+          />
+          <path
+            d={
+              "M320.269942 245.897167L317.269942 251.093319L322.466095 254.093319"
+            }
+            strokeDasharray={"none"}
+          />
+        </g>
+        <g data-plotter-role={"leader"}>
+          <path d={"M393.473549 161.655252 V144 H365"} />
+        </g>
+        <text
+          x={"357"}
+          y={"148"}
+          fill={"currentColor"}
+          stroke={"none"}
+          fontSize={"11"}
+          opacity={"0.72"}
+          textAnchor={"end"}
+        >
+          {"Displaced"}
+        </text>
+        <text
+          x={"280"}
+          y={"337"}
+          fill={"currentColor"}
+          stroke={"none"}
+          fontSize={"12"}
+          opacity={"0.72"}
+          textAnchor={"middle"}
+        >
+          {"Return to balance"}
+        </text>
+        <g data-plotter-role={"guide"}>
+          <path d={"M260 256H270 M290 256H300"} />
+        </g>
+      </g>
+    </BlueprintDrawing>
+  );
+}
+
+function DrawingSystemResilientRoute() {
+  return (
+    <BlueprintDrawing roles>
+      <g
+        fill={"none"}
+        strokeLinecap={"butt"}
+        strokeLinejoin={"round"}
+        style={{
+          fontOpticalSizing: "auto",
+          fontSynthesis: "none",
+          fontVariationSettings: "'GEOM' 25",
+          fontWeight: "400",
+        }}
+      >
+        <g data-plotter-role={"guide"}>
+          <path d={"M160 268H168 M392 268H400"} />
+        </g>
+        <g data-plotter-role={"secondary"}>
+          <path d={"M176 268H256 M304 268H384"} />
+        </g>
+        <g data-plotter-role={"primary"}>
+          <circle cx={"112"} cy={"268"} r={"16"} />
+          <circle cx={"448"} cy={"268"} r={"16"} />
+          <path
+            d={
+              "M128 268H176V184 A40 40 0 0 1 216 144 H344 A40 40 0 0 1 384 184 V268H432"
+            }
+          />
+        </g>
+        <text
+          x={"112"}
+          y={"272"}
+          fill={"currentColor"}
+          stroke={"none"}
+          fontSize={"11"}
+          opacity={"0.72"}
+          textAnchor={"middle"}
+        >
+          {"A"}
+        </text>
+        <text
+          x={"448"}
+          y={"272"}
+          fill={"currentColor"}
+          stroke={"none"}
+          fontSize={"11"}
+          opacity={"0.72"}
+          textAnchor={"middle"}
+        >
+          {"B"}
+        </text>
+        <g data-plotter-role={"leader"}>
+          <path d={"M252 261L260 275 M300 261L308 275"} />
+        </g>
+        <g data-plotter-role={"dimension"}>
+          <path
+            d={
+              "M256 284L256 312 M304 284L304 312 M256 306L268 306 M292 306L304 306 M252 310L260 302 M300 310L308 302"
+            }
+          />
+        </g>
+        <text
+          x={"280"}
+          y={"310"}
+          fill={"currentColor"}
+          stroke={"none"}
+          fontSize={"10"}
+          opacity={"0.5"}
+          textAnchor={"middle"}
+        >
+          {"48"}
+        </text>
+        <text
+          x={"280"}
+          y={"339"}
+          fill={"currentColor"}
+          stroke={"none"}
+          fontSize={"11"}
+          opacity={"0.72"}
+          textAnchor={"middle"}
+        >
+          {"Break"}
+        </text>
+        <text
+          x={"280"}
+          y={"109"}
+          fill={"currentColor"}
+          stroke={"none"}
+          fontSize={"12"}
+          opacity={"0.72"}
+          textAnchor={"middle"}
+        >
+          {"Keep a way through"}
+        </text>
+      </g>
+    </BlueprintDrawing>
+  );
+}
+
+function DrawingCraftRepairKey() {
+  return (
+    <BlueprintDrawing roles>
+      <g
+        fill={"none"}
+        strokeLinecap={"butt"}
+        strokeLinejoin={"round"}
+        style={{
+          fontOpticalSizing: "auto",
+          fontSynthesis: "none",
+          fontVariationSettings: "'GEOM' 25",
+          fontWeight: "400",
+        }}
+      >
+        <g data-plotter-role={"guide"}>
+          <path d={"M248 174V242 M312 174V242"} />
+        </g>
+        <g data-plotter-role={"primary"}>
+          <path d={"M248 116 H312 L296 140 L312 164 H248 L264 140 Z"} />
+          <rect x={"112"} y={"252"} width={"336"} height={"96"} rx={"8"} />
+          <path d={"M248 276 H312 L296 300 L312 324 H248 L264 300 Z"} />
+        </g>
+        <g data-plotter-role={"secondary"}>
+          <path d={"M276 252L272 264L280 276 M280 324L288 336L284 348"} />
+        </g>
+        <g data-plotter-role={"transfer"}>
+          <path d={"M280 232L280 182"} />
+          <path
+            d={"M275.757359 227.757359L280 232L284.242641 227.757359"}
+            strokeDasharray={"none"}
+          />
+        </g>
+        <text
+          x={"298"}
+          y={"211"}
+          fill={"currentColor"}
+          stroke={"none"}
+          fontSize={"11"}
+          opacity={"0.72"}
+          textAnchor={"start"}
+        >
+          {"Rejoin"}
+        </text>
+        <g data-plotter-role={"dimension"}>
+          <path
+            d={
+              "M248 108L248 78 M312 108L312 78 M248 84L267 84 M293 84L312 84 M244 88L252 80 M308 88L316 80"
+            }
+          />
+        </g>
+        <text
+          x={"280"}
+          y={"88"}
+          fill={"currentColor"}
+          stroke={"none"}
+          fontSize={"10"}
+          opacity={"0.5"}
+          textAnchor={"middle"}
+        >
+          {"64"}
+        </text>
+      </g>
+    </BlueprintDrawing>
+  );
+}
+
 export const expandedStudies: IllustrationStudy[] = [
   {
     id: "agent-registration",
@@ -7476,5 +7728,32 @@ export const expandedStudies: IllustrationStudy[] = [
       "Three mass units on the shorter arm balance two on the longer arm.",
     category: "Mechanisms",
     illustration: <DrawingPlayBalance />,
+  },
+  {
+    id: "geo-return-to-balance",
+    code: "GEO-11",
+    title: "Return to balance",
+    description:
+      "A displaced disc returns to the low point of a shared circular cradle.",
+    category: "Geometry",
+    illustration: <DrawingGeoReturnToBalance />,
+  },
+  {
+    id: "system-resilient-route",
+    code: "SYS-06",
+    title: "Keep a way through",
+    description:
+      "An alternate route keeps two terminals connected around a break in the direct path.",
+    category: "Systems",
+    illustration: <DrawingSystemResilientRoute />,
+  },
+  {
+    id: "craft-repair-key",
+    code: "CRF-06",
+    title: "Rejoin",
+    description:
+      "An exactly matched repair key spans a seam and restores the connection between two parts.",
+    category: "Craft",
+    illustration: <DrawingCraftRepairKey />,
   },
 ];

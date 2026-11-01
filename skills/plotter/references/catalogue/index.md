@@ -20,6 +20,7 @@ Codes are a three-letter family prefix and a number, without gaps within a famil
 | [GEO-08](GEO-08.svg) | One interval left open | A field of tangent circles keeps its repeated pitch while one missing member interrupts the lower row. |
 | [GEO-09](GEO-09.svg) | One rise, one run | Six equal rise-and-run pairs construct a staircase along one repeated slope. |
 | [GEO-10](GEO-10.svg) | One piece short | The pip sequence continues across one absent domino, leaving its position unmistakable. |
+| [GEO-11](GEO-11.svg) | Return to balance | A displaced disc returns to the low point of a shared circular cradle. |
 
 ## Typography (TYP)
 
@@ -72,6 +73,7 @@ Codes are a three-letter family prefix and a number, without gaps within a famil
 | [SYS-01](SYS-01.svg) | A route, constructed | One selected route and two alternatives share a junction. A repeated bend radius establishes the spacing between the three outlets. |
 | [SYS-03](SYS-03.svg) | One node, two paths | A first-order RC low-pass joins a series resistor and a shunt capacitor at one explicit junction. |
 | [SYS-05](SYS-05.svg) | Different paths, one place | Three routes join one final stretch before reaching the same destination. |
+| [SYS-06](SYS-06.svg) | Keep a way through | An alternate route keeps two terminals connected around a break in the direct path. |
 
 ## Services (SRV)
 
@@ -152,6 +154,7 @@ Codes are a three-letter family prefix and a number, without gaps within a famil
 | [CRF-03](CRF-03.svg) | A joint that holds | A wider tail and narrower neck create one complementary boundary between two pieces. |
 | [CRF-04](CRF-04.svg) | Across the crease | One corner reflects across its diagonal crease and becomes a triangular flap. |
 | [CRF-05](CRF-05.svg) | One shared corner | Four tiles meet around a common circular opening and a constant joint width. |
+| [CRF-06](CRF-06.svg) | Rejoin | An exactly matched repair key spans a seam and restores the connection between two parts. |
 
 ## Nature (NAT)
 
