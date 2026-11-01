@@ -40,7 +40,7 @@ export function SheetBar({
   );
 }
 
-/** A drawing at its native 560 × 440. Narrow screens scroll it sideways. */
+/** A drawing that fits its container, up to its native 560 × 440 size. */
 export function SheetArt({
   label,
   children,
@@ -49,13 +49,7 @@ export function SheetArt({
   children: ReactNode;
 }) {
   return (
-    <div
-      aria-label={label}
-      className="sheet-art"
-      role="img"
-      // biome-ignore lint/a11y/noNoninteractiveTabindex: Native-size drawings need keyboard scrolling on narrow screens.
-      tabIndex={0}
-    >
+    <div aria-label={label} className="sheet-art" role="img">
       <div className="sheet-art-inner pointer-events-none select-none">
         {children}
       </div>

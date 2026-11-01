@@ -39,9 +39,6 @@ export function VisualGrammar() {
             </a>
             .
           </p>
-          <p className="text-muted-foreground text-xs sm:hidden">
-            Drawings are shown at full size. Scroll each one sideways.
-          </p>
         </div>
         <nav aria-label="Visual grammar topics" className="sheet-cell">
           <ol className="grid gap-x-8 sm:grid-cols-2">

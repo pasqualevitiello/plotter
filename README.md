@@ -13,7 +13,7 @@ bun install
 bun run dev
 ```
 
-The development site uses port `3000`. Every page uses the Sheet design: one ruled drawing sheet, with drawings at their native 560 × 440. The former `/proto` links redirect to the homepage. Documentation covers [installation](content/docs/installation.md), [drawing](content/docs/drawing.md), [animation](content/docs/animation.md), and [customization](content/docs/customization.md).
+The development site uses port `3000`. Every page uses the Sheet design: one ruled drawing sheet, with drawings authored at 560 × 440 and scaled proportionally to fit narrower containers. The former `/proto` links redirect to the homepage. Documentation covers [installation](content/docs/installation.md), [drawing](content/docs/drawing.md), [animation](content/docs/animation.md), and [customization](content/docs/customization.md).
 
 ## Formatting and checks
 

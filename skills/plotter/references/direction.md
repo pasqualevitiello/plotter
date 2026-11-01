@@ -22,7 +22,7 @@ Preserve the original grouping level of opacity during role adoption. At the sha
 
 Use the host font or `Cal Sans, sans-serif`. Use automatic optical sizing, no added letter-spacing, no synthesized bold/italic, and one GEOM value per text role where the font supports it: 25 for ordinary illustration text, 0 for identifiers. Use typeset punctuation. Editable text with a sans-serif fallback is portable; exact Cal Sans metrics require that font to be available.
 
-Bundled references use a `560 × 440` viewBox. Inspect at the intended output size and as a thumbnail; preserve essential labels when adapting a composition. Native-size scrolling is a catalogue presentation convention, not a requirement for every host.
+Bundled references use a `560 × 440` viewBox. Inspect at the intended output size and as a thumbnail; preserve essential labels when adapting a composition. The website displays drawings at native size when space permits and scales them proportionally to fit narrower containers.
 
 ## Revisions and interpretation
 

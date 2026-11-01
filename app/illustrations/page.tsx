@@ -39,7 +39,7 @@ export default function IllustrationsPage() {
     <SiteShell current="/illustrations">
       <PageIntro label="01 — Illustrations" title="Ideas, made visible.">
         Construction studies of interfaces, systems, time, agents, and the
-        objects around them. Every drawing is shown at its native 560 × 440.
+        objects around them.
       </PageIntro>
       <section
         aria-labelledby="illustrations-heading"
@@ -49,7 +49,7 @@ export default function IllustrationsPage() {
         <SheetBar
           id="illustrations-heading"
           label="01.1 — Collection"
-          meta={`${ordered.length} drawings · Scale 1:1`}
+          meta={`${ordered.length} drawings`}
         />
         <Suspense
           fallback={

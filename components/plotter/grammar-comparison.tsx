@@ -27,7 +27,7 @@ export function GrammarComparison({
         data-isolated={isolated ? "" : undefined}
         id={drawingId}
         role="img"
-        // biome-ignore lint/a11y/noNoninteractiveTabindex: Native-size drawings need keyboard scrolling on narrow screens.
+        // biome-ignore lint/a11y/noNoninteractiveTabindex: Keyboard focus isolates the grammar marks, matching hover and the toggle.
         tabIndex={0}
       >
         <div className="sheet-art-inner pointer-events-none select-none">

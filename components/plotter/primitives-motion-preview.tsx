@@ -20,10 +20,9 @@ export function PrimitivesMotionPreview({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    // Native size; narrow screens scroll sideways instead of scaling.
-    <div className="overflow-x-auto px-5 pt-8 pb-6">
+    <div className="sheet-art">
       <div
-        className={`relative mx-auto w-[560px] select-none ${styles.drawing}`}
+        className={`sheet-art-inner relative select-none ${styles.drawing}`}
         data-live={!reducedMotion || undefined}
         ref={drawing}
       >

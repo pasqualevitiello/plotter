@@ -235,17 +235,15 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
           <figure className="min-w-0">
             <div
               aria-label="Assembly line, section cut, and region highlight with adjustable drawing tokens"
-              className="overflow-x-auto border p-4 outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="min-w-0 border p-4"
               role="img"
               style={previewStyle}
-              // biome-ignore lint/a11y/noNoninteractiveTabindex: Native-size drawings need keyboard scrolling on narrow screens.
-              tabIndex={0}
             >
-              <div className="pointer-events-none mx-auto w-[560px] select-none">
+              <div className="sheet-art-inner pointer-events-none select-none">
                 {children}
                 <svg
                   aria-hidden="true"
-                  className="block h-28 w-[560px] text-foreground"
+                  className="block h-auto w-full text-foreground"
                   data-plotter=""
                   fill="none"
                   stroke="currentColor"
@@ -288,8 +286,7 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
             </div>
             <figcaption className="mt-3 text-xs text-muted-foreground">
               MEC-05 · Same geometry, adjustable linework. Section width and
-              highlight opacity have separate samples below the drawing. Scroll
-              sideways on narrow screens.
+              highlight opacity have separate samples below the drawing.
             </figcaption>
           </figure>
 

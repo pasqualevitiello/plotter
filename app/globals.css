@@ -168,7 +168,7 @@
 }
 
 /* Sheet: the site is set as one drawing sheet. Rules divide it into cells;
-   drawings sit in cells at their native 560 × 440 and never scale down. */
+   drawings keep their native proportions and fit within each cell. */
 :root {
   --rule: --alpha(var(--color-black) / 13%);
 }
@@ -414,7 +414,7 @@
   }
 
   .sheet-art {
-    overflow-x: auto;
+    min-width: 0;
     padding: 32px 20px 24px;
     outline: none;
   }
@@ -423,8 +423,14 @@
     outline-offset: -2px;
   }
   .sheet-art-inner {
-    width: 560px;
+    width: 100%;
+    max-width: 560px;
     margin-inline: auto;
+  }
+  .sheet-art-inner > svg {
+    display: block;
+    width: 100%;
+    height: auto;
   }
   .sheet-caption {
     display: flex;

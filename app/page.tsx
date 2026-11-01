@@ -90,7 +90,7 @@ export default function Home() {
             </span>
             <span className="border-s px-5 py-3">{hero.title}</span>
             <span className="mono-label border-s px-5 py-3 max-sm:hidden">
-              Scale 1:1 · 560 × 440
+              SVG · 560 × 440
             </span>
           </figcaption>
         </figure>

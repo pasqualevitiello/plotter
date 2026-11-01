@@ -103,7 +103,7 @@ export default async function DocumentPage({
             {/* biome-ignore lint/performance/noImgElement: The downloadable SVG file is the example. */}
             <img
               alt=""
-              className="block w-[560px] dark:invert"
+              className="block h-auto w-full dark:invert"
               height="440"
               src="/plotter/downloads/agent-registration.svg"
               width="560"
