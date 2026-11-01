@@ -27,7 +27,8 @@ function SocketSection({ compact = false }: { compact?: boolean }) {
             : "M356 144l16-16 M356 160l16-16 M356 288l16-16 M356 304l16-16"
         }
         opacity="0.27"
-        strokeWidth="0.65"
+        strokeWidth="1"
+        strokeOpacity="0.65"
       />
     </>
   );
@@ -36,21 +37,22 @@ function SocketSection({ compact = false }: { compact?: boolean }) {
 export function DisconnectedBlueprint() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.24" strokeWidth="0.6">
+      <g opacity="0.24" strokeWidth="1" strokeOpacity="0.6">
         <path d="M112 176H248 M112 264H248 M128 160V172 M128 268V280 M224 160V172 M224 268V280" />
       </g>
       <path
         d="M56 214H72 M56 226H72"
         opacity="0.45"
         strokeDasharray="3 5"
-        strokeWidth="0.65"
+        strokeWidth="1"
+        strokeOpacity="0.65"
       />
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <path d="M72 214H128 M72 226H128" />
         <PlugBody />
         <SocketSection />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path d="M328 196H272 M328 244H272" strokeDasharray="4 6" />
         <path d="M323.757 191.757 328 196 323.757 200.243 M323.757 239.757 328 244 323.757 248.243" />
         {/* Gap witnesses: the pin ends at x264 and socket mouth at x344. */}
@@ -85,7 +87,8 @@ export function DisconnectedCompact() {
         d="M272 196H336 M272 244H336"
         opacity="0.24"
         strokeDasharray="8 3 1 3"
-        strokeWidth="0.6"
+        strokeWidth="1"
+        strokeOpacity="0.6"
       />
     </CompactBlueprintDrawing>
   );

@@ -27,7 +27,7 @@ export function AssemblyContent({
       strokeLinecap="butt"
       strokeLinejoin="miter"
     >
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         {scene === "workspace" && part === 0 && (
           <circle cx="22" cy="20" r="9" />
         )}
@@ -54,7 +54,7 @@ export function AssemblyContent({
           <circle cx="24" cy="24" r="12" />
         )}
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         {scene === "workspace" && part === 0 && <path d="M18 20h8 M22 16v8" />}
         {scene === "workspace" && part === 2 && (
           <g>

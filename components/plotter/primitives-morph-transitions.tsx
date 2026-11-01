@@ -61,7 +61,12 @@ export function PrimitivesMorphTransitions() {
     <g>
       <g data-transition="circle-to-capsule" opacity="0">
         <TransitionVisibility {...circleToCapsule} />
-        <g opacity="0.3" strokeDasharray="4 4" strokeWidth="0.65">
+        <g
+          opacity="0.3"
+          strokeDasharray="4 4"
+          strokeWidth="1"
+          strokeOpacity="0.65"
+        >
           {[204, 364].map((center) => (
             <circle cx="284" cy="204" key={center} r="120">
               <TransitionMotion
@@ -94,7 +99,12 @@ export function PrimitivesMorphTransitions() {
       </g>
       <g data-transition="button-to-card" opacity="0">
         <TransitionVisibility {...buttonToCard} />
-        <g opacity="0.3" strokeDasharray="4 4" strokeWidth="0.65">
+        <g
+          opacity="0.3"
+          strokeDasharray="4 4"
+          strokeWidth="1"
+          strokeOpacity="0.65"
+        >
           {corners.map(({ id, x, y }) => (
             <circle cx={284 + x * 136} cy={204 + y * 56} key={id} r="24">
               <TransitionMotion

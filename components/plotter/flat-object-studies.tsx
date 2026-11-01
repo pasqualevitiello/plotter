@@ -13,25 +13,30 @@ const keyboardKeys = [
 function KeyboardPlanStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.09" strokeWidth="0.6">
+      <g opacity="0.09" strokeWidth="1" strokeOpacity="0.6">
         <path d="M144 72V132 M216 72V132 M288 72V132 M360 72V132" />
         <path d="M104 140H136 M104 204H136 M104 212H154 M104 276H154" />
         <path d="M162 284V304 M234 284V304 M306 284V304 M378 284V304" />
       </g>
-      <g opacity="0.28" strokeWidth="0.65">
+      <g opacity="0.28" strokeWidth="1" strokeOpacity="0.65">
         <path d="M416 116H136A16 16 0 0 0 120 132V292" />
         <path d="M416 116H464 M120 292V340" strokeDasharray="3 6" />
         <path d="M144 212V336 M162 284V336" strokeDasharray="3 6" />
         <path d="M144 204V212 M162 204V212" />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         {keyboardKeys.map(({ x, y, label }) => (
           <rect height="64" key={label} rx="8" width="64" x={x} y={y} />
         ))}
         <path d="M410 140H368A8 8 0 0 0 360 148V196A8 8 0 0 0 368 204H410" />
         <path d="M410 212H386A8 8 0 0 0 378 220V268A8 8 0 0 0 386 276H410" />
       </g>
-      <g opacity="0.28" strokeDasharray="3 6" strokeWidth="0.65">
+      <g
+        opacity="0.28"
+        strokeDasharray="3 6"
+        strokeWidth="1"
+        strokeOpacity="0.65"
+      >
         <path d="M410 140H464 M410 204H464 M410 212H464 M410 276H464" />
         <path d="M180 304H420 M180 368H420" />
         <path d="M180 320V352 M244 320V352 M252 320V352 M316 320V352" />
@@ -49,7 +54,7 @@ function KeyboardPlanStudy() {
           </text>
         ))}
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path d="M144 100H216 M144 92V108 M216 92V108 m-76-4 8-8 m64 8 8-8" />
         <path d="M144 328H162 M144 320V336 M162 320V336 m-22-4 8-8 m10 8 8-8" />
         <path d="M96 140V204 M88 140H104 M88 204H104 m-12-60 8-8 m-8 72 8-8" />
@@ -75,11 +80,11 @@ function KeyboardPlanStudy() {
 function LampElevationStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.09" strokeWidth="0.6">
+      <g opacity="0.09" strokeWidth="1" strokeOpacity="0.6">
         <path d="M184 92V228 M376 92V228 M160 108H264 M296 108H400" />
         <path d="M160 300H264 M296 300H400 M208 316V372 M352 316V372" />
       </g>
-      <g opacity="0.28" strokeWidth="0.65">
+      <g opacity="0.28" strokeWidth="1" strokeOpacity="0.65">
         <path
           d="M280 76V196 M280 212V372 M152 204H176 M384 204H408"
           strokeDasharray="5 6"
@@ -90,12 +95,12 @@ function LampElevationStudy() {
         />
         <path d="M184 84V60 M376 84V60" />
       </g>
-      <g strokeWidth="1">
+      <g strokeWidth="1" strokeOpacity="1">
         <path d="M184 204A96 96 0 0 1 376 204Z" />
         <path d="M274 204V332 M286 204V332" />
         <rect height="12" rx="6" width="144" x="208" y="332" />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path d="M280 204 347.88 136.12 m-6 0h6v6" />
         <path d="M270 204H290 M280 194V214 M280 220H296V204" />
         <path d="M184 72H260 M300 72H376 M184 64V80 M376 64V80 m-196-4 8-8 m184 8 8-8" />
@@ -131,13 +136,13 @@ const folders = [
 function FolderPlanStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.09" strokeWidth="0.6">
+      <g opacity="0.09" strokeWidth="1" strokeOpacity="0.6">
         <path d="M104 64V112 M168 64V112 M352 64V112 M416 64V112" />
         <path d="M80 120H96 M176 120H344 M424 120H512" />
         <path d="M80 144H96 M328 144H344 M496 144H512" />
         <path d="M104 304V344 M320 304V344 M352 232V272 M488 232V272" />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         {folders.map(({ x, width, height, opacity }) => (
           <path
             d={`M${x} ${120 + height - 8}V128a8 8 0 0 1 8-8h48a8 8 0 0 1 8 8v8a8 8 0 0 0 8 8h${width - 80}a8 8 0 0 1 8 8v${height - 40}a8 8 0 0 1-8 8H${x + 8}a8 8 0 0 1-8-8Z`}
@@ -146,7 +151,7 @@ function FolderPlanStudy() {
           />
         ))}
       </g>
-      <g opacity="0.28" strokeWidth="0.65">
+      <g opacity="0.28" strokeWidth="1" strokeOpacity="0.65">
         <circle cx="160" cy="128" r="8" strokeDasharray="2 4" />
         <circle cx="176" cy="136" r="8" strokeDasharray="2 4" />
         <path d="M148 128H172 M160 116V140 M164 136H188 M176 124V148" />
@@ -154,7 +159,7 @@ function FolderPlanStudy() {
         <path d="M320 144H352 M328 120H344" strokeDasharray="3 6" />
         <path d="M416 116V148 M408 128H424 M416 136H432" />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path d="M104 80H168 M104 72V88 M168 72V88 m-68-4 8-8 m56 8 8-8" />
         <path d="M352 80H416 M352 72V88 M416 72V88 m-68-4 8-8 m56 8 8-8" />
         <path d="M104 332H196 M228 332H320 M104 324V340 M320 324V340 m-220-4 8-8 m208 8 8-8" />

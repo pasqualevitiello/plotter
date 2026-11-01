@@ -4,7 +4,7 @@ import type { IllustrationStudy } from "./study-types";
 function LetterAnatomy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.18" strokeWidth="0.6">
+      <g opacity="0.18" strokeWidth="1" strokeOpacity="0.6">
         <path d="M111 132H449M111 308H449M170 89V354M364 89V354" />
         <path d="M266 76V361M108 220H452" strokeDasharray="5 6" />
         <circle cx="266" cy="220" r="96" strokeDasharray="3 5" />
@@ -15,14 +15,20 @@ function LetterAnatomy() {
         fill="currentColor"
         fillOpacity="0.025"
         fillRule="evenodd"
-        strokeWidth="1.1"
+        strokeWidth="1"
+        strokeOpacity="1"
       />
-      <g opacity="0.3" strokeWidth="0.6">
+      <g opacity="0.3" strokeWidth="1" strokeOpacity="0.6">
         <path d="M266 158H328V220M204 220V282H266" />
         <path d="M260 220h12M266 214v12" />
         <path d="M266 124H213M170 220V167M266 316H319" />
       </g>
-      <g fill="var(--color-sidebar)" opacity="0.8" strokeWidth="0.65">
+      <g
+        fill="var(--color-sidebar)"
+        opacity="0.8"
+        strokeWidth="1"
+        strokeOpacity="0.65"
+      >
         <rect height="4" width="4" x="264" y="122" />
         <rect height="4" width="4" x="168" y="218" />
         <rect height="4" width="4" x="264" y="314" />
@@ -30,7 +36,7 @@ function LetterAnatomy() {
         <circle cx="170" cy="167" r="2" />
         <circle cx="319" cy="316" r="2" />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path d="M394 132V308M386 132H402M386 308H402" />
         <path d="m390 136 8-8m-8 184 8-8" />
         <path d="M330 333V361M364 333V361M330 352H364" />
@@ -67,7 +73,7 @@ function LetterAnatomy() {
 function MarkInMaking() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.18" strokeWidth="0.6">
+      <g opacity="0.18" strokeWidth="1" strokeOpacity="0.6">
         <path d="M280 63V377M116 220H444" strokeDasharray="5 6" />
         <path d="M166 84V356M394 84V356M146 106H414M146 334H414" />
         <circle cx="280" cy="220" r="114" strokeDasharray="3 6" />
@@ -79,9 +85,10 @@ function MarkInMaking() {
         d="M360.61 139.39A114 114 0 1 0 360.61 300.61L335.15 275.15A78 78 0 1 1 335.15 164.85Z"
         fill="currentColor"
         fillOpacity="0.025"
-        strokeWidth="1.1"
+        strokeWidth="1"
+        strokeOpacity="1"
       />
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path d="M315.36 184.64A50 50 0 0 1 315.36 255.36" />
         <path d="m315 190v-6h6m-6 65v6h6" />
         <path d="M280 220 199.39 139.39m0 6v-6h6" />
@@ -90,7 +97,12 @@ function MarkInMaking() {
         <path d="M367 143H416L432 127" />
         <path d="M274 220h12M280 214v12" />
       </g>
-      <g fill="var(--color-sidebar)" opacity="0.8" strokeWidth="0.65">
+      <g
+        fill="var(--color-sidebar)"
+        opacity="0.8"
+        strokeWidth="1"
+        strokeOpacity="0.65"
+      >
         <circle cx="280" cy="106" r="2.5" />
         <circle cx="166" cy="220" r="2.5" />
         <circle cx="280" cy="334" r="2.5" />

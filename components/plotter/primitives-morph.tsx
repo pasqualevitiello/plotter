@@ -186,7 +186,12 @@ export function PrimitivesMorph({ paused }: { paused: boolean }) {
             y="0"
           >
             <rect fill="white" height="440" stroke="none" width="560" />
-            <use href={`#${guideId}`} stroke="black" strokeWidth="1.3" />
+            <use
+              href={`#${guideId}`}
+              stroke="black"
+              strokeWidth="1.3"
+              strokeOpacity="1"
+            />
             <SliderGridMask />
           </mask>
           {/* Origin at the circle center aligns a hatch line with its 45° radius. */}
@@ -197,10 +202,20 @@ export function PrimitivesMorph({ paused }: { paused: boolean }) {
             patternUnits="userSpaceOnUse"
             width="10"
           >
-            <path d="M0 10 10 0" opacity="0.27" strokeWidth="0.65" />
+            <path
+              d="M0 10 10 0"
+              opacity="0.27"
+              strokeWidth="1"
+              strokeOpacity="0.65"
+            />
           </pattern>
         </defs>
-        <g mask={`url(#${gridMaskId})`} opacity="0.08" strokeWidth="0.6">
+        <g
+          mask={`url(#${gridMaskId})`}
+          opacity="0.08"
+          strokeWidth="1"
+          strokeOpacity="0.6"
+        >
           {gridX.map((x) => (
             <path d={`M${x} 68V348`} key={x} />
           ))}
@@ -208,7 +223,12 @@ export function PrimitivesMorph({ paused }: { paused: boolean }) {
             <path d={`M104 ${y}H464`} key={y} />
           ))}
         </g>
-        <use href={`#${guideId}`} opacity="0.24" strokeWidth="0.65" />
+        <use
+          href={`#${guideId}`}
+          opacity="0.24"
+          strokeWidth="1"
+          strokeOpacity="0.65"
+        />
         <path {...secondaryLine} d={circle.dimensions}>
           <Morph
             attributeName="d"
@@ -227,13 +247,13 @@ export function PrimitivesMorph({ paused }: { paused: boolean }) {
             />
           </path>
         </g>
-        <path d={circle.outline} strokeWidth="1">
+        <path d={circle.outline} strokeWidth="1" strokeOpacity="1">
           <Morph
             attributeName="d"
             values={stages.map((stage) => stage.outline)}
           />
         </path>
-        <g strokeWidth="0.8">
+        <g strokeWidth="1" strokeOpacity="0.8">
           <Morph
             attributeName="opacity"
             values={stages.map((stage) => stage.showHeight)}

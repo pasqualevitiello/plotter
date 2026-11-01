@@ -3,7 +3,7 @@ import { BlueprintDrawing } from "./blueprint-drawing";
 export function OriginalParticlesBlueprint() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.09" strokeWidth="0.6">
+      <g opacity="0.09" strokeWidth="1" strokeOpacity="0.6">
         <path d="M140 108H156 M316 108H428 M140 140H156 M316 140H428" />
         <path d="M140 196H156 M412 196H428 M140 244H156 M412 244H428" />
         <path d="M140 292H156 M412 292H428 M140 340H156 M412 340H428" />
@@ -11,7 +11,7 @@ export function OriginalParticlesBlueprint() {
         <path d="M212 148V188 M260 148V188 M308 148V188" />
         <path d="M212 252V284 M260 252V284 M308 252V284 M356 252V284" />
       </g>
-      <g opacity="0.28" strokeWidth="0.65">
+      <g opacity="0.28" strokeWidth="1" strokeOpacity="0.65">
         <path d="M164 76V100 M164 148V188 M164 252V284 M164 348V400" />
         <path
           d="M188 76V100 M188 148V188 M188 252V284 M188 348V376"
@@ -21,23 +21,23 @@ export function OriginalParticlesBlueprint() {
         <path d="M140 100V84H156 M412 84H428V100 M140 348V364H156 M412 364H428V348" />
         <path d="M180 108A16 16 0 0 0 164 124 M172 124H184 M180 116V132" />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <rect height="32" rx="16" width="144" x="164" y="108" />
         <rect height="48" rx="16" width="240" x="164" y="196" />
         <rect height="48" rx="16" width="240" x="164" y="292" />
       </g>
-      <g opacity="0.72" strokeWidth="0.75">
+      <g opacity="0.72" strokeWidth="1" strokeOpacity="0.75">
         <path d="m188 124 4 4 7-8" />
         <path d="m288 120 8 8 m0-8-8 8" />
         <rect height="16" rx="3" width="16" x="188" y="212" />
         <path d="M192 220H200 M196 216V224" />
         <path d="m380 216 4 4-4 4" />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <rect height="18" rx="9" width="30" x="350" y="307" />
         <circle cx="371" cy="316" r="5.5" />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path d="M180 124 168.69 112.69 144 88H112" />
         <path d="M164 164H188 M164 158V170 M188 158V170 m-28-2 8-8 m16 8 8-8" />
         <path d="M164 268H188 M164 262V274 M188 262V274 m-28-2 8-8 m16 8 8-8" />

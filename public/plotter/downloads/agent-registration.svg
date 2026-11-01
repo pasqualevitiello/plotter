@@ -4,7 +4,7 @@
   <metadata>Study: agent-registration, revision 2, explicitly liked by the user on 2026-10-31. Mode: conceptual diagram. Registration is represented as the assembly of one discoverable record from an agent definition; this does not depict authentication, permission grants, or execution. References: INT-02 assembly, INT-03 allocation, INT-09 identity fragments. Local unit u = 24 SVG units. Record width 14u = 336; height 4u = 96; horizontal allocation 1u inset + 2u identity + 1u gap + 5u name + 1u gap + 3u tools + 1u inset. Source and assembled fragments differ only by a vertical translation of 148 units. The assigned identifier is new text within the name allocation. No background grid or hatch is needed.</metadata>
 
   <!-- Projections follow fragment extents; none retrace a form or cross a label. -->
-  <g data-plotter-role="guide" stroke-width="0.6" opacity="0.24" stroke-dasharray="none">
+  <g data-plotter-role="guide" stroke-width="1" opacity="0.14" stroke-dasharray="none">
     <path d="M136 152V236M184 152V236M208 180V236M328 180V236M352 180V236M424 180V236" />
     <path d="M136 252V260M184 252V260M208 252V264M328 252V264M352 252V256M424 252V256" />
     <path d="M128 120H136M184 120H192M128 168H136M184 168H192" />
@@ -12,12 +12,12 @@
   </g>
 
   <!-- The loose fragments retain the same geometry inside the completed record. -->
-  <g data-plotter-role="primary" stroke-width="0.95" opacity="1" stroke-dasharray="none">
+  <g data-plotter-role="primary" stroke-width="1" opacity="1" stroke-dasharray="none">
     <circle cx="160" cy="144" r="24" />
     <rect x="352" y="116" width="72" height="24" rx="12" />
     <rect x="352" y="148" width="72" height="24" rx="12" />
   </g>
-  <g data-plotter-role="secondary" stroke-width="0.65" opacity="0.5" stroke-dasharray="none">
+  <g data-plotter-role="secondary" stroke-width="1" opacity="0.32" stroke-dasharray="none">
     <circle cx="160" cy="137" r="5" />
     <path d="M148 156A12 12 0 0 1 172 156" />
     <path d="M208 168V176M208 172H328M328 168V176" />
@@ -35,20 +35,20 @@
 
   <!-- One movement cue expresses assembly; the edge projections express fit. -->
   <!-- plotter:registration-transfer -->
-  <g data-plotter-role="transfer" stroke-width="0.65" opacity="0.5" stroke-dasharray="4 6">
+  <g data-plotter-role="transfer" stroke-width="1" opacity="0.32" stroke-dasharray="4 6">
     <path d="M268 212L268 186" />
     <path d="M263.757359 207.757359L268 212L272.242641 207.757359" stroke-dasharray="none" />
   </g>
   <!-- /plotter:registration-transfer -->
   <text x="280" y="234" fill="#171717" stroke="none" font-size="11" opacity="0.72" text-anchor="middle">Registered agent</text>
 
-  <g data-plotter-role="primary" stroke-width="0.95" opacity="1" stroke-dasharray="none">
+  <g data-plotter-role="primary" stroke-width="1" opacity="1" stroke-dasharray="none">
     <rect data-plotter-part="registry-record" x="112" y="244" width="336" height="96" rx="12" />
     <circle cx="160" cy="292" r="24" />
     <rect x="352" y="264" width="72" height="24" rx="12" />
     <rect x="352" y="296" width="72" height="24" rx="12" />
   </g>
-  <g data-plotter-role="secondary" stroke-width="0.65" opacity="0.5" stroke-dasharray="none">
+  <g data-plotter-role="secondary" stroke-width="1" opacity="0.32" stroke-dasharray="none">
     <circle cx="160" cy="285" r="5" />
     <path d="M148 304A12 12 0 0 1 172 304" />
   </g>
@@ -60,7 +60,7 @@
   <text x="208" y="314" fill="#171717" stroke="none" font-size="10" opacity="0.72" style="font-variation-settings:'GEOM' 0">agent_07</text>
 
   <!-- Witnesses measure the frame width and both equal 24-unit allocation gaps. -->
-  <g data-plotter-role="dimension" stroke-width="0.65" opacity="0.5" stroke-dasharray="none">
+  <g data-plotter-role="dimension" stroke-width="1" opacity="0.32" stroke-dasharray="none">
     <!-- plotter:registration-width -->
     <path d="M112 348L112 398 M448 348L448 398 M112 390L264 390 M296 390L448 390 M108 394L116 386 M444 394L452 386" />
     <!-- /plotter:registration-width -->

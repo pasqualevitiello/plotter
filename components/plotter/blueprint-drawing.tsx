@@ -16,7 +16,8 @@ export function BlueprintDrawing({
       fill="none"
       focusable="false"
       stroke="currentColor"
-      strokeWidth="0.8"
+      strokeWidth="1"
+      strokeOpacity={roles ? undefined : 0.8}
       viewBox="0 0 560 440"
     >
       {roles && <style data-plotter-styles="true">{roleCss}</style>}

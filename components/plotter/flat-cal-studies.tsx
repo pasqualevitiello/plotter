@@ -8,12 +8,12 @@ const weekHours = ["09:00", "10:00", "11:00", "12:00", "13:00"];
 function WeekConstruction() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.14" strokeWidth="0.6">
+      <g opacity="0.14" strokeWidth="1" strokeOpacity="0.6">
         <path d="M140 80V344M420 80V344M132 140H452M132 300H452" />
         <path d="M280 130V326M132 200H436" strokeDasharray="4 5" />
       </g>
 
-      <g opacity="0.5" strokeWidth="0.9">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.9">
         <path d="M140 140H420V300H140Z" />
         <path d="M180 140V300M220 140V300M260 140V300M300 140V300M340 140V300M380 140V300" />
         <path d="M140 180H420M140 220H420M140 260H420" />
@@ -23,10 +23,11 @@ function WeekConstruction() {
         d="M260 180H300V220H260Z"
         fill="currentColor"
         fillOpacity="0.035"
-        strokeWidth="0.95"
+        strokeWidth="1"
+        strokeOpacity="0.95"
       />
-      <circle cx="280" cy="200" r="16" strokeWidth="1" />
-      <g opacity="0.45" strokeWidth="0.65">
+      <circle cx="280" cy="200" r="16" strokeWidth="1" strokeOpacity="1" />
+      <g opacity="0.45" strokeWidth="1" strokeOpacity="0.65">
         <path d="M256 200H304M280 176V224" strokeDasharray="2 4" />
         <path d="M280 200 291.3 188.7" />
         <path d="M287.3 188.7h4v4" />
@@ -36,10 +37,11 @@ function WeekConstruction() {
         cy="200"
         fill="var(--color-sidebar)"
         r="2"
-        strokeWidth="0.8"
+        strokeWidth="1"
+        strokeOpacity="0.8"
       />
 
-      <g opacity="0.42" strokeWidth="0.65">
+      <g opacity="0.42" strokeWidth="1" strokeOpacity="0.65">
         <path d="M140 88H256M304 88H420M140 80V96M420 80V96" />
         <path d="m136 92 8-8m272 8 8-8" />
         <path d="M140 316V340M180 316V340M140 332H180" />
@@ -74,7 +76,7 @@ function WeekConstruction() {
           Thu · 10:00–11:00
         </text>
       </g>
-      <g opacity="0.3" strokeWidth="0.6">
+      <g opacity="0.3" strokeWidth="1" strokeOpacity="0.6">
         <path d="M99 96h12M105 90v12M443 356h12M449 350v12" />
       </g>
     </BlueprintDrawing>
@@ -84,16 +86,16 @@ function WeekConstruction() {
 function TimeSlotConstruction() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.1" strokeWidth="0.6">
+      <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path d="M156 104V344M216 104V344M276 104V344M336 104V344M396 104V344" />
         <path d="M124 128H424M124 168H424M124 224H424M124 280H424" />
       </g>
-      <g opacity="0.26" strokeWidth="0.6">
+      <g opacity="0.26" strokeWidth="1" strokeOpacity="0.6">
         <path d="M132 148H420M132 252H436M276 92V352" strokeDasharray="4 5" />
         <path d="M156 180V212M396 180V212" strokeDasharray="3 5" />
       </g>
 
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <rect height="40" rx="20" width="120" x="156" y="128" />
         <rect height="40" rx="20" width="120" x="276" y="128" />
         <rect
@@ -106,7 +108,7 @@ function TimeSlotConstruction() {
         />
       </g>
 
-      <g opacity="0.38" strokeWidth="0.65">
+      <g opacity="0.38" strokeWidth="1" strokeOpacity="0.65">
         <path d="M216 180V212M336 180V212" />
         <path d="m212 208 4 4 4-4m112 0 4 4 4-4" />
         <path d="M156 100H207M225 100H276M156 94V106M276 94V106" />
@@ -144,7 +146,7 @@ function TimeSlotConstruction() {
           R28
         </text>
       </g>
-      <g opacity="0.3" strokeWidth="0.6">
+      <g opacity="0.3" strokeWidth="1" strokeOpacity="0.6">
         <path d="M118 104h12M124 98v12M422 352h12M428 346v12" />
       </g>
     </BlueprintDrawing>
@@ -154,15 +156,15 @@ function TimeSlotConstruction() {
 function AvailabilityConstruction() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.1" strokeWidth="0.6">
+      <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path d="M160 84V324M208 84V324M256 84V324M304 84V324M352 84V324M400 84V324" />
         <path d="M112 108H448M112 156H448M112 204H448M112 252H448M112 300H448" />
       </g>
-      <g opacity="0.26" strokeWidth="0.6">
+      <g opacity="0.26" strokeWidth="1" strokeOpacity="0.6">
         <path d="M280 112V344M100 204H460" strokeDasharray="5 5" />
       </g>
 
-      <g opacity="0.62" strokeWidth="0.95">
+      <g opacity="0.62" strokeWidth="1" strokeOpacity="0.95">
         <path d="M136 180H424V228H136Z" />
         <path d="M256 108H304V300H256Z" />
       </g>
@@ -171,20 +173,22 @@ function AvailabilityConstruction() {
         fillOpacity="0.045"
         height="48"
         strokeWidth="1"
+        strokeOpacity="1"
         width="48"
         x="256"
         y="180"
       />
-      <circle cx="280" cy="204" r="16" strokeWidth="1" />
+      <circle cx="280" cy="204" r="16" strokeWidth="1" strokeOpacity="1" />
       <circle
         cx="280"
         cy="204"
         fill="var(--color-sidebar)"
         r="2"
-        strokeWidth="0.8"
+        strokeWidth="1"
+        strokeOpacity="0.8"
       />
 
-      <g opacity="0.42" strokeWidth="0.65">
+      <g opacity="0.42" strokeWidth="1" strokeOpacity="0.65">
         <path d="M136 336V360M424 336V360M136 352H266M294 352H424" />
         <path d="m132 356 8-8m280 8 8-8" />
         <path d="M444 108H464M444 300H464M456 108V191M456 217V300" />
@@ -220,7 +224,7 @@ function AvailabilityConstruction() {
           30 min meeting
         </text>
       </g>
-      <g opacity="0.3" strokeWidth="0.6">
+      <g opacity="0.3" strokeWidth="1" strokeOpacity="0.6">
         <path d="M106 86h12M112 80v12M442 330h12M448 324v12" />
       </g>
     </BlueprintDrawing>

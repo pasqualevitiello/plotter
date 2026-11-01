@@ -5,14 +5,15 @@ import type { IllustrationStudy } from "./study-types";
 
 const secondaryLine = {
   opacity: 0.5,
-  strokeWidth: 0.65,
+  strokeWidth: 1,
+  strokeOpacity: 0.65,
   strokeLinecap: "butt",
   strokeLinejoin: "miter",
 } as const;
 
 function Registration() {
   return (
-    <g opacity="0.28" strokeWidth="0.6">
+    <g opacity="0.28" strokeWidth="1" strokeOpacity="0.6">
       <path d="M94 84h12 M100 78v12 M454 372h12 M460 366v12" />
     </g>
   );
@@ -40,7 +41,7 @@ function SearchForm() {
 
 function SearchGap({ dash = "4 5" }: { dash?: string }) {
   return (
-    <g opacity="0.38" strokeWidth="0.65">
+    <g opacity="0.38" strokeWidth="1" strokeOpacity="0.65">
       <path d="M280 152V224" strokeDasharray={dash} />
       <path d="M252 250V240H262 M298 240H308V250 M252 286V296H262 M298 296H308V286" />
       <path d="M272 268h16 M280 260v16" strokeDasharray={dash} />
@@ -51,11 +52,11 @@ function SearchGap({ dash = "4 5" }: { dash?: string }) {
 function SearchStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.1" strokeWidth="0.6">
+      <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path d="M92 240H464 M92 296H464 M108 220V320 M164 220V320 M180 220V320 M236 220V320 M324 220V320 M380 220V320 M396 220V320 M452 220V320" />
       </g>
       <SearchGap />
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <SearchForm />
       </g>
       <g {...secondaryLine}>
@@ -133,10 +134,10 @@ function NotificationStream({ dash = "3 5" }: { dash?: string }) {
 function NotificationsStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.1" strokeWidth="0.6">
+      <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path d="M192 92V296 M400 92V296 M176 112H424 M176 152H424 M176 176H424 M176 216H424 M176 240H424 M176 280H424" />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <NotificationStream />
       </g>
       <g {...secondaryLine}>
@@ -200,21 +201,21 @@ function WritingArea({ dash = "3 5" }: { dash?: string }) {
 function FilesStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.1" strokeWidth="0.6">
+      <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path
           d={`M164 80H396 M164 ${pageBottom}H396 M180 64V${pageBottom + 16} M380 128V${pageBottom + 16}`}
         />
       </g>
-      <g opacity="0.24" strokeWidth="0.65">
+      <g opacity="0.24" strokeWidth="1" strokeOpacity="0.65">
         <path
           d={`M180 80 220 ${writingTop} M340 ${writingBottom} 380 ${pageBottom}`}
         />
         <path d="M328 80H352 M340 68V132 M368 120H392" />
       </g>
-      <g strokeWidth="0.75">
+      <g strokeWidth="1" strokeOpacity="0.75">
         <WritingArea />
       </g>
-      <g strokeWidth="1">
+      <g strokeWidth="1" strokeOpacity="1">
         <PageForm />
       </g>
       <g {...secondaryLine}>
@@ -262,7 +263,7 @@ const plotRows = [132, 180, 228, 276];
 function EmptyPlot({ compact = false }: { compact?: boolean }) {
   return (
     <>
-      <g opacity={compact ? 0.24 : 0.12} strokeWidth="0.6">
+      <g opacity={compact ? 0.24 : 0.12} strokeWidth="1" strokeOpacity="0.6">
         {plotRows.map((y) => (
           <path d={`M148 ${y}H436`} key={y} />
         ))}
@@ -289,7 +290,7 @@ function EmptyPlot({ compact = false }: { compact?: boolean }) {
 function DataStudy() {
   return (
     <BlueprintDrawing>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <EmptyPlot />
       </g>
       <g {...secondaryLine}>
@@ -339,7 +340,7 @@ const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 function EmptyWeek() {
   return (
     <>
-      <g opacity="0.45" strokeWidth="0.85">
+      <g opacity="0.45" strokeWidth="1" strokeOpacity="0.85">
         <path d="M140 164H420V284H140Z M180 164V284 M300 164V284 M340 164V284 M380 164V284 M140 204H420 M140 244H420" />
       </g>
       <path d="M220 164V284 M260 164V284" />
@@ -351,10 +352,10 @@ function EmptyWeek() {
 function BookingsStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.1" strokeWidth="0.6">
+      <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path d="M140 112V308 M420 112V308 M128 164H440 M128 284H440" />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <EmptyWeek />
       </g>
       <g {...secondaryLine}>
@@ -420,10 +421,21 @@ function ImageBounds({ dash = "4 6" }: { dash?: string }) {
         d="M208 120H352 M400 168V252 M352 300H208 M160 252V168"
         opacity="0.38"
         strokeDasharray={dash}
-        strokeWidth="0.65"
+        strokeWidth="1"
+        strokeOpacity="0.65"
       />
-      <path d="M160 300 400 120" opacity="0.5" strokeWidth="0.65" />
-      <path d="M388 300V288H400" opacity="0.5" strokeWidth="0.65" />
+      <path
+        d="M160 300 400 120"
+        opacity="0.5"
+        strokeWidth="1"
+        strokeOpacity="0.65"
+      />
+      <path
+        d="M388 300V288H400"
+        opacity="0.5"
+        strokeWidth="1"
+        strokeOpacity="0.65"
+      />
     </>
   );
 }
@@ -431,10 +443,10 @@ function ImageBounds({ dash = "4 6" }: { dash?: string }) {
 function ImageStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.1" strokeWidth="0.6">
+      <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path d="M160 104V316 M400 104V316 M144 120H416 M144 300H416" />
       </g>
-      <g strokeWidth="1">
+      <g strokeWidth="1" strokeOpacity="1">
         <ImageBounds />
       </g>
       <g {...secondaryLine}>

@@ -22,7 +22,8 @@ for item in manifest:
     drawing = "\n".join(filter(None, (element(n, ids, 4) for n in svg)))
     join = json.dumps(svg.attrib.get("stroke-linejoin", "round"))
     cap = json.dumps(svg.attrib.get("stroke-linecap", "butt"))
-    width = json.dumps(svg.attrib.get("stroke-width", "0.95"))
+    width = json.dumps(svg.attrib.get("stroke-width", "1"))
+    stroke_opacity = json.dumps(svg.attrib.get("stroke-opacity", "1"))
     declaration = "  const id = useId();\n" if ids else ""
     wrapper = "BlueprintDrawing"
     if "data-plotter" in svg.attrib:
@@ -44,7 +45,7 @@ for item in manifest:
         drawing = element(group, ids, 3)
         body = drawing
     else:
-        body = f"      <g strokeLinecap={{{cap}}} strokeLinejoin={{{join}}} strokeWidth={{{width}}}>\n{drawing}\n      </g>"
+        body = f"      <g strokeLinecap={{{cap}}} strokeLinejoin={{{join}}} strokeWidth={{{width}}} strokeOpacity={{{stroke_opacity}}}>\n{drawing}\n      </g>"
     components.append(f'''function {name}() {{
 {declaration}  return (
     <{wrapper}>

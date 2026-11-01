@@ -85,8 +85,8 @@ const boardGrid = constructionGrid(
 function ProcessorBoardStudy() {
   return (
     <BlueprintDrawing>
-      <path d={boardGrid} opacity="0.1" strokeWidth="0.6" />
-      <g opacity="0.5" strokeWidth="0.65">
+      <path d={boardGrid} opacity="0.1" strokeWidth="1" strokeOpacity="0.6" />
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         {cpuPinOffsets.map((offset) => (
           <g key={offset}>
             <path
@@ -102,21 +102,26 @@ function ProcessorBoardStudy() {
         ))}
         <rect height="96" width="40" x="416" y="156" />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <path d="M228 144H340V264H220V152Z" />
         <rect height="56" width="56" x="252" y="176" />
         {processorRoutes.map((y) => (
           <circle cx="124" cy={y} key={y} r="4" />
         ))}
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <circle cx="232" cy="156" r="2.4" />
         {processorRoutes.map((y) => (
           <path d={`M128 ${y}H208 M352 ${y}H404`} key={y} />
         ))}
         <path d="M238 110V130 M322 110V130 M238 116H264 M296 116H322 m-88 4 8-8 m76 8 8-8" />
       </g>
-      <g opacity="0.24" strokeDasharray="8 3 1 3" strokeWidth="0.6">
+      <g
+        opacity="0.24"
+        strokeDasharray="8 3 1 3"
+        strokeWidth="1"
+        strokeOpacity="0.6"
+      >
         {/* Center axes stop at the package envelope and never cross the die. */}
         <path d="M280 88V102 M280 268V344" />
         <path d="M88 204H204 M356 204H412 M460 204H480" />
@@ -165,8 +170,8 @@ const rcGrid = constructionGrid(
 function RcFilterStudy() {
   return (
     <BlueprintDrawing>
-      <path d={rcGrid} opacity="0.1" strokeWidth="0.6" />
-      <g strokeWidth="0.95">
+      <path d={rcGrid} opacity="0.1" strokeWidth="1" strokeOpacity="0.6" />
+      <g strokeWidth="1" strokeOpacity="0.95">
         <circle cx="112" cy="184" r="4" />
         <circle cx="448" cy="184" r="4" />
         <path d="M116 184H184 M256 184H444 M328 184V256 M328 268V328" />
@@ -342,16 +347,16 @@ export function NewtonsCradleStudy() {
   return (
     <BlueprintDrawing>
       {/* S1 marks identify the fixed support, not a material cross-section. */}
-      <g opacity="0.27" strokeWidth="0.65">
+      <g opacity="0.27" strokeWidth="1" strokeOpacity="0.65">
         {Array.from({ length: 15 }, (_, i) => 176 + i * 16).map((x) => (
           <path d={`M${x} 112l16-16`} key={x} />
         ))}
       </g>
-      <g opacity="0.24" strokeWidth="0.6">
+      <g opacity="0.24" strokeWidth="1" strokeOpacity="0.6">
         <path d="M304 322V340 M348 322V340 M396 120H458" />
         <path d="M96 296H190 M414 296H458" strokeDasharray="8 3 1 3" />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         {cradle.centers.map((x) => (
           <g key={x}>
             <path d={`M${x} 112V${cradle.pivotY - cradle.pivotRadius}`} />
@@ -359,21 +364,26 @@ export function NewtonsCradleStudy() {
           </g>
         ))}
       </g>
-      <path d="M172 112H424" strokeWidth="0.95" />
-      <g opacity="0.45" strokeDasharray="3 5" strokeWidth="0.65">
+      <path d="M172 112H424" strokeWidth="1" strokeOpacity="0.95" />
+      <g
+        opacity="0.45"
+        strokeDasharray="3 5"
+        strokeWidth="1"
+        strokeOpacity="0.65"
+      >
         <path
           d={`M${cradlePivotX} ${cradle.pivotY + cradle.pivotRadius}V${cradleRestY - cradle.radius}`}
         />
         <circle cx={cradlePivotX} cy={cradleRestY} r={cradle.radius} />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path
           d={`M${cradleArcEnd.x} ${cradleArcEnd.y}A${cradle.length} ${cradle.length} 0 0 1 ${cradleArcStart.x} ${cradleArcStart.y}`}
           strokeDasharray="4 6"
         />
         <path d={`M${cradleArcArrow}`} />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         {cradle.centers.slice(1).map((x) => (
           <g key={x}>
             <path
@@ -387,7 +397,7 @@ export function NewtonsCradleStudy() {
         />
         <circle cx={displacedBob.x} cy={displacedBob.y} r={cradle.radius} />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path
           d={`M${cradlePivotX} ${cradle.pivotY + cradleAngleRadius}A${cradleAngleRadius} ${cradleAngleRadius} 0 0 1 ${cradlePivotX - cradleAngleRadius * Math.sin(cradle.angle)} ${cradle.pivotY + cradleAngleRadius * Math.cos(cradle.angle)}`}
         />

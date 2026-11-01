@@ -46,7 +46,12 @@ export function MorphDetails({
           fill={`url(#${hatchId})`}
           stroke="none"
         />
-        <g opacity="0.2" strokeDasharray="5 5" strokeWidth="0.65">
+        <g
+          opacity="0.2"
+          strokeDasharray="5 5"
+          strokeWidth="1"
+          strokeOpacity="0.65"
+        >
           <path d="M152 204H416 M284 72V336" />
         </g>
         <g {...secondaryLine}>
@@ -101,7 +106,12 @@ export function MorphDetails({
   if (stage === "capsule") {
     return (
       <g>
-        <g opacity="0.3" strokeDasharray="4 4" strokeWidth="0.65">
+        <g
+          opacity="0.3"
+          strokeDasharray="4 4"
+          strokeWidth="1"
+          strokeOpacity="0.65"
+        >
           {[204, 364].map((center) => (
             <g key={center}>
               <circle cx={center} cy="204" r="80" />
@@ -182,7 +192,12 @@ export function MorphDetails({
           <ConstructionMotion attributeName="rx" from={40} stage={4} to={0} />
         </rect>
         <ConstructionAnnotation stage={4}>
-          <g opacity="0.26" strokeDasharray="3 4" strokeWidth="0.65">
+          <g
+            opacity="0.26"
+            strokeDasharray="3 4"
+            strokeWidth="1"
+            strokeOpacity="0.65"
+          >
             <path d="M204 84V124H164 M364 324V284H404" />
           </g>
           <g {...secondaryLine}>

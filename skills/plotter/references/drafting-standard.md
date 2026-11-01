@@ -35,30 +35,30 @@ Research used the public ISO catalogue abstracts and the cited IEC/NPS material.
 
 ## House stroke palette
 
-All lengths below are SVG user units in a `560 × 440` viewBox. Width and opacity are independent: width expresses drawing role, opacity establishes visual emphasis. The values intentionally stay close to the approved anchors; they are house choices, not physical pen widths or quotations from ISO.
+All lengths below are SVG user units in a `560 × 440` viewBox. Every stroke role defaults to 1 unit, which renders as 1 CSS pixel at native size. Opacity establishes visual emphasis, and dash patterns distinguish line meanings. Width tokens remain independently adjustable. These are house choices, not physical pen widths or quotations from ISO.
 
 <!-- BEGIN GENERATED: stroke-palette -->
 | Role | Width | Opacity | Pattern | Use |
 | --- | ---: | ---: | --- | --- |
-| Primary form | 0.95 | 1 | Continuous | Main silhouette or selected functional route |
-| Secondary form | 0.65 | 0.50 | Continuous | Subordinate real detail |
-| Dimension / leader | 0.65 | 0.50 | Continuous | Measurement, extension, explanatory leader |
-| Reference guides | 0.60 | 0.24 | Continuous | Subordinate alignment projections and reference scaffold |
-| Grid | 0.60 | 0.10 | Continuous | A useful repeated coordinate/module field |
-| Hatch | 0.65 | 0.27 | Continuous | One declared bounded region |
-| Section cut, when needed | 1.30 | 1 | Continuous | Material actually intersected by a stated cut plane |
+| Primary form | 1.00 | 1 | Continuous | Main silhouette or selected functional route |
+| Secondary form | 1.00 | 0.32 | Continuous | Subordinate real detail |
+| Dimension / leader | 1.00 | 0.32 | Continuous | Measurement, extension, explanatory leader |
+| Reference guides | 1.00 | 0.14 | Continuous | Subordinate alignment projections and reference scaffold |
+| Grid | 1.00 | 0.06 | Continuous | A useful repeated coordinate/module field |
+| Hatch | 1.00 | 0.18 | Continuous | One declared bounded region |
+| Section cut, when needed | 1.00 | 1 | Continuous | Material actually intersected by a stated cut plane |
 <!-- END GENERATED: stroke-palette -->
 
-GEO-01’s existing `1.0` primary width is an accepted anchor variation. Dimensions and leaders share the secondary role's width and opacity. INT-03’s switch is the reusable component reference: track `30 × 18`, corner radius `9`, thumb radius `5.5`, edge inset `3.5`, with the primary line role. Preserve those proportions when scaling the component as a whole.
+Dimensions and leaders share the secondary role's width and opacity. INT-03’s switch is the reusable component reference: track `30 × 18`, corner radius `9`, thumb radius `5.5`, edge inset `3.5`, with the primary line role. Preserve those proportions when scaling the component as a whole.
 
 Assign patterned lines by meaning:
 
 <!-- BEGIN GENERATED: line-patterns -->
 | Role | `stroke-dasharray` | Width / opacity | Meaning |
 | --- | --- | --- | --- |
-| Axis / centerline / pitch locus | `8 3 1 3` | 0.60 / 0.24 | A center, symmetry axis, or theoretical generating locus |
-| Hidden or absent outline | `3 5` | 0.65 / 0.45 | Geometry not presently visible or present; explain which in context |
-| Motion or transfer | `4 6` | 0.65 / 0.50 | Proposed movement or conceptual transfer, with solid open arrowhead |
+| Axis / centerline / pitch locus | `8 3 1 3` | 1.00 / 0.14 | A center, symmetry axis, or theoretical generating locus |
+| Hidden or absent outline | `3 5` | 1.00 / 0.32 | Geometry not presently visible or present; explain which in context |
+| Motion or transfer | `4 6` | 1.00 / 0.32 | Proposed movement or conceptual transfer, with solid open arrowhead |
 <!-- END GENERATED: line-patterns -->
 
 These patterns are deliberately different. A continuous construction that directly explains the principal form, such as a generating radius or inset, uses the shared secondary style; the lighter reference-guide role is reserved for subordinate scaffold. Do not choose a dash merely because it looks technical. If a drawing includes both hidden and absent features, distinguish them with labels or remove one ambiguous role. A physical hidden edge and a hypothetical motion path must never be the same unlabeled mark.

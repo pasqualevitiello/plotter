@@ -15,49 +15,99 @@ import {
   CollapsiblePanel,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import {
+  Field,
+  FieldDescription,
+  FieldError,
+  FieldLabel,
+} from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
+import { Slider, SliderValue } from "@/components/ui/slider";
+import { roleCss } from "../../skills/plotter/assets/foundation/index.mjs";
 import standard from "../../skills/plotter/assets/foundation/standard.json";
 
-const controls = [
-  {
-    token: "--plotter-stroke-primary",
-    label: "Primary stroke",
-    hint: "The outlines of the carriers and cores.",
-    max: standard.tokens["--plotter-stroke-primary"] * 2,
-  },
-  {
-    token: "--plotter-opacity-guide",
-    label: "Guide opacity",
-    hint: "The quiet alignment and extension lines.",
-    max: 1,
-  },
-  {
-    token: "--plotter-opacity-hatch",
-    label: "Hatch opacity",
-    hint: "Only the diagonal lines on the core faces.",
-    max: 1,
-  },
-] as const;
-
-type ControlToken = (typeof controls)[number]["token"];
+type ControlToken = keyof typeof standard.tokens;
 type Values = Record<ControlToken, number>;
 
-const defaults: Values = {
-  "--plotter-stroke-primary": standard.tokens["--plotter-stroke-primary"],
-  "--plotter-opacity-guide": standard.tokens["--plotter-opacity-guide"],
-  "--plotter-opacity-hatch": standard.tokens["--plotter-opacity-hatch"],
-};
+const controls = {
+  "--plotter-stroke-primary": {
+    label: "Primary stroke",
+    hint: "Main outlines of the carriers and cores.",
+  },
+  "--plotter-stroke-secondary": {
+    label: "Secondary stroke",
+    hint: "Details, dimensions, arrows, and hidden edges.",
+  },
+  "--plotter-stroke-guide": {
+    label: "Guide stroke",
+    hint: "Alignment lines, axes, and grid lines.",
+  },
+  "--plotter-stroke-hatch": {
+    label: "Hatch stroke",
+    hint: "Diagonal lines inside the core faces.",
+  },
+  "--plotter-stroke-section": {
+    label: "Section stroke",
+    hint: "The separate section-cut sample below the drawing.",
+  },
+  "--plotter-opacity-primary": {
+    label: "Primary opacity",
+    hint: "Main forms and any marks grouped inside them.",
+  },
+  "--plotter-opacity-secondary": {
+    label: "Secondary opacity",
+    hint: "Rollers, dimensions, and transfer arrows.",
+  },
+  "--plotter-opacity-guide": {
+    label: "Guide opacity",
+    hint: "Alignment and extension lines.",
+  },
+  "--plotter-opacity-grid": {
+    label: "Grid opacity",
+    hint: "The repeated construction grid.",
+  },
+  "--plotter-opacity-hatch": {
+    label: "Hatch opacity",
+    hint: "Hatching within the primary forms.",
+  },
+  "--plotter-opacity-hidden": {
+    label: "Hidden opacity",
+    hint: "The dashed edge below the incoming core.",
+  },
+} satisfies Record<ControlToken, { label: string; hint: string }>;
+
+const defaults = standard.tokens;
+const tokens = Object.keys(defaults) as ControlToken[];
+const groups = [
+  { label: "Stroke widths", prefix: "--plotter-stroke-" },
+  { label: "Opacity", prefix: "--plotter-opacity-" },
+];
 
 export function PlotterTokenGuide({ children }: { children: ReactNode }) {
   const id = useId();
   const cssRef = useRef<HTMLTextAreaElement>(null);
   const [values, setValues] = useState<Values>(defaults);
+  const [inkInput, setInkInput] = useState("currentColor");
+  const [ink, setInk] = useState("currentColor");
+  const [inkError, setInkError] = useState(false);
   const [copyState, setCopyState] = useState<"idle" | "copied" | "manual">(
     "idle",
   );
-  const css = `.illustration {\n  --plotter-ink: currentColor;\n${controls
-    .map(({ token }) => `  ${token}: ${values[token]};`)
+  const css = `.illustration {\n  --plotter-ink: ${ink};\n${tokens
+    .map((token) => `  ${token}: ${values[token]};`)
     .join("\n")}\n}`;
-  const previewStyle: CSSProperties & Values = values;
+  const previewStyle: CSSProperties & Values & { "--plotter-ink": string } = {
+    ...values,
+    "--plotter-ink": ink,
+  };
+
+  function updateInk(value: string) {
+    setInkInput(value);
+    const valid = CSS.supports("color", value.trim());
+    if (valid) setInk(value.trim());
+    if (valid || inkError) setInkError(!valid);
+    setCopyState("idle");
+  }
 
   useEffect(() => {
     if (copyState !== "copied") return;
@@ -91,57 +141,124 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
         </h2>
         <p className="text-sm text-pretty text-muted-foreground">
           Adjust ink, stroke widths, and opacity without changing the drawing.
-          Try the shared tokens on MEC-05, then copy the CSS to a wrapper around
-          your inline SVG.
+          Try all 12 tokens on MEC-05 and the section-cut sample, then copy the
+          CSS to a wrapper around your inline SVG.
         </p>
       </div>
 
-      <div className="grid min-w-0 gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] xl:items-center xl:gap-12">
-        <div className="flex min-w-0 flex-col gap-6">
-          <div className="flex flex-col gap-5">
-            {controls.map(({ token, label, hint, max }) => (
-              <div className="flex flex-col gap-2" key={token}>
-                <div className="flex items-baseline justify-between gap-4">
-                  <label
-                    className="text-sm font-medium"
-                    htmlFor={`${id}-${token}`}
-                  >
-                    {label}
-                  </label>
-                  <output
-                    className="font-mono text-xs text-muted-foreground tabular-nums"
-                    htmlFor={`${id}-${token}`}
-                  >
-                    {values[token].toFixed(2)}
-                  </output>
-                </div>
-                <input
-                  aria-describedby={`${id}-${token}-hint`}
-                  className="h-6 w-full cursor-pointer accent-foreground outline-offset-4 focus-visible:outline-2 focus-visible:outline-ring"
-                  id={`${id}-${token}`}
-                  max={max}
-                  min={0}
-                  onChange={(event) => {
-                    const value = event.currentTarget.valueAsNumber;
-                    setValues((current) => ({
-                      ...current,
-                      [token]: value,
-                    }));
-                    setCopyState("idle");
-                  }}
-                  step={0.01}
-                  type="range"
-                  value={values[token]}
-                />
-                <p
-                  className="text-xs text-muted-foreground"
-                  id={`${id}-${token}-hint`}
-                >
-                  {hint}
-                </p>
+      <div className="grid min-w-0 gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] xl:items-start xl:gap-12">
+        <div className="flex min-w-0 flex-col gap-8">
+          <Field invalid={inkError}>
+            <FieldLabel>Ink</FieldLabel>
+            <Input
+              autoComplete="off"
+              className="font-mono max-sm:text-base"
+              data-1p-ignore="true"
+              onBlur={() =>
+                setInkError(!CSS.supports("color", inkInput.trim()))
+              }
+              onValueChange={updateInk}
+              spellCheck={false}
+              type="text"
+              value={inkInput}
+            />
+            <FieldDescription>
+              Use currentColor to follow your theme, or a CSS color such as
+              #2563eb or var(--foreground).
+            </FieldDescription>
+            <FieldError match={inkError}>
+              Enter a valid CSS color. The preview keeps the last valid value.
+            </FieldError>
+          </Field>
+
+          {groups.map(({ label: groupLabel, prefix }) => (
+            <fieldset className="min-w-0" key={prefix}>
+              <legend className="mb-5 text-sm font-medium">{groupLabel}</legend>
+              <div className="grid min-w-0 gap-x-8 gap-y-6 sm:grid-cols-2">
+                {tokens
+                  .filter((token) => token.startsWith(prefix))
+                  .map((token) => {
+                    const { label, hint } = controls[token];
+                    const max = token.startsWith("--plotter-opacity-")
+                      ? 1
+                      : defaults[token] * 2;
+                    return (
+                      <Field className="min-w-0" key={token}>
+                        <Slider
+                          format={{
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2,
+                          }}
+                          largeStep={0.1}
+                          max={max}
+                          min={0}
+                          onValueChange={(value) => {
+                            setValues((current) => ({
+                              ...current,
+                              [token]:
+                                typeof value === "number" ? value : value[0],
+                            }));
+                            setCopyState("idle");
+                          }}
+                          step={0.01}
+                          value={values[token]}
+                        >
+                          <div className="mb-3 flex items-baseline justify-between gap-4">
+                            <FieldLabel>{label}</FieldLabel>
+                            <SliderValue className="font-mono text-xs text-muted-foreground tabular-nums" />
+                          </div>
+                        </Slider>
+                        <FieldDescription className="mt-1">
+                          {hint}
+                        </FieldDescription>
+                      </Field>
+                    );
+                  })}
               </div>
-            ))}
-          </div>
+            </fieldset>
+          ))}
+        </div>
+
+        <div className="flex min-w-0 flex-col gap-6">
+          <figure className="min-w-0">
+            <div
+              aria-label="Assembly line and section-cut sample with adjustable drawing tokens"
+              className="overflow-x-auto border p-4 outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              role="img"
+              style={previewStyle}
+              // biome-ignore lint/a11y/noNoninteractiveTabindex: Native-size drawings need keyboard scrolling on narrow screens.
+              tabIndex={0}
+            >
+              <div className="pointer-events-none mx-auto w-[560px] select-none">
+                {children}
+                <svg
+                  aria-hidden="true"
+                  className="block h-12 w-[560px] text-foreground"
+                  data-plotter=""
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 560 48"
+                >
+                  <style data-plotter-styles="true">{roleCss}</style>
+                  <text
+                    x="16"
+                    y="28"
+                    fill="currentColor"
+                    stroke="none"
+                    fontSize="11"
+                  >
+                    Section cut
+                  </text>
+                  <path d="M120 24H544" data-plotter-role="section" />
+                </svg>
+              </div>
+            </div>
+            <figcaption className="mt-3 text-xs text-muted-foreground">
+              MEC-05 · Same geometry, adjustable linework. Section width is
+              shown separately below the drawing. Scroll sideways on narrow
+              screens.
+            </figcaption>
+          </figure>
 
           <div className="flex flex-col gap-2">
             <div className="flex flex-wrap items-center justify-between gap-2">
@@ -155,6 +272,9 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
                 <Button
                   onClick={() => {
                     setValues(defaults);
+                    setInkInput("currentColor");
+                    setInk("currentColor");
+                    setInkError(false);
                     setCopyState("idle");
                   }}
                   size="sm"
@@ -173,16 +293,16 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
               </div>
             </div>
             <textarea
-              className="w-full resize-none border bg-transparent p-4 font-mono text-xs leading-6 outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="w-full resize-none border bg-transparent p-4 font-mono text-base leading-6 outline-none focus-visible:ring-2 focus-visible:ring-ring sm:text-xs"
               id={`${id}-css`}
               readOnly
               ref={cssRef}
-              rows={6}
+              rows={tokens.length + 3}
               spellCheck={false}
               value={css}
             />
             <p className="text-xs text-muted-foreground">
-              The starting values come from Plotter’s shared standard.
+              Reset restores every token to Plotter’s shared standard.
             </p>
             <span aria-live="polite" className="sr-only">
               {copyState === "manual"
@@ -193,25 +313,6 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
             </span>
           </div>
         </div>
-
-        <figure className="min-w-0">
-          <div
-            aria-label="Assembly line with adjustable drawing tokens"
-            className="overflow-x-auto border p-4 outline-none focus-visible:ring-2 focus-visible:ring-ring"
-            role="img"
-            style={previewStyle}
-            // biome-ignore lint/a11y/noNoninteractiveTabindex: Native-size drawings need keyboard scrolling on narrow screens.
-            tabIndex={0}
-          >
-            <div className="pointer-events-none mx-auto w-[560px] select-none">
-              {children}
-            </div>
-          </div>
-          <figcaption className="mt-3 text-xs text-muted-foreground">
-            MEC-05 · Same geometry, adjustable linework. Scroll sideways on
-            narrow screens.
-          </figcaption>
-        </figure>
       </div>
 
       <Collapsible className="mt-8 border px-4 py-1 sm:px-5">

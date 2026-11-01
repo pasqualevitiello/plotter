@@ -12,7 +12,12 @@ function RequestRoute() {
 
 function AbsentPage({ dash = "3 5" }: { dash?: string }) {
   return (
-    <g opacity="0.45" strokeDasharray={dash} strokeWidth="0.65">
+    <g
+      opacity="0.45"
+      strokeDasharray={dash}
+      strokeWidth="1"
+      strokeOpacity="0.65"
+    >
       <path d="M304 196V116H404L440 152V308H304V228 M404 116V152H440" />
       <circle cx="304" cy="212" r="8" />
       <path d="M280 204H296 M280 220H296" />
@@ -30,11 +35,11 @@ export function MissingDestinationBlueprint({
 }) {
   return (
     <BlueprintDrawing>
-      <g opacity="0.1" strokeWidth="0.6">
+      <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path d="M112 256V280 M112 312V328 M176 312V328 M200 224V236 M216 272V284 M240 188V196 M304 100V108 M304 316V328 M404 100V108 M404 160V172 M440 100V144 M440 316V328" />
         <path d="M96 288H104 M96 304H104 M288 116H296 M412 116H456 M288 308H296 M448 308H456" />
       </g>
-      <g opacity="0.24" strokeWidth="0.6">
+      <g opacity="0.24" strokeWidth="1" strokeOpacity="0.6">
         <path
           d="M296 212H348 M396 212H448 M372 100V196 M372 228V324"
           strokeDasharray="8 3 1 3"
@@ -43,7 +48,7 @@ export function MissingDestinationBlueprint({
         <path d="M176 250V278 M162 264H190 M226 244H254 M240 230V258" />
       </g>
       <AbsentPage />
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <RequestRoute />
         {animated && (
           <circle r="3.5">
@@ -61,7 +66,8 @@ export function MissingDestinationBlueprint({
       </g>
       <g
         opacity="0.5"
-        strokeWidth="0.65"
+        strokeWidth="1"
+        strokeOpacity="0.65"
         strokeLinecap="butt"
         strokeLinejoin="miter"
       >
@@ -87,7 +93,7 @@ export function MissingDestinationBlueprint({
           No page at this address
         </text>
       </g>
-      <g opacity="0.24" strokeWidth="0.6">
+      <g opacity="0.24" strokeWidth="1" strokeOpacity="0.6">
         <path d="M94 84h12 M100 78v12 M454 372h12 M460 366v12" />
       </g>
     </BlueprintDrawing>

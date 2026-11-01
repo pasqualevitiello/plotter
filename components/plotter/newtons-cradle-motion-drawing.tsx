@@ -119,7 +119,12 @@ function Pendulum({ x }: { x: number }) {
       />
       <circle cx={x} cy={restY} r={cradle.radius} />
       {x === 304 && (
-        <path d="M300 296h8 M304 292v8" opacity="0.5" strokeWidth="0.65" />
+        <path
+          d="M300 296h8 M304 292v8"
+          opacity="0.5"
+          strokeWidth="1"
+          strokeOpacity="0.65"
+        />
       )}
     </>
   );
@@ -167,16 +172,16 @@ export function NewtonsCradleMotionDrawing() {
   return (
     <BlueprintDrawing>
       {/* S1 support marks stay fixed. No moving guide or ghost bob is needed. */}
-      <g opacity="0.27" strokeWidth="0.65">
+      <g opacity="0.27" strokeWidth="1" strokeOpacity="0.65">
         {Array.from({ length: 15 }, (_, i) => 176 + i * 16).map((x) => (
           <path d={`M${x} 112l16-16`} key={x} />
         ))}
       </g>
-      <g opacity="0.24" strokeWidth="0.6">
+      <g opacity="0.24" strokeWidth="1" strokeOpacity="0.6">
         <path d="M304 322V340 M348 322V340 M396 120H524" />
         <path d="M84 296H100 M510 296H524" strokeDasharray="8 3 1 3" />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         {cradle.pivots.map((x) => (
           <g key={x}>
             <path d={`M${x} 112V${cradle.pivotY - cradle.pivotRadius}`} />
@@ -184,15 +189,15 @@ export function NewtonsCradleMotionDrawing() {
           </g>
         ))}
       </g>
-      <path d="M172 112H424" strokeWidth="0.95" />
-      <g strokeWidth="0.95">
+      <path d="M172 112H424" strokeWidth="1" strokeOpacity="0.95" />
+      <g strokeWidth="1" strokeOpacity="0.95">
         {cradle.pivots.slice(1, -1).map((x) => (
           <SwingingPendulum key={x} side="middle" x={x} />
         ))}
         <SwingingPendulum side="left" x={216} />
         <SwingingPendulum side="right" x={392} />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         {/* Both length witnesses lie beyond the complete swept bob envelope. */}
         <path d="M530 120V194 M530 218V296 M524 120h12 M524 296h12 m-10-172 8-8 m-8 184 8-8" />
         <path d="M304 346H348 M304 340v12 M348 340v12 m-48-2 8-8 m36 8 8-8" />

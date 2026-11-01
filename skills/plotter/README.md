@@ -38,7 +38,7 @@ The examples demonstrate implementation; they are not additional approved style 
 
 ## Maintain the package
 
-[`standard.json`](assets/foundation/standard.json) owns shared numeric defaults; `scripts/build-standard.py` generates runtime data, CSS, and marked drafting tables. Generated or example-embedded styles are outputs, not separate palettes. Regenerate an example’s SVG before export when the standard changes. Website token adoption currently covers AGT-01, MEC-05, GEO-11, SYS-06, and CRF-06; legacy catalogue drawings retain their authored treatment.
+[`standard.json`](assets/foundation/standard.json) owns shared numeric defaults; `scripts/build-standard.py` generates runtime data, CSS, and marked drafting tables. Generated or example-embedded styles are outputs, not separate palettes. Regenerate an example’s SVG before export when the standard changes. Website token adoption currently covers AGT-01, MEC-05, GEO-11, SYS-06, and CRF-06; all current illustrations use 1-unit visible strokes while legacy catalogue drawings retain their authored opacity and dash patterns.
 
 Current instructions live outside [history](references/history/index.md). Preserve the seven reference snapshots and their revision manifest. Historical coss records establish only their original tasks and revisions; coss paths in those records are provenance, not active dependencies. Update general guidance from specific evidence rather than extending every past preference to all drawings.
 

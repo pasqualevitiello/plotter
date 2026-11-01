@@ -19,61 +19,70 @@ function GrammarArrows() {
         fontVariationSettings: "'GEOM' 25",
         fontWeight: "400",
       }}
+      strokeOpacity={"1"}
       aria-hidden={"true"}
       focusable={"false"}
     >
       <path
         d={"M200 260H392A24 24 0 0 1 392 308H200A24 24 0 0 1 200 260Z"}
-        strokeWidth={"0.95"}
+        strokeWidth={"1"}
         opacity={"1"}
+        strokeOpacity={"0.95"}
       />
       <circle
         cx={"200"}
         cy={"284"}
         r={"9"}
-        strokeWidth={"0.95"}
+        strokeWidth={"1"}
         opacity={"1"}
+        strokeOpacity={"0.95"}
       />
       <circle
         cx={"392"}
         cy={"284"}
         r={"9"}
-        strokeWidth={"0.95"}
+        strokeWidth={"1"}
         opacity={"1"}
+        strokeOpacity={"0.95"}
       />
       <path
         d={"M176 252V92A24 24 0 0 1 224 92V252"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.45"}
         strokeDasharray={"3 5"}
+        strokeOpacity={"0.65"}
       />
       <circle
         cx={"200"}
         cy={"92"}
         r={"9"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.45"}
         strokeDasharray={"3 5"}
+        strokeOpacity={"0.65"}
       />
       <path
         d={
           "M200 104V244M188 92H196M204 92H236M140 284H164M236 284H380M404 284H428"
         }
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.24"}
         strokeDasharray={"8 3 1 3"}
+        strokeOpacity={"0.6"}
       />
       <circle
         cx={"200"}
         cy={"284"}
         r={"2"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <path
         d={"M200 252V220A64 64 0 0 1 264 284"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <text
         x={"240"}
@@ -88,21 +97,24 @@ function GrammarArrows() {
       </text>
       <path
         d={"M200 68A216 216 0 0 1 416 284"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
         strokeDasharray={"4 6"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.65"}
       />
       <path
         d={"M204.242641 63.757359L200 68L204.242641 72.242641"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.65"}
       />
       <path
         d={"M352.735065 131.264935L376 112H400"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <text
         x={"408"}
@@ -126,7 +138,12 @@ function GrammarArrows() {
       >
         {"Proposed"}
       </text>
-      <path d={"M164 162H172"} strokeWidth={"0.65"} opacity={"0.5"} />
+      <path
+        d={"M164 162H172"}
+        strokeWidth={"1"}
+        opacity={"0.5"}
+        strokeOpacity={"0.65"}
+      />
       <text
         x={"308"}
         y={"243"}
@@ -140,13 +157,15 @@ function GrammarArrows() {
       </text>
       <path
         d={"M200 320V372M392 320V372"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.24"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M200 364H280.0M312.0 364H392M196 368L204 360M388 368L396 360"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <text
         x={"296.0"}
@@ -163,8 +182,9 @@ function GrammarArrows() {
         d={
           "M176 316V324M224 316V324M176 324H188M212 324H224M172 328L180 320M220 328L228 320"
         }
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <text
         x={"200"}
@@ -209,61 +229,70 @@ function GrammarCallouts() {
         fontVariationSettings: "'GEOM' 25",
         fontWeight: "400",
       }}
+      strokeOpacity={"1"}
       aria-hidden={"true"}
       focusable={"false"}
     >
       <path
         d={"M200 260H392A24 24 0 0 1 392 308H200A24 24 0 0 1 200 260Z"}
-        strokeWidth={"0.95"}
+        strokeWidth={"1"}
         opacity={"1"}
+        strokeOpacity={"0.95"}
       />
       <circle
         cx={"200"}
         cy={"284"}
         r={"9"}
-        strokeWidth={"0.95"}
+        strokeWidth={"1"}
         opacity={"1"}
+        strokeOpacity={"0.95"}
       />
       <circle
         cx={"392"}
         cy={"284"}
         r={"9"}
-        strokeWidth={"0.95"}
+        strokeWidth={"1"}
         opacity={"1"}
+        strokeOpacity={"0.95"}
       />
       <path
         d={"M176 252V92A24 24 0 0 1 224 92V252"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.45"}
         strokeDasharray={"3 5"}
+        strokeOpacity={"0.65"}
       />
       <circle
         cx={"200"}
         cy={"92"}
         r={"9"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.45"}
         strokeDasharray={"3 5"}
+        strokeOpacity={"0.65"}
       />
       <path
         d={
           "M200 104V244M188 92H196M204 92H236M140 284H164M236 284H380M404 284H428"
         }
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.24"}
         strokeDasharray={"8 3 1 3"}
+        strokeOpacity={"0.6"}
       />
       <circle
         cx={"200"}
         cy={"284"}
         r={"2"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <path
         d={"M200 252V220A64 64 0 0 1 264 284"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <text
         x={"240"}
@@ -278,20 +307,23 @@ function GrammarCallouts() {
       </text>
       <path
         d={"M200 68A216 216 0 0 1 416 284"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
         strokeDasharray={"4 6"}
+        strokeOpacity={"0.65"}
       />
       <path
         d={"M204.242641 63.757359L200 68L204.242641 72.242641"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <path
         data-grammar-focus={"true"}
         d={"M352.735065 131.264935L376 112H400"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <text
         data-grammar-focus={"true"}
@@ -316,7 +348,12 @@ function GrammarCallouts() {
       >
         {"Proposed"}
       </text>
-      <path d={"M164 162H172"} strokeWidth={"0.65"} opacity={"0.5"} />
+      <path
+        d={"M164 162H172"}
+        strokeWidth={"1"}
+        opacity={"0.5"}
+        strokeOpacity={"0.65"}
+      />
       <text
         x={"308"}
         y={"243"}
@@ -330,13 +367,15 @@ function GrammarCallouts() {
       </text>
       <path
         d={"M200 320V372M392 320V372"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.24"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M200 364H280.0M312.0 364H392M196 368L204 360M388 368L396 360"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <text
         x={"296.0"}
@@ -353,8 +392,9 @@ function GrammarCallouts() {
         d={
           "M176 316V324M224 316V324M176 324H188M212 324H224M172 328L180 320M220 328L228 320"
         }
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <text
         x={"200"}
@@ -400,6 +440,7 @@ function GrammarCenterlines() {
         fontSynthesis: "none",
         fontVariationSettings: '"GEOM" 25',
       }}
+      strokeOpacity={"1"}
       aria-hidden={"true"}
       focusable={"false"}
     >
@@ -409,8 +450,8 @@ function GrammarCenterlines() {
         r={"132"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.95"}
-        strokeOpacity={"1"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.95"}
       />
       <circle
         cx={"280"}
@@ -418,8 +459,8 @@ function GrammarCenterlines() {
         r={"40"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.95"}
-        strokeOpacity={"1"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.95"}
       />
       <path
         d={
@@ -427,8 +468,8 @@ function GrammarCenterlines() {
         }
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.95"}
-        strokeOpacity={"1"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.95"}
       />
       <path
         d={
@@ -436,8 +477,8 @@ function GrammarCenterlines() {
         }
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.95"}
-        strokeOpacity={"1"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.95"}
       />
       <path
         d={
@@ -445,8 +486,8 @@ function GrammarCenterlines() {
         }
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.95"}
-        strokeOpacity={"1"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.95"}
       />
       <path
         d={
@@ -454,8 +495,8 @@ function GrammarCenterlines() {
         }
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.95"}
-        strokeOpacity={"1"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.95"}
       />
       <path
         d={
@@ -463,8 +504,8 @@ function GrammarCenterlines() {
         }
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.95"}
-        strokeOpacity={"1"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.95"}
       />
       <path
         d={
@@ -472,8 +513,8 @@ function GrammarCenterlines() {
         }
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.95"}
-        strokeOpacity={"1"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.95"}
       />
       <circle
         cx={"280"}
@@ -481,8 +522,8 @@ function GrammarCenterlines() {
         r={"92"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.6"}
-        strokeOpacity={"0.24"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.144"}
         strokeDasharray={"8 3 1 3"}
         data-grammar-focus={"true"}
       />
@@ -490,8 +531,8 @@ function GrammarCenterlines() {
         d={"M280 62L280 214M280 226L280 378"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.6"}
-        strokeOpacity={"0.24"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.144"}
         strokeDasharray={"8 3 1 3"}
         data-grammar-focus={"true"}
       />
@@ -499,8 +540,8 @@ function GrammarCenterlines() {
         d={"M416.832014 141L285.196152 217M274.803848 223L143.167986 299"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.6"}
-        strokeOpacity={"0.24"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.144"}
         strokeDasharray={"8 3 1 3"}
         data-grammar-focus={"true"}
       />
@@ -508,8 +549,8 @@ function GrammarCenterlines() {
         d={"M416.832014 299L285.196152 223M274.803848 217L143.167986 141"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.6"}
-        strokeOpacity={"0.24"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.144"}
         strokeDasharray={"8 3 1 3"}
         data-grammar-focus={"true"}
       />
@@ -519,16 +560,16 @@ function GrammarCenterlines() {
         r={"2.5"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.65"}
-        strokeOpacity={"0.5"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.325"}
         data-grammar-focus={"true"}
       />
       <path
         d={"M280 165A55 55 0 0 1 327.631397 192.5"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.65"}
-        strokeOpacity={"0.5"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.325"}
       />
       <text
         x={"317"}
@@ -545,15 +586,15 @@ function GrammarCenterlines() {
         d={"M452 220L372 220"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.65"}
-        strokeOpacity={"0.5"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.325"}
       />
       <path
         d={"M376.242641 224.242641L372 220L376.242641 215.757359"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.65"}
-        strokeOpacity={"0.5"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.325"}
       />
       <text
         x={"462"}
@@ -570,29 +611,29 @@ function GrammarCenterlines() {
         d={"M148 220V380M412 220V380"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.6"}
-        strokeOpacity={"0.24"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.144"}
       />
       <path
         d={"M148 372H265.0M295.0 372H412"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.65"}
-        strokeOpacity={"0.5"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.325"}
       />
       <path
         d={"M144 376l8 -8"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.65"}
-        strokeOpacity={"0.5"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.325"}
       />
       <path
         d={"M408 376l8 -8"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.65"}
-        strokeOpacity={"0.5"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.325"}
       />
       <text
         x={"280"}
@@ -638,6 +679,7 @@ function GrammarDimensions() {
         fontSynthesis: "none",
         fontVariationSettings: '"GEOM" 25',
       }}
+      strokeOpacity={"1"}
       aria-hidden={"true"}
       focusable={"false"}
     >
@@ -647,22 +689,22 @@ function GrammarDimensions() {
         }
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.95"}
-        strokeOpacity={"1"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.95"}
       />
       <path
         d={"M400 248A120 120 0 1 1 280 128M360 248A80 80 0 1 1 280 168"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.6"}
-        strokeOpacity={"0.24"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.144"}
       />
       <path
         d={"M280 104V124M280 134V242M280 254V388M136 248H274M286 248H428"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.6"}
-        strokeOpacity={"0.24"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.144"}
         strokeDasharray={"8 3 1 3"}
       />
       <circle
@@ -671,40 +713,40 @@ function GrammarDimensions() {
         r={"2.5"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.65"}
-        strokeOpacity={"0.5"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.325"}
         data-grammar-focus={"true"}
       />
       <path
         d={"M120 116V72M400 236V72"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.6"}
-        strokeOpacity={"0.24"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.144"}
         data-grammar-focus={"true"}
       />
       <path
         d={"M120 80H251.0M269.0 80H400"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.65"}
-        strokeOpacity={"0.5"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.325"}
         data-grammar-focus={"true"}
       />
       <path
         d={"M116 84l8 -8"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.65"}
-        strokeOpacity={"0.5"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.325"}
         data-grammar-focus={"true"}
       />
       <path
         d={"M396 84l8 -8"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.65"}
-        strokeOpacity={"0.5"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.325"}
         data-grammar-focus={"true"}
       />
       <text
@@ -723,32 +765,32 @@ function GrammarDimensions() {
         d={"M360 352V388M400 352V388"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.6"}
-        strokeOpacity={"0.24"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.144"}
         data-grammar-focus={"true"}
       />
       <path
         d={"M360 380H371.0M389.0 380H400"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.65"}
-        strokeOpacity={"0.5"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.325"}
         data-grammar-focus={"true"}
       />
       <path
         d={"M356 384l8 -8"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.65"}
-        strokeOpacity={"0.5"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.325"}
         data-grammar-focus={"true"}
       />
       <path
         d={"M396 384l8 -8"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.65"}
-        strokeOpacity={"0.5"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.325"}
         data-grammar-focus={"true"}
       />
       <text
@@ -767,16 +809,16 @@ function GrammarDimensions() {
         d={"M281.767767 246.232233L364.852814 163.147186"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.65"}
-        strokeOpacity={"0.5"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.325"}
         data-grammar-focus={"true"}
       />
       <path
         d={"M358.852814 163.147186L364.852814 163.147186L364.852814 169.147186"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.65"}
-        strokeOpacity={"0.5"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.325"}
         data-grammar-focus={"true"}
       />
       <text
@@ -820,8 +862,8 @@ function GrammarDimensions() {
         r={"2.5"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.65"}
-        strokeOpacity={"0.5"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.325"}
       />
       <circle
         cx={"400"}
@@ -829,8 +871,8 @@ function GrammarDimensions() {
         r={"2.5"}
         fill={"none"}
         stroke={"currentColor"}
-        strokeWidth={"0.65"}
-        strokeOpacity={"0.5"}
+        strokeWidth={"1"}
+        strokeOpacity={"0.325"}
       />
     </svg>
   );
@@ -853,220 +895,256 @@ function GrammarGrids() {
         fontVariationSettings: "'GEOM' 25",
         fontWeight: "400",
       }}
+      strokeOpacity={"1"}
       aria-hidden={"true"}
       focusable={"false"}
     >
       <path
         d={"M152 64L152 368"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M184 64L184 96"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M184 352L184 360"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M216 64L216 128"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M216 256L216 288"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M216 352L216 360"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M248 64L248 368"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M280 64L280 188"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M280 196L280 368"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M312 64L312 368"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M344 64L344 368"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M376 64L376 368"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M408 64L408 368"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M152 64L408 64"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M176 96L184 96"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M280 96L408 96"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M152 128L216 128"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M280 128L312 128"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M336 128L408 128"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M152 160L408 160"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M152 192L276 192"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M284 192L408 192"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M152 224L408 224"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M152 256L216 256"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M280 256L408 256"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M152 288L216 288"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M280 288L408 288"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M152 320L408 320"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M176 352L184 352"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M216 352L408 352"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={
           "M184 96L184 352M184 360L184 368M216 128L216 256M216 288L216 352M216 360L216 368M280 188L280 196M152 96L176 96M184 96L280 96M216 128L280 128M312 128L336 128M276 192L284 192M216 256L280 256M216 288L280 288M152 352L176 352M184 352L216 352"
         }
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.1"}
         data-grammar-focus={"true"}
         data-grammar-isolation-only={"true"}
         visibility={"hidden"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={
           "M184 96H280A96 96 0 0 1 280 288H216V352H184Z M216 128H280A64 64 0 0 1 280 256H216Z"
         }
-        strokeWidth={"0.95"}
+        strokeWidth={"1"}
         opacity={"1"}
+        strokeOpacity={"0.95"}
       />
       <path
         d={"M280 188V196M276 192H284"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.24"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M280 192L347.88225099390854 124.11774900609144"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <path
         d={"M341.882251 124.117749H347.882251V130.117749"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <text
         x={"323"}
@@ -1081,8 +1159,9 @@ function GrammarGrids() {
       </text>
       <path
         d={"M280 192L325.25483399593907 237.25483399593904"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <text
         x={"316"}
@@ -1099,8 +1178,9 @@ function GrammarGrids() {
         d={
           "M176 96H104M176 352H104M112 96V208M112 240V352M108 100L116 92M108 356L116 348"
         }
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <text
         x={"112"}
@@ -1117,8 +1197,9 @@ function GrammarGrids() {
         d={
           "M184 360V392M216 360V392M184 384H216M180 388L188 380M212 388L220 380"
         }
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <text
         x={"200"}
@@ -1164,6 +1245,7 @@ function GrammarHatching() {
         fontVariationSettings: "'GEOM' 25",
         fontWeight: "400",
       }}
+      strokeOpacity={"1"}
       aria-hidden={"true"}
       focusable={"false"}
     >
@@ -1182,16 +1264,22 @@ function GrammarHatching() {
         d={
           "M140 100L420 -180M140 112L420 -168M140 124L420 -156M140 136L420 -144M140 148L420 -132M140 160L420 -120M140 172L420 -108M140 184L420 -96M140 196L420 -84M140 208L420 -72M140 220L420 -60M140 232L420 -48M140 244L420 -36M140 256L420 -24M140 268L420 -12M140 280L420 0M140 292L420 12M140 304L420 24M140 316L420 36M140 328L420 48M140 340L420 60M140 352L420 72M140 364L420 84M140 376L420 96M140 388L420 108M140 400L420 120M140 412L420 132M140 424L420 144M140 436L420 156M140 448L420 168M140 460L420 180M140 472L420 192M140 484L420 204M140 496L420 216M140 508L420 228M140 520L420 240M140 532L420 252M140 544L420 264M140 556L420 276M140 568L420 288M140 580L420 300M140 592L420 312M140 604L420 324M140 616L420 336M140 628L420 348"
         }
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.27"}
         clipPath={`url(#${id}-grammar-hatching-blade-region)`}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.65"}
       />
-      <g strokeWidth={"0.6"} opacity={"0.24"} strokeDasharray={"8 3 1 3"}>
+      <g
+        strokeWidth={"1"}
+        opacity={"0.24"}
+        strokeDasharray={"8 3 1 3"}
+        strokeOpacity={"0.6"}
+      >
         <circle cx={"280"} cy={"220"} r={"40"} />
         <path d={"M136 220H277M328 220H424M280 84V217M280 223V356"} />
       </g>
-      <g strokeWidth={"0.95"}>
+      <g strokeWidth={"1"} strokeOpacity={"0.95"}>
         <circle cx={"280"} cy={"220"} r={"120"} />
         <path
           d={
@@ -1199,7 +1287,7 @@ function GrammarHatching() {
           }
         />
       </g>
-      <g strokeWidth={"0.65"} opacity={"0.5"}>
+      <g strokeWidth={"1"} opacity={"0.5"} strokeOpacity={"0.65"}>
         <circle cx={"280"} cy={"220"} r={"3"} />
         <path
           d={
@@ -1250,10 +1338,11 @@ function GrammarOutlines() {
         fontVariationSettings: "'GEOM' 25",
         fontWeight: "400",
       }}
+      strokeOpacity={"1"}
       aria-hidden={"true"}
       focusable={"false"}
     >
-      <g strokeWidth={"0.6"} opacity={"0.24"}>
+      <g strokeWidth={"1"} opacity={"0.24"} strokeOpacity={"0.6"}>
         <path
           d={
             "M136 152V236M184 152V236M208 180V236M328 180V236M352 180V236M424 180V236"
@@ -1271,12 +1360,12 @@ function GrammarOutlines() {
           }
         />
       </g>
-      <g strokeWidth={"0.95"} data-grammar-focus={"true"}>
+      <g strokeWidth={"1"} data-grammar-focus={"true"} strokeOpacity={"0.95"}>
         <circle cx={"160"} cy={"144"} r={"24"} />
         <rect x={"352"} y={"116"} width={"72"} height={"24"} rx={"12"} />
         <rect x={"352"} y={"148"} width={"72"} height={"24"} rx={"12"} />
       </g>
-      <g strokeWidth={"0.65"} opacity={"0.5"}>
+      <g strokeWidth={"1"} opacity={"0.5"} strokeOpacity={"0.65"}>
         <circle cx={"160"} cy={"137"} r={"5"} data-grammar-focus={"true"} />
         <path d={"M148 156A12 12 0 0 1 172 156"} data-grammar-focus={"true"} />
         <path d={"M208 168V176M208 172H328M328 168V176"} />
@@ -1309,7 +1398,7 @@ function GrammarOutlines() {
           {"Tools"}
         </text>
       </g>
-      <g strokeWidth={"0.65"} opacity={"0.5"}>
+      <g strokeWidth={"1"} opacity={"0.5"} strokeOpacity={"0.65"}>
         <path d={"M268 212V186"} strokeDasharray={"4 6"} />
         <path d={"M263.757359 207.757359L268 212L272.242641 207.757359"} />
       </g>
@@ -1324,13 +1413,18 @@ function GrammarOutlines() {
       >
         {"Registered agent"}
       </text>
-      <g strokeWidth={"0.95"} data-grammar-focus={"true"}>
+      <g strokeWidth={"1"} data-grammar-focus={"true"} strokeOpacity={"0.95"}>
         <rect x={"112"} y={"244"} width={"336"} height={"96"} rx={"12"} />
         <circle cx={"160"} cy={"292"} r={"24"} />
         <rect x={"352"} y={"264"} width={"72"} height={"24"} rx={"12"} />
         <rect x={"352"} y={"296"} width={"72"} height={"24"} rx={"12"} />
       </g>
-      <g strokeWidth={"0.65"} opacity={"0.5"} data-grammar-focus={"true"}>
+      <g
+        strokeWidth={"1"}
+        opacity={"0.5"}
+        data-grammar-focus={"true"}
+        strokeOpacity={"0.65"}
+      >
         <circle cx={"160"} cy={"285"} r={"5"} />
         <path d={"M148 304A12 12 0 0 1 172 304"} />
       </g>
@@ -1356,7 +1450,7 @@ function GrammarOutlines() {
       >
         {"agent_07"}
       </text>
-      <g strokeWidth={"0.65"} opacity={"0.5"}>
+      <g strokeWidth={"1"} opacity={"0.5"} strokeOpacity={"0.65"}>
         <path
           d={
             "M112 348V398M448 348V398M112 390H264M296 390H448M108 394L116 386M444 394L452 386"
@@ -1411,10 +1505,11 @@ function GrammarProjections() {
         fontVariationSettings: "'GEOM' 25",
         fontWeight: "400",
       }}
+      strokeOpacity={"1"}
       aria-hidden={"true"}
       focusable={"false"}
     >
-      <g strokeWidth={"0.95"}>
+      <g strokeWidth={"1"} strokeOpacity={"0.95"}>
         <rect x={"112"} y={"116"} width={"336"} height={"64"} rx={"12"} />
         <path
           d={
@@ -1425,8 +1520,13 @@ function GrammarProjections() {
           d={"M268 272H448A12 12 0 0 1 460 284V324A12 12 0 0 1 448 336H268Z"}
         />
       </g>
-      <path d={"M256 116V180"} strokeWidth={"0.65"} opacity={"0.5"} />
-      <g strokeWidth={"0.6"} opacity={"0.24"}>
+      <path
+        d={"M256 116V180"}
+        strokeWidth={"1"}
+        opacity={"0.5"}
+        strokeOpacity={"0.65"}
+      />
+      <g strokeWidth={"1"} opacity={"0.24"} strokeOpacity={"0.6"}>
         <path
           d={
             "M110.9565 188L101.0435 264M254.9565 188L245.0435 264M257.0435 188L266.9565 264M449.0435 188L458.9565 264"
@@ -1439,7 +1539,7 @@ function GrammarProjections() {
           }
         />
       </g>
-      <g strokeWidth={"0.65"} opacity={"0.5"}>
+      <g strokeWidth={"1"} opacity={"0.5"} strokeOpacity={"0.65"}>
         <path d={"M172 246V210M364 246V210"} strokeDasharray={"4 6"} />
         <path
           d={
@@ -1476,7 +1576,7 @@ function GrammarProjections() {
           {"Agent 02"}
         </text>
       </g>
-      <g strokeWidth={"0.65"} opacity={"0.5"}>
+      <g strokeWidth={"1"} opacity={"0.5"} strokeOpacity={"0.65"}>
         <path
           d={
             "M112 108V60M448 108V60M112 68H264M296 68H448M108 72L116 64M444 72L452 64"
@@ -1526,6 +1626,7 @@ function GrammarStates() {
         fontVariationSettings: "'GEOM' 25",
         fontWeight: "400",
       }}
+      strokeOpacity={"1"}
       aria-hidden={"true"}
       focusable={"false"}
     >
@@ -1535,101 +1636,116 @@ function GrammarStates() {
         width={"336"}
         height={"248"}
         rx={"16"}
-        strokeWidth={"0.95"}
+        strokeWidth={"1"}
         opacity={"1"}
+        strokeOpacity={"0.95"}
       />
       <circle
         cx={"144"}
         cy={"128"}
         r={"6"}
-        strokeWidth={"0.95"}
+        strokeWidth={"1"}
         opacity={"1"}
+        strokeOpacity={"0.95"}
       />
       <path
         d={"M132 128H136M152 128H156M144 116V120M144 136V140"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.24"}
+        strokeOpacity={"0.6"}
       />
       <circle
         cx={"144"}
         cy={"312"}
         r={"6"}
-        strokeWidth={"0.95"}
+        strokeWidth={"1"}
         opacity={"1"}
+        strokeOpacity={"0.95"}
       />
       <path
         d={"M132 312H136M152 312H156M144 300V304M144 320V324"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.24"}
+        strokeOpacity={"0.6"}
       />
       <circle
         cx={"416"}
         cy={"128"}
         r={"6"}
-        strokeWidth={"0.95"}
+        strokeWidth={"1"}
         opacity={"1"}
+        strokeOpacity={"0.95"}
       />
       <path
         d={"M404 128H408M424 128H428M416 116V120M416 136V140"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.24"}
+        strokeOpacity={"0.6"}
       />
       <circle
         cx={"416"}
         cy={"312"}
         r={"6"}
-        strokeWidth={"0.95"}
+        strokeWidth={"1"}
         opacity={"1"}
+        strokeOpacity={"0.95"}
       />
       <path
         d={"M404 312H408M424 312H428M416 300V304M416 320V324"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.24"}
+        strokeOpacity={"0.6"}
       />
       <circle
         cx={"280"}
         cy={"220"}
         r={"52"}
-        strokeWidth={"0.95"}
+        strokeWidth={"1"}
         opacity={"1"}
+        strokeOpacity={"0.95"}
       />
       <path
         d={
           "M184 124H280A96 96 0 0 1 280 316H184A8 8 0 0 1 184 300H280A80 80 0 0 0 280 140H184A8 8 0 0 1 184 124Z"
         }
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.45"}
         strokeDasharray={"3 5"}
         data-grammar-focus={"true"}
+        strokeOpacity={"0.65"}
       />
       <circle
         cx={"184"}
         cy={"132"}
         r={"3.5"}
-        strokeWidth={"0.95"}
+        strokeWidth={"1"}
         opacity={"1"}
+        strokeOpacity={"0.95"}
       />
       <circle
         cx={"184"}
         cy={"308"}
         r={"3.5"}
-        strokeWidth={"0.95"}
+        strokeWidth={"1"}
         opacity={"1"}
+        strokeOpacity={"0.95"}
       />
       <path
         d={
           "M280 156V168M280 180V208M280 232V260M280 272V284M216 220H228M240 220H268M292 220H320M332 220H344"
         }
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.24"}
         strokeDasharray={"8 3 1 3"}
+        strokeOpacity={"0.6"}
       />
       <circle
         cx={"280"}
         cy={"220"}
         r={"2"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <text
         x={"184"}
@@ -1655,8 +1771,9 @@ function GrammarStates() {
       </text>
       <path
         d={"M376 220H400L420 200H448"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <text
         x={"456"}
@@ -1680,11 +1797,17 @@ function GrammarStates() {
       >
         {"rear channel"}
       </text>
-      <path d={"M112 88V52M448 88V52"} strokeWidth={"0.6"} opacity={"0.24"} />
+      <path
+        d={"M112 88V52M448 88V52"}
+        strokeWidth={"1"}
+        opacity={"0.24"}
+        strokeOpacity={"0.6"}
+      />
       <path
         d={"M112 60H264.0M296.0 60H448M108 64L116 56M444 64L452 56"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <text
         x={"280.0"}
@@ -1699,13 +1822,15 @@ function GrammarStates() {
       </text>
       <path
         d={"M280 220L316.769553 183.230447"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <path
         d={"M310.769553 183.230447H316.769553V189.230447"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <text
         x={"309"}
@@ -1720,13 +1845,15 @@ function GrammarStates() {
       </text>
       <path
         d={"M128 352V388M432 352V388"}
-        strokeWidth={"0.6"}
+        strokeWidth={"1"}
         opacity={"0.24"}
+        strokeOpacity={"0.6"}
       />
       <path
         d={"M128 380H264.0M296.0 380H432M124 384L132 376M428 384L436 376"}
-        strokeWidth={"0.65"}
+        strokeWidth={"1"}
         opacity={"0.5"}
+        strokeOpacity={"0.65"}
       />
       <text
         x={"280.0"}

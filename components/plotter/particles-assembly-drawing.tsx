@@ -140,7 +140,8 @@ function FragmentOutline({
   return (
     <g
       data-fragment-outline={part}
-      strokeWidth="0.95"
+      strokeWidth="1"
+      strokeOpacity="0.95"
       strokeLinecap="butt"
       strokeLinejoin="miter"
     >
@@ -182,7 +183,7 @@ function FragmentOutline({
                 />
                 <Motion
                   index={index}
-                  attributeName="stroke-width"
+                  attributeName="stroke-opacity"
                   frames={[
                     [0, 0.95],
                     [contact, 0.95],
@@ -236,7 +237,8 @@ function Fragment({
         height={module.height}
         rx={module.radius}
         opacity="0"
-        strokeWidth="0.65"
+        strokeWidth="1"
+        strokeOpacity="0.65"
         strokeDasharray="4 6"
       >
         <Motion
@@ -313,7 +315,12 @@ function Fragment({
 
 function Receiver({ assembly, index }: { assembly: Assembly; index: number }) {
   return (
-    <g data-receiver="" strokeDasharray="4 6" strokeWidth="0.65">
+    <g
+      data-receiver=""
+      strokeDasharray="4 6"
+      strokeWidth="1"
+      strokeOpacity="0.65"
+    >
       {parts.map((part) => {
         const module = assembly.modules[part];
         const final = outlineAt(
@@ -419,7 +426,12 @@ function Construction({ assembly }: { assembly: Assembly }) {
   const bottom = frame.y + frame.height + 20;
   return (
     <>
-      <g data-construction="source-grid" opacity="0.08" strokeWidth="0.6">
+      <g
+        data-construction="source-grid"
+        opacity="0.08"
+        strokeWidth="1"
+        strokeOpacity="0.6"
+      >
         <path d="M68 84H492 M68 164H492" />
         {modules.flatMap((module, part) => {
           const x = 140 + part * 140 - module.width / 2;
@@ -432,7 +444,12 @@ function Construction({ assembly }: { assembly: Assembly }) {
         })}
       </g>
       {/* Each field is fixed; all guides stop outside the assembled content. */}
-      <g data-construction="assembly-grid" opacity="0.08" strokeWidth="0.6">
+      <g
+        data-construction="assembly-grid"
+        opacity="0.08"
+        strokeWidth="1"
+        strokeOpacity="0.6"
+      >
         <path d={`M${left} ${top}H${right}V${bottom}H${left}Z`} />
         {Array.from(
           { length: Math.floor(frame.width / assembly.unit) + 1 },
@@ -447,7 +464,7 @@ function Construction({ assembly }: { assembly: Assembly }) {
           d={`M${left - 8} ${frame.y}H${left + 12} M${right - 12} ${frame.y}H${right + 8} M${left - 8} ${bottom - 20}H${left + 12} M${right - 12} ${bottom - 20}H${right + 8}`}
         />
       </g>
-      <g opacity="0.32" strokeWidth="0.65">
+      <g opacity="0.32" strokeWidth="1" strokeOpacity="0.65">
         {[140, 280, 420].map((x) => (
           <g key={x}>
             <path d={`M${x} 198V176`} strokeDasharray="3 5" />

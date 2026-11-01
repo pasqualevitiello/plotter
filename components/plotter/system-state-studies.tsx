@@ -24,12 +24,14 @@ function CloudGap({ dash }: { dash: string }) {
         d="M272 236V200 M288 236V200 M272 236H288"
         opacity="0.38"
         strokeDasharray={dash}
-        strokeWidth="0.75"
+        strokeWidth="1"
+        strokeOpacity="0.75"
       />
       <path
         d="M267 273 293 263 M267 241 293 231"
         opacity="0.72"
-        strokeWidth="0.8"
+        strokeWidth="1"
+        strokeOpacity="0.8"
       />
     </>
   );
@@ -38,10 +40,10 @@ function CloudGap({ dash }: { dash: string }) {
 function OfflineStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.12" strokeWidth="0.6">
+      <g opacity="0.12" strokeWidth="1" strokeOpacity="0.6">
         <path d="M188 200H372 M240 280V360 M120 328H256 M120 344H256" />
       </g>
-      <g opacity="0.28" strokeWidth="0.65">
+      <g opacity="0.28" strokeWidth="1" strokeOpacity="0.65">
         <path
           d="M232.87 142.9A30 30 0 0 1 220 200 M323.61 131.94A48 48 0 1 1 232.87 142.9 M340 200A36 36 0 0 1 323.61 131.94"
           strokeDasharray="3 6"
@@ -53,11 +55,11 @@ function OfflineStudy() {
         <path d="M214 170H226 M220 164V176 M274 152H286 M280 146V158 M334 164H346 M340 158V170 M234 296H246 M240 290V302" />
         <path d="M136 336H240A40 40 0 0 0 280 296V276" strokeDasharray="3 5" />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <CloudForm />
       </g>
       <CloudGap dash="3 5" />
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path d="M240 296 268.28 324.28m-6 0h6v-6" />
         <path d="M296 268H322 M296 236H322" />
         <VerticalDimension label="32" x={328} y1={236} y2={268} />
@@ -119,11 +121,11 @@ function AccessStudy() {
   return (
     <BlueprintDrawing>
       <g transform="translate(0 -24)">
-        <g opacity="0.12" strokeWidth="0.6">
+        <g opacity="0.12" strokeWidth="1" strokeOpacity="0.6">
           <path d="M208 224H368 M208 336H368 M224 208V356 M352 208V356" />
           <path d="M272 252V308H304V252Z" />
         </g>
-        <g opacity="0.3" strokeWidth="0.65">
+        <g opacity="0.3" strokeWidth="1" strokeOpacity="0.65">
           <path d="M288 116V204 M232 176H344" strokeDasharray="4 6" />
           <path d="M248 176A40 40 0 0 0 328 176" strokeDasharray="3 6" />
           <path d="M224 240A16 16 0 1 0 240 224" strokeDasharray="3 5" />
@@ -133,14 +135,14 @@ function AccessStudy() {
           />
           <path d="M272 270H278 M298 270H304 M284 252V258 M292 252V258 M284 304V308 M292 304V308" />
         </g>
-        <g opacity="0.5" strokeWidth="0.65">
+        <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
           <LockInset />
         </g>
-        <g strokeWidth="0.95">
+        <g strokeWidth="1" strokeOpacity="0.95">
           <AccessRoute dash="3 5" />
           <LockForm />
         </g>
-        <g opacity="0.5" strokeWidth="0.65">
+        <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
           <path d="M208 280H160" strokeDasharray="4 6" />
           <path d="M203.76 275.76 208 280 203.76 284.24" />
           <path d="M288 176 316.28 147.72m-6 0h6v6" />
@@ -216,20 +218,20 @@ function EnvelopeFolds({ dash }: { dash: string }) {
 function EmailStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.12" strokeWidth="0.6">
+      <g opacity="0.12" strokeWidth="1" strokeOpacity="0.6">
         <path d="M144 88H416 M160 72V160 M400 72V160 M144 168H152 M408 168H424" />
         <path d="M144 312H416" />
       </g>
-      <g opacity="0.28" strokeWidth="0.65">
+      <g opacity="0.28" strokeWidth="1" strokeOpacity="0.65">
         <path d="M280 72V80 M280 96V240 M280 256V320" strokeDasharray="4 6" />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <EnvelopeForm />
       </g>
-      <g strokeWidth="0.65">
+      <g strokeWidth="1" strokeOpacity="0.65">
         <EnvelopeFolds dash="3 5" />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path d="M160 320V358 M400 320V358" />
         <HorizontalDimension label="3u" x1={160} x2={400} y={352} />
         <path d="M408 88H446 M408 168H446 M408 248H446" opacity="0.6" />
@@ -347,7 +349,7 @@ function GearsForm() {
 function MaintenanceStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.24" strokeWidth="0.6">
+      <g opacity="0.24" strokeWidth="1" strokeOpacity="0.6">
         {gears.map((gear) => (
           <g key={gear.teeth}>
             <circle
@@ -366,10 +368,10 @@ function MaintenanceStudy() {
           strokeDasharray="8 3 1 3"
         />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <GearsForm />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path d="M246 208V308 M294 208V308 M246 186v12 M294 186v12" />
         <HorizontalDimension label="48" x1={246} x2={294} y={314} />
       </g>
@@ -395,7 +397,8 @@ function MaintenanceCompact() {
         d="M254 192H286"
         opacity="0.24"
         strokeDasharray="8 3 1 3"
-        strokeWidth="0.6"
+        strokeWidth="1"
+        strokeOpacity="0.6"
       />
     </CompactBlueprintDrawing>
   );
@@ -434,11 +437,11 @@ function CoordinateField({
 function LocationStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.12" strokeWidth="0.6">
+      <g opacity="0.12" strokeWidth="1" strokeOpacity="0.6">
         <path d="M144 176H256 M352 176H448 M264 120V224 M344 120V224" />
         <path d="M144 216H256 M352 216H448" />
       </g>
-      <g opacity="0.3" strokeWidth="0.65">
+      <g opacity="0.3" strokeWidth="1" strokeOpacity="0.65">
         <path
           d="M269.99 197.05A40 40 0 0 0 338.01 197.05"
           strokeDasharray="3 6"
@@ -448,13 +451,13 @@ function LocationStudy() {
           strokeDasharray="4 6"
         />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <PinForm />
       </g>
-      <g strokeWidth="0.75">
+      <g strokeWidth="1" strokeOpacity="0.75">
         <CoordinateField arrowheads dash="3 5" />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path d="M304 264V256" />
         <path d="M299.76 259.76 304 264 308.24 259.76" />
         <path d="M313.9 166.1 332.28 147.72m-6 0h6v6" />

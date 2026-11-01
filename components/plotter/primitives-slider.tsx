@@ -31,7 +31,12 @@ export function SliderGridMask() {
         repeatCount="indefinite"
         values="0;1;1;0;0"
       />
-      <path d={travelGuides} stroke="black" strokeWidth="1.3" />
+      <path
+        d={travelGuides}
+        stroke="black"
+        strokeWidth="1.3"
+        strokeOpacity="1"
+      />
     </g>
   );
 }
@@ -39,11 +44,23 @@ export function SliderGridMask() {
 export function SliderConstruction() {
   return (
     <g>
-      <g opacity="0.38" strokeDasharray="4 4" strokeWidth="0.65">
+      <g
+        opacity="0.38"
+        strokeDasharray="4 4"
+        strokeWidth="1"
+        strokeOpacity="0.65"
+      >
         <path d={travelGuides} />
         <circle cx="204" cy="204" r="40" />
       </g>
-      <circle cx="204" cy="204" fill="none" r="40" strokeWidth="1">
+      <circle
+        cx="204"
+        cy="204"
+        fill="none"
+        r="40"
+        strokeWidth="1"
+        strokeOpacity="1"
+      >
         <ConstructionMotion
           attributeName="cx"
           delay={0.3}

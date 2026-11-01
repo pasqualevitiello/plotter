@@ -8,7 +8,7 @@ const radiusEndpoint = { x: 284 + radiusDiagonal, y: 204 - radiusDiagonal };
 export function PrimitivesBlueprint() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.09" strokeWidth="0.6">
+      <g opacity="0.09" strokeWidth="1" strokeOpacity="0.6">
         {gridCoordinates.map((coordinate) => (
           <path
             d={`M${coordinate} 68V348 M124 ${coordinate - 80}H444`}
@@ -17,7 +17,7 @@ export function PrimitivesBlueprint() {
         ))}
       </g>
 
-      <g opacity="0.24" strokeWidth="0.65">
+      <g opacity="0.24" strokeWidth="1" strokeOpacity="0.65">
         <path d="M164 54V368 M404 54V368 M104 84H464 M104 324H464" />
         <path d="M116 372 452 36" opacity="0.48" />
         <path d="M284 42V372 M90 204H478" strokeDasharray="5 5" />
@@ -30,18 +30,18 @@ export function PrimitivesBlueprint() {
         fillOpacity="0.035"
         stroke="none"
       />
-      <g opacity="0.27" strokeWidth="0.65">
+      <g opacity="0.27" strokeWidth="1" strokeOpacity="0.65">
         <path d="M164 228 166.03 225.97 M164 240 168.27 235.73 M164 252 171.16 244.84 M164 264 174.63 253.37 M164 276 178.61 261.39 M164 288 183.08 268.92 M164 300 188 276 M164 312 193.36 282.64 M164 324 199.15 288.85 M176 324 205.36 294.64 M188 324 212 300 M200 324 219.08 304.92 M212 324 226.61 309.39 M224 324 234.63 313.37 M236 324 243.16 316.84 M248 324 252.27 319.73 M260 324 262.03 321.97" />
       </g>
 
-      <g strokeWidth="1">
+      <g strokeWidth="1" strokeOpacity="1">
         <path d="M164 204V84H404V324H284" />
         <circle cx="284" cy="204" r="120" />
         <path d="M164 204V324H284" opacity="0.45" />
         <path d="M164 324 404 84" opacity="0.65" />
       </g>
 
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path
           d={`M284 204H404 M284 204 ${radiusEndpoint.x} ${radiusEndpoint.y}`}
         />
@@ -58,7 +58,7 @@ export function PrimitivesBlueprint() {
         <path d="M164 270H106L90 286 M404 124H455L471 108" />
       </g>
 
-      <g fill="var(--color-sidebar)" strokeWidth="0.8">
+      <g fill="var(--color-sidebar)" strokeWidth="1" strokeOpacity="0.8">
         <circle cx="284" cy="204" r="3" />
         <circle cx="164" cy="204" r="2.5" />
         <circle cx="284" cy="324" r="2.5" />
@@ -89,7 +89,7 @@ export function PrimitivesBlueprint() {
         </text>
       </g>
 
-      <g opacity="0.4" strokeWidth="0.65">
+      <g opacity="0.4" strokeWidth="1" strokeOpacity="0.65">
         <path d="M76 82h12 M82 76v12 M470 340h12 M476 334v12" />
         <path d="M266 401h36 M284 395v12" />
       </g>

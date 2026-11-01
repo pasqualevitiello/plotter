@@ -57,7 +57,7 @@ For Claude Code, start the same brief with `/plotter`.
 - `content/docs/` contains the website documentation.
 - `scripts/` contains website adapters and generation scripts. Download artifacts are produced by `bun scripts/build-plotter-downloads.tsx`.
 
-Shared role tokens are adopted by **AGT-01, MEC-05, GEO-11, SYS-06, and CRF-06**. Other catalogue drawings retain their authored appearance; the extraction does not imply a gallery-wide token migration.
+Shared role tokens are adopted by **AGT-01, MEC-05, GEO-11, SYS-06, and CRF-06**. Every current illustration uses 1-unit visible strokes. Other drawings retain their authored opacity and dash patterns; uniform width does not imply a gallery-wide token migration.
 
 Portable output includes resolved static SVG and animated HTML with its required local resources. The skill runs independently of the website. Exact Cal Sans appearance requires the font to be available; SVG text remains editable with a sans-serif fallback.
 

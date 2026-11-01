@@ -8,7 +8,7 @@ The linked **560 × 440** teaching SVGs are included in this package. Open the c
 
 ![The fragments and completed record read first.](grammar/outlines.svg)
 
-Identity, name, and tools assemble into one record. Primary outlines hold the loose fragments and finished form together; quieter face details and construction lines support them. Keep supporting marks subordinate. Giving every stroke equal weight makes the construction compete with the subject.
+Identity, name, and tools assemble into one record. Primary outlines hold the loose fragments and finished form together; quieter face details and construction lines support them. Keep supporting marks subordinate. Giving every stroke equal visual emphasis makes the construction compete with the subject.
 
 An important loose fragment can remain primary even when small.
 

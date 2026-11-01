@@ -45,8 +45,8 @@ CSS variables inherit from the host. Examples:
 ```css
 .illustration {
   --plotter-ink: currentColor;
-  --plotter-stroke-primary: 0.95;
-  --plotter-opacity-guide: 0.24;
+  --plotter-stroke-primary: 1;
+  --plotter-opacity-guide: 0.14;
 }
 ```
 
@@ -64,7 +64,7 @@ python3 scripts/export-svg.py drawing.svg exported.svg \
   --description 'A concise explanation of the relationship.'
 ```
 
-Existing SVG titles/descriptions are used when those arguments are omitted. Optional `--ink '#171717'` selects the output ink; `--token=--plotter-opacity-guide=0.24` supplies an explicit token value. The exporter resolves generated roles at their original grouping level, embeds no application dependency, and prefixes local IDs and their references. It preserves authored inline overrides. Supply the token values needed for an export; a detached SVG cannot read the host's computed theme.
+Existing SVG titles/descriptions are used when those arguments are omitted. Optional `--ink '#171717'` selects the output ink; `--token=--plotter-opacity-guide=0.14` supplies an explicit token value. The exporter resolves generated roles at their original grouping level, embeds no application dependency, and prefixes local IDs and their references. It preserves authored inline overrides. Supply the token values needed for an export; a detached SVG cannot read the host's computed theme.
 
 The output has literal appearance values, local defs, editable labels, native dimensions, and accessible meaning. Cal Sans uses a sans-serif fallback when the font is unavailable. Exact typography needs the same font; no font download is required. The exporter accepts Plotter's generated stylesheet and supported inline styles, and reports unsupported classes, external resources, or stylesheets rather than silently dropping them.
 

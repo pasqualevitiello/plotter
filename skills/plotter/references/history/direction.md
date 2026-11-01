@@ -286,3 +286,21 @@ The user asked for a Plotter animation of planets orbiting to show their differe
 M04 (Nature / “Three orbits, three speeds”) in `orbits-motion-drawing.tsx` is the revision. The cycle is 12s: planets complete 4, 2 and 1 orbits (3s, 6s, 12s), counter-clockwise from one start axis, and realign when the loop restarts. Orbit radii follow T² ∝ r³. Marks and the relationship each explains: a rotating generating radius per planet shows angular speed; a 24-division angular scale with a dashed `4 6` travel arrow gives direction and position; dashed `3 5` start outlines mark where the planets leave and return; the outer orbit’s ⌀ dimension and the T² ∝ r³ note tie spacing to period; a legend keys planet size to period; the sun uses concentric rings. Guides and the dimension sit outside the planets’ swept bands. These are implementation decisions awaiting review, not an approved motion reference.
 
 After the rayed, continuous-circle version the user said: “no sun rays. shouldn’t the orbit be represented by a specific element in the visual grammar?” Orbits are loci: draw them with the centerline pattern (`8 3 1 3`), not continuous circles, and give the sun no rays. An earlier experiment had replaced the circular orbits with real Keplerian orbits of Mercury, Earth, the Moon and Mars (Sun at a focus, dash-dot loci, dated to 31 October 2026) and removed the sun rays, ring and ticks. The user reviewed it and said “don’t like”, then asked to return to the version above. Treat that real-orbit direction as set aside, not as a preference for the rayed sun or continuous circles; the reason was not stated.
+
+## Shared primary stroke — 2026-11-01
+
+On the customization page, the user requested “make it 1, don’t want to see weird artifact on monitors” after discussing the shared primary stroke of 0.95. The shared standard now uses 1 SVG unit for primary outlines. This sets width; pixel alignment and display scaling still affect rasterization. Other role widths and existing unmarked drawings keep their authored treatment.
+
+## Uniform stroke defaults — 2026-11-01
+
+The user then asked whether all strokes should be 1px and approved setting all five shared stroke defaults to 1, keeping opacity differences for hierarchy. This supersedes the primary-only change above. Primary, secondary, guide, hatch, and section widths now share that default; their opacity values and dash patterns are unchanged.
+
+## Catalogue-wide stroke consistency — 2026-11-01
+
+After the shared token defaults changed, the user asked whether the other illustrations had also been updated. The active catalogue, animations, and live grammar drawings now use 1-unit visible strokes. Geometry, opacity grouping, dash patterns, and animation timing are preserved; the assembly’s stroke-width transition is removed so contact changes opacity without changing line weight. Invisible mask clearances and frozen reference snapshots retain their authored widths. This expands the width change beyond the five role-token drawings without migrating the remaining drawings to shared roles.
+
+## Opacity after the 1-unit stroke change — 2026-11-01
+
+The user asked to reduce opacity after the uniform-width change so the drawings retain a similar visual weight. Shared secondary, guide, grid, hatch, and hidden opacities are reduced; primary forms remain strong. Legacy strokes are compensated using their original width, through stroke-specific opacity so filled labels and surfaces keep their contrast. Original group opacity and playback fades remain in place; nested stroke-opacity boundaries reset inherited compensation rather than multiplying it. The assembly contact transition now changes stroke opacity at the original contact times while width stays 1. The prior thin-stroke appearance is a visual target, not a claim of identical rasterization.
+
+The user then set the shared hidden-line opacity to `0.32`. Hidden, absent, and proposed outlines share this token.

@@ -16,7 +16,7 @@ Use monochrome ink adapted to the host's foreground and background. Keep forms t
 
 Choose supporting marks through the [visual grammar](visual-grammar.md). A background grid earns its place when it reveals a shared coordinate or module system; geometric subject matter alone is insufficient. Calendar cells may be the subject rather than a background grid. Hatching identifies a declared bounded region or section and stays attached to that region through motion. It does not supply generic texture or lighting.
 
-Preserve the original grouping level of opacity during role adoption. Line hierarchy includes width, opacity, and dash meaning; nested opacity groups can unintentionally multiply emphasis. Keep arrowheads solid and joined to their shafts. Separate movement, dimensions, callouts, and proposed/hidden states by meaning rather than appearance alone.
+Preserve the original grouping level of opacity during role adoption. At the shared defaults, opacity establishes hierarchy and dash patterns communicate meaning; widths remain separately adjustable. Nested opacity groups can unintentionally multiply emphasis. Keep arrowheads solid and joined to their shafts. Separate movement, dimensions, callouts, and proposed/hidden states by meaning rather than appearance alone.
 
 ## Typography and presentation
 

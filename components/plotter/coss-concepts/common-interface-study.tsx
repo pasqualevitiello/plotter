@@ -84,7 +84,14 @@ function ConstructionGrid() {
     if (y === 288) cuts.push([360, 392]);
     paths.push(...remaining(120, 440, cuts).map(([a, b]) => `M${a} ${y}H${b}`));
   }
-  return <path d={paths.join(" ")} opacity="0.1" strokeWidth="0.6" />;
+  return (
+    <path
+      d={paths.join(" ")}
+      opacity="0.1"
+      strokeWidth="1"
+      strokeOpacity="0.6"
+    />
+  );
 }
 
 function InterfaceHatch() {
@@ -108,14 +115,21 @@ function InterfaceHatch() {
       );
     }
   }
-  return <path d={paths.join(" ")} opacity="0.27" strokeWidth="0.65" />;
+  return (
+    <path
+      d={paths.join(" ")}
+      opacity="0.27"
+      strokeWidth="1"
+      strokeOpacity="0.65"
+    />
+  );
 }
 
 export function CommonInterfaceStudy() {
   return (
     <BlueprintDrawing>
       <ConstructionGrid />
-      <g opacity="0.24" strokeWidth="0.6">
+      <g opacity="0.24" strokeWidth="1" strokeOpacity="0.6">
         <path d="M136 80V88 M128 96H120 M400 224H440" />
         <path d="M264 96 296 64 M264 160 296 128 M328 224 360 192 M392 224 424 192" />
         <path d="M266.121 221.879 293.879 194.121" />
@@ -125,19 +139,24 @@ export function CommonInterfaceStudy() {
         />
       </g>
       {/* The unoccupied position is projected exactly, not a second part. */}
-      <g opacity="0.45" strokeDasharray="3 5" strokeWidth="0.65">
+      <g
+        opacity="0.45"
+        strokeDasharray="3 5"
+        strokeWidth="1"
+        strokeOpacity="0.65"
+      >
         <path d="M264 96H360L392 128V224" />
         <path d="M264 160A64 64 0 0 1 328 224" />
       </g>
       <InterfaceHatch />
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         {/* One owner for every shared seam in the assembled three parts. */}
         <path d="M264 96H136V320A32 32 0 0 0 168 352H360V288H392V224H328A64 64 0 1 1 264 160Z" />
         <path d="M136 224H200 M264 288V352" />
         {/* The same NE quadrant translated by (32, −32). */}
         <path d="M296 64H392L424 96V192H360A64 64 0 0 0 296 128Z" />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path d="M184 224A80 80 0 0 0 264 304" />
         <circle cx={center.x} cy={center.y} r="3" />
         <circle cx={displaced.x} cy={displaced.y} r="3" />

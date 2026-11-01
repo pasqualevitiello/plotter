@@ -4,11 +4,11 @@ import type { IllustrationStudy } from "./study-types";
 function UnbuiltArch() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.09" strokeWidth="0.6">
+      <g opacity="0.09" strokeWidth="1" strokeOpacity="0.6">
         <path d="M154 128V350M190 128V350M280 128V350M370 128V350M406 128V350" />
         <path d="M128 154H432M128 190H432M128 280H432M128 332H432" />
       </g>
-      <g opacity="0.26" strokeWidth="0.6">
+      <g opacity="0.26" strokeWidth="1" strokeOpacity="0.6">
         <path d="M280 102V356M112 280H448" strokeDasharray="5 5" />
         <path d="M145 332H415M154 280A126 126 0 0 1 406 280" />
         <path d="M280 280 207.7 176.8M280 280 352.3 176.8" />
@@ -16,7 +16,7 @@ function UnbuiltArch() {
         <path d="M272 280H288M280 272V288" />
       </g>
 
-      <g fill="var(--color-sidebar)" strokeWidth="1">
+      <g fill="var(--color-sidebar)" strokeWidth="1" strokeOpacity="1">
         <path d="M154 332V280A126 126 0 0 1 260.3 155.6L265.9 191.1A90 90 0 0 0 190 280V332Z" />
         <path d="M370 332V280A90 90 0 0 0 294.1 191.1L299.7 155.6A126 126 0 0 1 406 280V332Z" />
         <path d="M145 332H199M361 332H415" />
@@ -25,10 +25,11 @@ function UnbuiltArch() {
         d="M260.3 155.6A126 126 0 0 1 299.7 155.6M265.9 191.1A90 90 0 0 1 294.1 191.1"
         opacity="0.32"
         strokeDasharray="3 4"
-        strokeWidth="0.65"
+        strokeWidth="1"
+        strokeOpacity="0.65"
       />
 
-      <g opacity="0.4" strokeWidth="0.65">
+      <g opacity="0.4" strokeWidth="1" strokeOpacity="0.65">
         <path d="M154 361H263M297 361H406M154 355V367M406 355V367" />
         <path d="m150 365 8-8m244 8 8-8" />
         <path d="M121 154V228M121 252V332M115 154H127M115 332H127" />

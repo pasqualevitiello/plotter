@@ -4,7 +4,7 @@ Plotter separates the meaning of a mark from its numerical treatment. The visual
 
 ## Start with the adoption boundary
 
-Shared role tokens currently style **AGT-01, MEC-05, GEO-11, SYS-06, and CRF-06** in the catalogue. Other drawings retain their authored attributes and inherited defaults. A global token override does not imply that every illustration has adopted that role.
+Shared role tokens currently style **AGT-01, MEC-05, GEO-11, SYS-06, and CRF-06** in the catalogue. All current illustrations use 1-unit visible strokes at native size. Other drawings retain their authored opacity and dash patterns; a global token override does not imply that every illustration has adopted that role.
 
 Preserve an existing drawing’s composition, opacity grouping, text, timing, and intentional exceptions during implementation changes. Adopt roles only where the result preserves its appearance or where a redesign is requested.
 
@@ -15,8 +15,8 @@ A role-enabled SVG has `data-plotter=""` on its root and uses `data-plotter-role
 ```css
 .illustration {
   --plotter-ink: currentColor;
-  --plotter-stroke-primary: 0.95;
-  --plotter-opacity-guide: 0.24;
+  --plotter-stroke-primary: 1;
+  --plotter-opacity-guide: 0.14;
 }
 ```
 
@@ -74,7 +74,7 @@ A detached SVG cannot read a website’s computed theme. Supply the desired ink 
 ```sh
 python3 scripts/export-svg.py drawing.svg exported.svg \
   --ink '#171717' \
-  --token=--plotter-opacity-guide=0.24 \
+  --token=--plotter-opacity-guide=0.14 \
   --id-prefix example
 ```
 

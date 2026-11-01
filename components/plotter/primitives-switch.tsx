@@ -14,7 +14,8 @@ export function SwitchConstruction() {
         d="M112 204H456"
         opacity="0.24"
         strokeDasharray="4 4"
-        strokeWidth="0.65"
+        strokeWidth="1"
+        strokeOpacity="0.65"
       />
       <circle
         cx="204"
@@ -22,7 +23,8 @@ export function SwitchConstruction() {
         fill="none"
         opacity="0.14"
         r="60"
-        strokeWidth="0.65"
+        strokeWidth="1"
+        strokeOpacity="0.65"
       />
       <ConstructionAnnotation stage={2}>
         <g {...secondaryLine}>
@@ -67,7 +69,7 @@ export function SwitchThumb() {
           type="translate"
           values="204 204;204 204;364 204;364 204;204 204;204 204"
         />
-        <circle fill="none" r="80" strokeWidth="0.85">
+        <circle fill="none" r="80" strokeWidth="1" strokeOpacity="0.85">
           <animate
             attributeName="r"
             begin="0s"

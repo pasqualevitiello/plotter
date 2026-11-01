@@ -5,7 +5,7 @@ import type { IllustrationStudy } from "./study-types";
 
 function Registration() {
   return (
-    <g opacity="0.32" strokeWidth="0.6">
+    <g opacity="0.32" strokeWidth="1" strokeOpacity="0.6">
       <path d="M100 82h12 M106 76v12 M448 342h12 M454 336v12" />
       <path d="M266 382h28 M280 376v12" />
     </g>
@@ -15,20 +15,25 @@ function Registration() {
 function TangencyStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.1" strokeWidth="0.6">
+      <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path d="M124 148V340 M284 148V340 M332 236V340 M412 236V340" />
         <path d="M108 164H296 M320 244H428 M108 324H444" />
       </g>
-      <g opacity="0.28" strokeDasharray="4 6" strokeWidth="0.6">
+      <g
+        opacity="0.28"
+        strokeDasharray="4 6"
+        strokeWidth="1"
+        strokeOpacity="0.6"
+      >
         <path d="M204 148V232 M204 256V340 M112 244H192 M216 244H298" />
         <path d="M372 232V272 M372 296V340 M320 284H360 M384 284H428" />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <circle cx="204" cy="244" r="80" />
         <circle cx="372" cy="284" r="40" />
         <path d="M125.79 114.9 440.02 273.53 M108 324H444" />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path d="M206.25 239.54 240.05 172.58 M374.25 279.54 390.03 248.29" />
         <path d="m235.55 181.51 8.92 4.51 4.51-8.93" />
         <path d="M204 312h12v12 M372 314h10v10" />
@@ -58,11 +63,11 @@ function TangencyStudy() {
 function CornerRuleStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.09" strokeWidth="0.6">
+      <g opacity="0.09" strokeWidth="1" strokeOpacity="0.6">
         <path d="M130 108H414 M130 160H414 M130 212H414 M130 264H414 M130 316H414" />
         <path d="M178 90V328 M230 90V328 M282 90V328 M334 90V328 M386 90V328" />
       </g>
-      <g opacity="0.28" strokeWidth="0.6">
+      <g opacity="0.28" strokeWidth="1" strokeOpacity="0.6">
         <path
           d="M128 108H386V328 M282 88V331 M123 212H426"
           strokeDasharray="4 6"
@@ -80,12 +85,12 @@ function CornerRuleStudy() {
         fillOpacity="0.035"
         stroke="none"
       />
-      <g strokeWidth="1">
+      <g strokeWidth="1" strokeOpacity="1">
         <path d="M140 108H282a104 104 0 0 1 104 104V318" />
         <path d="M140 132H282a80 80 0 0 1 80 80V318" />
         <path d="M140 104v32 M358 318h32" opacity="0.65" />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path d="M282 212 355.54 138.46 m-7 0h7v7" />
         <path d="M282 212H306V188 M306 212a24 24 0 0 0-7-17" />
         <path d="M282 78H386 M282 71v14 M386 71v14 m-108-3 8-8 m96 8 8-8" />
@@ -93,7 +98,7 @@ function CornerRuleStudy() {
         <path d="M362 345H386 M362 335v17 M386 335v17 m-28-3 8-8 m16 8 8-8" />
         <path d="M140 120H113L101 132" />
       </g>
-      <g fill="var(--color-sidebar)" strokeWidth="0.8">
+      <g fill="var(--color-sidebar)" strokeWidth="1" strokeOpacity="0.8">
         <circle cx="282" cy="212" r="2.5" />
         <circle cx="282" cy="108" r="2.5" />
         <circle cx="386" cy="212" r="2.5" />
@@ -123,17 +128,17 @@ function CornerRuleStudy() {
 function ProportionStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.1" strokeWidth="0.6">
+      <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path d="M128 112V333 M164 112V333 M218 112V333 M299 112V333 M420.5 112V333" />
         <path d="M111 185.5H440 M111 226H440 M111 253H440 M111 271H440 M111 307H440" />
       </g>
-      <g opacity="0.28" strokeWidth="0.65">
+      <g opacity="0.28" strokeWidth="1" strokeOpacity="0.65">
         <path d="M110 307H445 M111 279.5 449 110.5" />
         <path d="M128 271V259 M164 253V241 M218 226V214 M299 185.5V173.5" />
         <path d="M299 185.5 420.5 307 M299 307 420.5 185.5" opacity="0.55" />
         <path d="M420.5 115V326" strokeDasharray="4 6" />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <rect height="36" width="36" x="128" y="271" />
         <rect height="54" width="54" x="164" y="253" />
         <rect height="81" width="81" x="218" y="226" />
@@ -146,14 +151,19 @@ function ProportionStudy() {
           y="185.5"
         />
       </g>
-      <path d="M128 271 420.5 124.75" opacity="0.74" strokeWidth="0.9" />
-      <g opacity="0.48" strokeWidth="0.65">
+      <path
+        d="M128 271 420.5 124.75"
+        opacity="0.74"
+        strokeWidth="1"
+        strokeOpacity="0.9"
+      />
+      <g opacity="0.48" strokeWidth="1" strokeOpacity="0.65">
         <path d="M128 341H420.5 M128 334v14 M164 334v14 M218 334v14 M299 334v14 M420.5 334v14" />
         <path d="m124 345 8-8 m28 8 8-8 m46 8 8-8 m73 8 8-8 m113.5 8 8-8" />
         <path d="M442 185.5V307 M436 185.5h12 M436 307h12" />
         <path d="M359.75 124.75H420.5V155.125 M408.5 124.75v12h12" />
       </g>
-      <g fill="var(--color-sidebar)" strokeWidth="0.8">
+      <g fill="var(--color-sidebar)" strokeWidth="1" strokeOpacity="0.8">
         <circle cx="128" cy="271" r="2.5" />
         <circle cx="164" cy="253" r="2.5" />
         <circle cx="218" cy="226" r="2.5" />
@@ -191,11 +201,11 @@ function ProportionStudy() {
 function AssemblyStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.1" strokeWidth="0.6">
+      <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path d="M128 112H432 M128 144H432 M128 248H432 M128 281H432 M128 314H432" />
         <path d="M148 100V334 M180 100V334 M204 100V334 M334 100V334 M412 100V334" />
       </g>
-      <g opacity="0.34" strokeWidth="0.6">
+      <g opacity="0.34" strokeWidth="1" strokeOpacity="0.6">
         <path
           d="M164 172V261 M252 164V263 M373 166V264"
           strokeDasharray="3 6"
@@ -204,7 +214,7 @@ function AssemblyStudy() {
         <path d="M128 239v-10h20 M412 229h20v10 M118 248h20 M128 238v20" />
         <path d="M422 314h20 M432 304v20" />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <rect
           fill="var(--color-sidebar)"
           height="32"
@@ -242,7 +252,7 @@ function AssemblyStudy() {
         <rect height="28" rx="14" width="78" x="334" y="267" />
         <path d="m346 281 3 3 5-6" opacity="0.7" />
       </g>
-      <g opacity="0.45" strokeWidth="0.65">
+      <g opacity="0.45" strokeWidth="1" strokeOpacity="0.65">
         <path d="M204 156H298 M204 152v8 M298 152v8" />
         <path d="M128 344H432 M128 337v14 M432 337v14 m-308-3 8-8 m296 8 8-8" />
         <path d="M180 326H204 M180 322v8 M204 322v8" />
@@ -283,18 +293,18 @@ function AssemblyStudy() {
 function ModularTrayStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.14" strokeWidth="0.6">
+      <g opacity="0.14" strokeWidth="1" strokeOpacity="0.6">
         <path d="M128 120H432V328H128Z" />
         <path d="M148 100V348 M258 100V348 M280 100V348 M332 100V348 M412 100V348" />
         <path d="M108 140H452 M108 184H452 M108 208H452 M108 244H452 M108 264H452 M108 300H452" />
       </g>
-      <g opacity="0.4" strokeWidth="0.65">
+      <g opacity="0.4" strokeWidth="1" strokeOpacity="0.65">
         <path d="M128 136v-16h16 M416 120h16v16 M128 312v16h16 M416 328h16v-16" />
         <path d="M148 82H412 M148 76v12 M412 76v12 m-268-2 8-8 m256 8 8-8" />
         <path d="M148 353H258 M148 347v12 M258 347v12 M280 353H412 M280 347v12 M412 347v12" />
         <path d="M258 318h22 M258 313v10 M280 313v10" />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <rect
           fill="var(--color-sidebar)"
           height="32"
@@ -345,7 +355,7 @@ function ModularTrayStudy() {
         <rect height="18" rx="9" width="30" x="369" y="273" />
         <circle cx="390" cy="282" r="5.5" />
       </g>
-      <g opacity="0.3" strokeWidth="0.6">
+      <g opacity="0.3" strokeWidth="1" strokeOpacity="0.6">
         <path d="M332 140h80v44h-80Z" strokeDasharray="3 5" />
         <path d="M352 162H340 M408 162H396 M374 128v12 M374 184v12" />
         <path d="M139 291h18 M148 282v18" />

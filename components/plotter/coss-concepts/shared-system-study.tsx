@@ -42,14 +42,19 @@ const grid = [
 export function SharedSystemStudy() {
   return (
     <BlueprintDrawing>
-      <path d={grid} opacity="0.1" strokeWidth="0.6" />
-      <g opacity="0.24" strokeDasharray="8 3 1 3" strokeWidth="0.6">
+      <path d={grid} opacity="0.1" strokeWidth="1" strokeOpacity="0.6" />
+      <g
+        opacity="0.24"
+        strokeDasharray="8 3 1 3"
+        strokeWidth="1"
+        strokeOpacity="0.6"
+      >
         <path
           d={`M${seamX} 64V352 M136 ${upperCenterY}H434 M136 ${lowerCenterY}H434`}
         />
         <path d={complementaryLoci} />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <rect
           height={frame.size}
           width={frame.size}
@@ -58,7 +63,7 @@ export function SharedSystemStudy() {
         />
         <path d={interfaceProfile} />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path d={`M${seamX} ${upperCenterY} ${radiusTip.x} ${radiusTip.y}`} />
         <path
           d={`M${radiusTip.x - 6} ${radiusTip.y}H${radiusTip.x}V${radiusTip.y + 6}`}

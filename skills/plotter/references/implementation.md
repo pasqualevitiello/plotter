@@ -24,7 +24,7 @@ Use the current checkout and read its `AGENTS.md`. Paths below are relative to t
 | Download artifact generator                    | `scripts/build-plotter-downloads.tsx`                                                                            |
 | Website documentation                          | `content/docs/`                                                                                                  |
 
-`BlueprintDrawing` opts into shared roles with `roles`. Token adoption currently covers **AGT-01, MEC-05, GEO-11, SYS-06, and CRF-06**; legacy unmarked drawings keep their inherited stroke defaults. The SVG-to-JSX builder preserves supported root styles, removes standalone fixed ink and the root font family so the gallery inherits its theme and loaded font, and gives repeated definitions local IDs. Font weight, optical sizing, and GEOM settings remain authored. Standalone SVGs retain their own font stack.
+`BlueprintDrawing` opts into shared roles with `roles`. Token adoption currently covers **AGT-01, MEC-05, GEO-11, SYS-06, and CRF-06**; all current illustrations use 1-unit visible strokes. Legacy unmarked drawings retain their authored opacity and dash patterns, without acquiring shared role-token customization. The SVG-to-JSX builder preserves supported root styles, removes standalone fixed ink and the root font family so the gallery inherits its theme and loaded font, and gives repeated definitions local IDs. Font weight, optical sizing, and GEOM settings remain authored. Standalone SVGs retain their own font stack.
 
 Edit SVG sources and regenerate React output; catalogue and grammar components derived from those sources are generated artifacts. When the standard or AGT-01 source changes, use the repository-root sequence:
 

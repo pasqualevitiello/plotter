@@ -7,7 +7,12 @@ import { secondaryLine } from "./primitives-morph-style";
 export function ButtonConstruction() {
   return (
     <g>
-      <g opacity="0.22" strokeDasharray="3 4" strokeWidth="0.65">
+      <g
+        opacity="0.22"
+        strokeDasharray="3 4"
+        strokeWidth="1"
+        strokeOpacity="0.65"
+      >
         <path d="M184 112V176 M184 232V296 M384 112V176 M384 232V296" />
       </g>
       <rect

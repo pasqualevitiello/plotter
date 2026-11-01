@@ -81,16 +81,24 @@ function Sun() {
         cy={center.y}
         opacity="0.5"
         r="12"
-        strokeWidth="0.65"
+        strokeWidth="1"
+        strokeOpacity="0.65"
       />
       <circle
         cx={center.x}
         cy={center.y}
         opacity="0.5"
         r="2.5"
-        strokeWidth="0.65"
+        strokeWidth="1"
+        strokeOpacity="0.65"
       />
-      <circle cx={center.x} cy={center.y} r={sunRadius} strokeWidth="0.95" />
+      <circle
+        cx={center.x}
+        cy={center.y}
+        r={sunRadius}
+        strokeWidth="1"
+        strokeOpacity="0.95"
+      />
     </>
   );
 }
@@ -100,7 +108,12 @@ function Sun() {
 // passes through the transparent body that travels on it.
 function Orbits() {
   return (
-    <g opacity="0.24" strokeDasharray="8 3 1 3" strokeWidth="0.6">
+    <g
+      opacity="0.24"
+      strokeDasharray="8 3 1 3"
+      strokeWidth="1"
+      strokeOpacity="0.6"
+    >
       {planets.map(({ orbit }) => (
         <circle cx={center.x} cy={center.y} key={orbit} r={orbit} />
       ))}
@@ -116,12 +129,28 @@ function AngularScale() {
         cy={center.y}
         opacity="0.24"
         r={scaleRadius}
-        strokeWidth="0.6"
+        strokeWidth="1"
+        strokeOpacity="0.6"
       />
-      <path d={scaleTicks.step} opacity="0.4" strokeWidth="0.6" />
-      <path d={scaleTicks.third} opacity="0.5" strokeWidth="0.65" />
-      <path d={scaleTicks.quarter} opacity="0.5" strokeWidth="0.65" />
-      <g opacity="0.5" strokeWidth="0.65">
+      <path
+        d={scaleTicks.step}
+        opacity="0.4"
+        strokeWidth="1"
+        strokeOpacity="0.6"
+      />
+      <path
+        d={scaleTicks.third}
+        opacity="0.5"
+        strokeWidth="1"
+        strokeOpacity="0.65"
+      />
+      <path
+        d={scaleTicks.quarter}
+        opacity="0.5"
+        strokeWidth="1"
+        strokeOpacity="0.65"
+      />
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path
           d={`M${arrowTip.x} ${arrowTip.y}A${arrowRadius} ${arrowRadius} 0 0 1 ${arrowTail.x} ${arrowTail.y}`}
           strokeDasharray="4 6"
@@ -136,7 +165,12 @@ function AngularScale() {
 // per cycle. The state is named by the “Start” label at 0°.
 function StartPositions() {
   return (
-    <g opacity="0.45" strokeDasharray="3 5" strokeWidth="0.65">
+    <g
+      opacity="0.45"
+      strokeDasharray="3 5"
+      strokeWidth="1"
+      strokeOpacity="0.65"
+    >
       {planets.map(({ orbit, radius }) => (
         <circle cx={center.x + orbit} cy={center.y} key={orbit} r={radius} />
       ))}
@@ -157,12 +191,14 @@ function Dimension() {
       <path
         d={`M${dimension.from} ${dimensionTop}H${dimension.x - 8} M${dimension.from} ${dimensionBottom}H${dimension.x - 8}`}
         opacity="0.24"
-        strokeWidth="0.6"
+        strokeWidth="1"
+        strokeOpacity="0.6"
       />
       <path
         d={`M${dimension.x} ${dimensionTop}V${center.y - 10} M${dimension.x} ${center.y + 10}V${dimensionBottom} M${dimension.x - 4} ${dimensionTop + 4}l8 -8 M${dimension.x - 4} ${dimensionBottom + 4}l8 -8`}
         opacity="0.5"
-        strokeWidth="0.65"
+        strokeWidth="1"
+        strokeOpacity="0.65"
       />
     </>
   );
@@ -210,7 +246,7 @@ const keyEntries = [
 function Key() {
   return (
     <>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         {keyEntries.map(({ left, planet }) => (
           <circle cx={left + 10} cy="422" key={left} r={planet?.radius} />
         ))}
@@ -254,13 +290,15 @@ function Planet({
       <path
         d={`M${center.x + sunRadius + 6} ${center.y}H${start.x}`}
         opacity="0.5"
-        strokeWidth="0.65"
+        strokeWidth="1"
+        strokeOpacity="0.65"
       />
       <circle
         cx={center.x + orbit}
         cy={center.y}
         r={radius}
-        strokeWidth="0.95"
+        strokeWidth="1"
+        strokeOpacity="0.95"
       />
     </g>
   );

@@ -3,7 +3,7 @@ import type { IllustrationStudy } from "./study-types";
 
 function RegistrationMarks() {
   return (
-    <g opacity="0.28" strokeWidth="0.6">
+    <g opacity="0.28" strokeWidth="1" strokeOpacity="0.6">
       <path d="M100 86h12M106 80v12M448 354h12M454 348v12" />
       <path d="M262 392h36M280 386v12" />
     </g>
@@ -13,7 +13,7 @@ function RegistrationMarks() {
 function SharedAvailability() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.16" strokeWidth="0.6">
+      <g opacity="0.16" strokeWidth="1" strokeOpacity="0.6">
         <path d="M140 112V324M196 112V324M252 112V324M308 112V324M364 112V324M420 112V324" />
         <path d="M100 160H460M100 200H460M100 240H460M100 280H460" />
         <path d="M100 220H460" strokeDasharray="5 5" />
@@ -25,9 +25,10 @@ function SharedAvailability() {
         fillOpacity="0.025"
         opacity="0.45"
         strokeDasharray="3 5"
-        strokeWidth="0.65"
+        strokeWidth="1"
+        strokeOpacity="0.65"
       />
-      <g opacity="0.25" strokeWidth="0.7">
+      <g opacity="0.25" strokeWidth="1" strokeOpacity="0.7">
         <path d="M140 180H420M140 260H420" />
         <path d="M140 174V186M420 174V186M140 254V266M420 254V266" />
       </g>
@@ -36,7 +37,8 @@ function SharedAvailability() {
         fill="var(--color-sidebar)"
         height="40"
         rx="6"
-        strokeWidth="0.95"
+        strokeWidth="1"
+        strokeOpacity="0.95"
         width="140"
         x="196"
         y="160"
@@ -45,7 +47,8 @@ function SharedAvailability() {
         fill="var(--color-sidebar)"
         height="40"
         rx="6"
-        strokeWidth="0.95"
+        strokeWidth="1"
+        strokeOpacity="0.95"
         width="112"
         x="280"
         y="240"
@@ -62,12 +65,12 @@ function SharedAvailability() {
         fillOpacity="0.055"
         stroke="none"
       />
-      <g opacity="0.43" strokeWidth="0.65">
+      <g opacity="0.43" strokeWidth="1" strokeOpacity="0.65">
         <path d="M280 136V304M336 136V304" strokeDasharray="3 4" />
         <path d="M308 200V240" />
         <path d="M303 215H313M303 225H313" />
       </g>
-      <g fill="var(--color-sidebar)" strokeWidth="0.9">
+      <g fill="var(--color-sidebar)" strokeWidth="1" strokeOpacity="0.9">
         <circle cx="112" cy="180" r="10" />
         <circle cx="112" cy="260" r="10" />
       </g>
@@ -79,7 +82,7 @@ function SharedAvailability() {
           B
         </text>
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path d="M280 104H336M280 96V112M336 96V112" />
         <path d="m276 108 8-8m48 8 8-8" />
         <path d="M280 326V346M336 326V346M280 338H296M320 338H336" />
@@ -107,14 +110,19 @@ function SharedAvailability() {
 function TwoTimeZones() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.1" strokeWidth="0.6">
+      <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path d="M104 124V316 M176 124V316 M392 124V316 M464 124V316" />
         <path d="M88 136H232 M336 136H480 M88 248H232 M336 248H480" />
       </g>
-      <g opacity="0.28" strokeDasharray="4 6" strokeWidth="0.6">
+      <g
+        opacity="0.28"
+        strokeDasharray="4 6"
+        strokeWidth="1"
+        strokeOpacity="0.6"
+      >
         <path d="M248 212V240 M320 212V240 M248 324V332 M320 324V332" />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path d="M104 184H464 M104 296H464" />
         {[104, 176, 248, 320, 392, 464].map((x) => (
           <path d={`M${x} 180v8 M${x} 292v8`} key={x} />
@@ -124,7 +132,7 @@ function TwoTimeZones() {
         <path d="M274 220h20 M274 228h20" />
         <path d="M248 328H320 M248 324v8 M320 324v8" />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <rect height="40" rx="6" width="72" x="248" y="136" />
         <rect height="40" rx="6" width="72" x="248" y="248" />
       </g>

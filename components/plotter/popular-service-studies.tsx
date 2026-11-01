@@ -4,10 +4,10 @@ import type { IllustrationStudy } from "./study-types";
 function GitHubMergeStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.1" strokeWidth="0.6">
+      <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path d="M156 100V328M204 100V328M256 112V316M308 100V328M356 112V316M404 100V328M108 148H448M108 196H448M108 244H448" />
       </g>
-      <g opacity="0.28" strokeWidth="0.6">
+      <g opacity="0.28" strokeWidth="1" strokeOpacity="0.6">
         <path d="M96 244H460M156 88V344M404 88V344" strokeDasharray="4 6" />
         <path
           d="M156 196H224M204 128V216M356 196H288M308 128V216"
@@ -17,7 +17,7 @@ function GitHubMergeStudy() {
         <path d="M256 292V308M308 292V308M256 300H308m-56 4 8-8m44 8 8-8" />
       </g>
 
-      <g strokeWidth="1">
+      <g strokeWidth="1" strokeOpacity="1">
         <path d="M108 244H448" />
         <path d="M156 244V196A48 48 0 0 1 204 148H308A48 48 0 0 1 356 196V212A32 32 0 0 0 388 244" />
         {[156, 260, 404].map((x) => (
@@ -27,7 +27,7 @@ function GitHubMergeStudy() {
           <circle cx={x} cy="148" fill="var(--color-sidebar)" key={x} r="6" />
         ))}
       </g>
-      <g opacity="0.45" strokeWidth="0.65">
+      <g opacity="0.45" strokeWidth="1" strokeOpacity="0.65">
         <path d="M204 196 170.06 162.06M198 196H210M204 190V202" />
         <path d="M236 180V190H332V180M284 190V204" />
         <path d="M388 212H368M388 212V254M388 212 365.37 234.63" />
@@ -66,10 +66,10 @@ function GitHubMergeStudy() {
 function FigmaConstraintsStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.1" strokeWidth="0.6">
+      <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path d="M148 92V350M176 120V326M204 120V326M296 120V214M324 92V350M384 232V350M412 232V350M120 142H348M120 198H348M120 254H440M120 310H440" />
       </g>
-      <g opacity="0.27" strokeWidth="0.6">
+      <g opacity="0.27" strokeWidth="1" strokeOpacity="0.6">
         <path
           d="M120 170H348M120 282H440M148 92V356M324 202V322"
           strokeDasharray="4 5"
@@ -80,7 +80,7 @@ function FigmaConstraintsStudy() {
         <path d="M324 226H412m-6-4 6 4-6 4M324 222V230" />
       </g>
 
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <rect
           fill="var(--color-sidebar)"
           height="56"
@@ -100,7 +100,7 @@ function FigmaConstraintsStudy() {
         <path d="m176 164 6 6-6 6-6-6Zm0 112 6 6-6 6-6-6Z" opacity="0.65" />
         <path d="m294 166 4 4-4 4m88 104 4 4-4 4" opacity="0.65" />
       </g>
-      <g opacity="0.4" strokeWidth="0.6">
+      <g opacity="0.4" strokeWidth="1" strokeOpacity="0.6">
         <path d="M136 242H424V322H136Z" strokeDasharray="3 5" />
         <path d="M148 234H176M148 230V238M176 230V238M384 234H412M384 230V238M412 230V238" />
         <path d="M384 248V324M368 282H424M384 282 403.8 301.8 432 330H456" />
@@ -147,21 +147,26 @@ function FigmaConstraintsStudy() {
 function NotionBlocksStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.1" strokeWidth="0.6">
+      <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path d="M160 88V200 M400 88V200 M144 216H416 M144 384H416" />
         <path d="M180 152V224 M380 152V224 M180 392V408 M380 392V408" />
       </g>
-      <g opacity="0.28" strokeDasharray="4 6" strokeWidth="0.6">
+      <g
+        opacity="0.28"
+        strokeDasharray="4 6"
+        strokeWidth="1"
+        strokeOpacity="0.6"
+      >
         <path d="M180 152V208 M380 152V208" />
         <rect height="40" rx="6" width="200" x="180" y="280" />
       </g>
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <rect height="40" rx="6" width="200" x="180" y="104" />
         <rect height="168" rx="8" width="240" x="160" y="216" />
         <rect height="40" rx="6" width="200" x="180" y="232" />
         <rect height="40" rx="6" width="200" x="180" y="328" />
       </g>
-      <g opacity="0.5" strokeWidth="0.65">
+      <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
         <path d="M196 118h14 M196 124h10 M196 130h14" />
         <path d="M196 244v16 M206 244v16 M196 252h10" />
         <rect height="10" rx="2" width="10" x="196" y="339" />
@@ -207,10 +212,10 @@ function NotionBlocksStudy() {
 function SupabaseRelationsStudy() {
   return (
     <BlueprintDrawing>
-      <g opacity="0.1" strokeWidth="0.6">
+      <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path d="M120 96V348M168 108V272M204 108V272M252 96V348M328 168V348M376 180V348M412 180V348M460 168V348M104 124H272M104 160H272M104 192H480M104 224H272M104 256H480M312 288H480M312 320H480" />
       </g>
-      <g opacity="0.27" strokeWidth="0.6">
+      <g opacity="0.27" strokeWidth="1" strokeOpacity="0.6">
         <path d="M104 176H280M312 272H480" strokeDasharray="4 5" />
         <path
           d="M272 168V224M264 200H308M296 248H344M320 232V280"
@@ -221,7 +226,7 @@ function SupabaseRelationsStudy() {
         <path d="M96 160V192M90 160H102M90 192H102" />
       </g>
 
-      <g strokeWidth="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         <path d="M252 176H272A24 24 0 0 1 296 200V248A24 24 0 0 0 320 272H328" />
         <rect
           fill="var(--color-sidebar)"
@@ -247,7 +252,7 @@ function SupabaseRelationsStudy() {
         <circle cx="252" cy="176" fill="var(--color-sidebar)" r="4" />
         <circle cx="328" cy="272" fill="var(--color-sidebar)" r="4" />
       </g>
-      <g opacity="0.4" strokeWidth="0.65">
+      <g opacity="0.4" strokeWidth="1" strokeOpacity="0.65">
         <path d="M272 200 288.97 183.03M266 200H278M272 194V206" />
         <path d="M204 170V182M200 176H208M412 266V278M408 272H416" />
         <path d="M280 220H312M292 216V224M300 216V224" />

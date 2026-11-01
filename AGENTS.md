@@ -7,7 +7,7 @@ For creating, critiquing, refining, or animating Plotter illustrations, read [sk
 - `skills/plotter/` is the canonical portable package. Preserve one skill entrypoint and one shared token/geometry implementation.
 - `skills/plotter/assets/foundation/standard.json` owns numeric role defaults and helper constants. Its generated runtime data, CSS, and reference tables are outputs.
 - Edit catalogue and grammar SVG sources before regenerating their React output. Keep stable study IDs and approved reference revisions.
-- Token adoption currently covers AGT-01, MEC-05, GEO-11, SYS-06, and CRF-06. Preserve legacy drawings’ authored styling unless a change is requested.
+- All current illustrations use 1-unit visible strokes; preserve mask clearances, geometry, opacity, and dash patterns. Shared role-token customization currently covers AGT-01, MEC-05, GEO-11, SYS-06, and CRF-06.
 
 ## Preserve the art
 
