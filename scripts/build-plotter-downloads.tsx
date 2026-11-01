@@ -8,6 +8,13 @@ import { roleCss } from "../skills/plotter/assets/foundation/index.mjs";
 
 // Regenerate the page's downloads from the current skill and illustration sources.
 const root = resolve(import.meta.dir, "..");
+execFileSync(
+  process.execPath,
+  [resolve(root, "scripts/build-plotter-motion-examples.tsx")],
+  {
+    stdio: "inherit",
+  },
+);
 const destination = resolve(root, "public/plotter/downloads");
 mkdirSync(destination, { recursive: true });
 

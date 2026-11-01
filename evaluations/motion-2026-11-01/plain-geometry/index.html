@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The corner rule — a constant offset</title>
+  <style>
+    :root { color-scheme: light; color: #171717; background: #fff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 240px; }
+    .study { width: min(100%, 560px); margin-inline: auto; }
+    svg { display: block; width: 100%; height: auto; overflow: visible; font-family: "Cal Sans", Arial, sans-serif; font-optical-sizing: auto; font-synthesis: none; font-variation-settings: "GEOM" 25; font-weight: 400; }
+    text { fill: currentColor; stroke: none; font-size: 10px; }
+    .value { font-variant-numeric: tabular-nums; }
+  </style>
+</head>
+<body>
+  <main class="study">
+    <svg id="construction" xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440" fill="none" stroke="currentColor" stroke-width="1" stroke-opacity="0.8" role="img" aria-labelledby="title description" data-radius="104" data-inner-radius="80" data-offset="24" data-time="0">
+      <title id="title">The corner rule</title>
+      <desc id="description">Two concentric corners share a fixed center. The outer radius moves between 104 and 80 units; the inner radius moves between 80 and 56. Their offset always remains 24 units. The still shows outer radius 104 and inner radius 80.</desc>
+      <g opacity="0.09" stroke-opacity="0.6">
+        <path d="M394 108H414 M130 160H290 M336 160H414 M130 264H414 M130 316H414"/>
+        <path d="M178 90V328 M230 90V328 M334 90V328 M386 90V100 M386 116V204"/>
+      </g>
+      <g opacity="0.28" stroke-opacity="0.6">
+        <path id="projection" d="M290 108H386V204" stroke-dasharray="4 6"/>
+        <path d="M282 88V331 M123 212H426" stroke-dasharray="4 6"/>
+        <path id="outer-guide" d="M386 212A104 104 0 1 1 282 108"/>
+        <path id="inner-guide" d="M362 212A80 80 0 1 1 282 132" opacity="0.6"/>
+        <path id="corner-cross" d="M386 94V122 M372 108H400"/>
+        <path d="M272 212H292 M282 202V222"/>
+      </g>
+      <g stroke-opacity="1">
+        <path id="outer-corner" d="M140 108H282A104 104 0 0 1 386 212V318"/>
+        <path id="inner-corner" d="M140 132H282A80 80 0 0 1 362 212V318"/>
+        <path id="end-caps" d="M140 104V136 M358 318H390" opacity="0.65"/>
+      </g>
+      <g opacity="0.5" stroke-opacity="0.65">
+        <path id="radius-line" d="M282 212L355.539 138.461m-7 0h7v7"/>
+        <path d="M282 212H306V188 M306 212A24 24 0 0 0 299 195"/>
+        <path id="top-dimension" d="M282 78H386 M282 71V85 M386 71V85 M278 82L286 74 M382 82L390 74"/>
+        <path id="right-dimension" d="M417 108V212 M411 108H423 M411 212H423 M413 112L421 104 M413 216L421 208"/>
+        <path id="offset-dimension" d="M362 345H386 M362 335V352 M386 335V352 M358 349L366 341 M382 349L390 341"/>
+        <path id="offset-leader" d="M140 120H113L101 132"/>
+      </g>
+      <g>
+        <circle cx="282" cy="212" r="2.5"/>
+        <circle id="top-tangent" cx="282" cy="108" r="2.5"/>
+        <circle id="right-tangent" cx="386" cy="212" r="2.5"/>
+      </g>
+      <g opacity="0.58">
+        <text id="top-label" class="value" text-anchor="middle" x="334" y="67">r = 104</text>
+        <text id="right-label" x="430" y="164">r</text>
+        <text id="offset-label" class="value" text-anchor="middle" x="374" y="367">24</text>
+        <text id="radius-label" class="value" transform="rotate(-45 303 180)" x="303" y="180">R104</text>
+        <text id="offset-word" x="91" y="147">offset</text>
+      </g>
+      <g opacity="0.32" stroke-opacity="0.6">
+        <path d="M100 82H112 M106 76V88 M448 342H460 M454 336V348"/>
+        <path d="M266 382H294 M280 376V388"/>
+      </g>
+    </svg>
+  </main>
+  <script>
+    (() => {
+      "use strict";
+      const duration = 10;
+      const cx = 282, cy = 212, offset = 24;
+      const svg = document.getElementById("construction");
+      const ids = ["projection", "outer-guide", "inner-guide", "corner-cross", "outer-corner", "inner-corner", "end-caps", "radius-line", "top-dimension", "right-dimension", "offset-dimension", "offset-leader", "top-tangent", "right-tangent", "top-label", "right-label", "offset-label", "radius-label", "offset-word"];
+      const elements = Object.fromEntries(ids.map(id => [id, document.getElementById(id)]));
+      const set = (id, attributes) => {
+        for (const [key, value] of Object.entries(attributes)) elements[id].setAttribute(key, value);
+      };
+      const smooth = t => t * t * t * (t * (t * 6 - 15) + 10);
+      function radiusAt(time) {
+        if (time < 1.2) return 104;
+        if (time < 4.2) return 104 - 24 * smooth((time - 1.2) / 3);
+        if (time < 5.8) return 80;
+        if (time < 8.8) return 80 + 24 * smooth((time - 5.8) / 3);
+        return 104;
+      }
+      function render(time) {
+        // Geometry and numeric labels use the same tenth-unit measurement.
+        const radius = Math.round(radiusAt(time) * 10) / 10;
+        const inner = radius - offset;
+        const top = cy - radius, innerTop = cy - inner;
+        const right = cx + radius, innerRight = cx + inner;
+        const dimensionY = top - 30;
+        const diagonalX = cx + radius / Math.SQRT2;
+        const diagonalY = cy - radius / Math.SQRT2;
+        const labelX = cx + radius * 0.30 / Math.SQRT2 - 1;
+        const labelY = cy - radius * 0.30 / Math.SQRT2 - 10;
+        set("projection", { d: `M${cx + 8} ${top}H${right}V${cy - 8}` });
+        set("outer-guide", { d: `M${right} ${cy}A${radius} ${radius} 0 1 1 ${cx} ${top}` });
+        set("inner-guide", { d: `M${innerRight} ${cy}A${inner} ${inner} 0 1 1 ${cx} ${innerTop}` });
+        set("corner-cross", { d: `M${right} ${top - 14}V${top + 14} M${right - 14} ${top}H${right + 14}` });
+        set("outer-corner", { d: `M140 ${top}H${cx}A${radius} ${radius} 0 0 1 ${right} ${cy}V318` });
+        set("inner-corner", { d: `M140 ${innerTop}H${cx}A${inner} ${inner} 0 0 1 ${innerRight} ${cy}V318` });
+        set("end-caps", { d: `M140 ${top - 4}V${innerTop + 4} M${innerRight - 4} 318H${right + 4}` });
+        set("radius-line", { d: `M${cx} ${cy}L${diagonalX} ${diagonalY}m-7 0h7v7` });
+        set("top-dimension", { d: `M${cx} ${dimensionY}H${right} M${cx} ${dimensionY - 7}V${dimensionY + 7} M${right} ${dimensionY - 7}V${dimensionY + 7} M${cx - 4} ${dimensionY + 4}L${cx + 4} ${dimensionY - 4} M${right - 4} ${dimensionY + 4}L${right + 4} ${dimensionY - 4}` });
+        set("right-dimension", { d: `M417 ${top}V${cy} M411 ${top}H423 M411 ${cy}H423 M413 ${top + 4}L421 ${top - 4} M413 ${cy + 4}L421 ${cy - 4}` });
+        set("offset-dimension", { d: `M${innerRight} 345H${right} M${innerRight} 335V352 M${right} 335V352 M${innerRight - 4} 349L${innerRight + 4} 341 M${right - 4} 349L${right + 4} 341` });
+        set("offset-leader", { d: `M140 ${top + offset / 2}H113L101 ${top + offset / 2 + 12}` });
+        set("top-tangent", { cy: top });
+        set("right-tangent", { cx: right });
+        set("top-label", { x: cx + radius / 2, y: dimensionY - 11 });
+        elements["top-label"].textContent = `r = ${radius}`;
+        set("right-label", { y: cy - radius / 2 + 4 });
+        set("offset-label", { x: right - offset / 2 });
+        set("radius-label", { x: labelX, y: labelY, transform: `rotate(-45 ${labelX} ${labelY})` });
+        elements["radius-label"].textContent = `R${radius}`;
+        set("offset-word", { y: top + 39 });
+        svg.dataset.radius = radius;
+        svg.dataset.innerRadius = inner;
+        svg.dataset.time = time;
+      }
+      const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+      let frame = 0;
+      let manuallyPaused = false;
+      let origin = performance.now();
+      function tick(now) {
+        render(((now - origin) / 1000) % duration);
+        frame = requestAnimationFrame(tick);
+      }
+      function start() {
+        cancelAnimationFrame(frame);
+        if (!manuallyPaused && !reducedMotion.matches) {
+          origin = performance.now();
+          frame = requestAnimationFrame(tick);
+        }
+      }
+      window.study = Object.freeze({
+        duration,
+        seek(seconds) {
+          if (!Number.isFinite(seconds)) throw new TypeError("seek expects a finite time in seconds");
+          manuallyPaused = true;
+          cancelAnimationFrame(frame);
+          render(Math.max(0, Math.min(duration, seconds)));
+        }
+      });
+      reducedMotion.addEventListener("change", () => {
+        cancelAnimationFrame(frame);
+        if (!manuallyPaused) { render(0); start(); }
+      });
+      render(0);
+      start();
+    })();
+  </script>
+</body>
+</html>

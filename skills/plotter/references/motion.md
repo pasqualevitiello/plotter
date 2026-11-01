@@ -1,51 +1,79 @@
 # Animate a Plotter drawing
 
-Use this workflow for an animated construction, a loop, or motion added to an existing Plotter illustration. The drawing and animation share [visual direction](direction.md), [visual grammar](visual-grammar.md), and the [drafting standard](drafting-standard.md). Read those before choosing moving parts. Read [foundation.md](foundation.md) when using role styles or shared geometry; it is also the contract for static export.
+Motion should reveal a relationship over time: what joins, what causes the next event, what stays constant, or where a transfer ends. Keep the shared [direction](direction.md), [grammar](visual-grammar.md), and [drafting standard](drafting-standard.md). Read [motion examples](motion-examples.md) for the nearest behavior; borrow its reasoning, not its choreography or duration.
 
-## 1. Establish the still and the change
+## 1. Choose what time reveals
 
-For a new subject, complete the [drawing workflow](drawing.md) first. For an existing illustration, inspect its editable source and render, preserving its composition and authored exceptions. Choose a still that explains the subject when motion is unavailable; the first animation frame may be a poor fallback.
+For a new subject, resolve a readable [still](drawing.md) first. For an existing drawing, inspect its source and render; preserve the composition unless a redesign was requested. Select a meaningful fallback, which need not be frame zero.
 
-Name the relationship motion adds: a part seats, an aperture changes, an interval advances, or a route transfers something. Describe the initial state, significant event, and final state. Decide whether the result plays once, reverses, or loops. Use a loop only when its return has a coherent meaning.
+Complete this sentence before implementing: “The viewer sees [change], which explains [relationship].” Choose the moving subject and the fixed reference that makes the change legible. A dimension, grid, or hatch does not need its own entrance merely because it exists.
 
-**Done when:** an editable static fallback exists, the intended change is stated, and each moving part has an identifiable source group. If the brief needs a complete redesign, resolve its composition before adding a timeline.
+- **Assembly:** preserve the identity of the parts while their relationship changes. Move related marks together; let the completed arrangement register.
+- **Transfer:** establish the source and destination, then follow one event through them. Avoid simultaneous competing signals unless concurrency is the subject.
+- **Geometric change:** identify the changing parameter and the invariant. Derive outlines, witnesses, and labels from the same geometry throughout the transition.
+- **Continuous mechanism:** show the constraint through repeated motion. Keep the support, pivot, or locus stable so the viewer can read the movement against it.
 
-## 2. Define the motion contract
+A line-reveal effect is useful when the order of construction is the subject. Otherwise, moving the actual part or signal usually explains more. Do not add unrelated rotation, pulsing, or label entrances to make a quiet drawing feel animated.
 
-Keep three responsibilities separate:
+## 2. Stage the significant events
 
-| Responsibility | Owns                                                                                         |
-| -------------- | -------------------------------------------------------------------------------------------- |
-| Drawing        | Geometry, semantic groups, line roles, labels, hatch regions, static fallback                |
-| Timeline       | Drawing-specific transforms or path changes, timing, contact events, and loop/reset behavior |
-| Playback       | Start, pause/resume, replay, static mode, reduced motion, and visibility pausing             |
+Sketch the start, the decisive event, and the readable result before interpolating. Name what the eye should follow in each state. Keep unrelated marks still; move explanatory guides only when their witnesses move. A hatch travels with its bounded region, never as a separate effect.
 
-Use shared geometry helpers for supported marks; keep the mechanism's timing local. List only invariants the drawing actually claims. Rigid parts keep their size; pivoted parts keep their attachment; a hatch stays on the same region; an indexing sequence retains its pitch. A conceptual transition is not proof of physical simulation.
+For a sequence, establish cause before response: a part seats before its carrier advances; a request arrives before an output reacts. Overlap events when the relationship warrants it, not simply to make every part move at once. For continuous mechanisms, the handoff can be immediate; adding a pause at a pendulum collision changes the behavior.
 
-For seating or contact, specify which shape owns each coincident edge before, during, and after contact. Transfer ownership or shorten the visible segment so the join has one stroke. Keep forms transparent. Place fixed guides outside swept regions where they would obscure moving parts; use geometric clipping for genuine openings or entry/exit apertures.
+Choose the ending deliberately:
 
-**Done when:** every moving group has its transform or path rule, every contact has an edge owner, and the end-to-start transition has an explicit treatment. A continuous loop has a continuous visible state; a reverse or reset is intentional and legible.
+- **Once:** the result persists. Use this when the story is completion.
+- **Reverse:** the return describes a release, adjustment, recurring attempt, or comparison between exploded and assembled states. Reversing a construction study can clarify its parts; reversing a completed operation can imply that its result is undone. Choose based on what the drawing claims.
+- **Repeat:** the next cycle follows from the previous one. An indexing conveyor can supply a new part; a periodic mechanism can return to the same phase. A reset hidden at a real aperture is useful only when that aperture belongs to the drawing.
 
-## 3. Implement the timeline and player
+Keep the repeat within the established construction when possible. Do not introduce a whole-scene slide, replacement carrier, or new mechanism solely to avoid a simple, meaningful reversal; those additions can become the dominant motion.
 
-Preserve role styling and opacity grouping from the still. Transform a rigid part and its hatching together. Move explanatory guides only when they belong to the moving construction; keep page typography and fixed reference geometry stable. Native SVG animation, the host's existing animation system, or a small browser script are suitable; the portable foundation has no clock or playback dependency.
+Keep fixed guides outside swept regions where they would obscure moving parts. At contact, specify the owner of each coincident edge before, during, and after joining. Transfer ownership or trim the duplicate segment; transparent forms must remain transparent.
 
-For repeating motion, provide pause/resume and replay. Pause while the drawing is outside the viewport or the page is hidden. Respect `prefers-reduced-motion` with the chosen still, including changes to that preference while the page is open. Show the still when JavaScript or the animation capability is unavailable. A paused animation and the chosen still are different states; keep that distinction in the controls and implementation.
+## 3. Give the events a rhythm
 
-**Done when:** the drawing, timeline, and playback can be identified separately in the source; motion retains the still's line hierarchy and hatch meaning; and each delivery context has a deliberate fallback.
+Write a compact beat list with approximate times, moving groups, and the reason for each hold or overlap. Use it to implement and revise the sequence; it need not become user-facing documentation.
 
-## 4. Inspect and deliver
+Choose speed from the behavior:
 
-Within the user's permitted review scope, view the complete motion and its static fallback at their intended size. Inspect approach, contact, separation, and the loop boundary; look for doubled edges, hatch drift, unexpected occlusion, and labels cut by moving forms. Exercise the controls and reduced-motion/visibility behavior when permitted. Source inspection alone does not establish runtime behavior; name any unperformed review rather than calling it passed. Respect a request to skip automated checks and tests.
+| Behavior                           | Timing decision                                                                                            | What to inspect                                               |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Controlled placement or adjustment | Ease into the target so alignment can be read; use overshoot only if the mechanism has a reason to settle. | Does it arrive decisively, or drift indefinitely?             |
+| Free travel or a steady signal     | Preserve the intended speed through uninterrupted travel; do not ease to a stop at every path segment.     | Does a corner accidentally look like a new event?             |
+| Swing or orbital motion            | Derive motion from the stated construction; distinguish a stylized timing accent from a physical claim.    | Are pivots fixed and speed changes consistent with the story? |
+| A new readable configuration       | Give it enough time to recognize at the intended size before the next change.                              | Can the result be understood without pausing?                 |
 
-Deliver the editable animation source, its static fallback, and the files needed to open them. State the movement's purpose and any unverified behavior. For a standalone static SVG, export the chosen still with the packaged exporter; active animation is outside that exporter's contract. For animated HTML, include its actual stylesheet dependencies or inline the generated role stylesheet when packaging a single file. A file that depends on coss imports or an application stylesheet is not a portable delivery.
+Do not apply one easing curve to the whole drawing. A carrier’s index, a falling core, and the hold after contact have different jobs. Duration follows travel, reading time, and context; interface-transition timing is not automatically appropriate for an explanatory loop. Lengthen a hold when a result is missed; shorten empty waiting when attention wanders. Do not add dead stops to a continuous mechanism to satisfy a hold rule.
 
-**Done when:** both moving and static deliverables are available with opening instructions, required local resources accompany them, and the review report distinguishes what was observed from what remains unverified.
+## 4. Build, watch, revise
 
-## Portable example
+Keep geometry, timeline, and host playback separable. The [foundation](foundation.md) supplies styles and geometry, not a clock. Use native SVG animation, the host’s existing system, or a small script. Preserve the still’s opacity grouping, line hierarchy, rigid sizes, pivots, and attached hatching. State only the geometric or physical behavior the drawing actually supports.
 
-Open [assembly-motion.html](../assets/examples/assembly-motion.html) directly in a modern browser after copying the complete `plotter` folder. It reads the adjacent packaged `../foundation/roles.css`; retain that relative path. No server, package installation, coss checkout, or external font is needed. If moving the HTML alone, inline the contents of that generated CSS file rather than maintaining another palette.
+Within the permitted review scope, watch a complete cycle at normal speed and intended size. Then inspect the decisive event and the return boundary more closely. Ask:
 
-The small example seats a hatched core on a base and withdraws it. Its fixed base owns the shared contact edge; the core's bottom stroke hides while seated. Hatching travels with the core, and one static SVG state serves no-JavaScript and reduced-motion use. The player supplies pause/resume, replay, static mode, and visibility pausing.
+- Can the main change be described without reading the implementation?
+- Does attention move in the intended order? Remove competing motion before adding more emphasis.
+- Is the result readable? Adjust the move/hold balance rather than slowing everything uniformly.
+- Does the return preserve meaning and continuity? Compare position **and speed**, except at an intentional impact or reversal.
+- At approach, contact, and separation, do edges remain single, hatches attached, labels clear, and dimensions truthful?
 
-This is an editable implementation example, not the exact MEC-05 timeline, an approved visual reference, a physics simulation, or a resolved standalone SVG. Its durations and geometry demonstrate the relationship; choose the composition from the bundled approved references. Browser animation behavior still needs review in the eventual delivery environment.
+Revise the weakest observed issue and replay the affected sequence. Review the chosen still independently. Sampled frames can establish poses and clearances; they do not establish rhythm. If playback inspection is unavailable, name that gap rather than calling motion visually verified. Respect a request to skip automated checks.
+
+## Delivery and host behavior
+
+The brief determines the artifact. A request to animate a site component is not a request for a standalone HTML player. Preserve the host’s existing controls and playback conventions; read [website integration](implementation.md) for this repository.
+
+- **Embedded illustration:** integrate the timeline with the host’s playback. Plotter’s website loops have no visible controls; they pause off-screen or while the page is hidden.
+- **Standalone animation or review file:** include the editable timeline and its actual resources. A player with pause/resume, replay, and a way to inspect the selected still is useful here. For one-file HTML, inline the generated role stylesheet; for a folder, preserve all relative dependencies.
+- **Still export:** export the selected static composition with the packaged exporter. Active animation is outside that exporter’s contract.
+
+Respect reduced motion, including preference changes while the page is open, by showing the selected still. Keep it readable before JavaScript runs and when animation is unavailable. A paused intermediate frame is not the same as that deliberately chosen fallback.
+
+Deliver the requested source and a concise account of the movement and checks actually performed. Playback controls and packaging support the work; they do not establish that the animation communicates well.
+
+## Implementation example
+
+[Assembly motion](../assets/examples/assembly-motion.html) is a small portable wiring example: a core seats and withdraws, its hatching stays attached, and the base owns the contact edge. Keep its relative `../foundation/roles.css` dependency, or inline that generated CSS for one-file delivery. It has no build or server dependency.
+
+Its player demonstrates fallback and visibility handling. It is not an approved motion reference, the exact MEC-05 timeline, or a physics simulation. Use the [annotated studies](motion-examples.md) to reason about choreography and rhythm.

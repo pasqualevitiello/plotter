@@ -1,57 +1,49 @@
 # Animation
 
-Animate a relationship that the still already explains. A part seats, an aperture changes, an interval advances, or a route transfers something. The drawing, timeline, and player have different responsibilities.
-
-## Start from a readable still
-
-For a new subject, finish the [drawing](/docs/drawing) first. For an existing one, supply the editable source and preserve its composition unless you want a redesign.
-
-Choose a static fallback that explains the subject. The first frame of the timeline may not be the right still.
+Animate the relationship that matters: parts joining, a request reaching its destination, or a construction changing while one rule stays fixed. Tell Plotter what the movement should explain and where it will appear.
 
 ```text
-/plotter Animate this drawing so the selected core seats in the carrier.
-Preserve the static composition and transparent forms.
-Keep the hatching attached to the core, with one stroke at contact.
-Include pause/resume, replay, a static mode, and a reduced-motion still.
-Deliver editable animation HTML with its required local resources.
+/plotter Animate this drawing for a homepage illustration.
+A core seats in its carrier, then the line advances for the next assembly.
+Keep the composition quiet and make the handoff easy to follow.
 ```
 
-In Codex, start with `$plotter` instead.
+In Codex, start with `$plotter` instead. Supply the editable drawing when you have one; for a new subject, Plotter starts with a readable [still](/docs/drawing).
 
-## Describe the change
+## Decide what should move
 
-Name the initial state, significant event, and final state. Decide whether the motion plays once, reverses, or loops. Give a loop a meaningful return.
+Choose the main change and the fixed reference that makes it understandable. A carrier can stay still while a core seats. A pivot stays fixed while a pendulum swings. A request moves through a stable route.
 
-Keep rigid parts the same size, pivoted parts attached to their pivots, and hatching attached to its region. At contact, decide which shape owns the shared edge before, during, and after seating. Keep a single visible stroke at the join.
+Supporting marks do not all need animation. Keep labels, grids, and guides still unless the geometry they describe changes. Hatching stays attached to its region; dimensions follow their actual witnesses.
 
-A conceptual transition can explain a mechanism without claiming a physical simulation. State only the invariants and behavior the drawing actually supports.
+## Stage the story
 
-## Separate responsibilities
+Establish the starting state, the decisive event, and the readable result. Sequence cause and response: a core seats before the carrier advances; a request arrives before its destination reacts.
 
-| Part     | Owns                                                                       |
-| -------- | -------------------------------------------------------------------------- |
-| Drawing  | Geometry, semantic groups, line roles, labels, hatch regions, chosen still |
-| Timeline | Transforms, path changes, timing, contact, loop or reset                   |
-| Playback | Start, pause/resume, replay, static mode, reduced motion, visibility       |
+Give the result time to register when recognition needs a hold. Continuous mechanisms have different needs: Newton’s cradle transfers motion at contact without stopping there, and an orbit continues through its starting point at the same speed.
 
-The foundation supplies shared geometry and style roles; it has no clock or player dependency. Keep timing local to the mechanism. Transform a rigid part and its hatching together, preserving the still’s opacity grouping and line hierarchy.
+Choose a meaningful ending. A completed action can play once. A reversible adjustment can return. A repeating mechanism should produce its next cycle naturally rather than abruptly teleporting back or undoing the result without a reason.
 
-## Make playback deliberate
+## Shape the timing
 
-Repeating motion needs pause/resume and replay. Pause when the drawing leaves the viewport or the page is hidden. Respect `prefers-reduced-motion`, including changes while the page is open, with the selected still.
+Use different timing for different jobs. Controlled placement can slow into alignment. A steady signal should not stop at every bend. A swing slows near its turn, then accelerates toward contact.
 
-Keep paused motion distinct from static mode. A paused frame may be halfway through a transition, while the fallback is chosen for readability. Show that fallback when JavaScript or the animation capability is unavailable.
+Watch the whole sequence at its intended size. If the result is missed, lengthen its hold; if nothing happens for too long, shorten that gap. If several moving parts compete, simplify the staging. Slowing everything down rarely fixes those different problems.
 
-## Package animated HTML
+The complete skill includes an annotated motion gallery with the assembly line, Newton’s cradle, and orbits. Open `assets/examples/motion-studies.html` from the installed skill, or [download the motion studies](/plotter/downloads/motion-studies.html). The notes explain what to borrow and where each example can mislead. They are teaching studies, not a new approved reference set.
 
-The complete skill includes `assets/examples/assembly-motion.html`. Open it directly in a modern browser, keeping its relative dependency on `assets/foundation/roles.css`. It uses local resources and needs no website checkout or development server.
+## Match the destination
 
-For one-file delivery, inline the generated role stylesheet. For a folder delivery, include every actual local resource and preserve its relative path. A portable animation should not depend on website imports or application CSS.
+The output follows your brief. A site animation stays in the site’s component system. A standalone animation includes its editable source and the resources needed to open it. Ask for a standalone HTML file when that is what you need; a playback toolbar is not part of every illustration.
 
-[Download the assembly animation](/plotter/downloads/assembly-line.html) for a portable HTML example. This example is an implementation study; its timing is not the catalogue’s exact MEC-05 timeline.
+On this website, loops have no visible controls and pause when off-screen or when the page is hidden. Reduced motion shows a deliberately chosen still. A paused frame halfway through a move may be less readable than that fallback.
 
-## Export the still separately
+For a standalone review file, pause/resume, replay, and a still view help inspect the work. [Download the assembly animation](/plotter/downloads/assembly-line.html) for an editable example. The small `assets/examples/assembly-motion.html` in the skill demonstrates the player wiring separately from the motion-design guidance.
 
-The static SVG exporter accepts the selected still. Active animation is outside its contract. Export that still using the command in the [drawing guide](/docs/drawing#export-a-static-svg), and deliver it alongside the animation when requested.
+## Review the movement and the still
 
-Inspect approach, contact, separation, and the return boundary. Look for doubled edges, hatch drift, accidental occlusion, and labels crossed by moving forms. Exercise controls, visibility pausing, and reduced motion within the requested review scope. Name any unperformed review instead of treating source inspection as runtime verification.
+Watch a full cycle, then inspect approach, contact, separation, and the return boundary. Check for doubled edges, drifting hatches, crossed labels, and measurements that stop matching their geometry. Keep transparent forms transparent.
+
+Review the fallback on its own, and check the host’s reduced-motion and visibility behavior. Source inspection and sampled frames help with geometry; they do not establish how the rhythm feels in playback. Report what was actually inspected.
+
+When a separate static SVG is needed, export the selected still using the [drawing guide](/docs/drawing#export-a-static-svg). The static exporter does not export active animation.

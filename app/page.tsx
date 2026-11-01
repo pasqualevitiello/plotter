@@ -1,18 +1,20 @@
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
+import { EngineeringMotionPreview } from "@/components/plotter/engineering-motion-preview";
 import { illustrations } from "@/components/plotter/illustrations";
-import { DrawingFigure, SheetArt, SheetBar } from "@/components/sheet";
+import { NewtonsCradleMotionDrawing } from "@/components/plotter/newtons-cradle-motion-drawing";
+import { DrawingFigure, SheetBar } from "@/components/sheet";
 import { SiteShell } from "@/components/site-shell";
 import { Button } from "@/components/ui/button";
 
-const hero = study("mech-iris-aperture");
+const hero = study("OBJ-05");
 const library = [
-  "geo-negative-space",
-  "type-letter-strokes",
-  "agent-handoff",
-  "nature-leaf-veins",
-  "craft-dovetail",
-  "cal-appointment-buffers",
+  "MEC-01",
+  "INT-04",
+  "SRV-06",
+  "OBJ-01",
+  "NAT-01",
+  "EMP-02",
 ].map(study);
 
 const chapters = [
@@ -39,9 +41,9 @@ const chapters = [
   },
 ];
 
-function study(id: string) {
-  const item = illustrations.find((illustration) => illustration.id === id);
-  if (!item) throw new Error(`Missing homepage illustration: ${id}`);
+function study(code: string) {
+  const item = illustrations.find((illustration) => illustration.code === code);
+  if (!item) throw new Error(`Missing homepage illustration: ${code}`);
   return item;
 }
 
@@ -78,19 +80,30 @@ export default function Home() {
         </div>
         <figure className="flex flex-col">
           <div className="flex flex-1 items-center">
-            <div className="w-full">
-              <SheetArt label={`${hero.code}: ${hero.title}`}>
+            <div
+              aria-label={`${hero.code}: Newton’s cradle in motion`}
+              className="w-full"
+              role="img"
+            >
+              <EngineeringMotionPreview
+                animated={<NewtonsCradleMotionDrawing />}
+              >
                 {hero.illustration}
-              </SheetArt>
+              </EngineeringMotionPreview>
             </div>
           </div>
           <figcaption className="grid grid-cols-[auto_minmax(0,1fr)_auto] border-t text-sm">
             <span className="mono-label px-5 py-3 text-foreground">
               {hero.code}
             </span>
-            <span className="border-s px-5 py-3">{hero.title}</span>
+            <Link
+              className="border-s px-5 py-3 underline-offset-4 hover:underline"
+              href="/animations#newtons-cradle-animation"
+            >
+              Newton’s cradle
+            </Link>
             <span className="mono-label border-s px-5 py-3 max-sm:hidden">
-              SVG · 560 × 440
+              Animated SVG
             </span>
           </figcaption>
         </figure>
