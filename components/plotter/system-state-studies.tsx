@@ -41,7 +41,7 @@ function OfflineStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.12" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M188 200H372 M240 280V360 M120 328H256 M120 344H256" />
+        <path d="M188 200H212 M348 200H372 M240 280V320 M240 352V360 M120 328H128 M248 328H256 M120 344H128 M248 344H256" />
       </g>
       <g opacity="0.28" strokeWidth="1" strokeOpacity="0.65">
         <path
@@ -122,8 +122,8 @@ function AccessStudy() {
     <BlueprintDrawing>
       <g transform="translate(0 -24)">
         <g opacity="0.12" strokeWidth="1" strokeOpacity="0.6">
-          <path d="M208 224H368 M208 336H368 M224 208V356 M352 208V356" />
-          <path d="M272 252V308H304V252Z" />
+          <path d="M360 224H368 M208 336H216 M360 336H368 M224 208V216 M224 344V356 M352 208V216 M352 344V356" />
+          <path d="M272 308V252H304V296" />
         </g>
         <g opacity="0.3" strokeWidth="1" strokeOpacity="0.65">
           <path d="M288 116V204 M232 176H344" strokeDasharray="4 6" />
@@ -219,8 +219,8 @@ function EmailStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.12" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M144 88H416 M160 72V160 M400 72V160 M144 168H152 M408 168H424" />
-        <path d="M144 312H416" />
+        <path d="M144 88H416 M160 72V160 M400 72V160 M408 168H424" />
+        <path d="M144 312H152 M408 312H416" />
       </g>
       <g opacity="0.28" strokeWidth="1" strokeOpacity="0.65">
         <path d="M280 72V80 M280 96V240 M280 256V320" strokeDasharray="4 6" />
@@ -438,7 +438,7 @@ function LocationStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.12" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M144 176H256 M352 176H448 M264 120V224 M344 120V224" />
+        <path d="M144 176H256 M352 176H448 M264 120V224 M344 156V224" />
         <path d="M144 216H256 M352 216H448" />
       </g>
       <g opacity="0.3" strokeWidth="1" strokeOpacity="0.65">

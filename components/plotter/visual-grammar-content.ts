@@ -8,6 +8,14 @@ export const visualGrammarEntries = [
     caption: "The fragments and completed record read first.",
   },
   {
+    id: "highlights",
+    title: "Region highlights",
+    description:
+      "Two availability intervals share one time window. The translucent fill marks their intersection; the rest of each interval stays transparent.",
+    omit: "Use a highlight for a named selection, intersection, or result. Paint it once, and omit it when the outline or hatching already explains the same relationship.",
+    caption: "Only the shared portions of the two intervals are shaded.",
+  },
+  {
     id: "hatching",
     title: "Diagonal hatching",
     description:

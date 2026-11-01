@@ -145,7 +145,7 @@ export function CommonInterfaceStudy() {
         strokeWidth="1"
         strokeOpacity="0.65"
       >
-        <path d="M264 96H360L392 128V224" />
+        <path d="M264 96H348 M379 115L392 128V224" />
         <path d="M264 160A64 64 0 0 1 328 224" />
       </g>
       <InterfaceHatch />

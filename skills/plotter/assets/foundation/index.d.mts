@@ -41,6 +41,7 @@ export const standard: Readonly<{
   }>;
 }>;
 export const roleCss: string;
+export const highlightOpacity: string;
 
 /** A tip-first shaft and separate solid open head, in SVG coordinates. */
 export function arrow(input: { kind: "line"; from: Point; to: Point }): {

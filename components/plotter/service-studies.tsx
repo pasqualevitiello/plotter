@@ -5,10 +5,13 @@ function CloudflareEdgeStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M144 88V360M200 96V352M256 96V352M312 96V352M368 88V360M120 112H392M120 168H392M120 280H392M120 336H392" />
+        <path d="M144 88V104M144 344V352M200 96V104M200 132V216M200 232V296M200 344V352M312 96V104M312 176V188M312 232V316M312 344V352M368 88V104M368 344V352M120 112H136M376 112H392M120 168H136M164 168H280M336 168H348M376 168H392M120 280H136M164 280H224M272 280H348M376 280H392M120 336H136M376 336H392" />
       </g>
       <g opacity="0.25" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M72 224H488M256 88V360" strokeDasharray="4 5" />
+        <path
+          d="M64 224H72M484 224H496M256 88V104M256 152V172M256 344V360"
+          strokeDasharray="4 5"
+        />
         <path d="M144 76H240M272 76H368M144 68V84M368 68V84m-228-4 8-8m216 8 8-8" />
         <path d="M144 360V380M368 360V380M144 372H240M272 372H368m-228 4 8-8m216 8 8-8" />
       </g>
@@ -26,15 +29,15 @@ function CloudflareEdgeStudy() {
       />
       <g strokeWidth="1" strokeOpacity="0.9">
         <path d="M80 224H138M150 224H212" />
-        <circle cx="144" cy="224" fill="var(--color-sidebar)" r="6" />
-        <circle cx="256" cy="224" fill="var(--color-sidebar)" r="44" />
-        <circle cx="448" cy="224" fill="var(--color-sidebar)" r="28" />
+        <circle cx="144" cy="224" r="6" />
+        <circle cx="256" cy="224" r="44" />
+        <circle cx="448" cy="224" r="28" />
         <path d="M256 268V280A24 24 0 0 1 232 304H80m6-4-6 4 6 4" />
       </g>
       <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
-        <path d="M300 224H420" strokeDasharray="4 5" />
+        <path d="M300 224H365M371 224H420" strokeDasharray="4 5" />
         <path d="m414 220 6 4-6 4M200 220l4 4-4 4" />
-        <circle cx="368" cy="224" fill="var(--color-sidebar)" r="3" />
+        <circle cx="368" cy="224" r="3" />
         <path d="M232 280H264M232 280V312M232 280 249 297" />
         <path d="M287.1 192.9 312 168H328" />
       </g>
@@ -77,16 +80,15 @@ function VercelDeploymentStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.1" strokeWidth="1" strokeOpacity="0.55">
-        <path d="M112 84V372M136 88V368M232 88V368M256 84V372M328 164V292M352 176V288M448 176V288M472 164V292" />
-        <path d="M88 96H280M88 168H280M88 192H488M88 264H488M88 288H280M88 360H280" />
+        <path d="M112 84V88M112 176V184M112 272V280M112 368V376M256 84V88M256 176V184M256 272V280M256 368V376M328 180V184M328 272V284M472 180V184M472 272V284" />
+        <path d="M88 96H96M264 96H280M88 168H104M264 168H280M88 192H104M264 192H312M480 192H488M88 264H104M264 264H320M480 264H488M88 288H104M264 288H280M88 360H104M272 360H280" />
       </g>
       <g opacity="0.22" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M96 228H488M184 84V376M400 176V292" strokeDasharray="4 6" />
-        <path d="M100 96H112V84M256 372V360H268M316 192H328V180M472 276V264H484" />
         <path
-          d="M112 96H256M112 168H256M112 288H256M112 360H256"
-          strokeDasharray="3 5"
+          d="M96 228H104M480 228H488M184 84V88M184 176V184M184 272V280M184 368V376M400 176V184"
+          strokeDasharray="4 6"
         />
+        <path d="M100 96H112V84M256 372V360H268M316 192H328V180M472 276V264H484" />
       </g>
 
       <g
@@ -99,7 +101,6 @@ function VercelDeploymentStudy() {
         <rect height="72" rx="12" width="144" x="112" y="288" />
       </g>
       <rect
-        fill="var(--color-sidebar)"
         height="72"
         rx="12"
         strokeDasharray="4 4"
@@ -110,7 +111,6 @@ function VercelDeploymentStudy() {
         y="192"
       />
       <rect
-        fill="var(--color-sidebar)"
         height="72"
         rx="12"
         strokeWidth="1"
@@ -184,14 +184,17 @@ function StripeSettlementStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.13" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M128 104V188M192 104V188M208 104V188M272 104V188M288 104V188M352 104V188M368 104V188M432 104V188" />
-        <path d="M112 128H448M112 176H448M128 272H432M128 328H432" />
-        <path d="M152 244V364M216 244V364M280 244V364M344 244V364M408 244V364" />
+        <path d="M128 184V188M192 104V120M192 184V188M208 104V120M208 184V188M272 104V120M272 184V188M288 104V120M288 184V188M352 104V120M352 184V188M368 104V120M368 184V188M432 104V120M432 184V188" />
+        <path d="M112 128H120M440 128H448M112 176H120M440 176H448M128 272H144M416 272H432M128 328H144M416 328H432" />
+        <path d="M152 244V264M216 244V264M280 244V264M344 244V264M408 244V264M216 336V344M280 336V340M344 336V344" />
       </g>
       <g opacity="0.28" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M112 152H448M128 300H432" strokeDasharray="4 5" />
         <path
-          d="M160 188V212H184V260M240 188V228H248V260M320 188V228H312V260M400 188V212H376V260"
+          d="M112 152H120M440 152H448M128 300H144M416 300H432"
+          strokeDasharray="4 5"
+        />
+        <path
+          d="M160 188V212H184V252M240 188V228H248V252M320 188V228H312V252M400 188V212H376V252"
           strokeDasharray="3 5"
         />
         <path d="M128 92H150M170 92H192M128 86V98M192 86V98m-68 0 8-8m56 8 8-8" />
@@ -199,24 +202,9 @@ function StripeSettlementStudy() {
       </g>
       <g strokeWidth="1" strokeOpacity="0.95">
         {[128, 208, 288, 368].map((x) => (
-          <rect
-            fill="var(--color-sidebar)"
-            height="48"
-            key={x}
-            rx="8"
-            width="64"
-            x={x}
-            y="128"
-          />
+          <rect height="48" key={x} rx="8" width="64" x={x} y="128" />
         ))}
-        <rect
-          fill="var(--color-sidebar)"
-          height="56"
-          rx="8"
-          width="256"
-          x="152"
-          y="272"
-        />
+        <rect height="56" rx="8" width="256" x="152" y="272" />
         <path
           d="M216 272V284M280 272V284M344 272V284M216 316V328M280 316V328M344 316V328"
           opacity="0.45"
@@ -259,36 +247,25 @@ function StripePaymentStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.12" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M112 100V332M224 112V332M280 100V332M336 100V332M448 112V332M88 140H464M88 172H464M88 204H464M88 236H464M88 268H464M88 300H464" />
+        <path d="M112 116V132M112 180V196M112 244V260M112 308V332M224 116V132M224 180V196M224 244V260M224 308V332M448 112V208M448 276V332M96 140H104M232 140H240M96 172H104M96 204H104M232 204H244M96 236H104M232 236H244M96 268H104M232 268H244M96 300H104M232 300H244" />
       </g>
       <g opacity="0.28" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M96 220H468M308 100V340" strokeDasharray="4 5" />
+        <path
+          d="M96 220H104M460 220H468M308 116V196M308 276V324"
+          strokeDasharray="4 5"
+        />
         <path d="M112 100H152M184 100H224M112 92V108M224 92V108m-116-4 8-8m104 8 8-8" />
         <path d="M280 340H298M318 340H336M280 332V348M336 332V348m-60-4 8-8m48 8 8-8" />
         <path d="M88 156V284M80 156H96M80 220H96M80 284H96" />
       </g>
 
       <g strokeWidth="1" strokeOpacity="0.95">
-        <rect
-          fill="var(--color-sidebar)"
-          height="32"
-          rx="16"
-          width="112"
-          x="112"
-          y="140"
-        />
+        <rect height="32" rx="16" width="112" x="112" y="140" />
         <path d="M224 156H236A16 16 0 0 1 252 172V204A16 16 0 0 0 268 220H280" />
         <path d="M280 124V204M280 236V316M336 124V204M336 236V316" />
-        <rect
-          fill="var(--color-sidebar)"
-          height="32"
-          rx="16"
-          width="56"
-          x="280"
-          y="204"
-        />
-        <path d="M336 220H448" />
-        <circle cx="448" cy="220" fill="var(--color-sidebar)" r="5" />
+        <rect height="32" rx="16" width="56" x="280" y="204" />
+        <path d="M336 220H443" />
+        <circle cx="448" cy="220" r="5" />
       </g>
       <g opacity="0.45" strokeWidth="1" strokeOpacity="0.7">
         <rect height="32" rx="16" width="112" x="112" y="204" />
@@ -300,10 +277,10 @@ function StripePaymentStudy() {
         <path d="M272 124H288M328 124H344M272 316H288M328 316H344" />
       </g>
       <g opacity="0.34" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M236 156V180M228 172H260M236 172 247.3 160.7 264 144" />
-        <path d="M128 132V180M104 156H144M208 132V180M192 156H232" />
+        <path d="M236 156V180M228 172H260M236 172 247.3 160.7 258 150" />
+        <path d="M128 132V136M128 176V180M104 156H108M208 132V136M208 176V180M228 156H232" />
         <path d="M308 244V268H360" strokeDasharray="3 5" />
-        <path d="M448 232V268H420" />
+        <path d="M448 232V268H426" />
         <path d="M264 124H352M264 316H352" strokeDasharray="3 5" />
       </g>
       <g fill="currentColor" fontSize="11" opacity="0.72" stroke="none">
@@ -348,42 +325,24 @@ function LinearCycleStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.12" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M136 92V348M204 100V340M272 92V348M340 100V340M408 92V348" />
-        <path d="M112 156H432M112 188H432M112 212H432M112 244H432M112 268H432M112 300H432" />
+        <path d="M136 92V148 M136 196V348 M204 116V148 M204 196V204 M204 252V348 M272 92V148 M272 196V204 M272 252V260 M272 308V348 M340 116V204 M340 252V260 M340 308V348 M408 92V104" />
+        <path d="M112 156H128 M280 156H432 M112 188H128 M280 188H432 M112 212H196 M416 212H432 M112 244H196 M416 244H432 M112 268H264 M416 268H432 M112 300H264 M416 300H432" />
       </g>
       <g opacity="0.32" strokeWidth="1" strokeOpacity="0.65">
         <path d="M136 80H244M300 80H408M136 72V88M408 72V88m-276-4 8-8m264 8 8-8" />
         <path d="M136 120H402M136 114V126M272 114V126" />
-        <path d="M408 126V332" strokeDasharray="3 5" />
+        <path
+          d="M408 126V204 M408 252V260 M408 308V332"
+          strokeDasharray="3 5"
+        />
         <path d="M136 328H204M136 322V334M204 322V334m-72-2 8-8m60 8 8-8" />
         <path d="M116 172V284M110 172H122M110 228H122M110 284H122" />
       </g>
       <g strokeWidth="1" strokeOpacity="0.95">
-        <rect
-          fill="var(--color-sidebar)"
-          height="32"
-          rx="16"
-          width="136"
-          x="136"
-          y="156"
-        />
-        <rect
-          fill="var(--color-sidebar)"
-          height="32"
-          rx="16"
-          width="204"
-          x="204"
-          y="212"
-        />
-        <rect
-          fill="var(--color-sidebar)"
-          height="32"
-          rx="16"
-          width="136"
-          x="272"
-          y="268"
-        />
-        <circle cx="408" cy="120" fill="var(--color-sidebar)" r="6" />
+        <rect height="32" rx="16" width="136" x="136" y="156" />
+        <rect height="32" rx="16" width="204" x="204" y="212" />
+        <rect height="32" rx="16" width="136" x="272" y="268" />
+        <circle cx="408" cy="120" r="6" />
         <circle cx="152" cy="172" opacity="0.55" r="4" />
         <circle cx="220" cy="228" opacity="0.55" r="4" />
         <circle cx="288" cy="284" opacity="0.55" r="4" />

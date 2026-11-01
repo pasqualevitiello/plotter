@@ -5,13 +5,18 @@ function SpacingPlanStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M132 100V336 M156 100V324 M188 100V324 M212 100V324 M292 100V324 M316 100V324 M396 100V324 M420 100V336" />
-        <path d="M108 124H444 M108 156H444 M108 232H444 M108 252H444 M108 284H444 M108 304H444" />
+        <path d="M132 100V224 M132 312V336 M156 100V116 M156 164V224 M156 312V324 M188 100V116 M188 164V224 M188 312V324 M212 100V116 M212 164V224 M212 312V324 M292 100V116 M292 164V224 M292 312V324 M316 100V116 M316 164V224 M316 312V324 M396 108V116 M396 164V224 M396 312V324 M420 100V224 M420 312V336" />
+        <path d="M108 124H148 M404 124H444 M108 156H148 M404 156H444 M108 232H124 M428 232H444 M108 252H124 M428 252H444 M108 284H124 M428 284H444 M108 304H124 M428 304H444" />
       </g>
       <g opacity="0.27" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M108 140H444 M108 268H444" strokeDasharray="5 6" />
-        <path d="M172 100V324 M356 100V324" strokeDasharray="3 6" />
-        <rect height="32" width="32" x="156" y="124" />
+        <path
+          d="M108 140H148 M404 140H444 M108 268H124 M428 268H444"
+          strokeDasharray="5 6"
+        />
+        <path
+          d="M172 100V116 M172 312V324 M356 100V116 M356 312V324"
+          strokeDasharray="3 6"
+        />
         <circle cx="332" cy="140" r="16" strokeDasharray="2 4" />
         <path d="M332 116V164 M308 140H348" />
         <path d="M172 178V210 m-4-4 4 4 4-4 M252 178V210 m-4-4 4 4 4-4 M356 178V210 m-4-4 4 4 4-4" />
@@ -33,7 +38,6 @@ function SpacingPlanStudy() {
         <path d="M132 326v12 M156 326v12 M188 326v12 M212 326v12 M292 326v12 M316 326v12 M396 326v12 M420 326v12" />
         <path d="M132 370H420 M132 362v16 M420 362v16 m-292-4 8-8 m280 8 8-8" />
         <path d="M332 124 354 94H382" />
-        <path d="M172 140 183.3 128.7" />
         <path d="M112 232H92 M112 304H92 M100 232V304 m-4-68 8-8 m-8 80 8-8" />
       </g>
       <g fill="currentColor" fontSize="10" opacity="0.52" stroke="none">
@@ -81,7 +85,7 @@ function SwitchPlanStudy() {
       <g opacity="0.28" strokeWidth="1" strokeOpacity="0.6">
         <path d="M176 116h8v-8 M376 108v8h8 M176 308h8v8 M376 316v-8h8" />
         <path
-          d="M280 88V112 M104 212H120 M400 212H424 M280 308V320"
+          d="M280 88V112 M104 212H112 M400 212H424 M280 308V320"
           strokeDasharray="3 5"
         />
         <rect height="32" width="32" x="264" y="196" />
@@ -90,14 +94,32 @@ function SwitchPlanStudy() {
       </g>
       <g opacity="0.4" strokeWidth="1" strokeOpacity="0.75">
         {switchInputs.map((y) => (
-          <path d={`M124 ${y}H392`} key={y} />
+          <path
+            d={
+              y === 212
+                ? "M284 212H340 M348 212H392"
+                : `M124 ${y}H212 M220 ${y}H276 M284 ${y}H340 M348 ${y}H392`
+            }
+            key={y}
+          />
         ))}
         {switchOutputs.map((x) => (
-          <path d={`M${x} 100V336`} key={x} />
+          <path
+            d={
+              x === 280
+                ? "M280 100V144 M280 152V208"
+                : `M${x} 100V144 M${x} 152V208 M${x} 216V272 M${x} 280V336`
+            }
+            key={x}
+          />
         ))}
       </g>
-      <path d="M124 212H280V336" strokeWidth="1" strokeOpacity="1" />
-      <g fill="var(--color-sidebar)" strokeWidth="1" strokeOpacity="0.7">
+      <path
+        d="M124 212H212 M220 212H276 M280 216V272 M280 280V336"
+        strokeWidth="1"
+        strokeOpacity="1"
+      />
+      <g strokeWidth="1" strokeOpacity="0.7">
         {switchOutputs.flatMap((x) =>
           switchInputs.map((y) => (
             <circle cx={x} cy={y} key={`${x}-${y}`} r="4" />
@@ -105,7 +127,7 @@ function SwitchPlanStudy() {
         )}
       </g>
       <circle cx="280" cy="212" fill="currentColor" r="3" stroke="none" />
-      <g fill="var(--color-sidebar)" strokeWidth="1" strokeOpacity="0.85">
+      <g strokeWidth="1" strokeOpacity="0.85">
         {switchInputs.map((y) => (
           <circle cx="120" cy={y} key={y} r="4" />
         ))}
@@ -184,14 +206,19 @@ function CoordinatePlanStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.09" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M152 88V312 M216 88V312 M280 88V312 M344 88V312 M408 88V312" />
-        <path d="M136 104H424 M136 168H424 M136 232H424 M136 296H424" />
+        <path d="M152 88V312 M216 88V312 M280 88V160 M280 176V192 M280 208V224 M280 240V312 M344 88V312 M408 88V112 M408 144V312" />
+        <path d="M136 104H424 M329 168H424 M136 232H272 M288 232H304 M320 232H424 M136 296H424" />
       </g>
       <g fill="currentColor" opacity="0.22" stroke="none">
         {matrixColumns.flatMap((x) =>
-          matrixRows.map((y) => (
-            <circle cx={x} cy={y} key={`${x}-${y}`} r="1" />
-          )),
+          matrixRows
+            .filter(
+              (y) =>
+                !distributionPoints.some(
+                  ([pointX, pointY]) => pointX === x && pointY === y,
+                ),
+            )
+            .map((y) => <circle cx={x} cy={y} key={`${x}-${y}`} r="1" />),
         )}
       </g>
       <g opacity="0.6" strokeWidth="1" strokeOpacity="0.9">
@@ -199,13 +226,16 @@ function CoordinatePlanStudy() {
         <path d="M114 104h12 M114 168h12 M114 232h12 M114 296h12 M152 322v12 M216 322v12 M280 322v12 M344 322v12 M408 322v12" />
       </g>
       <g opacity="0.37" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M120 168H312V328" strokeDasharray="3 5" />
+        <path
+          d="M120 168H244 M252 168H276 M284 168H303 M312 177V196 M312 204V228 M312 236V328"
+          strokeDasharray="3 5"
+        />
         <path d="M237 148v-7h14 M323 148v-7h-14 M237 252v7h14 M323 252v7h-14" />
         <path d="M328 156 357 127H388" />
         <path d="M120 354H312 M120 348v12 M312 348v12 m-196-2 8-8 m184 8 8-8" />
         <path d="M92 168V328 M86 168h12 M86 328h12 m-10-156 8-8 m-8 168 8-8" />
       </g>
-      <g fill="var(--color-sidebar)" strokeWidth="1" strokeOpacity="0.95">
+      <g strokeWidth="1" strokeOpacity="0.95">
         {distributionPoints.map(([x, y]) => (
           <circle cx={x} cy={y} key={`${x}-${y}`} r="4" />
         ))}

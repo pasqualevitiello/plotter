@@ -18,7 +18,8 @@ export const standard = freeze({
     "--plotter-opacity-guide": 0.14,
     "--plotter-opacity-grid": 0.06,
     "--plotter-opacity-hatch": 0.18,
-    "--plotter-opacity-hidden": 0.32
+    "--plotter-opacity-hidden": 0.32,
+    "--plotter-opacity-highlight": 0.055
   },
   "roles": {
     "primary": {

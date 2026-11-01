@@ -85,8 +85,8 @@ function GrammarArrows() {
         strokeOpacity={"0.65"}
       />
       <text
-        x={"240"}
-        y={"253"}
+        x={"236"}
+        y={"254"}
         textAnchor={"middle"}
         fill={"currentColor"}
         stroke={"none"}
@@ -156,7 +156,7 @@ function GrammarArrows() {
         {"Current"}
       </text>
       <path
-        d={"M200 320V372M392 320V372"}
+        d={"M200 340V372M392 320V372"}
         strokeWidth={"1"}
         opacity={"0.24"}
         strokeOpacity={"0.6"}
@@ -295,8 +295,8 @@ function GrammarCallouts() {
         strokeOpacity={"0.65"}
       />
       <text
-        x={"240"}
-        y={"253"}
+        x={"236"}
+        y={"254"}
         textAnchor={"middle"}
         fill={"currentColor"}
         stroke={"none"}
@@ -366,7 +366,7 @@ function GrammarCallouts() {
         {"Current"}
       </text>
       <path
-        d={"M200 320V372M392 320V372"}
+        d={"M200 340V372M392 320V372"}
         strokeWidth={"1"}
         opacity={"0.24"}
         strokeOpacity={"0.6"}
@@ -528,7 +528,7 @@ function GrammarCenterlines() {
         data-grammar-focus={"true"}
       />
       <path
-        d={"M280 62L280 214M280 226L280 378"}
+        d={"M280 62L280 214M280 226L280 360"}
         fill={"none"}
         stroke={"currentColor"}
         strokeWidth={"1"}
@@ -615,7 +615,7 @@ function GrammarCenterlines() {
         strokeOpacity={"0.144"}
       />
       <path
-        d={"M148 372H265.0M295.0 372H412"}
+        d={"M148 372H262M298 372H412"}
         fill={"none"}
         stroke={"currentColor"}
         strokeWidth={"1"}
@@ -822,20 +822,20 @@ function GrammarDimensions() {
         data-grammar-focus={"true"}
       />
       <text
-        x={"325"}
-        y={"195"}
+        x={"310"}
+        y={"207"}
         textAnchor={"middle"}
         fontSize={"10"}
         fill={"currentColor"}
         stroke={"none"}
         opacity={"0.5"}
-        transform={"rotate(-45 325 195)"}
+        transform={"rotate(-45 310 207)"}
         data-grammar-focus={"true"}
       >
         {"R120"}
       </text>
       <text
-        x={"176"}
+        x={"165"}
         y={"157"}
         textAnchor={"middle"}
         fontSize={"11"}
@@ -1147,8 +1147,8 @@ function GrammarGrids() {
         strokeOpacity={"0.65"}
       />
       <text
-        x={"323"}
-        y={"141"}
+        x={"299"}
+        y={"151"}
         textAnchor={"middle"}
         fontSize={"10"}
         fill={"currentColor"}
@@ -1165,7 +1165,7 @@ function GrammarGrids() {
       />
       <text
         x={"316"}
-        y={"220"}
+        y={"212"}
         textAnchor={"start"}
         fontSize={"10"}
         fill={"currentColor"}
@@ -1294,7 +1294,7 @@ function GrammarHatching() {
             "M283 220H320M315.757359 215.757359L320 220L315.757359 224.242641M314 220V214H320"
           }
         />
-        <path d={"M320 196.905989L346 170H388M202 270L146 314H112"} />
+        <path d={"M320 196.905989L346 170H392M202 270L146 314H112"} />
         <path
           d={
             "M160 92V56M400 92V56M160 64H264M296 64H400M156 68L164 60M396 68L404 60"
@@ -1310,13 +1310,86 @@ function GrammarHatching() {
         </text>
       </g>
       <g fill={"currentColor"} stroke={"none"} fontSize={"11"} opacity={"0.72"}>
-        <text x={"396"} y={"174"}>
+        <text x={"400"} y={"174"}>
           {"Aperture"}
         </text>
         <text x={"104"} y={"318"} textAnchor={"end"}>
           {"Blade 01"}
         </text>
       </g>
+    </svg>
+  );
+}
+
+function GrammarHighlights() {
+  return (
+    <svg
+      width={"560"}
+      height={"440"}
+      viewBox={"0 0 560 440"}
+      fill={"none"}
+      stroke={"currentColor"}
+      strokeWidth={"1"}
+      strokeLinecap={"butt"}
+      strokeLinejoin={"round"}
+      style={{
+        fontFamily: "Cal Sans,sans-serif",
+        fontOpticalSizing: "auto",
+        fontSynthesis: "none",
+        fontVariationSettings: "'GEOM' 25",
+        fontWeight: "400",
+      }}
+      aria-hidden={"true"}
+      focusable={"false"}
+    >
+      <g
+        stroke={"none"}
+        fill={"currentColor"}
+        fillOpacity={"var(--plotter-opacity-highlight, 0.055)"}
+        data-plotter-fill={"highlight"}
+        data-grammar-focus={"true"}
+      >
+        <path d={"M260 160H372Q380 160 380 168V192Q380 200 372 200H260Z"} />
+        <path d={"M268 240H380V280H268Q260 280 260 272V248Q260 240 268 240Z"} />
+      </g>
+      <g strokeOpacity={"1"}>
+        <rect x={"140"} y={"160"} width={"240"} height={"40"} rx={"8"} />
+        <rect x={"260"} y={"240"} width={"180"} height={"40"} rx={"8"} />
+      </g>
+      <path
+        d={"M260 116V152M380 116V152M380 208V232M260 288V312M380 288V312"}
+        strokeOpacity={"0.14"}
+        strokeDasharray={"3 5"}
+      />
+      <g strokeOpacity={"0.32"}>
+        <path
+          d={
+            "M260 84V108M380 84V108M260 92H308M332 92H380m-124 4 8-8m112 8 8-8"
+          }
+        />
+      </g>
+      <g fill={"currentColor"} stroke={"none"} fontSize={"11"} opacity={"0.72"}>
+        <text x={"140"} y={"144"}>
+          {"Schedule A"}
+        </text>
+        <text x={"260"} y={"224"}>
+          {"Schedule B"}
+        </text>
+        <text x={"320"} y={"337"} textAnchor={"middle"}>
+          {"Shared availability"}
+        </text>
+      </g>
+      <text
+        x={"320"}
+        y={"95"}
+        textAnchor={"middle"}
+        fill={"currentColor"}
+        stroke={"none"}
+        fontSize={"10"}
+        opacity={"0.52"}
+      >
+        {"2h"}
+      </text>
     </svg>
   );
 }
@@ -1345,7 +1418,7 @@ function GrammarOutlines() {
       <g strokeWidth={"1"} opacity={"0.24"} strokeOpacity={"0.6"}>
         <path
           d={
-            "M136 152V236M184 152V236M208 180V236M328 180V236M352 180V236M424 180V236"
+            "M136 152V236M184 152V236M208 180V236M328 180V218M352 180V236M424 180V236"
           }
         />
         <path
@@ -1833,8 +1906,8 @@ function GrammarStates() {
         strokeOpacity={"0.65"}
       />
       <text
-        x={"309"}
-        y={"207"}
+        x={"292"}
+        y={"239"}
         textAnchor={"start"}
         fill={"currentColor"}
         stroke={"none"}
@@ -1891,6 +1964,7 @@ export const visualGrammarDrawings: Record<
   dimensions: <GrammarDimensions />,
   grids: <GrammarGrids />,
   hatching: <GrammarHatching />,
+  highlights: <GrammarHighlights />,
   outlines: <GrammarOutlines />,
   projections: <GrammarProjections />,
   states: <GrammarStates />,

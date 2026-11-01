@@ -304,3 +304,9 @@ After the shared token defaults changed, the user asked whether the other illust
 The user asked to reduce opacity after the uniform-width change so the drawings retain a similar visual weight. Shared secondary, guide, grid, hatch, and hidden opacities are reduced; primary forms remain strong. Legacy strokes are compensated using their original width, through stroke-specific opacity so filled labels and surfaces keep their contrast. Original group opacity and playback fades remain in place; nested stroke-opacity boundaries reset inherited compensation rather than multiplying it. The assembly contact transition now changes stroke opacity at the original contact times while width stays 1. The prior thin-stroke appearance is a visual target, not a claim of identical rasterization.
 
 The user then set the shared hidden-line opacity to `0.32`. Hidden, absent, and proposed outlines share this token.
+
+## Fills and catalogue consistency — 2026-11-01
+
+The user requested removal of several background fills, then reported exposed lines and asked for a review of all illustrations: “While some exceptions sometimes are allowed, we should make sure that they try to be consistent in general.” Earlier, they asked whether the occasionally shaded region should become a documented story element with a CSS token.
+
+Our interpretation is now recorded in the [fill and line-clearance rule](../drafting-standard.md#fills-and-line-clearance): transparent ordinary forms, named semantic highlights, geometric clearance for labels and open nodes, and explicit exceptions for useful construction. This is the implementation response to the request, not user approval of every revised drawing. The [catalogue review](catalogue-consistency-2026-11-01.md) records coverage, local decisions, and verification limits. Highlights in TIM-01/03/05 share a fill-opacity token; former decorative whole-form tints are removed.

@@ -82,11 +82,11 @@ function LampElevationStudy() {
     <BlueprintDrawing>
       <g opacity="0.09" strokeWidth="1" strokeOpacity="0.6">
         <path d="M184 92V228 M376 92V228 M160 108H264 M296 108H400" />
-        <path d="M160 300H264 M296 300H400 M208 316V372 M352 316V372" />
+        <path d="M180 300H264 M296 300H400 M208 316V372 M352 316V372" />
       </g>
       <g opacity="0.28" strokeWidth="1" strokeOpacity="0.65">
         <path
-          d="M280 76V196 M280 212V372 M152 204H176 M384 204H408"
+          d="M280 88V196 M280 212V372 M152 204H176 M384 204H408"
           strokeDasharray="5 6"
         />
         <path
@@ -111,7 +111,7 @@ function LampElevationStudy() {
         <text textAnchor="middle" x="280" y="75">
           2r
         </text>
-        <text transform="rotate(-45 316 158)" x="316" y="158">
+        <text transform="rotate(-45 306 158)" x="306" y="158">
           r
         </text>
         <text textAnchor="middle" x="244" y="383">

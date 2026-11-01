@@ -26,6 +26,18 @@ Opacity grouping matters: moving the same value from a group to its children can
 
 Text stays filled and editable with its own typography. Grammar focus markers control isolation independently of drawing roles; selecting a mark keeps its original color, width, opacity, and dash pattern.
 
+## Highlight a meaningful region
+
+A translucent highlight identifies a selected interval, intersection, or result. TIM-01, TIM-03, and TIM-05 use this treatment. Other forms stay transparent; labels, symbols, and hatching retain their own meaning.
+
+```css
+.illustration {
+  --plotter-opacity-highlight: 0.055;
+}
+```
+
+This token controls `fill-opacity` independently of outlines and text. It is available on authored highlight patches even when the rest of a drawing has not adopted stroke roles. Paint each highlighted region once so overlapping fills do not darken it. The customization samples show a highlight separately from MEC-05’s hatching.
+
 ## Change the shared standard
 
 The canonical source is:

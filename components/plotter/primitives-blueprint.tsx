@@ -1,6 +1,11 @@
 import { BlueprintDrawing } from "./blueprint-drawing";
 
-const gridCoordinates = [164, 204, 244, 284, 324, 364, 404];
+const gridLines = [
+  "M204 68V348 M124 124H320 M376 124H444",
+  "M244 68V348 M124 164H444",
+  "M324 68V104 M324 208V348 M124 244H444",
+  "M364 68V348 M124 284H444",
+];
 const radiusDiagonal = 120 / Math.sqrt(2);
 const angleDiagonal = 24 / Math.sqrt(2);
 const radiusEndpoint = { x: 284 + radiusDiagonal, y: 204 - radiusDiagonal };
@@ -9,27 +14,21 @@ export function PrimitivesBlueprint() {
   return (
     <BlueprintDrawing>
       <g opacity="0.09" strokeWidth="1" strokeOpacity="0.6">
-        {gridCoordinates.map((coordinate) => (
-          <path
-            d={`M${coordinate} 68V348 M124 ${coordinate - 80}H444`}
-            key={coordinate}
-          />
+        {gridLines.map((d) => (
+          <path d={d} key={d} />
         ))}
       </g>
 
       <g opacity="0.24" strokeWidth="1" strokeOpacity="0.65">
-        <path d="M164 54V368 M404 54V368 M104 84H464 M104 324H464" />
-        <path d="M116 372 452 36" opacity="0.48" />
-        <path d="M284 42V372 M90 204H478" strokeDasharray="5 5" />
+        <path d="M164 58V76 M164 332V344 M404 58V76 M404 332V368 M104 84H156 M412 84H464 M104 324H156 M412 324H464" />
+        <path d="M116 372 158 330 M410 78 452 36" opacity="0.48" />
+        <path
+          d="M284 58V372 M90 204H276 M412 204H428 M456 204H478"
+          strokeDasharray="5 5"
+        />
         <path d="M148 68H164V84 M404 68H420V84 M148 324H164V340 M404 324H420V340" />
       </g>
 
-      <path
-        d="M164 204A120 120 0 0 0 284 324H164Z"
-        fill="currentColor"
-        fillOpacity="0.035"
-        stroke="none"
-      />
       <g opacity="0.27" strokeWidth="1" strokeOpacity="0.65">
         <path d="M164 228 166.03 225.97 M164 240 168.27 235.73 M164 252 171.16 244.84 M164 264 174.63 253.37 M164 276 178.61 261.39 M164 288 183.08 268.92 M164 300 188 276 M164 312 193.36 282.64 M164 324 199.15 288.85 M176 324 205.36 294.64 M188 324 212 300 M200 324 219.08 304.92 M212 324 226.61 309.39 M224 324 234.63 313.37 M236 324 243.16 316.84 M248 324 252.27 319.73 M260 324 262.03 321.97" />
       </g>
@@ -42,9 +41,7 @@ export function PrimitivesBlueprint() {
       </g>
 
       <g opacity="0.5" strokeWidth="1" strokeOpacity="0.65">
-        <path
-          d={`M284 204H404 M284 204 ${radiusEndpoint.x} ${radiusEndpoint.y}`}
-        />
+        <path d="M284 204H404" />
         <path
           d={`M308 204A24 24 0 0 0 ${284 + angleDiagonal} ${204 - angleDiagonal}`}
         />
@@ -58,7 +55,7 @@ export function PrimitivesBlueprint() {
         <path d="M164 270H106L90 286 M404 124H455L471 108" />
       </g>
 
-      <g fill="var(--color-sidebar)" strokeWidth="1" strokeOpacity="0.8">
+      <g strokeWidth="1" strokeOpacity="0.8">
         <circle cx="284" cy="204" r="3" />
         <circle cx="164" cy="204" r="2.5" />
         <circle cx="284" cy="324" r="2.5" />

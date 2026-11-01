@@ -38,7 +38,7 @@ export function DisconnectedBlueprint() {
   return (
     <BlueprintDrawing>
       <g opacity="0.24" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M112 176H248 M112 264H248 M128 160V172 M128 268V280 M224 160V172 M224 268V280" />
+        <path d="M112 176H120 M232 176H248 M112 264H120 M232 264H248 M128 160V168 M128 272V280 M224 160V168 M224 272V280" />
       </g>
       <path
         d="M56 214H72 M56 226H72"
@@ -61,7 +61,7 @@ export function DisconnectedBlueprint() {
         {/* Both pin and pocket centerlines are y196 and y244. */}
         <path d="M396 196H426 M396 244H426" />
         <VerticalDimension label="48" x={432} y1={196} y2={244} />
-        <path d="M376 172V162" />
+        <path d="M376 172V162H400" />
       </g>
       <g fill="currentColor" fontSize="11" opacity="0.72" stroke="none">
         <text textAnchor="middle" x="304" y="110">
@@ -69,7 +69,7 @@ export function DisconnectedBlueprint() {
         </text>
       </g>
       <g fill="currentColor" fontSize="10" opacity="0.5" stroke="none">
-        <text textAnchor="middle" x="376" y="154">
+        <text textAnchor="middle" x="400" y="154">
           Socket
         </text>
       </g>

@@ -65,7 +65,30 @@ These patterns are deliberately different. A continuous construction that direct
 
 Use butt caps on dashed shafts to retain predictable dash lengths; use consistent joins. The open arrowhead uses the two equal legs and angle in `geometry.arrow` from the shared standard. Its arms stay solid, even when the shaft is dashed, and meet the shaft's terminal dash at the tip. Start the dashed path at the tip, as the helper does, or set a dash phase that preserves contact. Dimension slashes use `geometry.dimension.slashExtent`; a radius instead needs a leader that reaches the measured arc. Preserve authored cap/join exceptions during implementation-only refactors.
 
-Draw a coincident segment once. Split subordinate geometry at the required boundary; preserve one owner for each shared segment. Plan label clearance by shortening/splitting lines, using `geometry.dimension.labelClearance` around the actual text bounds. All forms are transparent; remove area tints and background-colored patches that erase guides. Text glyph fills are allowed. A filled junction marker belongs only to a declared symbol convention, never to a background patch.
+## Fills and line clearance
+
+Start ordinary forms with `fill="none"`. Choose each mark by what it explains:
+
+| Mark | Treatment | Example |
+| --- | --- | --- |
+| Ordinary form | Transparent interior with its own outline | A message, control, table, carrier, or architectural outline |
+| Region highlight | One translucent ink fill on a named intersection, selected interval, or resulting region | TIM-01’s shared availability; TIM-03’s selected cell; TIM-05’s common slot |
+| Symbol or glyph | Its meaning determines whether it is filled | Text, typing dots, plotted points, or a selected switch contact |
+| Hatch | Clipped linework describing one bounded region | MEC-05’s core faces |
+
+<!-- BEGIN GENERATED: fill-palette -->
+| Mark | Fill | Fill opacity | Use |
+| --- | --- | ---: | --- |
+| Region highlight | Illustration ink | 0.055 | Named intersection, selection, or result |
+<!-- END GENERATED: fill-palette -->
+
+A highlight uses `--plotter-opacity-highlight` through `fill-opacity`, independently of the outlines and labels. Paint the region once; stacked translucent shapes change its emphasis. A whole object does not earn a tint merely by being the subject. When hatching already explains the same region, use one treatment unless the second carries a different stated meaning. Keep highlights out of parent opacity groups that would silently multiply their strength.
+
+Background guides stop outside UI forms and labels. Start with an 8-unit gap from a contour when the guide is not meant to connect to it; shorten or omit an unhelpful fragment. Keep at least `geometry.dimension.labelClearance` (3 units at native size) around the actual glyphs, including rotated labels. Resolve clearance by splitting paths, shortening guides, or moving the annotation. Transparent shapes must remain readable on any page color; opaque surface patches do not provide clearance.
+
+Construction axes, generating circles, radii, and grids may cross a geometric subject when that crossing explains its construction. They still clear text. Short local alignment or padding witnesses may enter a UI frame when they explain that spacing and clear its content; AGT-01’s card uses this exception. A functional connector reaches the specified edge or port; split a line at the boundary of an open node instead of running it through the node’s interior. Physical contacts and explicitly depicted crossings follow their stated topology. Draw each coincident segment once.
+
+An exception needs a concrete reason in the source note or review: the relationship a crossing explains, the meaning of a filled symbol, or the region a highlight selects. A screenshot’s appearance alone is not a reason. In motion, an invisible clearance mask may remove a duplicate moving edge when contact changes ownership; it does not paint a background, change the form’s fill, or excuse text collisions. Frozen reference snapshots retain their historical treatment and do not override these current rules.
 
 ## Hatch grammar
 

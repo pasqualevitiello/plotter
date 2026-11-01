@@ -14,13 +14,6 @@ export function OriginalNotFoundBlueprint() {
         <path d="M144 76H160V92M400 76H416V92M144 332H160V348M400 332H416V348" />
       </g>
 
-      <path
-        d="M160 92H280V212H400V332H160Z"
-        fill="currentColor"
-        fillOpacity="0.025"
-        stroke="none"
-      />
-
       <g opacity="0.27" strokeWidth="1" strokeOpacity="0.65">
         <path d="M160 292 200 332M160 304 188 332M160 316 176 332M160 328 164 332" />
         <path d="M160 280V332H212" />
@@ -49,7 +42,7 @@ export function OriginalNotFoundBlueprint() {
         <path d="M160 272H110L94 288" />
       </g>
 
-      <g fill="var(--color-sidebar)" strokeWidth="1" strokeOpacity="0.8">
+      <g strokeWidth="1" strokeOpacity="0.8">
         <path d="M157.5 89.5h5v5h-5zM277.5 89.5h5v5h-5zM397.5 209.5h5v5h-5zM397.5 329.5h5v5h-5zM157.5 329.5h5v5h-5z" />
         <circle cx="280" cy="212" r="3" />
       </g>

@@ -161,7 +161,7 @@ const rcGrid = constructionGrid(
     { left: 97, right: 128, top: 147, bottom: 165 },
     { left: 429, right: 468, top: 147, bottom: 165 },
     { left: 191, right: 249, top: 133, bottom: 150 },
-    { left: 340, right: 360, top: 158, bottom: 176 },
+    { left: 340, right: 360, top: 158, bottom: 180 },
     { left: 365, right: 414, top: 247, bottom: 283 },
     { left: 142, right: 260, top: 312, bottom: 330 },
   ],
@@ -223,6 +223,8 @@ const assemblyGrid = constructionGrid(
     })),
     { left: 86, right: 474, top: 270, bottom: 306 },
     { left: 250, right: 310, top: 184, bottom: 196 },
+    { left: 124, right: 164, top: 172, bottom: 198 },
+    { left: 384, right: 448, top: 172, bottom: 198 },
     ...assemblyStations.map((x) => ({
       left: x - 2,
       right: x + 2,

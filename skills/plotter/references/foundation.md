@@ -2,7 +2,7 @@
 
 Use the foundation when implementing straight transfer arrows, horizontal/vertical dimensions, or rectangular hatching. Compose the illustration with ordinary SVG; use native paths for constructions these helpers do not cover. The helpers do not choose a composition or establish a mark's meaning.
 
-The complete skill folder contains the implementation. Resolve paths from the installed `plotter` directory, not a repository root. The ESM entrypoint is `assets/foundation/index.mjs`; it runs in a JavaScript authoring script or a host such as React without coss imports. It exports `arrow`, `dimension`, `hatch`, read-only `standard`, and `roleCss`. Its adjacent declaration file documents inputs and outputs. The import below assumes an authoring file at the skill root; examples in subdirectories use their own relative paths.
+The complete skill folder contains the implementation. Resolve paths from the installed `plotter` directory, not a repository root. The ESM entrypoint is `assets/foundation/index.mjs`; it runs in a JavaScript authoring script or a host such as React without coss imports. It exports `arrow`, `dimension`, `hatch`, `highlightOpacity`, read-only `standard`, and `roleCss`. Its adjacent declaration file documents inputs and outputs. The import below assumes an authoring file at the skill root; examples in subdirectories use their own relative paths.
 
 ```js
 import { arrow, dimension, hatch } from "./assets/foundation/index.mjs";
@@ -53,6 +53,16 @@ CSS variables inherit from the host. Examples:
 The generated rules contain default fallbacks rather than declaring variables on each SVG. Local inline styles can preserve an intentional exception. Keep opacity between zero and one and stroke widths non-negative. Geometry constants, hatch pitch, and dash meanings are not arbitrary CSS presets. Changing their source requires regenerating the affected geometry.
 
 Text remains filled, editable text with its own opacity and typography. Focus/isolation markers in the visual grammar are independent of drawing roles; they never boost color or opacity.
+
+## Region highlights
+
+`highlightOpacity` is a CSS `var()` expression with its fallback read from the shared standard. Use it as a native SVG `fill-opacity` value (React: `fillOpacity`) on a separate ink-filled patch. This works independently of stroke-role adoption, so adding a highlight does not change existing linework.
+
+```js
+import { highlightOpacity } from "./assets/foundation/index.mjs";
+```
+
+A native SVG patch uses `fill="currentColor"`, `stroke="none"`, and `fill-opacity="var(--plotter-opacity-highlight, 0.055)"`. Mark it `data-plotter-fill="highlight"` when recording its purpose. The exporter resolves the variable and accepts a `--token=--plotter-opacity-highlight=...` override. Follow the [fill and line-clearance rules](drafting-standard.md#fills-and-line-clearance) to decide whether the region needs highlighting.
 
 ## Standalone static export
 

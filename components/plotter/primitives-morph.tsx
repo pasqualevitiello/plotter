@@ -25,6 +25,8 @@ function construct({ width, height, corner: r }: Shape) {
   const top = 204 - height / 2;
   const bottom = 204 + height / 2;
   const a = r * 0.55228475;
+  const guideGapStart = height < 40 ? 298 : 348;
+  const guideGapEnd = height < 40 ? 320 : 348;
   const points = {
     "top-left": [left + r, top],
     "top-right": [right - r, top],
@@ -46,8 +48,9 @@ function construct({ width, height, corner: r }: Shape) {
       C${left + r - a} ${bottom} ${left} ${bottom - r + a} ${left} ${bottom - r}
       L${left} ${top + r}
       C${left} ${top + r - a} ${left + r - a} ${top} ${left + r} ${top} Z`,
-    // One continuous guide owns each extension; measurement marks never retrace it.
-    guides: `M${left} 38V348 M${right} 38V348
+    // Each extension has one guide owner; measurement marks do not retrace it.
+    guides: `M${left} 38V${guideGapStart} M${left} ${guideGapEnd}V348
+      M${right} 38V${guideGapStart} M${right} ${guideGapEnd}V348
       M${left - 24} ${top}H490 M${left - 24} ${bottom}H490
       M164 348V372 M204 348V372`,
     dimensions: `M${left} 46H264 M304 46H${right}
@@ -118,8 +121,24 @@ const tangentIds = [
   "left-top",
 ] as const;
 
-const gridX = [124, 164, 204, 244, 284, 324, 364, 404, 444];
-const gridY = [84, 124, 164, 204, 244, 284, 324];
+const gridPaths = [
+  "M124 68V298 M124 320V348",
+  "M164 68V240 M164 260V348",
+  "M204 68V348",
+  "M244 68V348",
+  "M284 68V121 M284 142V298 M284 320V348",
+  "M324 68V132 M324 163V348",
+  "M364 68V348",
+  "M404 68V348",
+  "M444 68V298 M444 320V348",
+  "M104 84H464",
+  "M104 124H273 M295 124H464",
+  "M104 164H172 M200 164H283 M354 164H464",
+  "M104 204H374 M394 204H464",
+  "M104 244H140 M168 244H464",
+  "M104 284H464",
+  "M104 324H464",
+];
 
 export function PrimitivesMorph({ paused }: { paused: boolean }) {
   const root = useRef<HTMLDivElement>(null);
@@ -216,11 +235,8 @@ export function PrimitivesMorph({ paused }: { paused: boolean }) {
           strokeWidth="1"
           strokeOpacity="0.6"
         >
-          {gridX.map((x) => (
-            <path d={`M${x} 68V348`} key={x} />
-          ))}
-          {gridY.map((y) => (
-            <path d={`M104 ${y}H464`} key={y} />
+          {gridPaths.map((d) => (
+            <path d={d} key={d} />
           ))}
         </g>
         <use

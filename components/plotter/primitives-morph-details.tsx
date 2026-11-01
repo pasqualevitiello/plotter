@@ -91,7 +91,7 @@ export function MorphDetails({
             >
               r = 3u
             </text>
-            <text x="325" y="191">
+            <text x="288" y="170">
               45°
             </text>
             <text textAnchor="end" x="464" y="384">

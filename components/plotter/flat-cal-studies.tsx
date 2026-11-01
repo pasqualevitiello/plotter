@@ -1,3 +1,4 @@
+import { highlightOpacity } from "../../skills/plotter/assets/foundation/index.mjs";
 import { AppointmentBuffersStudy } from "./appointment-buffers";
 import { BlueprintDrawing } from "./blueprint-drawing";
 import type { IllustrationStudy } from "./study-types";
@@ -15,14 +16,15 @@ function WeekConstruction() {
 
       <g opacity="0.5" strokeWidth="1" strokeOpacity="0.9">
         <path d="M140 140H420V300H140Z" />
-        <path d="M180 140V300M220 140V300M260 140V300M300 140V300M340 140V300M380 140V300" />
-        <path d="M140 180H420M140 220H420M140 260H420" />
+        <path d="M180 140V300M220 140V300M260 140V180M260 220V300M300 140V180M300 220V300M340 140V300M380 140V300" />
+        <path d="M140 180H260M300 180H420M140 220H260M300 220H420M140 260H420" />
       </g>
 
       <path
         d="M260 180H300V220H260Z"
         fill="currentColor"
-        fillOpacity="0.035"
+        data-plotter-fill="highlight"
+        fillOpacity={highlightOpacity}
         strokeWidth="1"
         strokeOpacity="0.95"
       />
@@ -32,14 +34,7 @@ function WeekConstruction() {
         <path d="M280 200 291.3 188.7" />
         <path d="M287.3 188.7h4v4" />
       </g>
-      <circle
-        cx="280"
-        cy="200"
-        fill="var(--color-sidebar)"
-        r="2"
-        strokeWidth="1"
-        strokeOpacity="0.8"
-      />
+      <circle cx="280" cy="200" r="2" strokeWidth="1" strokeOpacity="0.8" />
 
       <g opacity="0.42" strokeWidth="1" strokeOpacity="0.65">
         <path d="M140 88H256M304 88H420M140 80V96M420 80V96" />
@@ -87,25 +82,21 @@ function TimeSlotConstruction() {
   return (
     <BlueprintDrawing>
       <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M156 104V344M216 104V344M276 104V344M336 104V344M396 104V344" />
-        <path d="M124 128H424M124 168H424M124 224H424M124 280H424" />
+        <path d="M156 108V120M396 108V120M156 288V300M396 288V300M216 288V308M336 288V308" />
+        <path d="M124 128H148M404 128H424M124 168H148M404 168H424M124 224H148M404 224H424M124 280H148M404 280H424" />
       </g>
       <g opacity="0.26" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M132 148H420M132 252H436M276 92V352" strokeDasharray="4 5" />
+        <path
+          d="M132 148H148M404 148H420M132 252H148M404 252H436M276 108V120M276 176V216M276 336V352"
+          strokeDasharray="4 5"
+        />
         <path d="M156 180V212M396 180V212" strokeDasharray="3 5" />
       </g>
 
       <g strokeWidth="1" strokeOpacity="0.95">
         <rect height="40" rx="20" width="120" x="156" y="128" />
         <rect height="40" rx="20" width="120" x="276" y="128" />
-        <rect
-          fill="var(--color-sidebar)"
-          height="56"
-          rx="28"
-          width="240"
-          x="156"
-          y="224"
-        />
+        <rect height="56" rx="28" width="240" x="156" y="224" />
       </g>
 
       <g opacity="0.38" strokeWidth="1" strokeOpacity="0.65">
@@ -116,7 +107,7 @@ function TimeSlotConstruction() {
         <path d="M156 304V328M276 304V328M396 304V328" />
         <path d="M156 320H207M225 320H327M345 320H396" />
         <path d="m152 324 8-8m112 8 8-8m112 8 8-8" />
-        <path d="M368 214V290M358 252H406" />
+        <path d="M368 246V258M362 252H374" />
         <path d="M368 252 387.8 232.2 420 200H444" />
         <path d="M383.8 232.2h4v4" />
       </g>
@@ -157,20 +148,21 @@ function AvailabilityConstruction() {
   return (
     <BlueprintDrawing>
       <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M160 84V324M208 84V324M256 84V324M304 84V324M352 84V324M400 84V324" />
-        <path d="M112 108H448M112 156H448M112 204H448M112 252H448M112 300H448" />
+        <path d="M160 84V148M160 236V324M208 84V148M208 236V324M256 104V108M256 308V324M304 104V108M304 308V324M352 84V172M352 236V324M400 84V172M400 236V256" />
+        <path d="M112 108H248M312 108H448M112 156H128M232 156H248M312 156H448M112 204H128M432 204H440M112 252H248M312 252H448M112 300H248M312 300H348" />
       </g>
       <g opacity="0.26" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M280 112V344M100 204H460" strokeDasharray="5 5" />
+        <path d="M280 112V336M100 204H128M432 204H440" strokeDasharray="5 5" />
       </g>
 
       <g opacity="0.62" strokeWidth="1" strokeOpacity="0.95">
-        <path d="M136 180H424V228H136Z" />
-        <path d="M256 108H304V300H256Z" />
+        <path d="M256 180H136V228H256M304 180H424V228H304" />
+        <path d="M256 180V108H304V180M256 228V300H304V228" />
       </g>
       <rect
         fill="currentColor"
-        fillOpacity="0.045"
+        data-plotter-fill="highlight"
+        fillOpacity={highlightOpacity}
         height="48"
         strokeWidth="1"
         strokeOpacity="1"
@@ -179,23 +171,16 @@ function AvailabilityConstruction() {
         y="180"
       />
       <circle cx="280" cy="204" r="16" strokeWidth="1" strokeOpacity="1" />
-      <circle
-        cx="280"
-        cy="204"
-        fill="var(--color-sidebar)"
-        r="2"
-        strokeWidth="1"
-        strokeOpacity="0.8"
-      />
+      <circle cx="280" cy="204" r="2" strokeWidth="1" strokeOpacity="0.8" />
 
       <g opacity="0.42" strokeWidth="1" strokeOpacity="0.65">
         <path d="M136 336V360M424 336V360M136 352H266M294 352H424" />
         <path d="m132 356 8-8m280 8 8-8" />
         <path d="M444 108H464M444 300H464M456 108V191M456 217V300" />
         <path d="m452 112 8-8m-8 200 8-8" />
-        <path d="M256 64V88M304 64V88M256 76H304" />
+        <path d="M256 64V80M304 64V80M256 76H304" />
         <path d="m252 80 8-8m40 8 8-8" />
-        <path d="M304 228 360 284H452" />
+        <path d="M304 228 352 292H452" />
       </g>
       <g fill="currentColor" fontSize="10" opacity="0.5" stroke="none">
         <text textAnchor="middle" x="280" y="58">
@@ -220,7 +205,7 @@ function AvailabilityConstruction() {
         </text>
       </g>
       <g fill="currentColor" fontSize="10" opacity="0.5" stroke="none">
-        <text x="360" y="301">
+        <text x="360" y="310">
           30 min meeting
         </text>
       </g>

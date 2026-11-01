@@ -47,7 +47,7 @@ Resolve these concrete questions:
 - Does one focal relationship survive at a glance, with recognizable subject cues?
 - Do construction marks explain exact relationships and remain subordinate?
 - Are essential labels readable, with clear gaps and no accidental clipping?
-- Are forms transparent and flat, with no duplicated shared edges?
+- Do fills and line crossings follow the [fill and line-clearance rules](drafting-standard.md#fills-and-line-clearance), with readable text and one owner for each shared edge?
 - Does each numeric or behavioral claim have evidence appropriate to the drawing's stated scope?
 
 Improve arrangement or recognition before adding detail. If rendering is unavailable, deliver the source with the visual review explicitly pending; a source reading cannot establish visual quality.

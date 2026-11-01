@@ -31,7 +31,7 @@ const grid = [
   "M340 64V198 M340 218V352",
   "M370 64V198 M370 218V352",
   "M136 88H158 M402 88H424",
-  "M136 118H284 M318 118H424",
+  "M136 118H278 M318 118H424",
   "M136 178H424",
   "M136 208H178 M230 208H330 M382 208H424",
   "M136 238H424",
@@ -50,7 +50,7 @@ export function SharedSystemStudy() {
         strokeOpacity="0.6"
       >
         <path
-          d={`M${seamX} 64V352 M136 ${upperCenterY}H434 M136 ${lowerCenterY}H434`}
+          d={`M${seamX} 72V352 M136 ${upperCenterY}H434 M136 ${lowerCenterY}H434`}
         />
         <path d={complementaryLoci} />
       </g>
@@ -84,9 +84,9 @@ export function SharedSystemStudy() {
         </text>
         <text
           textAnchor="middle"
-          transform="rotate(-45 302 120)"
-          x="302"
-          y="120"
+          transform="rotate(-45 298 116)"
+          x="298"
+          y="116"
         >
           r = u
         </text>

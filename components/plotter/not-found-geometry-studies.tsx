@@ -9,14 +9,14 @@ function UnbuiltArch() {
         <path d="M128 154H432M128 190H432M128 280H432M128 332H432" />
       </g>
       <g opacity="0.26" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M280 102V356M112 280H448" strokeDasharray="5 5" />
+        <path d="M280 102V344M112 280H448" strokeDasharray="5 5" />
         <path d="M145 332H415M154 280A126 126 0 0 1 406 280" />
         <path d="M280 280 207.7 176.8M280 280 352.3 176.8" />
         <path d="M258 141 280 280 302 141" strokeDasharray="3 5" />
         <path d="M272 280H288M280 272V288" />
       </g>
 
-      <g fill="var(--color-sidebar)" strokeWidth="1" strokeOpacity="1">
+      <g strokeWidth="1" strokeOpacity="1">
         <path d="M154 332V280A126 126 0 0 1 260.3 155.6L265.9 191.1A90 90 0 0 0 190 280V332Z" />
         <path d="M370 332V280A90 90 0 0 0 294.1 191.1L299.7 155.6A126 126 0 0 1 406 280V332Z" />
         <path d="M145 332H199M361 332H415" />

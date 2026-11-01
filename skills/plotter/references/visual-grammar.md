@@ -13,6 +13,14 @@ Identity, name, and tools assemble into one record. Primary outlines hold the lo
 An important loose fragment can remain primary even when small.
 
 
+## Region highlights
+
+![Only the shared portions of two intervals are shaded.](grammar/highlights.svg)
+
+Two availability intervals share one time window. The translucent fill marks that intersection; the rest of each interval stays transparent. Use a highlight for a named selection, intersection, or result, and paint the region once. Omit it when the outline or hatching already explains the same relationship.
+
+Highlight opacity follows `--plotter-opacity-highlight`; outlines and labels keep their own treatment. See the [fill and line-clearance rules](drafting-standard.md#fills-and-line-clearance). Hover isolation retains the original highlight opacity.
+
 ## Diagonal hatching
 
 ![One blade is selected; its boundaries and the central opening stay clear.](grammar/hatching.svg)

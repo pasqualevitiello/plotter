@@ -23,7 +23,10 @@ import {
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Slider, SliderValue } from "@/components/ui/slider";
-import { roleCss } from "../../skills/plotter/assets/foundation/index.mjs";
+import {
+  highlightOpacity,
+  roleCss,
+} from "../../skills/plotter/assets/foundation/index.mjs";
 import standard from "../../skills/plotter/assets/foundation/standard.json";
 
 type ControlToken = keyof typeof standard.tokens;
@@ -69,6 +72,10 @@ const controls = {
   "--plotter-opacity-hatch": {
     label: "Hatch opacity",
     hint: "Hatching within the primary forms.",
+  },
+  "--plotter-opacity-highlight": {
+    label: "Highlight opacity",
+    hint: "The selected region in the sample below the drawing.",
   },
   "--plotter-opacity-hidden": {
     label: "Hidden opacity",
@@ -141,8 +148,8 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
         </h2>
         <p className="text-sm text-pretty text-muted-foreground">
           Adjust ink, stroke widths, and opacity without changing the drawing.
-          Try all 12 tokens on MEC-05 and the section-cut sample, then copy the
-          CSS to a wrapper around your inline SVG.
+          Try every token on MEC-05 and the samples below it, then copy the CSS
+          to a wrapper around your inline SVG.
         </p>
       </div>
 
@@ -187,7 +194,8 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
                         <Slider
                           format={{
                             minimumFractionDigits: 2,
-                            maximumFractionDigits: 2,
+                            maximumFractionDigits:
+                              token === "--plotter-opacity-highlight" ? 3 : 2,
                           }}
                           largeStep={0.1}
                           max={max}
@@ -200,7 +208,11 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
                             }));
                             setCopyState("idle");
                           }}
-                          step={0.01}
+                          step={
+                            token === "--plotter-opacity-highlight"
+                              ? 0.005
+                              : 0.01
+                          }
                           value={values[token]}
                         >
                           <div className="mb-3 flex items-baseline justify-between gap-4">
@@ -222,7 +234,7 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
         <div className="flex min-w-0 flex-col gap-6">
           <figure className="min-w-0">
             <div
-              aria-label="Assembly line and section-cut sample with adjustable drawing tokens"
+              aria-label="Assembly line, section cut, and region highlight with adjustable drawing tokens"
               className="overflow-x-auto border p-4 outline-none focus-visible:ring-2 focus-visible:ring-ring"
               role="img"
               style={previewStyle}
@@ -233,11 +245,11 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
                 {children}
                 <svg
                   aria-hidden="true"
-                  className="block h-12 w-[560px] text-foreground"
+                  className="block h-28 w-[560px] text-foreground"
                   data-plotter=""
                   fill="none"
                   stroke="currentColor"
-                  viewBox="0 0 560 48"
+                  viewBox="0 0 560 112"
                 >
                   <style data-plotter-styles="true">{roleCss}</style>
                   <text
@@ -250,13 +262,34 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
                     Section cut
                   </text>
                   <path d="M120 24H544" data-plotter-role="section" />
+                  <text
+                    x="16"
+                    y="84"
+                    fill="currentColor"
+                    stroke="none"
+                    fontSize="11"
+                  >
+                    Region highlight
+                  </text>
+                  <path
+                    d="M280 64H360V96H280Z"
+                    fill="currentColor"
+                    fillOpacity={highlightOpacity}
+                    stroke="none"
+                    data-plotter-fill="highlight"
+                  />
+                  <path d="M120 64H544V96H120Z" data-plotter-role="primary" />
+                  <path
+                    d="M280 64V96M360 64V96"
+                    data-plotter-role="secondary"
+                  />
                 </svg>
               </div>
             </div>
             <figcaption className="mt-3 text-xs text-muted-foreground">
-              MEC-05 · Same geometry, adjustable linework. Section width is
-              shown separately below the drawing. Scroll sideways on narrow
-              screens.
+              MEC-05 · Same geometry, adjustable linework. Section width and
+              highlight opacity have separate samples below the drawing. Scroll
+              sideways on narrow screens.
             </figcaption>
           </figure>
 

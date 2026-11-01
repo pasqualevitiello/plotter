@@ -14,7 +14,7 @@ function BrowserPlanStudy() {
         <path d="M144 136H160 M152 128V144" />
         <path d="M152 208V336" strokeDasharray="3 6" />
         <path
-          d="M432 112H480 M432 176H480 M128 328V376"
+          d="M432 112H456 M432 176H480 M128 328V376"
           strokeDasharray="3 6"
         />
       </g>
@@ -63,7 +63,7 @@ function PhonePlanStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.09" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M200 52V68 M360 52V68 M200 372V400 M360 372V400" />
+        <path d="M200 52V68 M360 52V68 M200 372V392 M360 372V392" />
         <path d="M168 76H192 M168 84H200 M168 108H192" />
       </g>
       <g opacity="0.28" strokeWidth="1" strokeOpacity="0.65">
@@ -141,17 +141,19 @@ function ChatPlanStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.09" strokeWidth="1" strokeOpacity="0.55">
-        <path d="M104 96V356M148 96V356M172 96V356M196 208V316M220 208V316M364 96V200M412 208V316M456 208V316" />
-        <path d="M80 116H388M80 180H388M172 228H480M172 292H480" />
+        <path d="M104 112V120M104 176V200M148 96V108M148 188V308M172 96V108M172 188V308M196 208V220M196 300V308M220 208V220M220 300V308M364 96V108M364 188V200M412 208V220M456 208V232M456 288V316" />
+        <path d="M80 116H140M372 116H388M80 180H140M372 180H388M172 228H188M420 228H480M172 292H188M420 292H480" />
       </g>
       <g opacity="0.24" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M72 148H388M172 260H488M128 332H248" strokeDasharray="4 6" />
+        <path
+          d="M64 148H76M132 148H140M372 148H388M172 260H188M420 260H428M484 260H496M128 332H140M236 332H248"
+          strokeDasharray="4 6"
+        />
         <path d="M148 104V92H160M364 104V92H352M196 304V316H208M412 304V316H400" />
-        <circle cx="164" cy="132" r="16" strokeDasharray="3 5" />
-        <path d="M140 132H188M164 108V156M164 132 132 100H112" />
+        <path d="M152.686292 120.686292 132 100H112" />
       </g>
 
-      <g fill="var(--color-sidebar)" strokeWidth="1" strokeOpacity="0.85">
+      <g strokeWidth="1" strokeOpacity="0.85">
         <rect height="64" rx="16" width="216" x="148" y="116" />
         <rect height="64" rx="16" width="216" x="196" y="228" />
         <rect height="32" rx="16" width="80" x="148" y="316" />
@@ -174,7 +176,7 @@ function ChatPlanStudy() {
         <path d="M124 174V200M148 188V200M124 194H148m-28 4 8-8m16 8 8-8" />
         <path d="M412 306V332M436 286V332M412 324H436m-28 4 8-8m16 8 8-8" />
         <path d="M148 362V382M172 362V382M148 374H172m-28 4 8-8m16 8 8-8" />
-        <path d="M388 180H404M388 228H404M396 180V196M396 212V228m-4-44 8-8m-8 56 8-8" />
+        <path d="M388 180H404M388 228H404M396 180V192M396 216V228m-4-44 8-8m-8 56 8-8" />
       </g>
       <g fill="currentColor" fontSize="11" opacity="0.72" stroke="none">
         <text x="172" y="152">

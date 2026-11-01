@@ -17,7 +17,7 @@ function TangencyStudy() {
     <BlueprintDrawing>
       <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path d="M124 148V340 M284 148V340 M332 236V340 M412 236V340" />
-        <path d="M108 164H296 M320 244H428 M108 324H444" />
+        <path d="M108 164H296 M320 244H428" />
       </g>
       <g
         opacity="0.28"
@@ -64,12 +64,12 @@ function CornerRuleStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.09" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M130 108H414 M130 160H414 M130 212H414 M130 264H414 M130 316H414" />
-        <path d="M178 90V328 M230 90V328 M282 90V328 M334 90V328 M386 90V328" />
+        <path d="M394 108H414 M130 160H290 M336 160H414 M130 264H414 M130 316H414" />
+        <path d="M178 90V328 M230 90V328 M334 90V328 M386 90V100 M386 116V204" />
       </g>
       <g opacity="0.28" strokeWidth="1" strokeOpacity="0.6">
         <path
-          d="M128 108H386V328 M282 88V331 M123 212H426"
+          d="M290 108H386V204 M282 88V331 M123 212H426"
           strokeDasharray="4 6"
         />
         <path d="M178 212a104 104 0 0 0 208 0 M282 108a104 104 0 0 0-104 104" />
@@ -79,12 +79,6 @@ function CornerRuleStudy() {
         />
         <path d="M386 94v28 M372 108h28 M272 212h20 M282 202v20" />
       </g>
-      <path
-        d="M140 108H282a104 104 0 0 1 104 104V318H362V212a80 80 0 0 0-80-80H140Z"
-        fill="currentColor"
-        fillOpacity="0.035"
-        stroke="none"
-      />
       <g strokeWidth="1" strokeOpacity="1">
         <path d="M140 108H282a104 104 0 0 1 104 104V318" />
         <path d="M140 132H282a80 80 0 0 1 80 80V318" />
@@ -98,7 +92,7 @@ function CornerRuleStudy() {
         <path d="M362 345H386 M362 335v17 M386 335v17 m-28-3 8-8 m16 8 8-8" />
         <path d="M140 120H113L101 132" />
       </g>
-      <g fill="var(--color-sidebar)" strokeWidth="1" strokeOpacity="0.8">
+      <g strokeWidth="1" strokeOpacity="0.8">
         <circle cx="282" cy="212" r="2.5" />
         <circle cx="282" cy="108" r="2.5" />
         <circle cx="386" cy="212" r="2.5" />
@@ -113,7 +107,7 @@ function CornerRuleStudy() {
         <text textAnchor="middle" x="374" y="367">
           u
         </text>
-        <text transform="rotate(-45 323 160)" x="323" y="160">
+        <text transform="rotate(-45 303 180)" x="303" y="180">
           R104
         </text>
         <text x="91" y="147">
@@ -130,7 +124,7 @@ function ProportionStudy() {
     <BlueprintDrawing>
       <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path d="M128 112V333 M164 112V333 M218 112V333 M299 112V333 M420.5 112V333" />
-        <path d="M111 185.5H440 M111 226H440 M111 253H440 M111 271H440 M111 307H440" />
+        <path d="M111 185.5H252 M428.5 185.5H440 M111 226H210 M307 226H440 M111 253H156 M226 253H440 M111 271H120 M172 271H440 M111 307H120 M428.5 307H440" />
       </g>
       <g opacity="0.28" strokeWidth="1" strokeOpacity="0.65">
         <path d="M110 307H445 M111 279.5 449 110.5" />
@@ -142,14 +136,7 @@ function ProportionStudy() {
         <rect height="36" width="36" x="128" y="271" />
         <rect height="54" width="54" x="164" y="253" />
         <rect height="81" width="81" x="218" y="226" />
-        <rect
-          fill="currentColor"
-          fillOpacity="0.025"
-          height="121.5"
-          width="121.5"
-          x="299"
-          y="185.5"
-        />
+        <rect height="121.5" width="121.5" x="299" y="185.5" />
       </g>
       <path
         d="M128 271 420.5 124.75"
@@ -163,7 +150,7 @@ function ProportionStudy() {
         <path d="M442 185.5V307 M436 185.5h12 M436 307h12" />
         <path d="M359.75 124.75H420.5V155.125 M408.5 124.75v12h12" />
       </g>
-      <g fill="var(--color-sidebar)" strokeWidth="1" strokeOpacity="0.8">
+      <g strokeWidth="1" strokeOpacity="0.8">
         <circle cx="128" cy="271" r="2.5" />
         <circle cx="164" cy="253" r="2.5" />
         <circle cx="218" cy="226" r="2.5" />
@@ -202,12 +189,12 @@ function AssemblyStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M128 112H432 M128 144H432 M128 248H432 M128 281H432 M128 314H432" />
-        <path d="M148 100V334 M180 100V334 M204 100V334 M334 100V334 M412 100V334" />
+        <path d="M128 112H432 M128 144H140 M188 144H204 M306 144H326 M420 144H432 M112 248H120 M440 248H448 M112 281H120 M440 281H448 M112 314H120 M440 314H448" />
+        <path d="M148 112V120 M148 168V240 M148 322V334 M180 112V120 M180 168V240 M180 322V334 M204 112V136 M204 164V240 M204 322V334 M334 112V122 M334 166V240 M334 322V334 M412 112V122 M412 166V240 M412 322V334" />
       </g>
       <g opacity="0.34" strokeWidth="1" strokeOpacity="0.6">
         <path
-          d="M164 172V261 M252 164V263 M373 166V264"
+          d="M164 172V240 M252 164V240 M373 166V240"
           strokeDasharray="3 6"
         />
         <path d="m160 207 4 5 4-5 m80 0 4 5 4-5 m113 0 4 5 4-5" />
@@ -215,35 +202,14 @@ function AssemblyStudy() {
         <path d="M422 314h20 M432 304v20" />
       </g>
       <g strokeWidth="1" strokeOpacity="0.95">
-        <rect
-          fill="var(--color-sidebar)"
-          height="32"
-          rx="6"
-          width="32"
-          x="148"
-          y="128"
-        />
+        <rect height="32" rx="6" width="32" x="148" y="128" />
         <path
           d="M156 136h6v6h-6z M166 136h6v6h-6z M156 146h6v6h-6z M166 146h6v6h-6z"
           opacity="0.7"
         />
-        <rect
-          fill="var(--color-sidebar)"
-          height="28"
-          rx="14"
-          width="78"
-          x="334"
-          y="130"
-        />
+        <rect height="28" rx="14" width="78" x="334" y="130" />
         <path d="m346 144 3 3 5-6" opacity="0.7" />
-        <rect
-          fill="var(--color-sidebar)"
-          height="66"
-          rx="12"
-          width="304"
-          x="128"
-          y="248"
-        />
+        <rect height="66" rx="12" width="304" x="128" y="248" />
         <rect height="32" rx="6" width="32" x="148" y="265" />
         <path
           d="M156 273h6v6h-6z M166 273h6v6h-6z M156 283h6v6h-6z M166 283h6v6h-6z"
@@ -294,9 +260,9 @@ function ModularTrayStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.14" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M128 120H432V328H128Z" />
-        <path d="M148 100V348 M258 100V348 M280 100V348 M332 100V348 M412 100V348" />
-        <path d="M108 140H452 M108 184H452 M108 208H452 M108 244H452 M108 264H452 M108 300H452" />
+        <path d="M128 120H432V328H282 M258 328H128V120" />
+        <path d="M148 100V138 M148 186V200 M148 308V348 M258 100V138 M258 186V200 M258 308V348 M280 100V138 M280 186V200 M280 308V348 M332 100V132 M332 308V348 M412 100V132 M412 308V348" />
+        <path d="M108 140H140 M420 140H452 M108 184H140 M420 184H452 M108 208H140 M420 208H452 M108 244H140 M420 244H452 M108 264H140 M420 264H452 M108 300H140 M420 300H452" />
       </g>
       <g opacity="0.4" strokeWidth="1" strokeOpacity="0.65">
         <path d="M128 136v-16h16 M416 120h16v16 M128 312v16h16 M416 328h16v-16" />
@@ -305,60 +271,27 @@ function ModularTrayStudy() {
         <path d="M258 318h22 M258 313v10 M280 313v10" />
       </g>
       <g strokeWidth="1" strokeOpacity="0.95">
-        <rect
-          fill="var(--color-sidebar)"
-          height="32"
-          rx="16"
-          width="160"
-          x="148"
-          y="146"
-        />
+        <rect height="32" rx="16" width="160" x="148" y="146" />
         <circle cx="165" cy="162" r="3" />
         <path d="m291 158 4 4-4 4" opacity="0.6" />
-        <rect
-          fill="var(--color-sidebar)"
-          height="44"
-          rx="9"
-          width="44"
-          x="352"
-          y="140"
-        />
+        <rect height="44" rx="9" width="44" x="352" y="140" />
         <path d="M366 162h16 M374 154v16" opacity="0.7" />
-        <rect
-          fill="var(--color-sidebar)"
-          height="92"
-          rx="9"
-          width="110"
-          x="148"
-          y="208"
-        />
+        <rect height="92" rx="9" width="110" x="148" y="208" />
         <rect height="24" opacity="0.7" rx="5" width="24" x="162" y="222" />
         <path d="M168 234h12 M174 228v12" opacity="0.55" />
         <path d="M162 263h54 M162 275h78" opacity="0.36" />
-        <rect
-          fill="var(--color-sidebar)"
-          height="36"
-          rx="7"
-          width="132"
-          x="280"
-          y="208"
-        />
+        <rect height="36" rx="7" width="132" x="280" y="208" />
         <circle cx="297" cy="226" opacity="0.75" r="4" />
-        <rect
-          fill="var(--color-sidebar)"
-          height="36"
-          rx="7"
-          width="132"
-          x="280"
-          y="264"
-        />
+        <rect height="36" rx="7" width="132" x="280" y="264" />
         <rect height="18" rx="9" width="30" x="369" y="273" />
         <circle cx="390" cy="282" r="5.5" />
       </g>
       <g opacity="0.3" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M332 140h80v44h-80Z" strokeDasharray="3 5" />
+        <path
+          d="M344 140H332V184H344 M404 140H412V184H404"
+          strokeDasharray="3 5"
+        />
         <path d="M352 162H340 M408 162H396 M374 128v12 M374 184v12" />
-        <path d="M139 291h18 M148 282v18" />
       </g>
       <g fill="currentColor" fontSize="11" opacity="0.72" stroke="none">
         <text x="178" y="166">

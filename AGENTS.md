@@ -11,7 +11,7 @@ For creating, critiquing, refining, or animating Plotter illustrations, read [sk
 
 ## Preserve the art
 
-Keep drawings at their native `560 × 440` geometry and preserve their composition during implementation changes. Forms remain transparent; hatch marks identify bounded regions and travel with those regions. Give each coincident edge one stroke owner. Preserve the grammar’s hover, keyboard, touch, and isolation behavior without boosting the selected marks’ styling.
+Keep drawings at their native `560 × 440` geometry and preserve their composition during implementation changes. Follow the [fill and line-clearance rules](skills/plotter/references/drafting-standard.md#fills-and-line-clearance) for transparent forms, semantic highlights, symbols, and construction marks. Hatch marks stay attached to their bounded regions. Give each coincident edge one stroke owner. Preserve the grammar’s hover, keyboard, touch, and isolation behavior without boosting the selected marks’ styling.
 
 Keep static drawings, timelines, and playback responsibilities separate. Preserve pause/resume, static fallback, reduced motion, and visibility behavior when changing motion. On the website, looping drawings have no visible controls (removed on 2026-11-01 at the user’s request): they pause off-screen and show the still drawing under reduced motion. Standalone animation deliverables keep their own player.
 

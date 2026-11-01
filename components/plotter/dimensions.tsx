@@ -3,11 +3,13 @@ export function HorizontalDimension({
   x2,
   y,
   label,
+  labelOffset = 8,
 }: {
   x1: number;
   x2: number;
   y: number;
   label: string;
+  labelOffset?: number;
 }) {
   return (
     <>
@@ -20,7 +22,7 @@ export function HorizontalDimension({
         stroke="none"
         textAnchor="middle"
         x={(x1 + x2) / 2}
-        y={y - 6}
+        y={y - labelOffset}
       >
         {label}
       </text>

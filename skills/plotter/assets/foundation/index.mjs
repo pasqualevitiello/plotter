@@ -2,6 +2,8 @@ import { standard } from "./standard.mjs";
 
 export { roleCss, standard } from "./standard.mjs";
 
+export const highlightOpacity = `var(--plotter-opacity-highlight, ${standard.tokens["--plotter-opacity-highlight"]})`;
+
 function finite(value, name) {
   if (typeof value !== "number" || !Number.isFinite(value)) {
     throw new TypeError(`${name} must be a finite number.`);

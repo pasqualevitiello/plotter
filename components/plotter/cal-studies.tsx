@@ -1,3 +1,4 @@
+import { highlightOpacity } from "../../skills/plotter/assets/foundation/index.mjs";
 import { BlueprintDrawing } from "./blueprint-drawing";
 import type { IllustrationStudy } from "./study-types";
 
@@ -14,27 +15,24 @@ function SharedAvailability() {
   return (
     <BlueprintDrawing>
       <g opacity="0.16" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M140 112V324M196 112V324M252 112V324M308 112V324M364 112V324M420 112V324" />
-        <path d="M100 160H460M100 200H460M100 240H460M100 280H460" />
+        <path d="M140 112V324M196 112V152M196 208V324M252 112V152M252 208V324M308 112V152M308 208V232M308 288V324M364 112V232M364 288V324M420 112V324" />
+        <path d="M100 160H188M344 160H460M100 200H188M344 200H460M100 240H272M400 240H460M100 280H272M400 280H460" />
         <path d="M100 220H460" strokeDasharray="5 5" />
       </g>
 
       <path
-        d="M280 124H336V318H280Z"
-        fill="currentColor"
-        fillOpacity="0.025"
+        d="M280 152V124H336V152M336 208V232M280 208V232M336 288V318H280V288"
         opacity="0.45"
         strokeDasharray="3 5"
         strokeWidth="1"
         strokeOpacity="0.65"
       />
       <g opacity="0.25" strokeWidth="1" strokeOpacity="0.7">
-        <path d="M140 180H420M140 260H420" />
+        <path d="M140 180H188M344 180H420M140 260H272M400 260H420" />
         <path d="M140 174V186M420 174V186M140 254V266M420 254V266" />
       </g>
 
       <rect
-        fill="var(--color-sidebar)"
         height="40"
         rx="6"
         strokeWidth="1"
@@ -44,7 +42,6 @@ function SharedAvailability() {
         y="160"
       />
       <rect
-        fill="var(--color-sidebar)"
         height="40"
         rx="6"
         strokeWidth="1"
@@ -56,21 +53,22 @@ function SharedAvailability() {
       <path
         d="M280 160H330Q336 160 336 166V194Q336 200 330 200H280Z"
         fill="currentColor"
-        fillOpacity="0.055"
+        data-plotter-fill="highlight"
+        fillOpacity={highlightOpacity}
         stroke="none"
       />
       <path
         d="M286 240H336V280H286Q280 280 280 274V246Q280 240 286 240Z"
         fill="currentColor"
-        fillOpacity="0.055"
+        data-plotter-fill="highlight"
+        fillOpacity={highlightOpacity}
         stroke="none"
       />
       <g opacity="0.43" strokeWidth="1" strokeOpacity="0.65">
-        <path d="M280 136V304M336 136V304" strokeDasharray="3 4" />
-        <path d="M308 200V240" />
+        <path d="M308 208V211M308 229V232" />
         <path d="M303 215H313M303 225H313" />
       </g>
-      <g fill="var(--color-sidebar)" strokeWidth="1" strokeOpacity="0.9">
+      <g strokeWidth="1" strokeOpacity="0.9">
         <circle cx="112" cy="180" r="10" />
         <circle cx="112" cy="260" r="10" />
       </g>
@@ -111,7 +109,7 @@ function TwoTimeZones() {
   return (
     <BlueprintDrawing>
       <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M104 124V316 M176 124V316 M392 124V316 M464 124V316" />
+        <path d="M104 124V140 M104 168V176 M104 216V252 M104 280V288 M176 124V176 M176 216V288 M392 124V176 M392 216V288 M464 124V176 M464 216V288" />
         <path d="M88 136H232 M336 136H480 M88 248H232 M336 248H480" />
       </g>
       <g

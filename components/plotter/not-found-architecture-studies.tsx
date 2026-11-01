@@ -6,8 +6,8 @@ function UnopenedDoor() {
   return (
     <BlueprintDrawing>
       <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M168 92V340M248 92V340M288 92V340M368 92V340" />
-        <path d="M112 128H448M112 168H448M112 208H448M112 288H448" />
+        <path d="M168 92V340M248 92V144M248 200V216M248 244V340M288 92V340M368 92V340" />
+        <path d="M112 128H448M112 168H252M288 168H448M112 208H448M112 288H448" />
       </g>
 
       <g opacity="0.25" strokeWidth="1" strokeOpacity="0.65">
@@ -18,8 +18,6 @@ function UnopenedDoor() {
 
       <path
         d="M128 248H208V264H128ZM336 248H432V264H336Z"
-        fill="currentColor"
-        fillOpacity="0.035"
         strokeWidth="1"
         strokeOpacity="1"
       />
@@ -59,22 +57,8 @@ function UnopenedDoor() {
         <path d="M332 218H388L404 202" />
       </g>
 
-      <circle
-        cx="208"
-        cy="248"
-        fill="var(--color-sidebar)"
-        r="3.5"
-        strokeWidth="1"
-        strokeOpacity="0.8"
-      />
-      <circle
-        cx="336"
-        cy="248"
-        fill="var(--color-sidebar)"
-        r="2.5"
-        strokeWidth="1"
-        strokeOpacity="0.8"
-      />
+      <circle cx="208" cy="248" r="3.5" strokeWidth="1" strokeOpacity="0.8" />
+      <circle cx="336" cy="248" r="2.5" strokeWidth="1" strokeOpacity="0.8" />
 
       <g fill="currentColor" fontSize="10" opacity="0.52" stroke="none">
         <text textAnchor="middle" x="272" y="317">

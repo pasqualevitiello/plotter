@@ -154,7 +154,7 @@ export function ProductionChainMotionDrawing() {
       </g>
       <g data-plotter-role="guide">
         {/* Feed guides clear the moving core by 4 units and end before the drop. */}
-        <path d="M256 118V124 M304 118V124 M80 124H248 M80 180H248" />
+        <path d="M256 118V124 M304 118V124 M80 124H248 M80 180H124 M164 180H248" />
         <path d="M144 312V358 M280 312V358 M416 312V336" />
       </g>
 

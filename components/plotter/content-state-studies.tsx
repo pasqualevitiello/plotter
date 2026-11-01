@@ -53,7 +53,7 @@ function SearchStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M92 240H464 M92 296H464 M108 220V320 M164 220V320 M180 220V320 M236 220V320 M324 220V320 M380 220V320 M396 220V320 M452 220V320" />
+        <path d="M92 240H100 M460 240H464 M92 296H100 M460 296H464 M108 304V320 M164 220V232 M164 304V320 M180 220V232 M180 304V320 M236 220V232 M236 304V320 M324 220V232 M324 304V320 M380 220V232 M380 304V320 M396 220V232 M396 304V320 M452 220V232 M452 304V320" />
       </g>
       <SearchGap />
       <g strokeWidth="1" strokeOpacity="0.95">
@@ -135,7 +135,7 @@ function NotificationsStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M192 92V296 M400 92V296 M176 112H424 M176 152H424 M176 176H424 M176 216H424 M176 240H424 M176 280H424" />
+        <path d="M192 160V168 M192 224V232 M192 288V296 M400 92V104 M400 160V168 M400 224V232 M400 288V296 M176 112H184 M408 112H424 M176 152H184 M408 152H424 M176 176H184 M408 176H424 M176 216H184 M408 216H424 M176 240H184 M408 240H424 M176 280H184 M408 280H424" />
       </g>
       <g strokeWidth="1" strokeOpacity="0.95">
         <NotificationStream />
@@ -203,14 +203,14 @@ function FilesStudy() {
     <BlueprintDrawing>
       <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
         <path
-          d={`M164 80H396 M164 ${pageBottom}H396 M180 64V${pageBottom + 16} M380 128V${pageBottom + 16}`}
+          d={`M164 80H172 M348 80H396 M164 ${pageBottom}H172 M388 ${pageBottom}H396 M180 64V72`}
         />
       </g>
       <g opacity="0.24" strokeWidth="1" strokeOpacity="0.65">
         <path
           d={`M180 80 220 ${writingTop} M340 ${writingBottom} 380 ${pageBottom}`}
         />
-        <path d="M328 80H352 M340 68V132 M368 120H392" />
+        <path d="M340 68V72 M340 128V132 M388 120H392" />
       </g>
       <g strokeWidth="1" strokeOpacity="0.75">
         <WritingArea />
@@ -353,7 +353,7 @@ function BookingsStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M140 112V308 M420 112V308 M128 164H440 M128 284H440" />
+        <path d="M140 112V156 M140 292V308 M420 112V156 M420 292V308 M128 164H132 M428 164H440 M128 284H132 M428 284H440" />
       </g>
       <g strokeWidth="1" strokeOpacity="0.95">
         <EmptyWeek />
@@ -364,7 +364,13 @@ function BookingsStudy() {
         <path d="M436 164H448 M436 284H448" />
         <VerticalDimension label="3 h" x={456} y1={164} y2={284} />
         <path d="M220 298V322 M260 298V322" />
-        <HorizontalDimension label="Today" x1={220} x2={260} y={328} />
+        <HorizontalDimension
+          label="Today"
+          labelOffset={10}
+          x1={220}
+          x2={260}
+          y={328}
+        />
       </g>
       <g
         fill="currentColor"
@@ -444,7 +450,7 @@ function ImageStudy() {
   return (
     <BlueprintDrawing>
       <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M160 104V316 M400 104V316 M144 120H416 M144 300H416" />
+        <path d="M160 104V112 M160 308V316 M400 104V112 M400 308V316 M144 120H152 M408 120H416 M144 300H152 M408 300H416" />
       </g>
       <g strokeWidth="1" strokeOpacity="1">
         <ImageBounds />

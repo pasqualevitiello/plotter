@@ -84,7 +84,7 @@ export function ParticlesBlueprint() {
         <path d="m324 340 8-8 m136 8 8-8" />
         <path d="M484 160H508 M484 304H508 M500 160V218 M500 246V304" />
         <path d="m496 164 8-8 m-8 152 8-8" />
-        <path d="M40 208V224 M40 240V256 M34 208H64 M34 256H64" />
+        <path d="M40 208V220 M40 244V256 M34 208H64 M34 256H64" />
       </g>
       <g fill="currentColor" fontSize="10" opacity="0.52" stroke="none">
         <text textAnchor="end" x="58" y="140">

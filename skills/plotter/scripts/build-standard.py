@@ -67,7 +67,12 @@ for key in pattern_rows:
 
 guide = ROOT / "references" / "drafting-standard.md"
 text = guide.read_text()
-for name, table in [("stroke-palette", solid), ("line-patterns", pattern)]:
+fills = [
+    "| Mark | Fill | Fill opacity | Use |",
+    "| --- | --- | ---: | --- |",
+    f"| Region highlight | Illustration ink | {number(tokens['--plotter-opacity-highlight'])} | Named intersection, selection, or result |",
+]
+for name, table in [("stroke-palette", solid), ("line-patterns", pattern), ("fill-palette", fills)]:
     begin = f"<!-- BEGIN GENERATED: {name} -->"
     end = f"<!-- END GENERATED: {name} -->"
     replacement = begin + "\n" + "\n".join(table) + "\n" + end

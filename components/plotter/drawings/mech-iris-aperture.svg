@@ -21,7 +21,7 @@
   <g stroke-width="1" opacity="0.5" stroke-opacity="0.65">
     <circle cx="280" cy="220" r="3"/>
     <path d="M283 220H320M315.757359 215.757359L320 220L315.757359 224.242641M314 220V214H320"/>
-    <path d="M320 196.905989L346 170H388M202 270L146 314H112"/>
+    <path d="M320 196.905989L346 170H392M202 270L146 314H112"/>
     <path d="M160 92V56M400 92V56M160 64H264M296 64H400M156 68L164 60M396 68L404 60"/>
   </g>
   <g fill="currentColor" stroke="none" font-size="10" opacity="0.5">
@@ -29,7 +29,7 @@
     <text x="280" y="67" text-anchor="middle">6u</text>
   </g>
   <g fill="currentColor" stroke="none" font-size="11" opacity="0.72">
-    <text x="396" y="174">Aperture</text>
+    <text x="400" y="174">Aperture</text>
     <text x="104" y="318" text-anchor="end">Blade 01</text>
   </g>
 </svg>

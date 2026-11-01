@@ -4,19 +4,23 @@ export function NotFoundBlueprint() {
   return (
     <BlueprintDrawing>
       <g opacity="0.1" strokeWidth="1" strokeOpacity="0.6">
-        <path d="M112 116H448M112 176H448M112 244H328M112 304H328M172 80V340M232 80V340M292 80V340M416 80V200" />
+        <path d="M112 116H448M112 176H300M376 176H448M112 244H328M112 304H328M172 80V340M232 80V340M292 80V340M416 80V188" />
       </g>
       <g opacity="0.25" strokeWidth="1" strokeOpacity="0.6">
         <path d="M100 304H292M232 84V350M272 116H464" strokeDasharray="4 6" />
-        <circle cx="172" cy="244" r="60" strokeDasharray="3 6" />
-        <circle cx="292" cy="176" r="60" strokeDasharray="3 6" />
+        <path
+          d="M151.478791 300.381557A60 60 0 1 0 115.618443 264.521209"
+          strokeDasharray="3 6"
+        />
+        <path
+          d="M349.827329 160A60 60 0 1 0 349.827329 192"
+          strokeDasharray="3 6"
+        />
         <path d="M164 244H180M172 236V252M284 176H300M292 168V184" />
       </g>
 
       <path
         d="M124 296H172A52 52 0 0 0 224 244V176A68 68 0 0 1 292 108H308V124H292A52 52 0 0 0 240 176V244A68 68 0 0 1 172 312H124Z"
-        fill="currentColor"
-        fillOpacity="0.025"
         strokeWidth="1"
         strokeOpacity="0.95"
       />
@@ -57,7 +61,7 @@ export function NotFoundBlueprint() {
         <text textAnchor="middle" x="148" y="351">
           u
         </text>
-        <text x="180" y="270">
+        <text x="196" y="256">
           R60
         </text>
         <text x="264" y="204">

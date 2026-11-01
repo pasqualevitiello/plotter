@@ -12,7 +12,7 @@ Make the main form read first, supporting construction second, and sparse dimens
 
 ## Surface and marks
 
-Use monochrome ink adapted to the host's foreground and background. Keep forms transparent. Clear guides and text by splitting or shortening paths, with one owner for each coincident segment. Text glyph fills are intentional; opaque surface patches are not a substitute for resolving geometry.
+Use monochrome ink adapted to the host’s foreground and background. Apply the [fill and line-clearance rules](drafting-standard.md#fills-and-line-clearance): ordinary forms are transparent, a region highlight identifies a named selection or intersection, and each supporting line has a clear purpose. Keep text legible by resolving the geometry around it.
 
 Choose supporting marks through the [visual grammar](visual-grammar.md). A background grid earns its place when it reveals a shared coordinate or module system; geometric subject matter alone is insufficient. Calendar cells may be the subject rather than a background grid. Hatching identifies a declared bounded region or section and stays attached to that region through motion. It does not supply generic texture or lighting.
 
