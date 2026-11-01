@@ -15,7 +15,8 @@ export function renderRegistration(svgSource) {
   const record = svg.match(
     /<rect\b[^>]*data-plotter-part="registry-record"[^>]*\/>/,
   )?.[0];
-  if (!record) throw new Error("AG01 is missing its registry-record rectangle.");
+  if (!record)
+    throw new Error("AG01 is missing its registry-record rectangle.");
   const x = numericAttribute(record, "x");
   const y = numericAttribute(record, "y");
   const width = numericAttribute(record, "width");
@@ -51,7 +52,9 @@ export function renderRegistration(svgSource) {
       throw new Error(`AG01 is missing its ${name} markers.`);
     const indent = svg.slice(svg.lastIndexOf("\n", from) + 1, from);
     svg =
-      svg.slice(0, from + start.length) + `\n${body}\n${indent}` + svg.slice(to);
+      svg.slice(0, from + start.length) +
+      `\n${body}\n${indent}` +
+      svg.slice(to);
   }
 
   replaceFragment(

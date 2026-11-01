@@ -10,7 +10,14 @@
     "start": "next start --port 3000",
     "downloads": "bun scripts/build-plotter-downloads.tsx && bun scripts/build-docs.ts",
     "drawings": "node scripts/build-plotter-registration.mjs && python3 scripts/build-plotter-drawings.py",
-    "grammar": "python3 scripts/build-plotter-grammar.py"
+    "grammar": "python3 scripts/build-plotter-grammar.py",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "imports": "biome check --write --formatter-enabled=false --linter-enabled=false .",
+    "typecheck": "tsc --noEmit",
+    "plotter:check": "bun scripts/check-plotter.tsx"
   },
   "dependencies": {
     "@base-ui/react": "1.9.0",
@@ -25,6 +32,7 @@
     "tailwind-merge": "3.4.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.6.4",
     "@tailwindcss/postcss": "4.1.17",
     "@types/node": "24.10.1",
     "@types/react": "19.2.3",

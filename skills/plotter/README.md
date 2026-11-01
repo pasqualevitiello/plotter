@@ -6,9 +6,9 @@ Editable flat monochrome construction illustrations, with drawing and animation 
 
 Copy this **complete `plotter` directory** into the agent’s personal skills directory, keeping its name and relative paths:
 
-| Agent | Destination | Invocation |
-| --- | --- | --- |
-| Codex | `~/.codex/skills/plotter` | `$plotter` |
+| Agent       | Destination                | Invocation |
+| ----------- | -------------------------- | ---------- |
+| Codex       | `~/.codex/skills/plotter`  | `$plotter` |
 | Claude Code | `~/.claude/skills/plotter` | `/plotter` |
 
 The canonical source is `skills/plotter` in the private `pasqualevitiello/plotter` repository. Obtain it through authenticated repository access or the complete skill download. Update installed copies as complete folders. Standalone work needs no website checkout, conversation history, package manager, or external font download.
@@ -26,11 +26,11 @@ In Claude Code, start the same request with `/plotter`. One entrypoint routes to
 
 Seven bundled SVG anchors support construction-reference selection. The [visual grammar](references/visual-grammar.md) includes teaching SVGs; the [foundation](references/foundation.md) contains dependency-free geometry helpers and generated role styles. [Website integration](references/implementation.md) and dated feedback are optional branches.
 
-| Example | Open or generate it from the copied skill directory |
-| --- | --- |
-| Static registration, using the shared arrow/dimension helpers | `node assets/examples/registration.mjs > registration.svg` |
-| Resolved static SVG with editable labels | `python3 scripts/export-svg.py registration.svg registration-export.svg --id-prefix registration` |
-| Animation and static fallback, with shared role CSS | Open `assets/examples/assembly-motion.html` in a modern browser; keep `assets/foundation/roles.css` in place. |
+| Example                                                       | Open or generate it from the copied skill directory                                                           |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Static registration, using the shared arrow/dimension helpers | `node assets/examples/registration.mjs > registration.svg`                                                    |
+| Resolved static SVG with editable labels                      | `python3 scripts/export-svg.py registration.svg registration-export.svg --id-prefix registration`             |
+| Animation and static fallback, with shared role CSS           | Open `assets/examples/assembly-motion.html` in a modern browser; keep `assets/foundation/roles.css` in place. |
 
 Node.js is needed for the authoring example; Python 3 is needed for the static exporter. Recipients opening a resolved SVG need neither. The motion example uses browser SVG animation and a small player without a build or server. Keep its local stylesheet alongside it, or inline that generated stylesheet when delivering one HTML file. Exact Cal Sans typography depends on the font being available; the fallback is sans-serif.
 

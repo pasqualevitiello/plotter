@@ -19,15 +19,15 @@ Use `/plotter` in Claude Code. For critique, ask for findings and proposed corre
 
 The package includes seven approved snapshots. Choose by the relationship, rather than the subject alone.
 
-| Relationship | Reference |
-| --- | --- |
-| Circle, square, radius, tangency | P00 |
-| Separate fragments becoming one form | C01 |
-| Modules following an allocation rule | C02 |
-| Time intervals combining into a whole | K07 |
-| Work aligned to a cycle | B04 |
-| Conversation through a few UI fragments | I06 |
-| Absence interrupting a structure | E02 |
+| Relationship                            | Reference |
+| --------------------------------------- | --------- |
+| Circle, square, radius, tangency        | P00       |
+| Separate fragments becoming one form    | C01       |
+| Modules following an allocation rule    | C02       |
+| Time intervals combining into a whole   | K07       |
+| Work aligned to a cycle                 | B04       |
+| Conversation through a few UI fragments | I06       |
+| Absence interrupting a structure        | E02       |
 
 The skill’s `references/approved-references.md` links the SVGs and records their revision boundary. These snapshots preserve their original composition; the current drafting standard supplies the treatment for new work.
 

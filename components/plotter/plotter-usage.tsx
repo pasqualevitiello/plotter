@@ -4,8 +4,8 @@ import { EngineeringMotionPreview } from "./engineering-motion-preview";
 import { ProductionChainStudy } from "./engineering-studies";
 import { expandedStudies } from "./expanded-studies";
 import { PlotterPrompts } from "./plotter-prompts";
-import { ProductionChainMotionDrawing } from "./production-chain-motion-drawing";
 import { plotterDownload } from "./plotter-usage-content";
+import { ProductionChainMotionDrawing } from "./production-chain-motion-drawing";
 
 export function PlotterUsage() {
   const registration = expandedStudies.find(
@@ -82,7 +82,10 @@ export function PlotterUsage() {
           </p>
           <p className="text-pretty text-muted-foreground text-xs">
             For Claude Code, use{" "}
-            <code className="break-all text-foreground">~/.claude/skills/plotter/</code>.
+            <code className="break-all text-foreground">
+              ~/.claude/skills/plotter/
+            </code>
+            .
           </p>
           <details className="border-t pt-4 text-sm">
             <summary className="cursor-pointer font-medium">

@@ -11,10 +11,18 @@ const links = [
   ["/docs", "Docs"],
 ];
 
-export function SiteShell({ children, current }: { children: ReactNode; current?: string }) {
+export function SiteShell({
+  children,
+  current,
+}: {
+  children: ReactNode;
+  current?: string;
+}) {
   return (
     <div className="site-wrap">
-      <a className="site-skip-link" href="#main">Skip to content</a>
+      <a className="site-skip-link" href="#main">
+        Skip to content
+      </a>
       <header className="site-header">
         <div className="site-brand">
           <PlotterWordmark />
@@ -22,7 +30,11 @@ export function SiteShell({ children, current }: { children: ReactNode; current?
         </div>
         <nav aria-label="Main navigation" className="site-nav">
           {links.map(([href, label]) => (
-            <Link aria-current={current === href ? "page" : undefined} href={href} key={href}>
+            <Link
+              aria-current={current === href ? "page" : undefined}
+              href={href}
+              key={href}
+            >
               {label}
             </Link>
           ))}
@@ -43,7 +55,8 @@ export function SiteShell({ children, current }: { children: ReactNode; current?
             <Link href="/docs/animation">Animation guide</Link>
             <Link href="/docs/customization">Customization</Link>
             <a download href="/plotter/downloads/plotter.zip">
-              Download skill <ArrowUpRightIcon aria-hidden="true" className="size-4" />
+              Download skill{" "}
+              <ArrowUpRightIcon aria-hidden="true" className="size-4" />
             </a>
           </nav>
         </div>
@@ -59,7 +72,15 @@ export function SiteShell({ children, current }: { children: ReactNode; current?
   );
 }
 
-export function PageIntro({ number, title, children }: { number: string; title: string; children: ReactNode }) {
+export function PageIntro({
+  number,
+  title,
+  children,
+}: {
+  number: string;
+  title: string;
+  children: ReactNode;
+}) {
   return (
     <div className="page-intro">
       <p className="eyebrow">Plotter / {number}</p>

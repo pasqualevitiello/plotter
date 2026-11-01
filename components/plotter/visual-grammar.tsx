@@ -27,7 +27,10 @@ export function VisualGrammar() {
             your own brief
           </a>
           , or explore{" "}
-          <a className="underline underline-offset-4" href="/docs#plotter-tokens">
+          <a
+            className="underline underline-offset-4"
+            href="/docs#plotter-tokens"
+          >
             the shared linework tokens
           </a>
           .

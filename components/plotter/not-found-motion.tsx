@@ -2,8 +2,8 @@
 
 import { PauseIcon, PlayIcon, RotateCcwIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { useMediaQuery } from "@/hooks/use-media-query";
 import { Button } from "@/components/ui/button";
+import { useMediaQuery } from "@/hooks/use-media-query";
 import { MissingDestinationBlueprint } from "./missing-destination";
 import styles from "./not-found-motion.module.css";
 

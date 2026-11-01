@@ -94,10 +94,7 @@ export function PlotterPrompts({
                   catalogue
                 </a>
                 , then use the{" "}
-                <a
-                  className="underline underline-offset-4"
-                  href="/grammar"
-                >
+                <a className="underline underline-offset-4" href="/grammar">
                   visual grammar
                 </a>{" "}
                 to choose supporting marks.

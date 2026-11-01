@@ -14,11 +14,11 @@ Name the relationship motion adds: a part seats, an aperture changes, an interva
 
 Keep three responsibilities separate:
 
-| Responsibility | Owns |
-| --- | --- |
-| Drawing | Geometry, semantic groups, line roles, labels, hatch regions, static fallback |
-| Timeline | Drawing-specific transforms or path changes, timing, contact events, and loop/reset behavior |
-| Playback | Start, pause/resume, replay, static mode, reduced motion, and visibility pausing |
+| Responsibility | Owns                                                                                         |
+| -------------- | -------------------------------------------------------------------------------------------- |
+| Drawing        | Geometry, semantic groups, line roles, labels, hatch regions, static fallback                |
+| Timeline       | Drawing-specific transforms or path changes, timing, contact events, and loop/reset behavior |
+| Playback       | Start, pause/resume, replay, static mode, reduced motion, and visibility pausing             |
 
 Use shared geometry helpers for supported marks; keep the mechanism's timing local. List only invariants the drawing actually claims. Rigid parts keep their size; pivoted parts keep their attachment; a hatch stays on the same region; an indexing sequence retains its pitch. A conceptual transition is not proof of physical simulation.
 

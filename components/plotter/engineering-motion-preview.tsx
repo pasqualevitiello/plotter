@@ -2,8 +2,8 @@
 
 import { PauseIcon, PlayIcon, RotateCcwIcon } from "lucide-react";
 import { type ReactNode, useEffect, useRef, useState } from "react";
-import { useMediaQuery } from "@/hooks/use-media-query";
 import { Button } from "@/components/ui/button";
+import { useMediaQuery } from "@/hooks/use-media-query";
 import styles from "./engineering-motion-preview.module.css";
 
 export function EngineeringMotionPreview({

@@ -5,5 +5,9 @@ const root = resolve(import.meta.dir, "..");
 const destination = resolve(root, "public/docs");
 mkdirSync(destination, { recursive: true });
 for (const filename of readdirSync(resolve(root, "content/docs"))) {
-  if (filename.endsWith(".md")) copyFileSync(resolve(root, "content/docs", filename), resolve(destination, filename));
+  if (filename.endsWith(".md"))
+    copyFileSync(
+      resolve(root, "content/docs", filename),
+      resolve(destination, filename),
+    );
 }

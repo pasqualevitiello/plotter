@@ -2,13 +2,13 @@
 
 import { Tabs as TabsPrimitive } from "@base-ui/react/tabs";
 import * as React from "react";
-import { cn } from "@/lib/utils";
 import {
   type SegmentedControlSize,
   segmentedControlIndicatorSurfaceClassName,
   segmentedControlItemLayoutClassName,
   segmentedControlItemSizeClassNames,
 } from "@/components/ui/segmented-control";
+import { cn } from "@/lib/utils";
 
 type TabsVariant = "default" | "underline";
 type TabsSize = SegmentedControlSize;
@@ -111,9 +111,9 @@ export function TabsPanel({
 }
 
 export {
-  TabsPrimitive,
-  TabsTab as TabsTrigger,
   TabsPanel as TabsContent,
+  TabsPrimitive,
   type TabsSize,
+  TabsTab as TabsTrigger,
   type TabsVariant,
 };

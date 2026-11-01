@@ -6,22 +6,22 @@ Read when editing the standalone Plotter website, its React components, or a hos
 
 Use the current checkout and read its `AGENTS.md`. Paths below are relative to the standalone repository root.
 
-| Responsibility | Source |
-| --- | --- |
-| Canonical portable package | `skills/plotter/` |
-| Shared token and geometry source | `skills/plotter/assets/foundation/` |
-| Gallery SVG wrapper and role-style opt-in | `components/plotter/blueprint-drawing.tsx` |
-| Editable catalogue SVGs | `components/plotter/drawings/` |
-| Catalogue compiler and SVG serializer | `scripts/build-plotter-drawings.py`, `scripts/plotter_svg.py` |
-| AG01 helper-fragment recipe | `skills/plotter/assets/examples/render-registration.mjs` |
-| AG01 host file adapter | `scripts/build-plotter-registration.mjs` |
-| Static W05 and O07 | `components/plotter/engineering-studies.tsx` |
-| W05 shared core hatching | `components/plotter/production-chain-hatching.tsx` |
-| W05 and O07 timelines | `components/plotter/production-chain-motion-drawing.tsx`, `components/plotter/newtons-cradle-motion-drawing.tsx` |
-| Engineering playback, fallback, and visibility | `components/plotter/engineering-motion-preview.tsx` |
-| Resolved pilot export adapter | `scripts/export-plotter-pilots.tsx` |
-| Download artifact generator | `scripts/build-plotter-downloads.tsx` |
-| Website documentation | `content/docs/` |
+| Responsibility                                 | Source                                                                                                           |
+| ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Canonical portable package                     | `skills/plotter/`                                                                                                |
+| Shared token and geometry source               | `skills/plotter/assets/foundation/`                                                                              |
+| Gallery SVG wrapper and role-style opt-in      | `components/plotter/blueprint-drawing.tsx`                                                                       |
+| Editable catalogue SVGs                        | `components/plotter/drawings/`                                                                                   |
+| Catalogue compiler and SVG serializer          | `scripts/build-plotter-drawings.py`, `scripts/plotter_svg.py`                                                    |
+| AG01 helper-fragment recipe                    | `skills/plotter/assets/examples/render-registration.mjs`                                                         |
+| AG01 host file adapter                         | `scripts/build-plotter-registration.mjs`                                                                         |
+| Static W05 and O07                             | `components/plotter/engineering-studies.tsx`                                                                     |
+| W05 shared core hatching                       | `components/plotter/production-chain-hatching.tsx`                                                               |
+| W05 and O07 timelines                          | `components/plotter/production-chain-motion-drawing.tsx`, `components/plotter/newtons-cradle-motion-drawing.tsx` |
+| Engineering playback, fallback, and visibility | `components/plotter/engineering-motion-preview.tsx`                                                              |
+| Resolved pilot export adapter                  | `scripts/export-plotter-pilots.tsx`                                                                              |
+| Download artifact generator                    | `scripts/build-plotter-downloads.tsx`                                                                            |
+| Website documentation                          | `content/docs/`                                                                                                  |
 
 `BlueprintDrawing` opts into shared roles with `roles`. Token adoption currently covers **AG01 and W05**; legacy unmarked drawings keep their inherited stroke defaults. The SVG-to-JSX builder preserves supported root styles, removes standalone fixed ink and the root font family so the gallery inherits its theme and loaded font, and gives repeated definitions local IDs. Font weight, optical sizing, and GEOM settings remain authored. Standalone SVGs retain their own font stack.
 

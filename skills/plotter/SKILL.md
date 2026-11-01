@@ -11,11 +11,11 @@ Make one construction relationship carry the idea: alignment, proportion, assemb
 
 Resolve this skill’s installed directory first. All links below are relative to it. The complete folder includes visual references, helper implementation, examples, and export tools; standalone work needs no website checkout or prior conversation. The canonical package is `skills/plotter` in the private `pasqualevitiello/plotter` repository.
 
-| Request | Read and follow |
-| --- | --- |
-| Create or refine a static drawing; critique an illustration | [Drawing workflow](references/drawing.md). For critique, report findings and proposed corrections without editing unless requested. |
-| Animate an illustration; refine timing, transitions, or a loop | [Animation workflow](references/motion.md). If no usable static composition exists, complete the drawing workflow first. |
-| Deliver only a static drawing from an animation | Use the selected static composition and the [foundation's static export](references/foundation.md#standalone-static-export). Time zero is not automatically the right drawing. |
+| Request                                                        | Read and follow                                                                                                                                                                |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Create or refine a static drawing; critique an illustration    | [Drawing workflow](references/drawing.md). For critique, report findings and proposed corrections without editing unless requested.                                            |
+| Animate an illustration; refine timing, transitions, or a loop | [Animation workflow](references/motion.md). If no usable static composition exists, complete the drawing workflow first.                                                       |
+| Deliver only a static drawing from an animation                | Use the selected static composition and the [foundation's static export](references/foundation.md#standalone-static-export). Time zero is not automatically the right drawing. |
 
 One Plotter entrypoint serves both workflows: `$plotter` in Codex and `/plotter` in Claude Code. “Animate this illustration” should reach the animation workflow directly while retaining the same grammar and tokens. Motion uses the same visual rules.
 
@@ -31,12 +31,12 @@ Current direction governs composition, the grammar explains marks, and the draft
 
 Load additional material only for its branch:
 
-| When | Reference |
-| --- | --- |
-| Writing role-based SVG, using arrow/dimension/hatch helpers, overriding tokens, or exporting | [Portable foundation](references/foundation.md), including its supported cases and examples |
-| Editing the Plotter website or its components | [Website integration](references/implementation.md), then the checkout’s applicable instructions |
-| Revisiting a named study's feedback or investigating a past failure | [History index](references/history/index.md); read only the relevant entry/revision |
-| Explicitly asked for technical verification | [Verification prompt](references/verification-prompt.md), supplied with current source and renders |
+| When                                                                                         | Reference                                                                                          |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Writing role-based SVG, using arrow/dimension/hatch helpers, overriding tokens, or exporting | [Portable foundation](references/foundation.md), including its supported cases and examples        |
+| Editing the Plotter website or its components                                                | [Website integration](references/implementation.md), then the checkout’s applicable instructions   |
+| Revisiting a named study's feedback or investigating a past failure                          | [History index](references/history/index.md); read only the relevant entry/revision                |
+| Explicitly asked for technical verification                                                  | [Verification prompt](references/verification-prompt.md), supplied with current source and renders |
 
 ## Finish the requested artifact
 

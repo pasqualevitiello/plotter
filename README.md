@@ -15,13 +15,31 @@ bun run dev
 
 The development site uses port `3000`. The homepage uses the selected Manual direction. The former `/proto` links redirect to the homepage. Documentation covers [installation](content/docs/installation.md), [drawing](content/docs/drawing.md), [animation](content/docs/animation.md), and [customization](content/docs/customization.md).
 
+## Formatting and checks
+
+Biome owns formatting for handwritten JavaScript/TypeScript, JSON, CSS, Markdown, and YAML. It uses the coss style: two spaces, 80 columns, double quotes, and trailing commas. Install the recommended Biome editor extension to format on save.
+
+```sh
+bun run format        # Format source files
+bun run format:check  # Check formatting without writing (also runs in CI)
+bun run imports       # Organize imports separately
+bun run lint          # Report lint diagnostics
+bun run lint:fix      # Apply safe lint fixes for review
+bun run typecheck
+bun run plotter:check
+```
+
+Formatting does not apply lint fixes. Linting uses Biome’s recommended rules and reports Tailwind class ordering; it is a separate check from the formatting CI job. Neither fix command enables unsafe fixes.
+
+Generated drawing components, foundation outputs, public assets, and historical reference records are excluded in `biome.json`. SVG sources and HTML examples are also excluded to preserve reference hashes and embedded stylesheet checks. Markdown code blocks stay as authored. Python scripts are outside Biome’s scope. After editing website documentation, `bun run build` refreshes its copies in `public/docs`.
+
 ## Install the skill
 
 Copy the **complete** [`skills/plotter`](skills/plotter) folder to your agent’s personal skills directory, preserving its name and relative paths:
 
-| Agent | Destination | Invocation |
-| --- | --- | --- |
-| Codex | `~/.codex/skills/plotter` | `$plotter` |
+| Agent       | Destination                | Invocation |
+| ----------- | -------------------------- | ---------- |
+| Codex       | `~/.codex/skills/plotter`  | `$plotter` |
 | Claude Code | `~/.claude/skills/plotter` | `/plotter` |
 
 Use your authenticated repository access or the complete skill download from the site. A single `SKILL.md` file is not a complete installation: the workflows load bundled references, SVGs, geometry helpers, and exporters. One entrypoint handles drawing, critique, refinement, and animation.

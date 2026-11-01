@@ -12,14 +12,30 @@ const sans = localFont({
   variable: "--font-sans",
   weight: "400 700",
 });
-const mono = localFont({ src: "../public/fonts/PaperMono-Regular.woff2", display: "swap", variable: "--font-mono" });
+const mono = localFont({
+  src: "../public/fonts/PaperMono-Regular.woff2",
+  display: "swap",
+  variable: "--font-mono",
+});
 
 export const metadata: Metadata = {
-  title: { default: "Plotter — A language for drawing", template: "%s — Plotter" },
-  description: "Editable construction illustrations. A shared visual grammar, drawing and animation skills, and a collection of precise ideas.",
+  title: {
+    default: "Plotter — A language for drawing",
+    template: "%s — Plotter",
+  },
+  description:
+    "Editable construction illustrations. A shared visual grammar, drawing and animation skills, and a collection of precise ideas.",
   robots: { index: false, follow: false },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  return <html lang="en"><body className={`${sans.variable} ${mono.variable} bg-neutral-50 font-sans`}>{children}</body></html>;
+  return (
+    <html lang="en">
+      <body
+        className={`${sans.variable} ${mono.variable} bg-neutral-50 font-sans`}
+      >
+        {children}
+      </body>
+    </html>
+  );
 }

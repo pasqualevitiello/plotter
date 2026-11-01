@@ -10,10 +10,10 @@ The canonical source is `skills/plotter` in the private `pasqualevitiello/plotte
 
 ## Choose your agent
 
-| Agent | Personal installation | Start a request |
-| --- | --- | --- |
-| Codex | `~/.codex/skills/plotter` | `$plotter` |
-| Claude Code | `~/.claude/skills/plotter` | `/plotter` |
+| Agent       | Personal installation      | Start a request |
+| ----------- | -------------------------- | --------------- |
+| Codex       | `~/.codex/skills/plotter`  | `$plotter`      |
+| Claude Code | `~/.claude/skills/plotter` | `/plotter`      |
 
 Place the complete extracted folder at the destination for your agent. The entrypoint should be directly at `~/.codex/skills/plotter/SKILL.md` or `~/.claude/skills/plotter/SKILL.md`, with no second nested `plotter` folder. If the agent is already open, start a new session so it can discover the installation.
 

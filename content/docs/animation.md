@@ -28,11 +28,11 @@ A conceptual transition can explain a mechanism without claiming a physical simu
 
 ## Separate responsibilities
 
-| Part | Owns |
-| --- | --- |
-| Drawing | Geometry, semantic groups, line roles, labels, hatch regions, chosen still |
-| Timeline | Transforms, path changes, timing, contact, loop or reset |
-| Playback | Start, pause/resume, replay, static mode, reduced motion, visibility |
+| Part     | Owns                                                                       |
+| -------- | -------------------------------------------------------------------------- |
+| Drawing  | Geometry, semantic groups, line roles, labels, hatch regions, chosen still |
+| Timeline | Transforms, path changes, timing, contact, loop or reset                   |
+| Playback | Start, pause/resume, replay, static mode, reduced motion, visibility       |
 
 The foundation supplies shared geometry and style roles; it has no clock or player dependency. Keep timing local to the mechanism. Transform a rigid part and its hatching together, preserving the still’s opacity grouping and line hierarchy.
 
