@@ -115,7 +115,7 @@ export function PlotterPrompts({
                   <p className="font-medium text-sm">
                     Agent registration{" "}
                     <span className="ms-2 font-mono text-muted-foreground text-xs">
-                      AG01
+                      AGT-01
                     </span>
                   </p>
                   <p className="text-muted-foreground text-xs">
@@ -173,14 +173,14 @@ export function PlotterPrompts({
                 // biome-ignore lint/a11y/noNoninteractiveTabindex: Native-size drawings need keyboard scrolling on narrow screens.
                 tabIndex={0}
               >
-                <div className="mx-auto w-[560px]">{animation}</div>
+                <div className="min-w-0">{animation}</div>
               </div>
               <figcaption className="flex flex-wrap items-start justify-between gap-4">
                 <div className="flex flex-col gap-1">
                   <p className="font-medium text-sm">
                     An assembly line{" "}
                     <span className="ms-2 font-mono text-muted-foreground text-xs">
-                      W05
+                      MEC-05
                     </span>
                   </p>
                   <p className="text-muted-foreground text-xs">

@@ -121,20 +121,20 @@ function MarkInMaking() {
 export const objectStudies: IllustrationStudy[] = [
   {
     id: "type-letter",
-    code: "T01",
+    code: "TYP-01",
     title: "Anatomy of a letter",
     description:
       "A custom lowercase a exposes its circular bowl, counter, stem, and optical overshoot.",
-    category: "Foundations",
+    category: "Typography",
     illustration: <LetterAnatomy />,
   },
   {
     id: "type-monogram",
-    code: "T02",
+    code: "TYP-02",
     title: "A mark in the making",
     description:
       "Two concentric arcs and a deliberate opening establish the logic of a simple geometric C.",
-    category: "Foundations",
+    category: "Typography",
     illustration: <MarkInMaking />,
   },
 ];

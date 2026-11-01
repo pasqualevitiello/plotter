@@ -1,22 +1,35 @@
 import type { ReactNode } from "react";
 
+// One family per code prefix: GEO, TYP, INT, TIM, SYS, SRV, AGT, EMP, OBJ, MEC,
+// CRF, NAT. Codes are numbered without gaps within each family.
 export type StudyCategory =
-  | "Foundations"
-  | "Interfaces"
-  | "Scheduling"
-  | "Services"
-  | "Systems"
-  | "Objects"
-  | "Empty states"
-  | "Agents"
-  | "Mechanisms"
-  | "Architecture"
-  | "Nature"
-  | "Music"
-  | "Maps"
+  | "Geometry"
   | "Typography"
+  | "Interfaces"
+  | "Time"
+  | "Systems"
+  | "Services"
+  | "Agents"
+  | "Empty states"
+  | "Objects"
+  | "Mechanisms"
   | "Craft"
-  | "Play";
+  | "Nature";
+
+export const familyPrefix: Record<StudyCategory, string> = {
+  Geometry: "GEO",
+  Typography: "TYP",
+  Interfaces: "INT",
+  Time: "TIM",
+  Systems: "SYS",
+  Services: "SRV",
+  Agents: "AGT",
+  "Empty states": "EMP",
+  Objects: "OBJ",
+  Mechanisms: "MEC",
+  Craft: "CRF",
+  Nature: "NAT",
+};
 
 export type IllustrationStudy = {
   id: string;

@@ -7,7 +7,7 @@ import type { IllustrationStudy } from "./study-types";
 export const stateStudies: IllustrationStudy[] = [
   {
     id: "state-missing-page",
-    code: "S01",
+    code: "EMP-05",
     title: "The missing destination",
     description:
       "A paired route reaches a closed end one unit before an unbuilt page. The address remains projected, but the connection is absent.",

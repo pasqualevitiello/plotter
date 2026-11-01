@@ -1,4 +1,5 @@
 import { DownloadIcon, FolderIcon } from "lucide-react";
+import { SheetBar } from "@/components/sheet";
 import { Button } from "@/components/ui/button";
 import { EngineeringMotionPreview } from "./engineering-motion-preview";
 import { ProductionChainStudy } from "./engineering-studies";
@@ -17,24 +18,16 @@ export function PlotterUsage() {
   return (
     <section
       aria-labelledby="use-plotter-heading"
-      className="flex scroll-mt-20 flex-col gap-10 border-t py-12 md:py-16"
+      className="scroll-mt-6"
       id="use-plotter"
     >
-      <div className="flex max-w-2xl flex-col gap-3">
-        <h2
-          className="font-heading font-medium text-3xl [font-variation-settings:'GEOM'_50]"
-          id="use-plotter-heading"
-        >
-          Use Plotter
-        </h2>
-        <p className="text-pretty text-muted-foreground">
-          Give your coding agent the references, drawing rules, and helpers
-          behind this collection. One skill covers still illustrations and
-          animation.
-        </p>
-      </div>
-      <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] xl:gap-8">
-        <div className="flex max-w-lg flex-col items-start gap-4">
+      <SheetBar
+        id="use-plotter-heading"
+        label="04.5 — Use Plotter"
+        meta="One skill for still drawings and animation"
+      />
+      <div className="sheet-row sheet-cols">
+        <div className="sheet-cell flex flex-col items-start gap-4">
           <h3 className="font-medium text-lg">
             1. Install the complete skill.
           </h3>
@@ -58,7 +51,7 @@ export function PlotterUsage() {
             shared tokens, helpers, and examples. No coss checkout required.
           </p>
         </div>
-        <div className="flex min-w-0 flex-col gap-4 rounded-lg border p-5 sm:p-6">
+        <div className="sheet-cell flex flex-col gap-4">
           <p className="flex items-center gap-2 font-medium text-sm">
             <FolderIcon
               aria-hidden="true"
@@ -100,7 +93,7 @@ export function PlotterUsage() {
           </details>
         </div>
       </div>
-      <div className="flex flex-col gap-5 border-t pt-8">
+      <div className="sheet-row sheet-cell flex flex-col gap-5">
         <h3 className="font-medium text-lg">
           2. Choose a workflow and copy a brief.
         </h3>

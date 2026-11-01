@@ -211,7 +211,7 @@ function ChatPlanStudy() {
 export const interfaceDetailStudies: IllustrationStudy[] = [
   {
     id: "interface-browser-plan",
-    code: "I04",
+    code: "INT-07",
     title: "A browser, in detail",
     description:
       "An enlarged browser corner relates the window radius to its tab radius and content inset. Cropped edges leave the rest of the screen outside the drawing.",
@@ -220,7 +220,7 @@ export const interfaceDetailStudies: IllustrationStudy[] = [
   },
   {
     id: "interface-phone-plan",
-    code: "I05",
+    code: "INT-08",
     title: "The screen within the frame",
     description:
       "Shared corner centers and an eight-pixel offset construct the frame. Symmetric vertical and horizontal margins locate the safe area within it.",
@@ -229,7 +229,7 @@ export const interfaceDetailStudies: IllustrationStudy[] = [
   },
   {
     id: "interface-chat-plan",
-    code: "I06",
+    code: "INT-09",
     title: "A conversation, constructed",
     description:
       "Two rounded message blocks pair with circular avatars. Shared radius, text inset, and avatar spacing construct the conversation without pointed tails.",

@@ -25,15 +25,18 @@ export function PrimitivesMotionPreview({ children }: { children: ReactNode }) {
 
   return (
     <div>
-      <div
-        className={`pointer-events-none relative mx-auto w-full max-w-140 select-none ${styles.drawing}`}
-        data-live={(live && !reducedMotion) || undefined}
-        ref={drawing}
-      >
-        <div className={styles.original}>{children}</div>
-        {live && !reducedMotion && (
-          <PrimitivesMorph paused={paused || !inView} />
-        )}
+      {/* Native size; narrow screens scroll sideways instead of scaling. */}
+      <div className="overflow-x-auto px-5 pt-8 pb-6">
+        <div
+          className={`pointer-events-none relative mx-auto w-[560px] select-none ${styles.drawing}`}
+          data-live={(live && !reducedMotion) || undefined}
+          ref={drawing}
+        >
+          <div className={styles.original}>{children}</div>
+          {live && !reducedMotion && (
+            <PrimitivesMorph paused={paused || !inView} />
+          )}
+        </div>
       </div>
       <div className="flex flex-wrap items-center justify-between gap-3 border-t px-4 py-3 sm:px-6">
         <p className="text-muted-foreground text-xs">Continuous loop</p>

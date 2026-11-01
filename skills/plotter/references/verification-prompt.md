@@ -108,8 +108,8 @@ manufacturable, or standards-compliant without the corresponding proof.
 
 | Claim                                            | Calculation                                                                           | Verdict             |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------- | ------------------- |
-| P00 square is `6u`, with `u = 40`                | `404 − 164 = 240 = 6 × 40`                                                            | PASS                |
-| P00 original radial endpoint lies on `R120`      | `hypot(369 − 284, 119 − 204) = 120.20815`; residual `0.20815 > 0.05`                  | FAIL                |
+| GEO-01 square is `6u`, with `u = 40`             | `404 − 164 = 240 = 6 × 40`                                                            | PASS                |
+| GEO-01 original radial endpoint lies on `R120`   | `hypot(369 − 284, 119 − 204) = 120.20815`; residual `0.20815 > 0.05`                  | FAIL                |
 | A simplified gear pair is a functional mechanism | Shared pitch and center distance checked; tooth contact over rotation not established | NEEDS QUALIFICATION |
 
-This example describes the original inspected P00 endpoint. Recalculate from the current source after correction. A report is evidence for a revision, not a permanent badge attached to a study ID.
+This example describes the original inspected GEO-01 endpoint. Recalculate from the current source after correction. A report is evidence for a revision, not a permanent badge attached to a study ID.

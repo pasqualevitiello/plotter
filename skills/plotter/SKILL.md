@@ -23,7 +23,7 @@ One Plotter entrypoint serves both workflows: `$plotter` in Codex and `/plotter`
 
 For drawing, critique, or animation:
 
-1. Read [current direction](references/direction.md) and the [approved reference index](references/approved-references.md). Select and inspect the closest **bundled SVG** by its construction relationship; the wider repository catalogue is optional.
+1. Read [current direction](references/direction.md) and the [approved reference index](references/approved-references.md). Select and inspect the closest **bundled SVG** by its construction relationship. When the brief names a catalogue code such as `TIM-06`, also open that drawing from the [catalogue](references/catalogue/index.md); it is an example of a relationship, not a style reference.
 2. Read the [visual grammar](references/visual-grammar.md) to choose meaningful marks. Inspect the linked teaching SVG for each mark you add or revise. Existing unchanged marks do not require loading every teaching example.
 3. Read the [drafting standard](references/drafting-standard.md): scope, stroke palette, and geometry/dimensions; include hatch grammar when hatching is involved and symbols/topology when making connectivity or product-behavior claims.
 

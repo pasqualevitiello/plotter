@@ -1,3 +1,4 @@
+import { ArrowLeftIcon } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -6,6 +7,7 @@ import remarkGfm from "remark-gfm";
 import { CodeBlock, CopyText } from "@/components/copy-text";
 import { ProductionChainStudy } from "@/components/plotter/engineering-studies";
 import { PlotterTokenGuide } from "@/components/plotter/plotter-token-guide";
+import { SheetArt } from "@/components/sheet";
 import { SiteShell } from "@/components/site-shell";
 import { StandaloneAnimationPreview } from "@/components/standalone-animation-preview";
 import { documents, readDocument } from "@/lib/docs";
@@ -35,80 +37,105 @@ export default async function DocumentPage({
   const { slug } = await params;
   const content = await readDocument(slug);
   if (!content) notFound();
+  const index = documents.findIndex((document) => document.slug === slug);
   return (
     <SiteShell current="/docs">
-      <div className="flex flex-wrap items-center justify-between gap-4 py-10">
-        <Link href="/docs" className="text-sm underline underline-offset-4">
-          ← All documentation
-        </Link>
-        <div className="flex flex-wrap items-center gap-4">
+      <div className="sheet-bar">
+        <div>
+          <Link className="text-link" href="/docs">
+            <ArrowLeftIcon aria-hidden="true" />
+            <span className="sm:hidden">Docs</span>
+            <span className="max-sm:hidden">All documentation</span>
+          </Link>
+        </div>
+        <div>
           <CopyText text={content} label="Copy Markdown" />
-          <a
-            href={`/docs/${slug}.md`}
-            download
-            className="text-sm underline underline-offset-4"
-          >
+        </div>
+        <div className="max-sm:hidden">
+          <a className="text-link" download href={`/docs/${slug}.md`}>
             Download .md
           </a>
         </div>
       </div>
-      <article className="doc-content">
-        <Markdown
-          remarkPlugins={[remarkGfm]}
-          components={{
-            pre: ({ children }) => <CodeBlock>{children}</CodeBlock>,
-          }}
+      <div className="sheet-row grid lg:grid-cols-[260px_minmax(0,1fr)]">
+        <nav
+          aria-label="Documentation"
+          className="border-b px-5 py-4 lg:sticky lg:top-0 lg:self-start lg:border-b-0 lg:px-6 lg:py-8"
         >
-          {content}
-        </Markdown>
-      </article>
+          <p className="mono-label mb-2">Guides</p>
+          <ul>
+            {documents.map((document, position) => (
+              <li key={document.slug}>
+                <Link
+                  aria-current={document.slug === slug ? "page" : undefined}
+                  className="flex min-h-10 items-baseline gap-3 text-sm text-muted-foreground hover:text-foreground aria-[current=page]:text-foreground"
+                  href={`/docs/${document.slug}`}
+                >
+                  <span className="mono-label">04.{position + 1}</span>
+                  {document.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <div className="sheet-cell lg:border-s">
+          <p className="mono-label mb-5">04.{index + 1} — Docs</p>
+          <article className="doc-content">
+            <Markdown
+              remarkPlugins={[remarkGfm]}
+              components={{
+                pre: ({ children }) => <CodeBlock>{children}</CodeBlock>,
+              }}
+            >
+              {content}
+            </Markdown>
+          </article>
+        </div>
+      </div>
       {slug === "customization" && (
         <PlotterTokenGuide>
           <ProductionChainStudy />
         </PlotterTokenGuide>
       )}
       {slug === "drawing" && (
-        <figure className="max-w-140">
-          <img
-            className="dark:invert"
-            src="/plotter/downloads/agent-registration.svg"
-            alt="An identity, name, and tools become one registered agent."
-            width="560"
-            height="440"
-          />
-          <figcaption className="text-sm text-muted-foreground">
-            AG01 · An agent, registered. Editable SVG.
+        <figure className="sheet-row">
+          <SheetArt label="An identity, name, and tools become one registered agent.">
+            {/* biome-ignore lint/performance/noImgElement: The downloadable SVG file is the example. */}
+            <img
+              alt=""
+              className="block w-[560px] dark:invert"
+              height="440"
+              src="/plotter/downloads/agent-registration.svg"
+              width="560"
+            />
+          </SheetArt>
+          <figcaption className="sheet-caption border-t pt-3">
+            <span className="mono-label">AGT-01</span>
+            <span>An agent, registered</span>
+            <a
+              className="mono-label sheet-caption-meta underline underline-offset-4"
+              download
+              href="/plotter/downloads/agent-registration.svg"
+            >
+              Editable SVG
+            </a>
           </figcaption>
         </figure>
       )}
       {slug === "animation" && (
-        <div className="max-w-2xl">
-          <StandaloneAnimationPreview />
-          <a
-            href="/plotter/downloads/assembly-line.html"
-            download
-            className="inline-flex min-h-11 items-center text-sm underline underline-offset-4"
-          >
-            Download editable HTML
-          </a>
+        <div className="sheet-row sheet-cell">
+          <div className="max-w-2xl">
+            <StandaloneAnimationPreview />
+            <a
+              className="text-link"
+              download
+              href="/plotter/downloads/assembly-line.html"
+            >
+              Download editable HTML
+            </a>
+          </div>
         </div>
       )}
-      <nav
-        aria-label="More documentation"
-        className="flex flex-wrap gap-6 border-t py-8"
-      >
-        {documents
-          .filter((document) => document.slug !== slug)
-          .map((document) => (
-            <Link
-              href={`/docs/${document.slug}`}
-              key={document.slug}
-              className="text-sm underline underline-offset-4"
-            >
-              {document.title}
-            </Link>
-          ))}
-      </nav>
     </SiteShell>
   );
 }

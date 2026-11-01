@@ -68,7 +68,7 @@ function UnbuiltArch() {
 export const notFoundGeometryStudies: IllustrationStudy[] = [
   {
     id: "404-unbuilt-arch",
-    code: "E06",
+    code: "EMP-04",
     title: "An unbuilt arch",
     description:
       "An arch awaits its central keystone, turning the missing page into an unfinished architectural connection.",

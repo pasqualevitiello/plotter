@@ -15,6 +15,7 @@
       "!next-env.d.ts",
       "!public",
       "!skills/plotter/references/history",
+      "!skills/plotter/references/catalogue",
       "!components/plotter/expanded-studies.tsx",
       "!components/plotter/visual-grammar-drawings.tsx",
       "!skills/plotter/assets/foundation/roles.css",

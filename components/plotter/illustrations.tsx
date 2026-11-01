@@ -23,16 +23,16 @@ import { systemStudies } from "./system-studies";
 const collection: IllustrationStudy[] = [
   {
     id: "primitives-reference",
-    code: "P00",
+    code: "GEO-01",
     title: "Circle, square, line",
     description:
       "Fundamental geometry, connected by radius, tangency, and a shared construction grid.",
-    category: "Foundations",
+    category: "Geometry",
     illustration: <PrimitivesBlueprint />,
   },
   {
     id: "particles-reference",
-    code: "C00",
+    code: "INT-01",
     title: "The exploded interface",
     description:
       "A pill, row, and toggle projected onto a shared frame. Separate elements follow a common set of rules.",
@@ -58,7 +58,7 @@ const collection: IllustrationStudy[] = [
   ...expandedStudies,
   {
     id: "404-reference",
-    code: "E00",
+    code: "EMP-01",
     title: "The missing corner",
     description:
       "A vacant module in an otherwise complete construction. Absence, described by the edges around it.",
@@ -67,11 +67,24 @@ const collection: IllustrationStudy[] = [
   },
 ];
 
+// Near-duplicates retired from the catalogue on 2026-11-01, each mapped to the
+// drawing that now covers its idea. Sources and codes stay reserved, and old
+// deep links resolve to the replacement.
+export const retiredStudies: Record<string, string> = {
+  "time-appointment-buffers": "cal-appointment-buffers", // TM02 → TIM-06
+  "state-no-matching-results": "state-search", // S15 → EMP-06
+  "software-branch-history": "service-github-merge", // SW03 → SRV-06
+  "software-cache-route": "service-cloudflare-edge", // SW02 → SRV-01
+  "arch-missing-keystone": "404-unbuilt-arch", // AR03 → EMP-04
+};
+
+const active = collection.filter((item) => !(item.id in retiredStudies));
+
 // Open the collection with a cross-section of its subjects. Codes and deep links
 // stay stable as the drawings evolve.
-const opening = ["P00", "C03", "B04", "K06", "I06", "E02"];
+const opening = ["GEO-01", "INT-04", "SRV-04", "TIM-03", "INT-09", "EMP-03"];
 
 export const illustrations = [
-  ...opening.flatMap((code) => collection.filter((item) => item.code === code)),
-  ...collection.filter((item) => !opening.includes(item.code)),
+  ...opening.flatMap((code) => active.filter((item) => item.code === code)),
+  ...active.filter((item) => !opening.includes(item.code)),
 ];

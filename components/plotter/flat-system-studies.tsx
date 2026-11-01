@@ -238,7 +238,7 @@ function CoordinatePlanStudy() {
 export const flatSystemStudies: IllustrationStudy[] = [
   {
     id: "interface-spacing-plan",
-    code: "I03",
+    code: "INT-06",
     title: "From parts to a whole",
     description:
       "Three separate elements project into one control. Equal gaps, a common centerline, and a shared radius make the assembly rule visible.",
@@ -247,7 +247,7 @@ export const flatSystemStudies: IllustrationStudy[] = [
   },
   {
     id: "workflow-switch-plan",
-    code: "W03",
+    code: "SYS-02",
     title: "A connection, located",
     description:
       "Three inputs meet three outputs on a regular switching grid. A single closed junction connects B to 02, turning an abstract matrix into a precise route.",
@@ -256,7 +256,7 @@ export const flatSystemStudies: IllustrationStudy[] = [
   },
   {
     id: "data-coordinate-plan",
-    code: "A03",
+    code: "SYS-04",
     title: "A measured distribution",
     description:
       "A small cluster occupies a regular coordinate field. Two projected measurements locate one point and make the underlying rule visible.",

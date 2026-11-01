@@ -3,7 +3,7 @@ import { arrow, dimension, roleCss } from "../foundation/index.mjs";
 function numericAttribute(markup, name) {
   const value = markup.match(new RegExp(`\\b${name}="([^"]+)"`))?.[1];
   if (value === undefined || !Number.isFinite(Number(value))) {
-    throw new Error(`AG01 needs a numeric ${name} attribute.`);
+    throw new Error(`AGT-01 needs a numeric ${name} attribute.`);
   }
   return Number(value);
 }
@@ -16,7 +16,7 @@ export function renderRegistration(svgSource) {
     /<rect\b[^>]*data-plotter-part="registry-record"[^>]*\/>/,
   )?.[0];
   if (!record)
-    throw new Error("AG01 is missing its registry-record rectangle.");
+    throw new Error("AGT-01 is missing its registry-record rectangle.");
   const x = numericAttribute(record, "x");
   const y = numericAttribute(record, "y");
   const width = numericAttribute(record, "width");
@@ -25,7 +25,7 @@ export function renderRegistration(svgSource) {
     svg.match(/<svg\b[^>]*>/)?.[0] ?? "",
     "data-plotter-unit",
   );
-  if (unit <= 0) throw new Error("AG01 needs a positive local unit.");
+  if (unit <= 0) throw new Error("AGT-01 needs a positive local unit.");
 
   const transfer = arrow({ kind: "line", from: [268, 186], to: [268, 212] });
   const measurement = dimension({
@@ -49,7 +49,7 @@ export function renderRegistration(svgSource) {
     const from = svg.indexOf(start);
     const to = svg.indexOf(end, from + start.length);
     if (from < 0 || to < 0)
-      throw new Error(`AG01 is missing its ${name} markers.`);
+      throw new Error(`AGT-01 is missing its ${name} markers.`);
     const indent = svg.slice(svg.lastIndexOf("\n", from) + 1, from);
     svg =
       svg.slice(0, from + start.length) +

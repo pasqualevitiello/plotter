@@ -7103,7 +7103,7 @@ function DrawingPlayBalance() {
 export const expandedStudies: IllustrationStudy[] = [
   {
     id: "agent-registration",
-    code: "AG01",
+    code: "AGT-01",
     title: "An agent, registered",
     description:
       "Identity, name, and tools keep their alignment as they become one registry record.",
@@ -7112,7 +7112,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "agent-delegation",
-    code: "AG02",
+    code: "AGT-02",
     title: "One task, two agents",
     description:
       "Research and drafting separate into complementary scopes, assigned to two agents.",
@@ -7121,7 +7121,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "agent-handoff",
-    code: "AG03",
+    code: "AGT-03",
     title: "Context, carried forward",
     description:
       "One continuous context passes between two agents without changing its form.",
@@ -7130,7 +7130,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "agent-tools",
-    code: "AG04",
+    code: "AGT-04",
     title: "One matching interface",
     description:
       "A selected tool’s rounded end matches the agent’s common interface.",
@@ -7139,7 +7139,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "agent-permissions",
-    code: "AG05",
+    code: "AGT-05",
     title: "Only the shared scope",
     description:
       "The granted region is the intersection of what is requested and what is allowed.",
@@ -7148,7 +7148,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "agent-memory",
-    code: "AG06",
+    code: "AGT-06",
     title: "One context, two readers",
     description:
       "Two agents address the same findings row within one shared memory.",
@@ -7157,7 +7157,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "agent-checkpoint",
-    code: "AG07",
+    code: "AGT-07",
     title: "A state worth keeping",
     description:
       "One selected state is preserved as a checkpoint while the wider work continues.",
@@ -7166,7 +7166,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "agent-parallel",
-    code: "AG08",
+    code: "AGT-08",
     title: "Separate work, one join",
     description:
       "Three agents finish at different points and wait for the longest task before joining.",
@@ -7175,43 +7175,43 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "geo-circle-rectangle",
-    code: "GE01",
+    code: "GEO-05",
     title: "A circle, extended",
     description:
       "A circle and its wider rounded-rectangle state share one height while their corner radii change.",
-    category: "Foundations",
+    category: "Geometry",
     illustration: <DrawingGeoCircleRectangle />,
   },
   {
     id: "geo-compound-radii",
-    code: "GE03",
+    code: "GEO-06",
     title: "A curve from three radii",
     description:
       "Three circular arcs share tangent directions at their joins, producing one uninterrupted curve.",
-    category: "Foundations",
+    category: "Geometry",
     illustration: <DrawingGeoCompoundRadii />,
   },
   {
     id: "geo-negative-space",
-    code: "GE04",
+    code: "GEO-07",
     title: "The shape between circles",
     description:
       "Two equal circular regions reveal an unhatched lens where their boundaries overlap.",
-    category: "Foundations",
+    category: "Geometry",
     illustration: <DrawingGeoNegativeSpace />,
   },
   {
     id: "geo-interrupted-pattern",
-    code: "GE05",
+    code: "GEO-08",
     title: "One interval left open",
     description:
       "A field of tangent circles keeps its repeated pitch while one missing member interrupts the lower row.",
-    category: "Foundations",
+    category: "Geometry",
     illustration: <DrawingGeoInterruptedPattern />,
   },
   {
     id: "mech-iris-aperture",
-    code: "ME01",
+    code: "MEC-01",
     title: "Six blades, one aperture",
     description:
       "Six repeated edges shape a single opening. Hatching identifies one visible blade.",
@@ -7220,7 +7220,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "mech-pulley-ratio",
-    code: "ME02",
+    code: "MEC-02",
     title: "One belt, two rotations",
     description: "A shared belt joins two pulley radii in a 2:1 relation.",
     category: "Mechanisms",
@@ -7228,7 +7228,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "mech-cam-follower",
-    code: "ME04",
+    code: "MEC-03",
     title: "An offset becomes a lift",
     description:
       "An eccentric circular cam meets a guided roller, relating rotation to a vertical displacement.",
@@ -7237,7 +7237,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "mech-latch-receiver",
-    code: "ME05",
+    code: "MEC-04",
     title: "A profile finds its receiver",
     description:
       "A rounded bolt approaches the matching receiver, with its destination and clearance visible.",
@@ -7246,11 +7246,11 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "arch-staircase",
-    code: "AR02",
+    code: "GEO-09",
     title: "One rise, one run",
     description:
       "Six equal rise-and-run pairs construct a staircase along one repeated slope.",
-    category: "Architecture",
+    category: "Geometry",
     illustration: <DrawingArchStaircase />,
   },
   {
@@ -7259,12 +7259,12 @@ export const expandedStudies: IllustrationStudy[] = [
     title: "The last piece of the arch",
     description:
       "A lifted keystone preserves the geometry of the opening it will complete.",
-    category: "Architecture",
+    category: "Geometry",
     illustration: <DrawingArchMissingKeystone />,
   },
   {
     id: "nature-leaf-veins",
-    code: "NA01",
+    code: "NAT-01",
     title: "A branching leaf",
     description:
       "Paired veins follow a repeated pitch within a leaf formed by two intersecting arcs.",
@@ -7273,7 +7273,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "nature-honeycomb",
-    code: "NA02",
+    code: "NAT-02",
     title: "One edge, two cells",
     description:
       "A selected hexagonal cell shares each of its walls with the surrounding six cells.",
@@ -7282,34 +7282,34 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "music-chord",
-    code: "MU02",
+    code: "TIM-08",
     title: "Three notes, one onset",
     description:
       "Three separately placed pitches align vertically on one shared onset to form a chord.",
-    category: "Music",
+    category: "Time",
     illustration: <DrawingMusicChord />,
   },
   {
     id: "map-summit-contours",
-    code: "MP04",
+    code: "NAT-03",
     title: "The summit in contours",
     description:
       "Nested elevation lines tighten around one marked summit, with a consistent interval between levels.",
-    category: "Maps",
+    category: "Nature",
     illustration: <DrawingMapSummitContours />,
   },
   {
     id: "map-converging-paths",
-    code: "MP05",
+    code: "SYS-05",
     title: "Different paths, one place",
     description:
       "Three routes join one final stretch before reaching the same destination.",
-    category: "Maps",
+    category: "Systems",
     illustration: <DrawingMapConvergingPaths />,
   },
   {
     id: "type-letter-strokes",
-    code: "TY01",
+    code: "TYP-03",
     title: "A from three strokes",
     description:
       "Two parallel-sided diagonal strokes and one horizontal stroke make an outlined capital A; the crossbar is identified by hatching.",
@@ -7318,7 +7318,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "type-shared-glyphs",
-    code: "TY02",
+    code: "TYP-04",
     title: "One arch, three glyphs",
     description:
       "A shared circular shoulder and a constant stem width generate n, h and m, with the h selected to show the construction.",
@@ -7327,7 +7327,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "type-ligature",
-    code: "TY03",
+    code: "TYP-05",
     title: "The joining stroke",
     description:
       "The f and i share one continuous crossbar, joining the two glyphs into a single constructed ligature.",
@@ -7336,7 +7336,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "type-negative-monogram",
-    code: "TY04",
+    code: "TYP-06",
     title: "A monogram in the void",
     description:
       "An M is defined by the transparent space within a hatched field; its straight stems and surrounding margin follow the same unit.",
@@ -7345,7 +7345,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "type-optical-alignment",
-    code: "TY05",
+    code: "TYP-07",
     title: "The center you see",
     description:
       "A rightward shift brings a triangle’s area centroid to the center of its frame, providing a geometric starting point for optical alignment.",
@@ -7354,7 +7354,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "interface-corner-rule",
-    code: "UI01",
+    code: "INT-10",
     title: "One corner rule",
     description:
       "Three differently proportioned components retain a common corner radius.",
@@ -7363,7 +7363,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "interface-reflow",
-    code: "UI02",
+    code: "INT-11",
     title: "The same modules, reflowed",
     description:
       "Three equal modules preserve their size when the available width wraps the last one onto another row.",
@@ -7372,7 +7372,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "interface-slider-value",
-    code: "UI03",
+    code: "INT-12",
     title: "Position becomes value",
     description:
       "The thumb locates sixty percent of a shared travel interval; the track clears its circular outline.",
@@ -7403,20 +7403,20 @@ export const expandedStudies: IllustrationStudy[] = [
     title: "Room around an appointment",
     description:
       "An hour-long appointment reserves fifteen minutes of buffer time on either side.",
-    category: "Scheduling",
+    category: "Time",
     illustration: <DrawingTimeAppointmentBuffers />,
   },
   {
     id: "time-common-recurrence",
-    code: "TM03",
+    code: "TIM-07",
     title: "The same interval, again",
     description: "Four occurrences align to one repeated seven-day interval.",
-    category: "Scheduling",
+    category: "Time",
     illustration: <DrawingTimeCommonRecurrence />,
   },
   {
     id: "craft-weave",
-    code: "CR01",
+    code: "CRF-01",
     title: "Over and under",
     description:
       "One warp and one weft reveal the alternating rule that holds a weave together.",
@@ -7425,7 +7425,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "craft-stitch",
-    code: "CR02",
+    code: "CRF-02",
     title: "A seam, joined",
     description:
       "Repeated crossed stitches bridge two edges on one shared hole pitch.",
@@ -7434,7 +7434,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "craft-dovetail",
-    code: "CR03",
+    code: "CRF-03",
     title: "A joint that holds",
     description:
       "A wider tail and narrower neck create one complementary boundary between two pieces.",
@@ -7443,7 +7443,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "craft-paper-fold",
-    code: "CR04",
+    code: "CRF-04",
     title: "Across the crease",
     description:
       "One corner reflects across its diagonal crease and becomes a triangular flap.",
@@ -7452,7 +7452,7 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "craft-tiles",
-    code: "CR05",
+    code: "CRF-05",
     title: "One shared corner",
     description:
       "Four tiles meet around a common circular opening and a constant joint width.",
@@ -7461,20 +7461,20 @@ export const expandedStudies: IllustrationStudy[] = [
   },
   {
     id: "play-dominoes",
-    code: "PL03",
+    code: "GEO-10",
     title: "One piece short",
     description:
       "The pip sequence continues across one absent domino, leaving its position unmistakable.",
-    category: "Play",
+    category: "Geometry",
     illustration: <DrawingPlayDominoes />,
   },
   {
     id: "play-balance",
-    code: "PL04",
+    code: "MEC-06",
     title: "Unequal arms, equal moments",
     description:
       "Three mass units on the shorter arm balance two on the longer arm.",
-    category: "Play",
+    category: "Mechanisms",
     illustration: <DrawingPlayBalance />,
   },
 ];

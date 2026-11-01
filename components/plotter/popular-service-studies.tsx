@@ -303,7 +303,7 @@ function SupabaseRelationsStudy() {
 export const popularServiceStudies: IllustrationStudy[] = [
   {
     id: "service-github-merge",
-    code: "B06",
+    code: "SRV-06",
     title: "GitHub · A change, brought together",
     description:
       "A proposed change branches from main, passes through review, and returns to one shared line. Circular bends and commit spacing make collaboration a measured construction.",
@@ -312,7 +312,7 @@ export const popularServiceStudies: IllustrationStudy[] = [
   },
   {
     id: "service-figma-constraints",
-    code: "B07",
+    code: "SRV-07",
     title: "Figma · Rules that resize",
     description:
       "A component grows into a wider instance while its height, radius, and end spacing remain fixed. A study of reusable design and layout constraints.",
@@ -321,7 +321,7 @@ export const popularServiceStudies: IllustrationStudy[] = [
   },
   {
     id: "service-notion-blocks",
-    code: "B08",
+    code: "SRV-08",
     title: "Notion · Knowledge, assembled",
     description:
       "A reusable text block fits an open position in a page. Shared widths, repeated gaps, and one insertion route explain the assembly.",
@@ -330,7 +330,7 @@ export const popularServiceStudies: IllustrationStudy[] = [
   },
   {
     id: "service-supabase-relations",
-    code: "B09",
+    code: "SRV-09",
     title: "Supabase · A shared relation",
     description:
       "Two Postgres table fragments connect a user’s primary key to project ownership. A single measured route expresses the relational foundation beneath an application.",

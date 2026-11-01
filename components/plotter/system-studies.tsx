@@ -383,34 +383,34 @@ function ModularTrayStudy() {
 export const systemStudies: IllustrationStudy[] = [
   {
     id: "primitives-tangency",
-    code: "P01",
+    code: "GEO-02",
     title: "Tangency",
     description:
       "Two radii share a baseline and an inclined tangent. The contact geometry connects unequal circles through one construction rule.",
-    category: "Foundations",
+    category: "Geometry",
     illustration: <TangencyStudy />,
   },
   {
     id: "primitives-radius",
-    code: "P02",
+    code: "GEO-03",
     title: "The corner rule",
     description:
       "One enlarged corner reveals the radius, offset, and tangent points behind a familiar interface shape.",
-    category: "Foundations",
+    category: "Geometry",
     illustration: <CornerRuleStudy />,
   },
   {
     id: "primitives-proportion",
-    code: "P03",
+    code: "GEO-04",
     title: "A system of proportions",
     description:
       "Four squares grow from one shared unit. A single diagonal connects the scale into a structural rhythm.",
-    category: "Foundations",
+    category: "Geometry",
     illustration: <ProportionStudy />,
   },
   {
     id: "particles-assembly",
-    code: "C01",
+    code: "INT-02",
     title: "An assembly of parts",
     description:
       "An icon, a label, and a status pill align into one row, shown as an exploded technical drawing.",
@@ -419,7 +419,7 @@ export const systemStudies: IllustrationStudy[] = [
   },
   {
     id: "particles-slots",
-    code: "C02",
+    code: "INT-03",
     title: "A modular tray",
     description:
       "Different interface fragments occupy a shared grid, like precisely fitted pieces in an architectural plan.",
@@ -428,7 +428,7 @@ export const systemStudies: IllustrationStudy[] = [
   },
   {
     id: "particles-recombination",
-    code: "C03",
+    code: "INT-04",
     title: "Recombination",
     description:
       "Identity, visibility, and action combine into one compact panel. Each of the three fragments keeps its role in the assembled result.",
@@ -437,7 +437,7 @@ export const systemStudies: IllustrationStudy[] = [
   },
   {
     id: "particles-shared-frame",
-    code: "C04",
+    code: "INT-05",
     title: "Shared frame",
     description:
       "Two unequal modules fit one frame. A shared unit defines the edge clearances and the space between them.",

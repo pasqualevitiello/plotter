@@ -24,7 +24,7 @@ In Claude Code, start the same request with `/plotter`. One entrypoint routes to
 
 ## What is portable
 
-Seven bundled SVG anchors support construction-reference selection. The [visual grammar](references/visual-grammar.md) includes teaching SVGs; the [foundation](references/foundation.md) contains dependency-free geometry helpers and generated role styles. [Website integration](references/implementation.md) and dated feedback are optional branches.
+Seven bundled SVG anchors support construction-reference selection, and the [catalogue](references/catalogue/index.md) bundles every website drawing by code, so a brief can say “like TIM-06”. The [visual grammar](references/visual-grammar.md) includes teaching SVGs; the [foundation](references/foundation.md) contains dependency-free geometry helpers and generated role styles. [Website integration](references/implementation.md) and dated feedback are optional branches.
 
 | Example                                                       | Open or generate it from the copied skill directory                                                           |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -38,7 +38,7 @@ The examples demonstrate implementation; they are not additional approved style 
 
 ## Maintain the package
 
-[`standard.json`](assets/foundation/standard.json) owns shared numeric defaults; `scripts/build-standard.py` generates runtime data, CSS, and marked drafting tables. Generated or example-embedded styles are outputs, not separate palettes. Regenerate an example’s SVG before export when the standard changes. Website token adoption currently covers AG01 and W05; legacy catalogue drawings retain their authored treatment.
+[`standard.json`](assets/foundation/standard.json) owns shared numeric defaults; `scripts/build-standard.py` generates runtime data, CSS, and marked drafting tables. Generated or example-embedded styles are outputs, not separate palettes. Regenerate an example’s SVG before export when the standard changes. Website token adoption currently covers AGT-01 and MEC-05; legacy catalogue drawings retain their authored treatment.
 
 Current instructions live outside [history](references/history/index.md). Preserve the seven reference snapshots and their revision manifest. Historical coss records establish only their original tasks and revisions; coss paths in those records are provenance, not active dependencies. Update general guidance from specific evidence rather than extending every past preference to all drawings.
 

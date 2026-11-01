@@ -54,4 +54,4 @@ bun install
 bun run dev
 ```
 
-The development site uses port `4100`. The homepage is the main experience, `/proto` contains the design exploration, and `/docs` contains these guides. Installing the skill does not require running the website.
+The development site uses port `3000`. The homepage is the main experience, and `/docs` contains these guides. Installing the skill does not require running the website.

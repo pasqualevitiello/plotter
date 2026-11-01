@@ -187,7 +187,7 @@ function FolderPlanStudy() {
 export const flatObjectStudies: IllustrationStudy[] = [
   {
     id: "object-keyboard-plan",
-    code: "O03",
+    code: "OBJ-01",
     title: "A keyboard, in detail",
     description:
       "Two cropped rows reveal the keyboard’s construction: one key pitch and a quarter-unit stagger. Dashed continuations keep the focus on the spacing rule.",
@@ -196,7 +196,7 @@ export const flatObjectStudies: IllustrationStudy[] = [
   },
   {
     id: "object-lamp-elevation",
-    code: "O04",
+    code: "OBJ-02",
     title: "A lamp, drawn in elevation",
     description:
       "Half a circle becomes the shade. Its center establishes the support axis and divides the base into equal halves.",
@@ -205,7 +205,7 @@ export const flatObjectStudies: IllustrationStudy[] = [
   },
   {
     id: "object-folder-plan",
-    code: "O05",
+    code: "OBJ-03",
     title: "A family of folders",
     description:
       "One tab construction belongs to two folder widths. Paired corner radii and a shared tab dimension hold the family together.",

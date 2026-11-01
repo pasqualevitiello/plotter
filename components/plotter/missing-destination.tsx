@@ -20,7 +20,7 @@ function AbsentPage({ dash = "3 5" }: { dash?: string }) {
   );
 }
 
-// S01 is shared by the gallery and M03. The marker follows the true R32
+// EMP-05 is shared by the gallery and M03. The marker follows the true R32
 // centerline inside the 16-unit route; its 3.5-unit radius stays clear of the
 // closed end at x272. No part of the request crosses the 32-unit address gap.
 export function MissingDestinationBlueprint({

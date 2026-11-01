@@ -230,38 +230,38 @@ function AvailabilityConstruction() {
 export const flatCalStudies: IllustrationStudy[] = [
   {
     id: "cal-week-grid",
-    code: "K06",
+    code: "TIM-03",
     title: "A week, constructed",
     description:
       "Monday through Sunday on a measured hourly grid. One constructed circle locates a meeting on Thursday, from 10:00 to 11:00.",
-    category: "Scheduling",
+    category: "Time",
     illustration: <WeekConstruction />,
   },
   {
     id: "cal-time-modules",
-    code: "K07",
+    code: "TIM-04",
     title: "The shape of a time slot",
     description:
       "Two measured intervals combine into one reusable time slot. Duration becomes a rule of composition.",
-    category: "Scheduling",
+    category: "Time",
     illustration: <TimeSlotConstruction />,
   },
   {
     id: "cal-availability-plan",
-    code: "K08",
+    code: "TIM-05",
     title: "Where schedules meet",
     description:
       "Alex’s and Sam’s availability meet in one shared slot. Named bands and a meeting callout make the overlap explicit.",
-    category: "Scheduling",
+    category: "Time",
     illustration: <AvailabilityConstruction />,
   },
   {
     id: "cal-appointment-buffers",
-    code: "K09",
+    code: "TIM-06",
     title: "Appointment buffers",
     description:
       "A 30-minute appointment sits between two 10-minute buffers. The proportional intervals reserve 50 minutes in total.",
-    category: "Scheduling",
+    category: "Time",
     illustration: <AppointmentBuffersStudy />,
   },
 ];

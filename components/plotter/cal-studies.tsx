@@ -168,20 +168,20 @@ function TwoTimeZones() {
 export const calStudies: IllustrationStudy[] = [
   {
     id: "cal-availability",
-    code: "K02",
+    code: "TIM-01",
     title: "Common ground",
     description:
       "Two independent schedules share one precisely aligned window. The overlap becomes the composition’s central column.",
-    category: "Scheduling",
+    category: "Time",
     illustration: <SharedAvailability />,
   },
   {
     id: "cal-time-zones",
-    code: "K03",
+    code: "TIM-02",
     title: "One moment, two places",
     description:
       "Two hour scales describe the same booking. An aligned one-hour interval stays fixed while the local time changes by three hours.",
-    category: "Scheduling",
+    category: "Time",
     illustration: <TwoTimeZones />,
   },
 ];

@@ -92,7 +92,7 @@ function UnopenedDoor() {
 export const notFoundArchitectureStudies: IllustrationStudy[] = [
   {
     id: "404-doorway",
-    code: "E01",
+    code: "EMP-02",
     title: "An empty threshold",
     description:
       "A precise architectural threshold opens onto empty space, suggesting a destination that was never built.",
@@ -101,7 +101,7 @@ export const notFoundArchitectureStudies: IllustrationStudy[] = [
   },
   {
     id: "404-interrupted-path",
-    code: "E02",
+    code: "EMP-03",
     title: "An interrupted path",
     description:
       "A measured route stops at a missing link. Its paired outlines and unresolved destination make the interruption the central gesture.",

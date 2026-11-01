@@ -8,7 +8,7 @@
     "dev": "next dev --port 3000",
     "build": "bun scripts/build-docs.ts && next build",
     "start": "next start --port 3000",
-    "downloads": "bun scripts/build-plotter-downloads.tsx && bun scripts/build-docs.ts",
+    "downloads": "bun scripts/build-plotter-catalogue.tsx && bun scripts/build-plotter-downloads.tsx && bun scripts/build-docs.ts",
     "drawings": "node scripts/build-plotter-registration.mjs && python3 scripts/build-plotter-drawings.py",
     "grammar": "python3 scripts/build-plotter-grammar.py",
     "format": "biome format --write .",
@@ -17,7 +17,8 @@
     "lint:fix": "biome lint --write .",
     "imports": "biome check --write --formatter-enabled=false --linter-enabled=false .",
     "typecheck": "tsc --noEmit",
-    "plotter:check": "bun scripts/check-plotter.tsx"
+    "plotter:check": "bun scripts/check-plotter.tsx",
+    "catalogue": "bun scripts/build-plotter-catalogue.tsx"
   },
   "dependencies": {
     "@base-ui/react": "1.9.0",

@@ -13,7 +13,7 @@ bun install
 bun run dev
 ```
 
-The development site uses port `3000`. The homepage uses the selected Manual direction. The former `/proto` links redirect to the homepage. Documentation covers [installation](content/docs/installation.md), [drawing](content/docs/drawing.md), [animation](content/docs/animation.md), and [customization](content/docs/customization.md).
+The development site uses port `3000`. Every page uses the Sheet design: one ruled drawing sheet, with drawings at their native 560 × 440. The former `/proto` links redirect to the homepage. Documentation covers [installation](content/docs/installation.md), [drawing](content/docs/drawing.md), [animation](content/docs/animation.md), and [customization](content/docs/customization.md).
 
 ## Formatting and checks
 
@@ -57,7 +57,7 @@ For Claude Code, start the same brief with `/plotter`.
 - `content/docs/` contains the website documentation.
 - `scripts/` contains website adapters and generation scripts. Download artifacts are produced by `bun scripts/build-plotter-downloads.tsx`.
 
-Shared role tokens are adopted by **AG01 and W05**. Other catalogue drawings retain their authored appearance; the extraction does not imply a gallery-wide token migration.
+Shared role tokens are adopted by **AGT-01 and MEC-05**. Other catalogue drawings retain their authored appearance; the extraction does not imply a gallery-wide token migration.
 
 Portable output includes resolved static SVG and animated HTML with its required local resources. The skill runs independently of the website. Exact Cal Sans appearance requires the font to be available; SVG text remains editable with a sans-serif fallback.
 

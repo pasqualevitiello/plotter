@@ -73,7 +73,7 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
   return (
     <section
       aria-labelledby="plotter-tokens-heading"
-      className="scroll-mt-20 border-t py-12 md:py-16"
+      className="sheet-row sheet-cell scroll-mt-6"
       id="plotter-tokens"
     >
       <div className="mb-8 flex max-w-2xl flex-col gap-3">
@@ -85,7 +85,7 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
         </h2>
         <p className="text-pretty text-muted-foreground text-sm">
           Adjust ink, stroke widths, and opacity without changing the drawing.
-          Try the shared tokens on W05, then copy the CSS to a wrapper around
+          Try the shared tokens on MEC-05, then copy the CSS to a wrapper around
           your inline SVG.
         </p>
       </div>
@@ -197,8 +197,8 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
             </div>
           </div>
           <figcaption className="mt-3 text-muted-foreground text-xs">
-            W05 · Same geometry, adjustable linework. Scroll sideways on narrow
-            screens.
+            MEC-05 · Same geometry, adjustable linework. Scroll sideways on
+            narrow screens.
           </figcaption>
         </figure>
       </div>
@@ -246,8 +246,8 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
             <p>
               These variables apply to inline SVG with the packaged role
               stylesheet, a <code>data-plotter</code> root, and named{" "}
-              <code>data-plotter-role</code> marks. In this catalogue, AG01 and
-              W05 use that foundation. Other drawings keep their existing
+              <code>data-plotter-role</code> marks. In this catalogue, AGT-01
+              and MEC-05 use that foundation. Other drawings keep their existing
               styles. CSS on a page cannot reach into an SVG loaded as an image.
             </p>
             <p>

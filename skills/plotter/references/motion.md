@@ -48,4 +48,4 @@ Open [assembly-motion.html](../assets/examples/assembly-motion.html) directly in
 
 The small example seats a hatched core on a base and withdraws it. Its fixed base owns the shared contact edge; the core's bottom stroke hides while seated. Hatching travels with the core, and one static SVG state serves no-JavaScript and reduced-motion use. The player supplies pause/resume, replay, static mode, and visibility pausing.
 
-This is an editable implementation example, not the exact W05 timeline, an approved visual reference, a physics simulation, or a resolved standalone SVG. Its durations and geometry demonstrate the relationship; choose the composition from the bundled approved references. Browser animation behavior still needs review in the eventual delivery environment.
+This is an editable implementation example, not the exact MEC-05 timeline, an approved visual reference, a physics simulation, or a resolved standalone SVG. Its durations and geometry demonstrate the relationship; choose the composition from the bundled approved references. Browser animation behavior still needs review in the eventual delivery environment.

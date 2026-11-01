@@ -1,142 +1,142 @@
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
-import type { ReactNode } from "react";
-import { ProductionChainStudy } from "@/components/plotter/engineering-studies";
-import { PrimitivesBlueprint } from "@/components/plotter/primitives-blueprint";
+import { illustrations } from "@/components/plotter/illustrations";
+import { DrawingFigure, SheetArt, SheetBar } from "@/components/sheet";
 import { SiteShell } from "@/components/site-shell";
 import { Button } from "@/components/ui/button";
-import styles from "./page.module.css";
+
+const hero = study("mech-iris-aperture");
+const library = [
+  "geo-negative-space",
+  "type-letter-strokes",
+  "agent-handoff",
+  "nature-leaf-veins",
+  "craft-dovetail",
+  "cal-appointment-buffers",
+].map(study);
 
 const chapters = [
   {
-    number: "01",
-    title: "A library to draw from",
-    copy: "Geometry, interfaces, systems, and the spaces between them. Find a drawing that makes your idea tangible.",
-    href: "/illustrations",
-    link: "Browse illustrations",
-  },
-  {
-    number: "02",
-    title: "A grammar to build on",
-    copy: "A shared language of forms, construction lines, dimensions, and hatching. Every mark has a job.",
+    label: "03 — Grammar",
+    title: "Every mark has a job.",
+    copy: "Primary forms, construction lines, dimensions, and hatching each carry one meaning, so a drawing reads the same everywhere.",
     href: "/grammar",
-    link: "Learn the grammar",
+    link: "Read the grammar",
   },
   {
-    number: "03",
-    title: "A skill to make it yours",
-    copy: "Give your agent a brief. Get an editable drawing you can inspect, adapt, and put to work.",
+    label: "04 — Motion",
+    title: "Relationships that move.",
+    copy: "Animate a sequence with the same restraint as a still: one change at a time, at a pace you can follow.",
+    href: "/animations",
+    link: "See the motion studies",
+  },
+  {
+    label: "05 — Skill",
+    title: "Give your agent a brief.",
+    copy: "Install the skill in Claude Code or Codex. Describe an idea and get an editable drawing you can inspect and adapt.",
     href: "/docs/installation",
     link: "Install Plotter",
   },
 ];
 
+function study(id: string) {
+  const item = illustrations.find((illustration) => illustration.id === id);
+  if (!item) throw new Error(`Missing homepage illustration: ${id}`);
+  return item;
+}
+
 export default function Home() {
   return (
     <SiteShell>
-      <section className={styles.manualHero}>
-        <div className={styles.manualIntroduction}>
-          <p className={styles.eyebrow}>An open language for illustration</p>
-          <h1 className="font-medium">
-            Give an idea
-            <br />
-            its shape.
-          </h1>
-          <p className={styles.lede}>
-            Simple forms. Fine lines. A considered way to draw and animate ideas
-            for the web.
-          </p>
-          <div className={styles.actions}>
-            <Button render={<Link href="/docs/installation" />} size="xl">
-              Start drawing <ArrowRightIcon aria-hidden="true" />
+      <section aria-labelledby="home-title" className="sheet-row sheet-cols">
+        <div className="sheet-cell flex flex-col justify-center gap-8">
+          <div>
+            <p className="mono-label">01 — Introduction</p>
+            <h1
+              className="mt-5 max-w-[12ch] text-[40px] leading-[1.02] sm:text-[52px]"
+              id="home-title"
+            >
+              Construction drawings for product ideas.
+            </h1>
+            <p className="mt-5 max-w-[42ch] text-lg text-muted-foreground">
+              A visual grammar, a library of editable SVG drawings, and an agent
+              skill that draws new ones by the same rules.
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-2">
+            <Button render={<Link href="/docs/installation" />} size="lg">
+              Install the skill <ArrowRightIcon aria-hidden="true" />
             </Button>
-            <Link className={styles.textLink} href="/illustrations">
-              Explore the collection{" "}
-              <ArrowRightIcon aria-hidden="true" className="size-4" />
-            </Link>
+            <Button
+              render={<Link href="/illustrations" />}
+              size="lg"
+              variant="ghost"
+            >
+              Browse the library <ArrowRightIcon aria-hidden="true" />
+            </Button>
           </div>
-          <p className={styles.materialNote}>
-            Editable SVG · Agent skill · Shared visual grammar
-          </p>
         </div>
-        <figure className={styles.manualFigure}>
-          <div className={styles.figureTopline}>
-            <span>Study P00</span>
-            <span>Foundations</span>
+        <figure className="flex flex-col">
+          <div className="flex flex-1 items-center">
+            <div className="w-full">
+              <SheetArt label={`${hero.code}: ${hero.title}`}>
+                {hero.illustration}
+              </SheetArt>
+            </div>
           </div>
-          <Artwork label="A circle inscribed in a square, connected by a diagonal, radius, and dimension lines.">
-            <PrimitivesBlueprint />
-          </Artwork>
-          <figcaption>
-            <strong>Circle, square, line.</strong>
-            <span>One relationship, made visible.</span>
+          <figcaption className="grid grid-cols-[auto_minmax(0,1fr)_auto] border-t text-sm">
+            <span className="mono-label px-5 py-3 text-foreground">
+              {hero.code}
+            </span>
+            <span className="border-s px-5 py-3">{hero.title}</span>
+            <span className="mono-label border-s px-5 py-3 max-sm:hidden">
+              Scale 1:1 · 560 × 440
+            </span>
           </figcaption>
         </figure>
       </section>
 
-      <section
-        aria-labelledby="manual-principle"
-        className={styles.manualPrinciple}
-      >
-        <p className={styles.eyebrow}>The principle</p>
-        <h2 className="font-medium" id="manual-principle">
-          The drawing should explain
-          <br className={styles.desktopBreak} /> what the words can’t.
-        </h2>
-        <p>
-          Plotter brings the care of a construction drawing to product
-          illustration. Transparent forms reveal relationships. Fine lines
-          establish hierarchy. A little geometry does a lot of explaining.
-        </p>
+      <section aria-labelledby="home-library">
+        <SheetBar
+          action={
+            <Link className="text-link" href="/illustrations">
+              View all {illustrations.length}{" "}
+              <ArrowRightIcon aria-hidden="true" />
+            </Link>
+          }
+          id="home-library"
+          label="02 — Library"
+          meta="Geometry, interfaces, empty states, agents, and more"
+        />
+        <div className="sheet-row sheet-cols">
+          {library.map((item) => (
+            <DrawingFigure
+              code={item.code}
+              href={`/illustrations?variant=${item.id}`}
+              key={item.id}
+              title={item.title}
+            >
+              {item.illustration}
+            </DrawingFigure>
+          ))}
+        </div>
       </section>
 
-      <section aria-label="Explore Plotter" className={styles.manualChapters}>
+      <section aria-label="Explore Plotter" className="sheet-row sheet-cols-3">
         {chapters.map((chapter) => (
-          <article key={chapter.number}>
-            <span className={styles.chapterNumber}>{chapter.number}</span>
-            <h3 className="font-medium">{chapter.title}</h3>
-            <p>{chapter.copy}</p>
-            <Link className={styles.textLink} href={chapter.href}>
-              {chapter.link}{" "}
-              <ArrowRightIcon aria-hidden="true" className="size-4" />
+          <article
+            className="flex flex-col items-start gap-3 px-5 py-8 sm:px-6"
+            key={chapter.label}
+          >
+            <p className="mono-label">{chapter.label}</p>
+            <h2 className="mt-3 text-2xl leading-tight">{chapter.title}</h2>
+            <p className="max-w-[38ch] text-muted-foreground">{chapter.copy}</p>
+            <Link className="text-link mt-auto" href={chapter.href}>
+              {chapter.link} <ArrowRightIcon aria-hidden="true" />
             </Link>
           </article>
         ))}
       </section>
-
-      <section aria-labelledby="manual-motion" className={styles.manualMotion}>
-        <figure>
-          <Artwork label="A square core above a line of three equally spaced carriers, showing load and assembly positions.">
-            <ProductionChainStudy />
-          </Artwork>
-          <figcaption className={styles.smallCaption}>
-            Study W05 — A part, made in sequence
-          </figcaption>
-        </figure>
-        <div>
-          <p className={styles.eyebrow}>From drawing to motion</p>
-          <h2 className="font-medium" id="manual-motion">
-            Make the relationship move.
-          </h2>
-          <p>
-            A core settles into its carrier. The line advances. Motion can
-            explain a sequence as carefully as a still drawing explains a
-            structure.
-          </p>
-          <Link className={styles.textLink} href="/animations">
-            See the motion studies{" "}
-            <ArrowRightIcon aria-hidden="true" className="size-4" />
-          </Link>
-        </div>
-      </section>
     </SiteShell>
-  );
-}
-
-function Artwork({ children, label }: { children: ReactNode; label: string }) {
-  return (
-    <div aria-label={label} className={styles.artwork} role="img">
-      {children}
-    </div>
   );
 }

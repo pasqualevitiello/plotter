@@ -69,7 +69,7 @@ function BranchingWorkflowStudy() {
 export const networkStudies: IllustrationStudy[] = [
   {
     id: "workflow-branch",
-    code: "W02",
+    code: "SYS-01",
     title: "A route, constructed",
     description:
       "One selected route and two alternatives share a junction. A repeated bend radius establishes the spacing between the three outlets.",

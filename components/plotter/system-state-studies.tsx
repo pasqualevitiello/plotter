@@ -497,7 +497,7 @@ function LocationCompact() {
 export const systemStateStudies: IllustrationStudy[] = [
   {
     id: "state-offline",
-    code: "S04",
+    code: "EMP-07",
     title: "A cloud, out of reach",
     description:
       "A curved connection stops before the cloud. Its separated continuation and measured gap make the missing route visible.",
@@ -511,7 +511,7 @@ export const systemStateStudies: IllustrationStudy[] = [
   },
   {
     id: "state-access",
-    code: "S08",
+    code: "EMP-11",
     title: "A boundary, locked",
     description:
       "A closed lock interrupts the access route. Its corner radius sets the inset, while a separate construction field locates the keyhole without crossing it.",
@@ -525,7 +525,7 @@ export const systemStateStudies: IllustrationStudy[] = [
   },
   {
     id: "state-email",
-    code: "S09",
+    code: "EMP-12",
     title: "An envelope, unfolded",
     description:
       "An open flap mirrors its folded position across one crease. Equal offsets and the pocket’s diagonals explain the envelope as a flat construction.",
@@ -539,7 +539,7 @@ export const systemStateStudies: IllustrationStudy[] = [
   },
   {
     id: "state-maintenance",
-    code: "S10",
+    code: "EMP-13",
     title: "A gear train, interrupted",
     description:
       "Three gears share a common pitch. A separated drive interrupts the mechanism.",
@@ -553,7 +553,7 @@ export const systemStateStudies: IllustrationStudy[] = [
   },
   {
     id: "state-disconnected",
-    code: "S11",
+    code: "EMP-14",
     title: "A connection, apart",
     description:
       "A mobile plug aligns with a separate socket recessed behind a thin mounting flange. The hatched support, matching contact spacing, and open gap describe the interrupted connection.",
@@ -567,7 +567,7 @@ export const systemStateStudies: IllustrationStudy[] = [
   },
   {
     id: "state-location",
-    code: "S12",
+    code: "EMP-15",
     title: "A pin, unplaced",
     description:
       "A compact pin sits just above an unresolved point in a broad coordinate field. The measured horizontal offset locates the proposed position.",

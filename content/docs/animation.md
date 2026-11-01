@@ -48,7 +48,7 @@ The complete skill includes `assets/examples/assembly-motion.html`. Open it dire
 
 For one-file delivery, inline the generated role stylesheet. For a folder delivery, include every actual local resource and preserve its relative path. A portable animation should not depend on website imports or application CSS.
 
-[Download the assembly animation](/plotter/downloads/assembly-line.html) for a portable HTML example. This example is an implementation study; its timing is not the catalogue’s exact W05 timeline.
+[Download the assembly animation](/plotter/downloads/assembly-line.html) for a portable HTML example. This example is an implementation study; its timing is not the catalogue’s exact MEC-05 timeline.
 
 ## Export the still separately
 

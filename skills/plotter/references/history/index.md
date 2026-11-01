@@ -7,6 +7,7 @@ Read this material only when revisiting a named study, tracing a decision, or ma
 | What did the user say about a particular drawing or motion revision? | Search its ID in [direction and feedback](direction.md). Distinguish quoted preferences from the assistant's interpretation and proposed response. |
 | What was excluded from the reference selection, and how was that interpreted? | [Reference-selection evidence](reference-selection.md). The current index retains all 27 selections and seven bundled snapshots. |
 | Why did the registration batch fail, and what changed? | [Registration failure and revision](examples/agent-registration.md), with both editable SVGs. |
+| A record cites an older code such as P00, K09, or AG01. | [Code map](code-map.md): former and current codes, and the drawings retired on 2026-11-01. |
 | What was technically inspected at the October 25 snapshot? | [Source audit](source-audit.md) and [remaining-source audit](remaining-source-audit.md). These are revision-specific results, not current certification. |
 | What did the coss.com proposals claim at that time? | [Product concepts](coss-product-concepts.md). Re-establish current product facts before reusing their claims. |
 

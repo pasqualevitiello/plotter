@@ -1,3 +1,4 @@
+import { SheetBar } from "@/components/sheet";
 import { GrammarComparison } from "./grammar-comparison";
 import { visualGrammarEntries } from "./visual-grammar-content";
 import { visualGrammarDrawings } from "./visual-grammar-drawings";
@@ -6,78 +7,89 @@ export function VisualGrammar() {
   return (
     <section
       aria-labelledby="visual-grammar-heading"
-      className="scroll-mt-20 border-t py-12 md:py-16"
+      className="scroll-mt-6"
       id="visual-grammar"
     >
-      <div className="mb-8 space-y-3">
-        <h2
-          className="font-heading font-medium text-2xl [font-variation-settings:'GEOM'_50]"
-          id="visual-grammar-heading"
-        >
-          Visual grammar
-        </h2>
-        <p className="max-w-2xl text-pretty text-muted-foreground text-sm">
-          A glossary of the marks these drawings use: what they mean, when they
-          help, and when to leave them out. Hover over a drawing to isolate the
-          marks being explained, then move away to see the whole construction.
-        </p>
-        <p className="max-w-2xl text-pretty text-muted-foreground text-sm">
-          Use these meanings in{" "}
-          <a className="underline underline-offset-4" href="/docs">
-            your own brief
-          </a>
-          , or explore{" "}
-          <a
-            className="underline underline-offset-4"
-            href="/docs#plotter-tokens"
-          >
-            the shared linework tokens
-          </a>
-          .
-        </p>
-        <nav
-          aria-label="Visual grammar topics"
-          className="flex max-w-3xl flex-wrap gap-x-5 gap-y-2 text-sm"
-        >
-          {visualGrammarEntries.map((entry) => (
+      <SheetBar
+        id="visual-grammar-heading"
+        label="03.1 — Glossary"
+        meta={`${visualGrammarEntries.length} marks`}
+      />
+      <div className="sheet-row sheet-cols">
+        <div className="sheet-cell flex flex-col gap-3">
+          <p className="max-w-[56ch] text-pretty text-muted-foreground">
+            What each mark means, when it helps, and when to leave it out. Hover
+            over a drawing to isolate the marks being explained, then move away
+            to see the whole construction.
+          </p>
+          <p className="max-w-[56ch] text-pretty text-muted-foreground">
+            Use these meanings in{" "}
             <a
-              className="underline underline-offset-4 hover:text-muted-foreground"
-              href={`#grammar-${entry.id}`}
-              key={entry.id}
+              className="text-foreground underline underline-offset-4"
+              href="/docs"
             >
-              {entry.title}
+              your own brief
             </a>
-          ))}
+            , or explore{" "}
+            <a
+              className="text-foreground underline underline-offset-4"
+              href="/docs/customization"
+            >
+              the shared linework tokens
+            </a>
+            .
+          </p>
+          <p className="text-muted-foreground text-xs sm:hidden">
+            Drawings are shown at full size. Scroll each one sideways.
+          </p>
+        </div>
+        <nav aria-label="Visual grammar topics" className="sheet-cell">
+          <ol className="grid gap-x-8 sm:grid-cols-2">
+            {visualGrammarEntries.map((entry, index) => (
+              <li key={entry.id}>
+                <a
+                  className="flex min-h-10 items-baseline gap-3 text-sm hover:underline hover:underline-offset-4"
+                  href={`#grammar-${entry.id}`}
+                >
+                  <span className="mono-label">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  {entry.title}
+                </a>
+              </li>
+            ))}
+          </ol>
         </nav>
       </div>
-      <div className="divide-y">
-        {visualGrammarEntries.map((entry) => (
-          <article
-            aria-labelledby={`grammar-${entry.id}-heading`}
-            className="grid min-w-0 scroll-mt-20 gap-6 py-8 first:pt-0 last:pb-0 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] xl:items-center xl:gap-12"
-            id={`grammar-${entry.id}`}
-            key={entry.id}
-          >
-            <div className="max-w-xl space-y-3">
-              <h3
-                className="font-medium text-lg"
-                id={`grammar-${entry.id}-heading`}
-              >
-                {entry.title}
-              </h3>
-              <p className="text-pretty text-muted-foreground text-sm">
-                {entry.description}
-              </p>
-              <p className="text-pretty text-muted-foreground text-sm">
-                {entry.omit}
-              </p>
-            </div>
-            <GrammarComparison caption={entry.caption} title={entry.title}>
-              {visualGrammarDrawings[entry.id]}
-            </GrammarComparison>
-          </article>
-        ))}
-      </div>
+      {visualGrammarEntries.map((entry, index) => (
+        <article
+          aria-labelledby={`grammar-${entry.id}-heading`}
+          className="sheet-row sheet-cols scroll-mt-6"
+          id={`grammar-${entry.id}`}
+          key={entry.id}
+        >
+          <div className="sheet-cell flex flex-col justify-center gap-3">
+            <p className="mono-label">
+              Mark {String(index + 1).padStart(2, "0")}
+            </p>
+            <h3
+              className="mt-3 text-2xl leading-tight"
+              id={`grammar-${entry.id}-heading`}
+            >
+              {entry.title}
+            </h3>
+            <p className="max-w-[52ch] text-pretty text-muted-foreground">
+              {entry.description}
+            </p>
+            <p className="max-w-[52ch] text-pretty text-muted-foreground text-sm">
+              {entry.omit}
+            </p>
+          </div>
+          <GrammarComparison caption={entry.caption} title={entry.title}>
+            {visualGrammarDrawings[entry.id]}
+          </GrammarComparison>
+        </article>
+      ))}
     </section>
   );
 }

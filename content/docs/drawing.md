@@ -21,13 +21,15 @@ The package includes seven approved snapshots. Choose by the relationship, rathe
 
 | Relationship                            | Reference |
 | --------------------------------------- | --------- |
-| Circle, square, radius, tangency        | P00       |
-| Separate fragments becoming one form    | C01       |
-| Modules following an allocation rule    | C02       |
-| Time intervals combining into a whole   | K07       |
-| Work aligned to a cycle                 | B04       |
-| Conversation through a few UI fragments | I06       |
-| Absence interrupting a structure        | E02       |
+| Circle, square, radius, tangency        | GEO-01    |
+| Separate fragments becoming one form    | INT-02    |
+| Modules following an allocation rule    | INT-03    |
+| Time intervals combining into a whole   | TIM-04    |
+| Work aligned to a cycle                 | SRV-04    |
+| Conversation through a few UI fragments | INT-09    |
+| Absence interrupting a structure        | EMP-03    |
+
+Any drawing on the [illustrations page](/illustrations) can also be named by its code, for example “like TIM-06”. The skill bundles every catalogue drawing in `references/catalogue/`, so the code works without this website. A named drawing shows a relationship to borrow; the seven snapshots above remain the style anchors.
 
 The skill’s `references/approved-references.md` links the SVGs and records their revision boundary. These snapshots preserve their original composition; the current drafting standard supplies the treatment for new work.
 
@@ -67,7 +69,7 @@ python3 scripts/export-svg.py drawing.svg exported.svg \
 
 The exporter resolves supported role styles and tokens, keeps labels editable, and prefixes local definition IDs and references. It reports unsupported external resources or styles rather than silently dropping them. The resolved SVG has no website, JavaScript, or external stylesheet dependency. Exact Cal Sans appearance still depends on the font.
 
-Download the resolved [AG01 registration SVG](/plotter/downloads/agent-registration.svg) or [W05 production-chain SVG](/plotter/downloads/production-chain.svg) as examples of portable static output.
+Download the resolved [AGT-01 registration SVG](/plotter/downloads/agent-registration.svg) or [MEC-05 production-chain SVG](/plotter/downloads/production-chain.svg) as examples of portable static output.
 
 ## Review the result
 

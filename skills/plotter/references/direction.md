@@ -28,4 +28,4 @@ Bundled references use a `560 × 440` viewBox. Inspect at the intended output si
 
 An implementation-only refactor preserves composition, timing, text, transparency, shared edges, and intentional legacy exceptions. A requested redesign may change those decisions within its brief. Current explicit user direction takes precedence over the packaged defaults.
 
-Study-specific decisions stay local. W05's hatch marks identify only its core faces; that preference does not require cubes or hatching in other drawings. A rejected drawing does not ban its subject category. Instructional examples and later liked revisions do not automatically join the approved reference set.
+Study-specific decisions stay local. MEC-05's hatch marks identify only its core faces; that preference does not require cubes or hatching in other drawings. A rejected drawing does not ban its subject category. Instructional examples and later liked revisions do not automatically join the approved reference set.

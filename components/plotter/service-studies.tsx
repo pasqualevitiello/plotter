@@ -424,7 +424,7 @@ function LinearCycleStudy() {
 export const serviceStudies: IllustrationStudy[] = [
   {
     id: "service-cloudflare-edge",
-    code: "B01",
+    code: "SRV-01",
     title: "Cloudflare · Between visitor and origin",
     description:
       "An edge cache between visitor and origin: a hit returns locally, while a miss continues outward. A study of Cloudflare’s CDN role.",
@@ -433,7 +433,7 @@ export const serviceStudies: IllustrationStudy[] = [
   },
   {
     id: "service-vercel-deploy",
-    code: "B02",
+    code: "SRV-02",
     title: "Vercel · From preview to production",
     description:
       "Preview 02 is selected for production. Matching outlines identify the same source version; promotion rebuilds it for the production environment.",
@@ -442,7 +442,7 @@ export const serviceStudies: IllustrationStudy[] = [
   },
   {
     id: "service-stripe-settlement",
-    code: "B03",
+    code: "SRV-03",
     title: "Stripe · Payments, combined",
     description:
       "Four equal payments combine into one gross payment total, before fees, refunds, or availability. Their conserved width makes aggregation a visible construction rule.",
@@ -451,7 +451,7 @@ export const serviceStudies: IllustrationStudy[] = [
   },
   {
     id: "service-linear-cycle",
-    code: "B04",
+    code: "SRV-04",
     title: "Linear · Work aligned to a cycle",
     description:
       "Issue modules share a two-week construction grid. Their measured spans align the work within a common cycle boundary.",
@@ -460,7 +460,7 @@ export const serviceStudies: IllustrationStudy[] = [
   },
   {
     id: "service-stripe-payment",
-    code: "B05",
+    code: "SRV-05",
     title: "Stripe · Many ways to pay",
     description:
       "Card, wallet, and bank payments share one checkout aperture. A selected route carries a customer payment through to a paid purchase for the business.",

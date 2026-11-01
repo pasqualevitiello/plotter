@@ -19,40 +19,37 @@ export function GrammarComparison({
   const instructionId = `${id}-instruction`;
 
   return (
-    <figure className="min-w-0">
-      <div className="mb-3 flex flex-wrap items-center gap-x-4 gap-y-2">
-        <Button
-          aria-controls={drawingId}
-          aria-pressed={isolated}
-          onClick={() => setIsolated((value) => !value)}
-          size="sm"
-          variant={isolated ? "secondary" : "ghost"}
-        >
-          Isolate element
-        </Button>
-        <p className="text-muted-foreground text-xs" id={instructionId}>
-          Hover or focus to reveal the element. Tap to keep it isolated.
-        </p>
-      </div>
+    <figure className="flex min-w-0 flex-col">
       <div
         aria-describedby={instructionId}
         aria-label={`${title}. ${caption}`}
-        className={`${styles.drawing} overflow-x-auto rounded-lg border border-border/64 p-4 outline-none focus-visible:ring-2 focus-visible:ring-ring`}
+        className={`${styles.drawing} sheet-art`}
         data-isolated={isolated ? "" : undefined}
         id={drawingId}
         role="img"
         // biome-ignore lint/a11y/noNoninteractiveTabindex: Native-size drawings need keyboard scrolling on narrow screens.
         tabIndex={0}
       >
-        <div className="pointer-events-none mx-auto w-[560px] select-none">
+        <div className="sheet-art-inner pointer-events-none select-none">
           {children}
         </div>
       </div>
-      <figcaption className="mt-3 min-h-10 text-pretty text-muted-foreground text-xs">
-        {caption}
+      <figcaption className="mt-auto flex flex-col gap-3 border-t px-5 py-3 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-pretty text-muted-foreground text-xs">{caption}</p>
+        <Button
+          aria-controls={drawingId}
+          aria-pressed={isolated}
+          className="shrink-0 self-start sm:self-auto"
+          onClick={() => setIsolated((value) => !value)}
+          size="sm"
+          variant={isolated ? "secondary" : "ghost"}
+        >
+          Isolate element
+        </Button>
       </figcaption>
-      <p className="text-muted-foreground text-xs sm:hidden">
-        Scroll sideways to see the full drawing.
+      <p className="sr-only" id={instructionId}>
+        Hover or focus to reveal the element. Use Isolate element to keep it
+        isolated.
       </p>
     </figure>
   );

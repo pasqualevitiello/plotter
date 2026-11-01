@@ -422,7 +422,7 @@ export function NewtonsCradleStudy() {
 export const engineeringStudies: IllustrationStudy[] = [
   {
     id: "object-gpu-plan",
-    code: "O06",
+    code: "OBJ-04",
     title: "A processor, constructed",
     description:
       "Regular contacts connect a central CPU to I/O and memory. Dashed centerlines locate the package on an open construction grid. The layout is conceptual.",
@@ -431,7 +431,7 @@ export const engineeringStudies: IllustrationStudy[] = [
   },
   {
     id: "workflow-rc-filter",
-    code: "W04",
+    code: "SYS-03",
     title: "One node, two paths",
     description:
       "A first-order RC low-pass joins a series resistor and a shunt capacitor at one explicit junction.",
@@ -440,16 +440,16 @@ export const engineeringStudies: IllustrationStudy[] = [
   },
   {
     id: "workflow-production-chain",
-    code: "W05",
+    code: "MEC-05",
     title: "A part, made in sequence",
     description:
       "Equal carriers advance along one assembly line while a matching core enters an open frame at the central station.",
-    category: "Systems",
+    category: "Mechanisms",
     illustration: <ProductionChainStudy />,
   },
   {
     id: "object-newtons-cradle",
-    code: "O07",
+    code: "OBJ-05",
     title: "Newton’s cradle, at release",
     description:
       "Five equal pendulums share a tangent rest position; one follows a true arc from a 30° release.",

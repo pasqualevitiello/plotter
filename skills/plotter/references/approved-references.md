@@ -6,50 +6,50 @@ On 2026-10-25, the user explicitly identified these 27 drawings as the best illu
 
 Choose by construction relationship, then render and inspect the linked SVG. These seven snapshots are available in a standalone installation:
 
-| Relationship                                      | Reference               | What to borrow                                                               |
-| ------------------------------------------------- | ----------------------- | ---------------------------------------------------------------------------- |
-| Circle, square, radius, and tangency              | [P00](drawings/P00.svg) | A shared geometric construction with one focal relationship                  |
-| Separate fragments becoming one record or control | [C01](drawings/C01.svg) | Preserved dimensions and positions, projection, and one assembled focal form |
-| Modules following one allocation rule             | [C02](drawings/C02.svg) | Repeated units, spacing, and a coherent component family                     |
-| Time intervals combining into a whole             | [K07](drawings/K07.svg) | Proportional lengths and restrained duration labels                          |
-| Work aligned to a cycle                           | [B04](drawings/B04.svg) | A scoped service concept organized by a shared time field                    |
-| Conversation expressed with a few UI fragments    | [I06](drawings/I06.svg) | Recognition through avatars, tail-free messages, and spacing                 |
-| Absence interrupting a structure                  | [E02](drawings/E02.svg) | A missing connection that affects the construction itself                    |
+| Relationship                                      | Reference                     | What to borrow                                                               |
+| ------------------------------------------------- | ----------------------------- | ---------------------------------------------------------------------------- |
+| Circle, square, radius, and tangency              | [GEO-01](drawings/GEO-01.svg) | A shared geometric construction with one focal relationship                  |
+| Separate fragments becoming one record or control | [INT-02](drawings/INT-02.svg) | Preserved dimensions and positions, projection, and one assembled focal form |
+| Modules following one allocation rule             | [INT-03](drawings/INT-03.svg) | Repeated units, spacing, and a coherent component family                     |
+| Time intervals combining into a whole             | [TIM-04](drawings/TIM-04.svg) | Proportional lengths and restrained duration labels                          |
+| Work aligned to a cycle                           | [SRV-04](drawings/SRV-04.svg) | A scoped service concept organized by a shared time field                    |
+| Conversation expressed with a few UI fragments    | [INT-09](drawings/INT-09.svg) | Recognition through avatars, tail-free messages, and spacing                 |
+| Absence interrupting a structure                  | [EMP-03](drawings/EMP-03.svg) | A missing connection that affects the construction itself                    |
 
-[The manifest](drawings/manifest.json) records source revision and snapshot hashes; a reference-level `source_commit` overrides the manifest's shared revision. These are source snapshots of selected compositions, not newly normalized or technically certified drawings. Historical background fills and line-role variations may remain; use the [drafting standard](drafting-standard.md) for new work. Render the snapshots on a light surface to inspect their original presentation. Bundling C01 adds access to an already approved composition; the 27-reference selection remains unchanged.
+[The manifest](drawings/manifest.json) records source revision and snapshot hashes; a reference-level `source_commit` overrides the manifest's shared revision. These are source snapshots of selected compositions, not newly normalized or technically certified drawings. Historical background fills and line-role variations may remain; use the [drafting standard](drafting-standard.md) for new work. Render the snapshots on a light surface to inspect their original presentation. Bundling INT-02 adds access to an already approved composition; the 27-reference selection remains unchanged.
 
 ## Full reference set
 
-The following selection remains unchanged. In the standalone Plotter checkout, find catalogue sources by code or study ID in `components/plotter/`. Without that checkout, choose the nearest bundled relationship above instead of assuming the wider catalogue is accessible. A familiar subject alone is not a sufficient reference match. The original coss route and source locations are historical provenance, recorded in [history](history/index.md).
+The following selection remains unchanged. Every catalogue drawing, including these, is bundled as a resolved static SVG in the [catalogue](catalogue/index.md). Codes were renumbered on 2026-11-01; older records use the former codes listed in the [code map](history/code-map.md). A familiar subject alone is not a sufficient reference match. The original coss route and source locations are historical provenance, recorded in [history](history/index.md).
 
-| Code | Drawing                                 | Study ID                     |
-| ---- | --------------------------------------- | ---------------------------- |
-| P00  | Circle, square, line                    | `primitives-reference`       |
-| B04  | Linear · Work aligned to a cycle        | `service-linear-cycle`       |
-| K06  | A week, constructed                     | `cal-week-grid`              |
-| I06  | A conversation, constructed             | `interface-chat-plan`        |
-| E02  | An interrupted path                     | `404-interrupted-path`       |
-| P02  | The corner rule                         | `primitives-radius`          |
-| P03  | A system of proportions                 | `primitives-proportion`      |
-| C01  | An assembly of parts                    | `particles-assembly`         |
-| C02  | A modular tray                          | `particles-slots`            |
-| K07  | The shape of a time slot                | `cal-time-modules`           |
-| K08  | Where schedules meet                    | `cal-availability-plan`      |
-| I03  | From parts to a whole                   | `interface-spacing-plan`     |
-| W03  | A connection, located                   | `workflow-switch-plan`       |
-| A03  | A measured distribution                 | `data-coordinate-plan`       |
-| B01  | Cloudflare · Between visitor and origin | `service-cloudflare-edge`    |
-| B02  | Vercel · From preview to production     | `service-vercel-deploy`      |
-| B03  | Stripe · A balance, assembled           | `service-stripe-settlement`  |
-| B05  | Stripe · Many ways to pay               | `service-stripe-payment`     |
-| B06  | GitHub · A change, brought together     | `service-github-merge`       |
-| B07  | Figma · Rules that resize               | `service-figma-constraints`  |
-| B09  | Supabase · A shared relation            | `service-supabase-relations` |
-| K02  | Common ground                           | `cal-availability`           |
-| T01  | Anatomy of a letter                     | `type-letter`                |
-| T02  | A mark in the making                    | `type-monogram`              |
-| E01  | An empty threshold                      | `404-doorway`                |
-| E06  | An unbuilt arch                         | `404-unbuilt-arch`           |
-| E00  | The missing corner                      | `404-reference`              |
+| Code   | Drawing                                 | Study ID                     |
+| ------ | --------------------------------------- | ---------------------------- |
+| GEO-01 | Circle, square, line                    | `primitives-reference`       |
+| SRV-04 | Linear · Work aligned to a cycle        | `service-linear-cycle`       |
+| TIM-03 | A week, constructed                     | `cal-week-grid`              |
+| INT-09 | A conversation, constructed             | `interface-chat-plan`        |
+| EMP-03 | An interrupted path                     | `404-interrupted-path`       |
+| GEO-03 | The corner rule                         | `primitives-radius`          |
+| GEO-04 | A system of proportions                 | `primitives-proportion`      |
+| INT-02 | An assembly of parts                    | `particles-assembly`         |
+| INT-03 | A modular tray                          | `particles-slots`            |
+| TIM-04 | The shape of a time slot                | `cal-time-modules`           |
+| TIM-05 | Where schedules meet                    | `cal-availability-plan`      |
+| INT-06 | From parts to a whole                   | `interface-spacing-plan`     |
+| SYS-02 | A connection, located                   | `workflow-switch-plan`       |
+| SYS-04 | A measured distribution                 | `data-coordinate-plan`       |
+| SRV-01 | Cloudflare · Between visitor and origin | `service-cloudflare-edge`    |
+| SRV-02 | Vercel · From preview to production     | `service-vercel-deploy`      |
+| SRV-03 | Stripe · A balance, assembled           | `service-stripe-settlement`  |
+| SRV-05 | Stripe · Many ways to pay               | `service-stripe-payment`     |
+| SRV-06 | GitHub · A change, brought together     | `service-github-merge`       |
+| SRV-07 | Figma · Rules that resize               | `service-figma-constraints`  |
+| SRV-09 | Supabase · A shared relation            | `service-supabase-relations` |
+| TIM-01 | Common ground                           | `cal-availability`           |
+| TYP-01 | Anatomy of a letter                     | `type-letter`                |
+| TYP-02 | A mark in the making                    | `type-monogram`              |
+| EMP-02 | An empty threshold                      | `404-doorway`                |
+| EMP-04 | An unbuilt arch                         | `404-unbuilt-arch`           |
+| EMP-01 | The missing corner                      | `404-reference`              |
 
 The [selection evidence](history/reference-selection.md) preserves the original exclusions and working interpretations. A later revision still needs its own visual assessment; inclusion here is not technical certification.

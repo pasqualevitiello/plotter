@@ -476,7 +476,7 @@ export const contentStateStudies: IllustrationStudy[] = [
   },
   {
     id: "state-search",
-    code: "S03",
+    code: "EMP-06",
     title: "A search, unanswered",
     description:
       "A query projects into the missing position of an ordered index. The surrounding records exist; the requested one does not.",
@@ -490,7 +490,7 @@ export const contentStateStudies: IllustrationStudy[] = [
   },
   {
     id: "state-notifications",
-    code: "S05",
+    code: "EMP-08",
     title: "A stream, caught up",
     description:
       "Read entries occupy an evenly spaced notification stream. Its next position remains open, with no unread entry to continue it.",
@@ -504,7 +504,7 @@ export const contentStateStudies: IllustrationStudy[] = [
   },
   {
     id: "state-files",
-    code: "S06",
+    code: "EMP-09",
     title: "A page, unwritten",
     description:
       "A blank writing area repeats the page’s 1 : √2 proportion. Equal side margins locate the cursor before the first line exists.",
@@ -518,7 +518,7 @@ export const contentStateStudies: IllustrationStudy[] = [
   },
   {
     id: "state-data",
-    code: "S07",
+    code: "EMP-10",
     title: "A field without observations",
     description:
       "Calibrated axes establish a coordinate field. Its units are defined, but no observation occupies a coordinate.",
@@ -532,7 +532,7 @@ export const contentStateStudies: IllustrationStudy[] = [
   },
   {
     id: "state-bookings",
-    code: "S13",
+    code: "EMP-16",
     title: "A week, unbooked",
     description:
       "Seven days share a measured hour grid. Today has its place in the week; the time field contains no bookings.",
@@ -546,7 +546,7 @@ export const contentStateStudies: IllustrationStudy[] = [
   },
   {
     id: "state-image",
-    code: "S14",
+    code: "EMP-17",
     title: "An image, not yet placed",
     description:
       "Crop corners establish a 4 : 3 image area. The diagonal and unit measurements define its proportions while the image itself is absent.",

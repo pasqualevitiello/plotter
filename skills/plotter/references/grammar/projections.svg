@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440" fill="none" stroke="currentColor" stroke-linecap="butt" stroke-linejoin="round" style="font-family:Cal Sans,sans-serif;font-optical-sizing:auto;font-synthesis:none;font-variation-settings:'GEOM' 25;font-weight:400" role="img" aria-labelledby="grammar-projections-useful-title grammar-projections-useful-desc">
   <title id="grammar-projections-useful-title">A whole, projected into its parts</title>
   <desc id="grammar-projections-useful-desc">The Research and Draft allocations retain their widths after separation. Four quiet projections connect the exact width witnesses of each source allocation with its assigned form.</desc>
-  <metadata>Plotter grammar teaching example, adapted from the user-liked delegation revision. Approved references K07 part/whole proportion, C01 preserved fragments, C02 allocation. Unit u=24. Whole width336 partitions into144 and192; lower forms translate(-12,156) and(12,156). Projection lines extend the corresponding allocation edges, with8-unit clearances from forms. No background grid or extra hatch.</metadata>
+  <metadata>Plotter grammar teaching example, adapted from the user-liked delegation revision. Approved references TIM-04 part/whole proportion, INT-02 preserved fragments, INT-03 allocation. Unit u=24. Whole width336 partitions into144 and192; lower forms translate(-12,156) and(12,156). Projection lines extend the corresponding allocation edges, with8-unit clearances from forms. No background grid or extra hatch.</metadata>
 
   <!-- The source is one boundary with a single shared partition. -->
   <g stroke-width="0.95">

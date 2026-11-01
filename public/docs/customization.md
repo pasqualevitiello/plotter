@@ -4,7 +4,7 @@ Plotter separates the meaning of a mark from its numerical treatment. The visual
 
 ## Start with the adoption boundary
 
-Shared role tokens currently style **AG01 and W05** in the catalogue. Other drawings retain their authored attributes and inherited defaults. A global token override does not imply that every illustration has adopted that role.
+Shared role tokens currently style **AGT-01 and MEC-05** in the catalogue. Other drawings retain their authored attributes and inherited defaults. A global token override does not imply that every illustration has adopted that role.
 
 Preserve an existing drawing’s composition, opacity grouping, text, timing, and intentional exceptions during implementation changes. Adopt roles only where the result preserves its appearance or where a redesign is requested.
 

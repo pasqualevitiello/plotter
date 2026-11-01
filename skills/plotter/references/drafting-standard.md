@@ -6,7 +6,7 @@ Use for new drawings and deliberate revisions. Read the [approved references](ap
 
 ## Name and scope
 
-**Monochrome orthographic construction diagrams** is the precise name for this house illustration language. “Blueprint illustrations” remains useful informal shorthand. The drawings present one flat geometric relationship through visible outlines, restrained construction lines, sparse dimensions, and occasional line hatching. P00 supplies the circle/square relationship, C02 the modular assembly and switch geometry, and B04 the alignment of work within a time grid.
+**Monochrome orthographic construction diagrams** is the precise name for this house illustration language. “Blueprint illustrations” remains useful informal shorthand. The drawings present one flat geometric relationship through visible outlines, restrained construction lines, sparse dimensions, and occasional line hatching. GEO-01 supplies the circle/square relationship, INT-03 the modular assembly and switch geometry, and SRV-04 the alignment of work within a time grid.
 
 “Blueprint” historically identifies a reproduction process: cyanotypes commonly reproduce designs as white lines on a blue ground. Black or theme-colored SVG linework is not a cyanotype reproduction. This distinction concerns medium, not drawing accuracy. [Te Papa collection terminology](https://collections.tepapa.govt.nz/category/421176)
 
@@ -49,7 +49,7 @@ All lengths below are SVG user units in a `560 × 440` viewBox. Width and opacit
 | Section cut, when needed | 1.30 | 1 | Continuous | Material actually intersected by a stated cut plane |
 <!-- END GENERATED: stroke-palette -->
 
-P00’s existing `1.0` primary width is an accepted anchor variation. Dimensions and leaders share the secondary role's width and opacity. C02’s switch is the reusable component reference: track `30 × 18`, corner radius `9`, thumb radius `5.5`, edge inset `3.5`, with the primary line role. Preserve those proportions when scaling the component as a whole.
+GEO-01’s existing `1.0` primary width is an accepted anchor variation. Dimensions and leaders share the secondary role's width and opacity. INT-03’s switch is the reusable component reference: track `30 × 18`, corner radius `9`, thumb radius `5.5`, edge inset `3.5`, with the primary line role. Preserve those proportions when scaling the component as a whole.
 
 Assign patterned lines by meaning:
 
@@ -71,7 +71,7 @@ Draw a coincident segment once. Split subordinate geometry at the required bound
 
 Hatching describes a region, not a lighting effect. For every hatch, record the region’s boundary and its meaning: for example “square minus circle in this quadrant,” “selected interval,” or “unspecified material cut by this section.” Only claim a material such as concrete or steel when its representation is sourced and appropriate to the stated discipline/view.
 
-- **H1:** parallel lines at −45° in SVG screen coordinates, using the hatch role. Edge intercept pitch is `geometry.hatch.edgePitch`; perpendicular pitch is that value divided by `√2`. This preserves P00's spacing convention measured along horizontal/vertical edges.
+- **H1:** parallel lines at −45° in SVG screen coordinates, using the hatch role. Edge intercept pitch is `geometry.hatch.edgePitch`; perpendicular pitch is that value divided by `√2`. This preserves GEO-01's spacing convention measured along horizontal/vertical edges.
 - **H2:** the same pitch and weight at +45°, reserved for distinguishing an adjacent region. Use one angle and one pitch throughout a single region.
 - Clip each line analytically or with a unique SVG clip path to the declared region. Boundaries remain continuous; hatch endpoints terminate at them without extending beyond them. Do not invent a boundary to accommodate a convenient hatch tile.
 - For a cut region, exclude voids and openings. The same object keeps a consistent hatch in the same view. A generic 45° hatch does not identify material or prove a compliant section.

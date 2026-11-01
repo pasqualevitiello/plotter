@@ -53,35 +53,38 @@ export function NotFoundMotion({
 
   return (
     <div>
-      <div
-        className={`relative mx-auto w-full max-w-140 select-none ${styles.drawing}`}
-        data-live={(live && !reducedMotion) || undefined}
-        ref={drawing}
-      >
-        <div className={`pointer-events-none ${styles.original}`}>
-          <MissingDestinationBlueprint />
-        </div>
+      {/* Native size; narrow screens scroll sideways instead of scaling. */}
+      <div className="overflow-x-auto px-5 pt-8 pb-6">
         <div
-          className={`pointer-events-none absolute inset-0 ${styles.animation}`}
-          ref={animation}
+          className={`relative mx-auto w-[560px] select-none ${styles.drawing}`}
+          data-live={(live && !reducedMotion) || undefined}
+          ref={drawing}
         >
-          <MissingDestinationBlueprint animated />
-        </div>
-        {controls === "hero" && !reducedMotion && (
-          <Button
-            aria-label={paused ? "Resume illustration" : "Pause illustration"}
-            className="pointer-events-auto absolute right-0 bottom-0 rounded-full text-muted-foreground motion-reduce:hidden"
-            onClick={togglePlayback}
-            size="icon-sm"
-            variant="ghost"
+          <div className={`pointer-events-none ${styles.original}`}>
+            <MissingDestinationBlueprint />
+          </div>
+          <div
+            className={`pointer-events-none absolute inset-0 ${styles.animation}`}
+            ref={animation}
           >
-            {paused ? (
-              <PlayIcon aria-hidden="true" />
-            ) : (
-              <PauseIcon aria-hidden="true" />
-            )}
-          </Button>
-        )}
+            <MissingDestinationBlueprint animated />
+          </div>
+          {controls === "hero" && !reducedMotion && (
+            <Button
+              aria-label={paused ? "Resume illustration" : "Pause illustration"}
+              className="pointer-events-auto absolute right-0 bottom-0 rounded-full text-muted-foreground motion-reduce:hidden"
+              onClick={togglePlayback}
+              size="icon-sm"
+              variant="ghost"
+            >
+              {paused ? (
+                <PlayIcon aria-hidden="true" />
+              ) : (
+                <PauseIcon aria-hidden="true" />
+              )}
+            </Button>
+          )}
+        </div>
       </div>
       {controls === "preview" && (
         <div className="flex flex-wrap items-center justify-between gap-3 border-t px-4 py-3 sm:px-6">
