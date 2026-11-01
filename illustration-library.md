@@ -2,18 +2,13 @@
 
 Decided on 2026-11-01.
 
-## Browsing: sections and search, no category filter
+## Browsing: one ordered collection
 
-The 16-category filter mixed three questions: product area, subject, and drawing method. Only two of its categories match a job someone arrives with. A cleaner seven-category taxonomy was proposed and rejected for the same reason.
+The illustrations page shows one list: eight varied drawings first (GEO-01, INT-04, SRV-04, TIM-03, INT-09, MEC-01, CRF-03, TYP-03), then every other drawing by family and code.
 
-The illustrations page now has:
-
-- **01.1 Selected**: eight varied drawings that open the collection (GEO-01, INT-04, SRV-04, TIM-03, INT-09, MEC-01, CRF-03, TYP-03).
-- **01.2 Empty states** and **01.3 Agents**: the two groups that match a real job.
-- **01.4 More drawings**: everything else, in catalogue order.
-- **Search** over code, title, description, and category. The query is kept in `?q=`, and Escape clears it.
-
-The `category` field stays in the data. It defines the two sections and feeds search, but it is no longer shown in captions. Old `?category=Empty states` and `?category=Agents` links scroll to their section; other old category links show the full page.
+- The 16-category filter was dropped. It mixed product area, subject, and drawing method, and only two of its categories matched a job someone arrives with.
+- A seven-category taxonomy, then sections (Selected, Empty states, Agents, More) with search, were tried and rejected. With an intentional order, the extra navigation was not needed.
+- The `category` field now names a drawing’s code family and sets its place in the order. It is not shown as a filter or caption. Old `?category=` and `?q=` links show the full page.
 
 ## Retired near-duplicates
 

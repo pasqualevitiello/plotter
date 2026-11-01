@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { CossConcepts } from "@/components/plotter/coss-concepts";
-import {
-  type GallerySection,
-  IllustrationGallery,
-} from "@/components/plotter/illustration-gallery";
+import { IllustrationGallery } from "@/components/plotter/illustration-gallery";
 import {
   illustrations,
   retiredStudies,
 } from "@/components/plotter/illustrations";
-import { PageIntro } from "@/components/sheet";
+import { familyPrefix } from "@/components/plotter/study-types";
+import { PageIntro, SheetBar } from "@/components/sheet";
 import { SiteShell } from "@/components/site-shell";
 
-// A varied first look. Empty states and agents get their own sections, since
-// they match a job someone arrives with; everything else follows.
+// A varied first look, then every other drawing by family and code.
 const selected = [
   "primitives-reference",
   "particles-recombination",
@@ -24,37 +21,16 @@ const selected = [
   "craft-dovetail",
   "type-letter-strokes",
 ];
-const emptyStates = illustrations.filter(
-  (item) => item.category === "Empty states",
-);
-const agents = illustrations.filter((item) => item.category === "Agents");
-const sections: GallerySection[] = [
-  {
-    id: "selected",
-    label: "01.1 — Selected",
-    title: "Selected",
-    items: selected.flatMap((id) =>
-      illustrations.filter((item) => item.id === id),
+const families = Object.keys(familyPrefix);
+const ordered = [
+  ...selected.flatMap((id) => illustrations.filter((item) => item.id === id)),
+  ...illustrations
+    .filter((item) => !selected.includes(item.id))
+    .sort(
+      (a, b) =>
+        families.indexOf(a.category) - families.indexOf(b.category) ||
+        a.code.localeCompare(b.code),
     ),
-  },
-  {
-    id: "empty-states",
-    label: "01.2 — Empty states",
-    title: "Empty states",
-    items: emptyStates,
-  },
-  { id: "agents", label: "01.3 — Agents", title: "Agents", items: agents },
-  {
-    id: "more",
-    label: "01.4 — More drawings",
-    title: "More",
-    items: illustrations.filter(
-      (item) =>
-        !selected.includes(item.id) &&
-        !emptyStates.includes(item) &&
-        !agents.includes(item),
-    ),
-  },
 ];
 
 export const metadata: Metadata = { title: "Illustrations" };
@@ -62,14 +38,19 @@ export default function IllustrationsPage() {
   return (
     <SiteShell current="/illustrations">
       <PageIntro label="01 — Illustrations" title="Ideas, made visible.">
-        Start with a selection, jump to empty states or agents, or search by
-        shape or idea. Every drawing is shown at its native 560 × 440.
+        Construction studies of interfaces, systems, time, agents, and the
+        objects around them. Every drawing is shown at its native 560 × 440.
       </PageIntro>
       <section
-        aria-label="Collection"
+        aria-labelledby="illustrations-heading"
         className="scroll-mt-6"
         id="illustrations"
       >
+        <SheetBar
+          id="illustrations-heading"
+          label="01.1 — Collection"
+          meta={`${ordered.length} drawings · Scale 1:1`}
+        />
         <Suspense
           fallback={
             <p className="sheet-row sheet-cell text-muted-foreground">
@@ -77,7 +58,10 @@ export default function IllustrationsPage() {
             </p>
           }
         >
-          <IllustrationGallery retired={retiredStudies} sections={sections} />
+          <IllustrationGallery
+            illustrations={ordered}
+            retired={retiredStudies}
+          />
         </Suspense>
       </section>
       <CossConcepts />

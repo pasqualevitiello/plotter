@@ -28,7 +28,7 @@ export function CossConcepts() {
     >
       <SheetBar
         id="coss-concepts-heading"
-        label="01.5 — coss.com concepts"
+        label="01.2 — coss.com concepts"
         meta="Two studies of a shared interface"
       />
       <div className="sheet-row sheet-cols">
