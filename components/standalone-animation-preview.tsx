@@ -29,7 +29,7 @@ export function StandaloneAnimationPreview() {
 
   return (
     <iframe
-      className="h-180 w-full rounded-lg border"
+      className="h-180 w-full border"
       onLoad={(event) => syncFrameTheme(event.currentTarget)}
       ref={frameRef}
       sandbox="allow-scripts allow-same-origin"

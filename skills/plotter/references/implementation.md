@@ -50,7 +50,7 @@ Catalogue codes are a three-letter family prefix (`familyPrefix` in `components/
 
 Present catalogue art at native `560 × 440` dimensions. Narrow containers may scroll locally. Preserve grammar isolation behavior: focused marks retain their original appearance, and supplemental grid segments restore only portions hidden with a form. Keep hover, keyboard, and touch access to that behavior.
 
-Static drawings and animation timelines remain separate. MEC-05’s static and animated core faces share a hatch component; its carrier frames remain unhatched. Playback owns pause/resume, replay, static fallback, reduced motion, and visibility. Timeline edits preserve the chosen still unless redesign is requested. Current source owns exact timing; [historical feedback](history/direction.md) explains particular revisions.
+Static drawings and animation timelines remain separate. MEC-05’s static and animated core faces share a hatch component; its carrier frames remain unhatched. Playback owns pause/resume, static fallback, reduced motion, and visibility. On the website, looping drawings show no controls; they pause off-screen and fall back to the still drawing under reduced motion. Timeline edits preserve the chosen still unless redesign is requested. Current source owns exact timing; [historical feedback](history/direction.md) explains particular revisions.
 
 ## Portable delivery from the website
 

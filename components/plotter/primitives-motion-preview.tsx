@@ -1,16 +1,12 @@
 "use client";
 
-import { PauseIcon, PlayIcon } from "lucide-react";
 import { type ReactNode, useEffect, useRef, useState } from "react";
-import { Button } from "@/components/ui/button";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { PrimitivesMorph } from "./primitives-morph";
 import styles from "./primitives-motion.module.css";
 
 export function PrimitivesMotionPreview({ children }: { children: ReactNode }) {
   const drawing = useRef<HTMLDivElement>(null);
-  const [live, setLive] = useState(true);
-  const [paused, setPaused] = useState(false);
   const [inView, setInView] = useState(false);
   const reducedMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
 
@@ -24,50 +20,21 @@ export function PrimitivesMotionPreview({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <div>
-      {/* Native size; narrow screens scroll sideways instead of scaling. */}
-      <div className="overflow-x-auto px-5 pt-8 pb-6">
-        <div
-          className={`pointer-events-none relative mx-auto w-[560px] select-none ${styles.drawing}`}
-          data-live={(live && !reducedMotion) || undefined}
-          ref={drawing}
-        >
-          <div className={styles.original}>{children}</div>
-          {live && !reducedMotion && (
-            <PrimitivesMorph paused={paused || !inView} />
-          )}
+    // Native size; narrow screens scroll sideways instead of scaling.
+    <div className="overflow-x-auto px-5 pt-8 pb-6">
+      <div
+        className={`relative mx-auto w-[560px] select-none ${styles.drawing}`}
+        data-live={!reducedMotion || undefined}
+        ref={drawing}
+      >
+        <div className={`pointer-events-none ${styles.original}`}>
+          {children}
         </div>
-      </div>
-      <div className="flex flex-wrap items-center justify-between gap-3 border-t px-4 py-3 sm:px-6">
-        <p className="text-muted-foreground text-xs">Continuous loop</p>
-        <div className="flex items-center gap-1 motion-reduce:hidden">
-          <Button
-            onClick={() => {
-              if (live) setPaused((value) => !value);
-              else {
-                setLive(true);
-                setPaused(false);
-              }
-            }}
-            size="sm"
-            variant="ghost"
-          >
-            {live && !paused ? (
-              <PauseIcon aria-hidden="true" />
-            ) : (
-              <PlayIcon aria-hidden="true" />
-            )}
-            {live ? (paused ? "Resume" : "Pause") : "Play animation"}
-          </Button>
-          {live && (
-            <Button onClick={() => setLive(false)} size="sm" variant="ghost">
-              Show static
-            </Button>
-          )}
-        </div>
-        <p className="hidden text-muted-foreground text-xs motion-reduce:block">
-          Reduced motion · Static drawing
-        </p>
+        {!reducedMotion && (
+          <div className="pointer-events-none">
+            <PrimitivesMorph paused={!inView} />
+          </div>
+        )}
       </div>
     </div>
   );

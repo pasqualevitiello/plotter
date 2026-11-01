@@ -1,7 +1,8 @@
 "use client";
 
-import { CheckIcon, CopyIcon, DownloadIcon } from "lucide-react";
+import { CheckIcon, CopyIcon } from "lucide-react";
 import { type ReactNode, useEffect, useRef, useState } from "react";
+import { SheetArt } from "@/components/sheet";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsPanel, TabsTab } from "@/components/ui/tabs";
 import {
@@ -11,7 +12,8 @@ import {
 } from "./plotter-usage-content";
 
 function Prompt({ text }: { text: string }) {
-  const [status, setStatus] = useState<"idle" | "copied" | "failed">("idle");
+  const [status, setStatus] = useState<"idle" | "copied" | "selected">("idle");
+  const body = useRef<HTMLParagraphElement>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(
     () => () => {
@@ -27,34 +29,99 @@ function Prompt({ text }: { text: string }) {
         throw new Error("Clipboard unavailable");
       await navigator.clipboard.writeText(text);
       setStatus("copied");
-      timer.current = setTimeout(() => setStatus("idle"), 2000);
+      timer.current = setTimeout(() => setStatus("idle"), 1500);
     } catch {
-      setStatus("failed");
+      // Without clipboard access, select the text so it can be copied by hand.
+      if (body.current) window.getSelection()?.selectAllChildren(body.current);
+      setStatus("selected");
     }
   }
 
   return (
-    <div className="flex flex-col gap-4 rounded-lg border p-5">
-      <p className="whitespace-pre-wrap text-pretty text-sm leading-relaxed">
-        {text}
-      </p>
-      <div className="flex flex-wrap items-center gap-3">
-        <Button onClick={copy} size="sm" variant="outline">
+    <div className="flex flex-col gap-2">
+      <div className="flex items-center justify-between gap-3">
+        <span className="mono-label">Brief</span>
+        <Button
+          aria-label={status === "copied" ? "Copied" : "Copy brief"}
+          onClick={copy}
+          size="icon-sm"
+          title="Copy brief"
+          variant="ghost"
+        >
           {status === "copied" ? (
             <CheckIcon aria-hidden="true" />
           ) : (
             <CopyIcon aria-hidden="true" />
           )}
-          {status === "copied" ? "Copied" : "Copy prompt"}
         </Button>
-        <span aria-live="polite" className="text-muted-foreground text-xs">
-          {status === "failed"
-            ? "Select the prompt text and copy it manually."
-            : status === "copied"
-              ? "Ready to paste into your agent."
-              : "Adapt the subject and placement. In Claude Code, invoke /plotter."}
-        </span>
       </div>
+      <p
+        className="border-s-2 ps-4 leading-relaxed text-pretty whitespace-pre-wrap"
+        ref={body}
+      >
+        {text}
+      </p>
+      <span aria-live="polite" className="sr-only">
+        {status === "copied"
+          ? "Brief copied."
+          : status === "selected"
+            ? "Brief selected. Copy it with your keyboard."
+            : ""}
+      </span>
+    </div>
+  );
+}
+
+function Example({
+  code,
+  title,
+  note,
+  label,
+  children,
+}: {
+  code: string;
+  title: string;
+  note: string;
+  label?: string;
+  children: ReactNode;
+}) {
+  return (
+    <figure className="flex h-full min-w-0 flex-col">
+      <div className="flex flex-1 items-center">
+        <div className="w-full">
+          {label ? <SheetArt label={label}>{children}</SheetArt> : children}
+        </div>
+      </div>
+      <figcaption>
+        <div className="sheet-caption">
+          <span className="mono-label">{code}</span>
+          <span>{title}</span>
+        </div>
+        <p className="sheet-caption-description">{note}</p>
+      </figcaption>
+    </figure>
+  );
+}
+
+function Brief({
+  title,
+  intro,
+  prompt,
+  footer,
+}: {
+  title: string;
+  intro: ReactNode;
+  prompt: string;
+  footer: ReactNode;
+}) {
+  return (
+    <div className="sheet-cell flex flex-col gap-4">
+      <h3 className="text-2xl leading-tight">{title}</h3>
+      <p className="max-w-[52ch] text-pretty text-muted-foreground">{intro}</p>
+      <div className="mt-2">
+        <Prompt text={prompt} />
+      </div>
+      <p className="mt-auto pt-4 text-sm text-muted-foreground">{footer}</p>
     </div>
   );
 }
@@ -67,151 +134,93 @@ export function PlotterPrompts({
   animation: ReactNode;
 }) {
   return (
-    <div className="flex scroll-mt-20 flex-col gap-6" id="plotter-outputs">
-      <Tabs defaultValue="drawing" className="gap-6">
-        <TabsList aria-label="Choose a Plotter workflow">
-          <TabsTab value="drawing">Draw an illustration</TabsTab>
-          <TabsTab value="animation">Animate a drawing</TabsTab>
-        </TabsList>
-        <TabsPanel value="drawing">
-          <div className="grid min-w-0 gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] xl:items-start">
-            <div className="flex min-w-0 flex-col gap-4">
-              <h3 className="font-medium text-lg">
-                Start with one relationship.
-              </h3>
-              <p className="text-pretty text-muted-foreground text-sm">
-                Give your agent a subject, a placement, and an output format.
-                Plotter supplies the construction references and drawing
-                workflow.
-              </p>
-              <Prompt text={drawingPrompt} />
-              <p className="text-muted-foreground text-xs">
-                Looking for a direction? Browse the{" "}
-                <a
-                  className="underline underline-offset-4"
-                  href="/illustrations"
-                >
-                  catalogue
-                </a>
-                , then use the{" "}
-                <a className="underline underline-offset-4" href="/grammar">
-                  visual grammar
-                </a>{" "}
-                to choose supporting marks.
-              </p>
-            </div>
-            <figure className="flex min-w-0 flex-col gap-4">
-              <div
-                aria-label="Agent registration, editable SVG example"
-                className="overflow-x-auto rounded-lg border p-4 outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                role="img"
-                // biome-ignore lint/a11y/noNoninteractiveTabindex: Native-size drawings need keyboard scrolling on narrow screens.
-                tabIndex={0}
+    <Tabs
+      className="scroll-mt-6 gap-0"
+      defaultValue="drawing"
+      id="plotter-outputs"
+    >
+      <div className="sheet-bar">
+        <h3 className="mono-label text-foreground">
+          Then choose a workflow and copy a brief
+        </h3>
+        <div className="items-end py-0!">
+          <TabsList aria-label="Choose a Plotter workflow" variant="underline">
+            <TabsTab value="drawing">Draw an illustration</TabsTab>
+            <TabsTab value="animation">Animate a drawing</TabsTab>
+          </TabsList>
+        </div>
+      </div>
+      <TabsPanel className="sheet-row sheet-cols" value="drawing">
+        <Brief
+          footer={
+            <>
+              Looking for a direction? Browse the{" "}
+              <a className="underline underline-offset-4" href="/illustrations">
+                illustrations
+              </a>
+              , then use the{" "}
+              <a className="underline underline-offset-4" href="/grammar">
+                visual grammar
+              </a>{" "}
+              to choose supporting marks.
+            </>
+          }
+          intro={
+            <>
+              Give your agent a subject, a placement, and an output format.
+              Plotter supplies the construction references and drawing workflow.
+              In Codex, start the brief with{" "}
+              <code className="text-foreground">$plotter</code> instead.
+            </>
+          }
+          prompt={drawingPrompt}
+          title="Start with one relationship."
+        />
+        <Example
+          code="AGT-01"
+          label="AGT-01: Agent registration, editable SVG example"
+          note="The kind of editable SVG this brief returns: paths and labels you can change."
+          title="Agent registration"
+        >
+          {drawing}
+        </Example>
+      </TabsPanel>
+      <TabsPanel className="sheet-row sheet-cols" value="animation">
+        <Brief
+          footer={
+            <>
+              One skill, a separate motion workflow. See more{" "}
+              <a className="underline underline-offset-4" href="/animations">
+                animations
+              </a>
+              .
+            </>
+          }
+          intro={
+            <>
+              Start from an editable still.{" "}
+              <a
+                className="text-foreground underline underline-offset-4"
+                download="production-chain.svg"
+                href={plotterDownload("production-chain.svg")}
               >
-                <div className="mx-auto w-[560px]">{drawing}</div>
-              </div>
-              <figcaption className="flex flex-wrap items-start justify-between gap-4">
-                <div className="flex flex-col gap-1">
-                  <p className="font-medium text-sm">
-                    Agent registration{" "}
-                    <span className="ms-2 font-mono text-muted-foreground text-xs">
-                      AGT-01
-                    </span>
-                  </p>
-                  <p className="text-muted-foreground text-xs">
-                    Editable paths and labels · Self-contained SVG
-                  </p>
-                </div>
-                <Button
-                  render={
-                    <a
-                      download="agent-registration.svg"
-                      href={plotterDownload("agent-registration.svg")}
-                    />
-                  }
-                  size="sm"
-                  variant="outline"
-                >
-                  <DownloadIcon aria-hidden="true" />
-                  Download SVG
-                </Button>
-              </figcaption>
-            </figure>
-          </div>
-        </TabsPanel>
-        <TabsPanel value="animation">
-          <div className="grid min-w-0 gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] xl:items-start">
-            <div className="flex min-w-0 flex-col gap-4">
-              <h3 className="font-medium text-lg">
-                Give the drawing a reason to move.
-              </h3>
-              <p className="text-pretty text-muted-foreground text-sm">
-                Start from an editable still.{" "}
-                <a
-                  className="underline underline-offset-4"
-                  download="production-chain.svg"
-                  href={plotterDownload("production-chain.svg")}
-                >
-                  Download the assembly-line SVG
-                </a>{" "}
-                and attach it with this prompt.
-              </p>
-              <Prompt text={animationPrompt} />
-              <p className="text-muted-foreground text-xs">
-                One skill, a separate motion workflow. Explore more{" "}
-                <a className="underline underline-offset-4" href="/animations">
-                  animation examples
-                </a>
-                .
-              </p>
-            </div>
-            <figure className="flex min-w-0 flex-col gap-4">
-              <div
-                aria-label="Assembly line, editable animation example"
-                className="overflow-x-auto rounded-lg border outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                role="region"
-                // biome-ignore lint/a11y/noNoninteractiveTabindex: Native-size drawings need keyboard scrolling on narrow screens.
-                tabIndex={0}
-              >
-                <div className="min-w-0">{animation}</div>
-              </div>
-              <figcaption className="flex flex-wrap items-start justify-between gap-4">
-                <div className="flex flex-col gap-1">
-                  <p className="font-medium text-sm">
-                    An assembly line{" "}
-                    <span className="ms-2 font-mono text-muted-foreground text-xs">
-                      MEC-05
-                    </span>
-                  </p>
-                  <p className="text-muted-foreground text-xs">
-                    Editable SVG + player · Open the HTML in a browser
-                  </p>
-                </div>
-                <Button
-                  render={
-                    <a
-                      download="assembly-line.html"
-                      href={plotterDownload("assembly-line.html")}
-                    />
-                  }
-                  size="sm"
-                  variant="outline"
-                >
-                  <DownloadIcon aria-hidden="true" />
-                  Download HTML
-                </Button>
-              </figcaption>
-            </figure>
-          </div>
-        </TabsPanel>
-      </Tabs>
-      <p className="text-muted-foreground text-xs sm:hidden">
-        Scroll sideways to see the full drawing.
-      </p>
-      <p className="text-muted-foreground text-xs">
-        These are editable examples to study and adapt. Downloads need no coss
-        runtime. Labels use Cal Sans when available, with a sans-serif fallback.
-      </p>
-    </div>
+                Download the assembly-line SVG
+              </a>{" "}
+              and attach it with this brief. In Codex, start with{" "}
+              <code className="text-foreground">$plotter</code> instead.
+            </>
+          }
+          prompt={animationPrompt}
+          title="Give the drawing a reason to move."
+        />
+        <Example
+          code="MEC-05"
+          note="The kind of result this brief returns: editable SVG with its own player."
+          title="An assembly line"
+        >
+          {animation}
+        </Example>
+      </TabsPanel>
+    </Tabs>
   );
 }

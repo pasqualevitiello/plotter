@@ -1,21 +1,13 @@
 "use client";
 
-import { PauseIcon, PlayIcon, RotateCcwIcon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { Button } from "@/components/ui/button";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { MissingDestinationBlueprint } from "./missing-destination";
 import styles from "./not-found-motion.module.css";
 
-export function NotFoundMotion({
-  controls = "preview",
-}: {
-  controls?: "hero" | "preview";
-}) {
+export function NotFoundMotion() {
   const drawing = useRef<HTMLDivElement>(null);
   const animation = useRef<HTMLDivElement>(null);
-  const [live, setLive] = useState(true);
-  const [paused, setPaused] = useState(false);
   const [inView, setInView] = useState(false);
   const reducedMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
 
@@ -31,90 +23,28 @@ export function NotFoundMotion({
   useEffect(() => {
     const svg = animation.current?.querySelector("svg");
     if (!svg) return;
-    if (!live || reducedMotion || paused || !inView) svg.pauseAnimations();
+    if (reducedMotion || !inView) svg.pauseAnimations();
     else svg.unpauseAnimations();
-  }, [live, reducedMotion, paused, inView]);
-
-  const togglePlayback = () => {
-    if (live) setPaused((value) => !value);
-    else {
-      setLive(true);
-      setPaused(false);
-    }
-  };
-
-  const replay = () => {
-    const svg = animation.current?.querySelector("svg");
-    svg?.setCurrentTime(0);
-    if (inView && !reducedMotion) svg?.unpauseAnimations();
-    setLive(true);
-    setPaused(false);
-  };
+  }, [reducedMotion, inView]);
 
   return (
-    <div>
-      {/* Native size; narrow screens scroll sideways instead of scaling. */}
-      <div className="overflow-x-auto px-5 pt-8 pb-6">
+    // Native size; narrow screens scroll sideways instead of scaling.
+    <div className="overflow-x-auto px-5 pt-8 pb-6">
+      <div
+        className={`relative mx-auto w-[560px] select-none ${styles.drawing}`}
+        data-live={!reducedMotion || undefined}
+        ref={drawing}
+      >
+        <div className={`pointer-events-none ${styles.original}`}>
+          <MissingDestinationBlueprint />
+        </div>
         <div
-          className={`relative mx-auto w-[560px] select-none ${styles.drawing}`}
-          data-live={(live && !reducedMotion) || undefined}
-          ref={drawing}
+          className={`pointer-events-none absolute inset-0 ${styles.animation}`}
+          ref={animation}
         >
-          <div className={`pointer-events-none ${styles.original}`}>
-            <MissingDestinationBlueprint />
-          </div>
-          <div
-            className={`pointer-events-none absolute inset-0 ${styles.animation}`}
-            ref={animation}
-          >
-            <MissingDestinationBlueprint animated />
-          </div>
-          {controls === "hero" && !reducedMotion && (
-            <Button
-              aria-label={paused ? "Resume illustration" : "Pause illustration"}
-              className="pointer-events-auto absolute right-0 bottom-0 rounded-full text-muted-foreground motion-reduce:hidden"
-              onClick={togglePlayback}
-              size="icon-sm"
-              variant="ghost"
-            >
-              {paused ? (
-                <PlayIcon aria-hidden="true" />
-              ) : (
-                <PauseIcon aria-hidden="true" />
-              )}
-            </Button>
-          )}
+          <MissingDestinationBlueprint animated />
         </div>
       </div>
-      {controls === "preview" && (
-        <div className="flex flex-wrap items-center justify-between gap-3 border-t px-4 py-3 sm:px-6">
-          <p className="text-muted-foreground text-xs">
-            A request approaches · The gap remains
-          </p>
-          <div className="flex flex-wrap items-center gap-1 motion-reduce:hidden">
-            <Button onClick={togglePlayback} size="sm" variant="ghost">
-              {live && !paused ? (
-                <PauseIcon aria-hidden="true" />
-              ) : (
-                <PlayIcon aria-hidden="true" />
-              )}
-              {live ? (paused ? "Resume" : "Pause") : "Play animation"}
-            </Button>
-            <Button onClick={replay} size="sm" variant="ghost">
-              <RotateCcwIcon aria-hidden="true" />
-              Replay
-            </Button>
-            {live && (
-              <Button onClick={() => setLive(false)} size="sm" variant="ghost">
-                Show static
-              </Button>
-            )}
-          </div>
-          <p className="hidden text-muted-foreground text-xs motion-reduce:block">
-            Reduced motion · Static drawing
-          </p>
-        </div>
-      )}
     </div>
   );
 }

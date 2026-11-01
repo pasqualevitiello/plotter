@@ -28,7 +28,7 @@ const studies: {
 }[] = [
   {
     id: "primitives-animation",
-    label: "GEO-01 · Geometry",
+    label: "GEO-01",
     title: "Changing geometry",
     description:
       "Avatar, pill, switch, button, card, slider. Six familiar UI elements, one continuous loop, with measurements that follow the geometry.",
@@ -40,19 +40,19 @@ const studies: {
   },
   {
     id: "particles-animation",
-    label: "INT-04 · Interfaces",
+    label: "INT-04",
     title: "Three assemblies",
     description:
       "Workspace, booking, activity. Three sets of independent elements assemble into three different interfaces in a repeating sequence.",
     preview: (
-      <ParticlesMotion controls="preview">
+      <ParticlesMotion>
         <ParticlesBlueprint />
       </ParticlesMotion>
     ),
   },
   {
     id: "not-found-animation",
-    label: "EMP-05 · Empty states",
+    label: "EMP-05",
     title: "An unreachable destination",
     description:
       "A request follows a curved route, reaches the closed end, and returns. The destination stays absent, one unit beyond its reach.",
@@ -60,45 +60,36 @@ const studies: {
   },
   {
     id: "production-chain-animation",
-    label: "MEC-05 · Mechanisms",
+    label: "MEC-05",
     title: "An assembly line in motion",
     description:
       "A core lowers into its carrier. The line advances, the completed part moves on, and the next assembly begins.",
     preview: (
-      <EngineeringMotionPreview
-        animated={<ProductionChainMotionDrawing />}
-        caption="Load · Seat · Advance"
-      >
+      <EngineeringMotionPreview animated={<ProductionChainMotionDrawing />}>
         <ProductionChainStudy />
       </EngineeringMotionPreview>
     ),
   },
   {
     id: "newtons-cradle-animation",
-    label: "OBJ-05 · Objects",
+    label: "OBJ-05",
     title: "One swing, passed along",
     description:
       "One end swings in and the other swings out. Equal lengths and fixed pivots carry the motion through a continuous rhythm.",
     preview: (
-      <EngineeringMotionPreview
-        animated={<NewtonsCradleMotionDrawing />}
-        caption="One swing · Alternating ends"
-      >
+      <EngineeringMotionPreview animated={<NewtonsCradleMotionDrawing />}>
         <NewtonsCradleStudy />
       </EngineeringMotionPreview>
     ),
   },
   {
     id: "orbits-animation",
-    label: "Motion only · Nature",
+    label: "Motion only",
     title: "Three orbits, three speeds",
     description:
       "Three planets leave one line together. The inner one circles four times for every turn of the outer one, and all three meet again at the start.",
     preview: (
-      <EngineeringMotionPreview
-        animated={<OrbitsMotionDrawing />}
-        caption="Inner · Middle · Outer"
-      >
+      <EngineeringMotionPreview animated={<OrbitsMotionDrawing />}>
         <OrbitsStudy />
       </EngineeringMotionPreview>
     ),
@@ -111,7 +102,7 @@ export default function AnimationsPage() {
     <SiteShell current="/animations">
       <PageIntro label="02 — Animations" title="An idea, in motion.">
         Watch the relationships unfold. Six animated studies keep their original
-        geometry, with playback controls and a quiet static alternative.
+        geometry, and each becomes a still drawing when reduced motion is on.
       </PageIntro>
       <section
         aria-labelledby="animations-heading"

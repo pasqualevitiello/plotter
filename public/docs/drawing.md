@@ -7,13 +7,13 @@ Make one construction relationship carry the idea: alignment, proportion, assemb
 A useful brief names the subject, placement, output size, relationship, and deliverable. For an existing illustration, supply its editable source and say which parts should change.
 
 ```text
-$plotter Illustrate fragments becoming one registered record.
+/plotter Illustrate fragments becoming one registered record.
 Use a flat 560 × 440 composition with transparent forms.
 Make the connection between the fragments and the assembled record clear.
 Deliver editable SVG plus a resolved standalone SVG.
 ```
 
-Use `/plotter` in Claude Code. For critique, ask for findings and proposed corrections; editing is a separate instruction.
+In Codex, start with `$plotter` instead. For critique, ask for findings and proposed corrections; editing is a separate instruction.
 
 ## Choose a construction reference
 

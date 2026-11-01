@@ -9,14 +9,14 @@ For a new subject, finish the [drawing](/docs/drawing) first. For an existing on
 Choose a static fallback that explains the subject. The first frame of the timeline may not be the right still.
 
 ```text
-$plotter Animate this drawing so the selected core seats in the carrier.
+/plotter Animate this drawing so the selected core seats in the carrier.
 Preserve the static composition and transparent forms.
 Keep the hatching attached to the core, with one stroke at contact.
 Include pause/resume, replay, a static mode, and a reduced-motion still.
 Deliver editable animation HTML with its required local resources.
 ```
 
-Use `/plotter` in Claude Code.
+In Codex, start with `$plotter` instead.
 
 ## Describe the change
 

@@ -12,27 +12,27 @@ The canonical source is `skills/plotter` in the private `pasqualevitiello/plotte
 
 | Agent       | Personal installation      | Start a request |
 | ----------- | -------------------------- | --------------- |
-| Codex       | `~/.codex/skills/plotter`  | `$plotter`      |
 | Claude Code | `~/.claude/skills/plotter` | `/plotter`      |
+| Codex       | `~/.codex/skills/plotter`  | `$plotter`      |
 
-Place the complete extracted folder at the destination for your agent. The entrypoint should be directly at `~/.codex/skills/plotter/SKILL.md` or `~/.claude/skills/plotter/SKILL.md`, with no second nested `plotter` folder. If the agent is already open, start a new session so it can discover the installation.
+Place the complete extracted folder at the destination for your agent. The entrypoint should be directly at `~/.claude/skills/plotter/SKILL.md` or `~/.codex/skills/plotter/SKILL.md`, with no second nested `plotter` folder. If the agent is already open, start a new session so it can discover the installation.
 
 For an update, replace the installed package as a complete folder. Keep your own drawings and custom overrides outside it so a package update does not replace your work.
 
 ## Make a first request
 
-In Codex:
-
-```text
-$plotter Draw a 20-minute appointment between two 5-minute buffers.
-Deliver an editable 560 × 440 SVG and a resolved static export.
-Keep the forms transparent and make the interval proportions visible.
-```
-
 In Claude Code:
 
 ```text
 /plotter Draw a 20-minute appointment between two 5-minute buffers.
+Deliver an editable 560 × 440 SVG and a resolved static export.
+Keep the forms transparent and make the interval proportions visible.
+```
+
+In Codex:
+
+```text
+$plotter Draw a 20-minute appointment between two 5-minute buffers.
 Deliver an editable 560 × 440 SVG and a resolved static export.
 Keep the forms transparent and make the interval proportions visible.
 ```

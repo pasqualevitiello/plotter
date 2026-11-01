@@ -1,5 +1,6 @@
 "use client";
 
+import { CheckIcon, ChevronDownIcon, CopyIcon } from "lucide-react";
 import {
   type CSSProperties,
   type ReactNode,
@@ -9,6 +10,11 @@ import {
   useState,
 } from "react";
 import { Button } from "@/components/ui/button";
+import {
+  Collapsible,
+  CollapsiblePanel,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import standard from "../../skills/plotter/assets/foundation/standard.json";
 
 const controls = [
@@ -78,12 +84,12 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
     >
       <div className="mb-8 flex max-w-2xl flex-col gap-3">
         <h2
-          className="font-heading font-medium text-2xl [font-variation-settings:'GEOM'_50]"
+          className="font-heading text-2xl font-medium [font-variation-settings:'GEOM'_50]"
           id="plotter-tokens-heading"
         >
           Make it fit your page
         </h2>
-        <p className="text-pretty text-muted-foreground text-sm">
+        <p className="text-sm text-pretty text-muted-foreground">
           Adjust ink, stroke widths, and opacity without changing the drawing.
           Try the shared tokens on MEC-05, then copy the CSS to a wrapper around
           your inline SVG.
@@ -97,13 +103,13 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
               <div className="flex flex-col gap-2" key={token}>
                 <div className="flex items-baseline justify-between gap-4">
                   <label
-                    className="font-medium text-sm"
+                    className="text-sm font-medium"
                     htmlFor={`${id}-${token}`}
                   >
                     {label}
                   </label>
                   <output
-                    className="font-mono text-muted-foreground text-xs tabular-nums"
+                    className="font-mono text-xs text-muted-foreground tabular-nums"
                     htmlFor={`${id}-${token}`}
                   >
                     {values[token].toFixed(2)}
@@ -128,7 +134,7 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
                   value={values[token]}
                 />
                 <p
-                  className="text-muted-foreground text-xs"
+                  className="text-xs text-muted-foreground"
                   id={`${id}-${token}-hint`}
                 >
                   {hint}
@@ -140,7 +146,7 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
           <div className="flex flex-col gap-2">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <label
-                className="text-muted-foreground text-xs"
+                className="text-xs text-muted-foreground"
                 htmlFor={`${id}-css`}
               >
                 CSS for your inline drawing
@@ -157,12 +163,17 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
                   Reset
                 </Button>
                 <Button onClick={copyCss} size="sm" variant="outline">
-                  {copyState === "copied" ? "Copied" : "Copy CSS"}
+                  {copyState === "copied" ? (
+                    <CheckIcon aria-hidden="true" />
+                  ) : (
+                    <CopyIcon aria-hidden="true" />
+                  )}
+                  Copy CSS
                 </Button>
               </div>
             </div>
             <textarea
-              className="w-full resize-none rounded-lg border bg-transparent p-4 font-mono text-xs leading-6 outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="w-full resize-none border bg-transparent p-4 font-mono text-xs leading-6 outline-none focus-visible:ring-2 focus-visible:ring-ring"
               id={`${id}-css`}
               readOnly
               ref={cssRef}
@@ -170,23 +181,23 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
               spellCheck={false}
               value={css}
             />
-            <p
-              aria-live="polite"
-              className="min-h-4 text-muted-foreground text-xs"
-            >
-              {copyState === "manual"
-                ? "Clipboard unavailable. The CSS is selected; copy it manually."
-                : copyState === "copied"
-                  ? "CSS copied to clipboard."
-                  : "The starting values come from Plotter’s shared standard."}
+            <p className="text-xs text-muted-foreground">
+              The starting values come from Plotter’s shared standard.
             </p>
+            <span aria-live="polite" className="sr-only">
+              {copyState === "manual"
+                ? "Clipboard unavailable. The CSS is selected; copy it with your keyboard."
+                : copyState === "copied"
+                  ? "CSS copied."
+                  : ""}
+            </span>
           </div>
         </div>
 
         <figure className="min-w-0">
           <div
             aria-label="Assembly line with adjustable drawing tokens"
-            className="overflow-x-auto rounded-lg border p-4 outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="overflow-x-auto border p-4 outline-none focus-visible:ring-2 focus-visible:ring-ring"
             role="img"
             style={previewStyle}
             // biome-ignore lint/a11y/noNoninteractiveTabindex: Native-size drawings need keyboard scrolling on narrow screens.
@@ -196,99 +207,103 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
               {children}
             </div>
           </div>
-          <figcaption className="mt-3 text-muted-foreground text-xs">
+          <figcaption className="mt-3 text-xs text-muted-foreground">
             MEC-05 · Same geometry, adjustable linework. Scroll sideways on
             narrow screens.
           </figcaption>
         </figure>
       </div>
 
-      <details className="mt-8 rounded-lg border p-4 sm:p-5">
-        <summary className="cursor-pointer font-medium text-sm outline-offset-4 focus-visible:outline-2 focus-visible:outline-ring">
+      <Collapsible className="mt-8 border px-4 py-1 sm:px-5">
+        <CollapsibleTrigger className="inline-flex min-h-10 items-center gap-2 text-sm font-medium [&_svg]:transition-transform data-panel-open:[&_svg]:rotate-180">
           All supported tokens and how to use them
-        </summary>
-        <div className="mt-5 grid min-w-0 gap-6 xl:grid-cols-2 xl:gap-10">
-          <div className="min-w-0 overflow-x-auto">
-            <table className="w-full text-start text-xs">
-              <caption className="sr-only">Plotter token defaults</caption>
-              <thead className="border-b text-muted-foreground">
-                <tr>
-                  <th className="pb-3 text-start font-medium" scope="col">
-                    Token
-                  </th>
-                  <th className="pb-3 text-end font-medium" scope="col">
-                    Default
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y">
-                <tr>
-                  <td className="py-2.5 pe-4 font-mono">--plotter-ink</td>
-                  <td className="py-2.5 text-end font-mono">currentColor</td>
-                </tr>
-                {Object.entries(standard.tokens).map(([token, value]) => (
-                  <tr key={token}>
-                    <td className="py-2.5 pe-4 font-mono">{token}</td>
-                    <td className="py-2.5 text-end font-mono tabular-nums">
-                      {value}
-                    </td>
+          <ChevronDownIcon aria-hidden="true" className="size-4" />
+        </CollapsibleTrigger>
+        <CollapsiblePanel>
+          <div className="mt-3 mb-4 grid min-w-0 gap-6 xl:grid-cols-2 xl:gap-10">
+            <div className="min-w-0 overflow-x-auto">
+              <table className="w-full text-start text-xs">
+                <caption className="sr-only">Plotter token defaults</caption>
+                <thead className="border-b text-muted-foreground">
+                  <tr>
+                    <th className="pb-3 text-start font-medium" scope="col">
+                      Token
+                    </th>
+                    <th className="pb-3 text-end font-medium" scope="col">
+                      Default
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="divide-y">
+                  <tr>
+                    <td className="py-2.5 pe-4 font-mono">--plotter-ink</td>
+                    <td className="py-2.5 text-end font-mono">currentColor</td>
+                  </tr>
+                  {Object.entries(standard.tokens).map(([token, value]) => (
+                    <tr key={token}>
+                      <td className="py-2.5 pe-4 font-mono">{token}</td>
+                      <td className="py-2.5 text-end font-mono tabular-nums">
+                        {value}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="flex min-w-0 flex-col gap-4 text-sm text-pretty text-muted-foreground">
+              <p>
+                Ink accepts a CSS color. Stroke widths are non-negative,
+                unitless SVG values; opacity ranges from 0 to 1. Preserve the
+                relative emphasis of forms, guides, and hatching.
+              </p>
+              <p>
+                These variables apply to inline SVG with the packaged role
+                stylesheet, a <code>data-plotter</code> root, and named{" "}
+                <code>data-plotter-role</code> marks. In this catalogue, AGT-01
+                and MEC-05 use that foundation. Other drawings keep their
+                existing styles. CSS on a page cannot reach into an SVG loaded
+                as an image.
+              </p>
+              <p>
+                Start with{" "}
+                <code className="break-all">
+                  assets/examples/registration.svg
+                </code>{" "}
+                in the skill ZIP. It already embeds the role stylesheet. Paste
+                its SVG markup inside your <code>.illustration</code> wrapper.
+                To inherit your page’s ink, remove that source SVG’s fixed{" "}
+                <code>color</code> style, or set <code>--plotter-ink</code> to
+                an explicit theme color such as <code>var(--foreground)</code>.
+              </p>
+              <p>
+                Dash patterns, hatch spacing, and arrow geometry express
+                meaning. They belong to the shared standard and helpers, rather
+                than CSS customization. See the{" "}
+                <a
+                  className="text-foreground underline underline-offset-4 hover:text-muted-foreground"
+                  href="/grammar"
+                >
+                  visual grammar
+                </a>{" "}
+                to choose the right mark.
+              </p>
+              <p>
+                For a resolved SVG export, pass your choices to the packaged
+                exporter with <code>--ink</code> and{" "}
+                <code className="break-all">{`--token=--plotter-opacity-guide=${standard.tokens["--plotter-opacity-guide"]}`}</code>
+                . It cannot read a detached page’s CSS. The{" "}
+                <a
+                  className="text-foreground underline underline-offset-4 hover:text-muted-foreground"
+                  href="/docs#plotter-outputs"
+                >
+                  downloadable SVGs
+                </a>{" "}
+                already contain resolved appearance values.
+              </p>
+            </div>
           </div>
-          <div className="flex min-w-0 flex-col gap-4 text-pretty text-muted-foreground text-sm">
-            <p>
-              Ink accepts a CSS color. Stroke widths are non-negative, unitless
-              SVG values; opacity ranges from 0 to 1. Preserve the relative
-              emphasis of forms, guides, and hatching.
-            </p>
-            <p>
-              These variables apply to inline SVG with the packaged role
-              stylesheet, a <code>data-plotter</code> root, and named{" "}
-              <code>data-plotter-role</code> marks. In this catalogue, AGT-01
-              and MEC-05 use that foundation. Other drawings keep their existing
-              styles. CSS on a page cannot reach into an SVG loaded as an image.
-            </p>
-            <p>
-              Start with{" "}
-              <code className="break-all">
-                assets/examples/registration.svg
-              </code>{" "}
-              in the skill ZIP. It already embeds the role stylesheet. Paste its
-              SVG markup inside your <code>.illustration</code> wrapper. To
-              inherit your page’s ink, remove that source SVG’s fixed{" "}
-              <code>color</code> style, or set <code>--plotter-ink</code> to an
-              explicit theme color such as <code>var(--foreground)</code>.
-            </p>
-            <p>
-              Dash patterns, hatch spacing, and arrow geometry express meaning.
-              They belong to the shared standard and helpers, rather than CSS
-              customization. See the{" "}
-              <a
-                className="text-foreground underline underline-offset-4 hover:text-muted-foreground"
-                href="/grammar"
-              >
-                visual grammar
-              </a>{" "}
-              to choose the right mark.
-            </p>
-            <p>
-              For a resolved SVG export, pass your choices to the packaged
-              exporter with <code>--ink</code> and{" "}
-              <code className="break-all">{`--token=--plotter-opacity-guide=${standard.tokens["--plotter-opacity-guide"]}`}</code>
-              . It cannot read a detached page’s CSS. The{" "}
-              <a
-                className="text-foreground underline underline-offset-4 hover:text-muted-foreground"
-                href="/docs#plotter-outputs"
-              >
-                downloadable SVGs
-              </a>{" "}
-              already contain resolved appearance values.
-            </p>
-          </div>
-        </div>
-      </details>
+        </CollapsiblePanel>
+      </Collapsible>
     </section>
   );
 }

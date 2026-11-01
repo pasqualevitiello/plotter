@@ -1,6 +1,11 @@
-import { DownloadIcon, FolderIcon } from "lucide-react";
+import { ChevronDownIcon, DownloadIcon, FolderIcon } from "lucide-react";
 import { SheetBar } from "@/components/sheet";
 import { Button } from "@/components/ui/button";
+import {
+  Collapsible,
+  CollapsiblePanel,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import { EngineeringMotionPreview } from "./engineering-motion-preview";
 import { ProductionChainStudy } from "./engineering-studies";
 import { expandedStudies } from "./expanded-studies";
@@ -28,15 +33,15 @@ export function PlotterUsage() {
       />
       <div className="sheet-row sheet-cols">
         <div className="sheet-cell flex flex-col items-start gap-4">
-          <h3 className="font-medium text-lg">
-            1. Install the complete skill.
+          <h3 className="text-2xl leading-tight">
+            Install the complete skill.
           </h3>
-          <p className="text-pretty text-muted-foreground text-sm">
+          <p className="max-w-[52ch] text-pretty text-muted-foreground">
             Download and unzip the package. Put the entire{" "}
             <code className="text-foreground">plotter</code> folder in your
             agent’s skills directory, keeping its files together. Start a task
-            with <code className="text-foreground">$plotter</code> in Codex or{" "}
-            <code className="text-foreground">/plotter</code> in Claude Code.
+            with <code className="text-foreground">/plotter</code> in Claude
+            Code or <code className="text-foreground">$plotter</code> in Codex.
           </p>
           <Button
             render={
@@ -46,26 +51,33 @@ export function PlotterUsage() {
             <DownloadIcon aria-hidden="true" />
             Download Plotter <span className="text-xs opacity-64">.zip</span>
           </Button>
-          <p className="text-muted-foreground text-xs">
+          <p className="text-xs text-muted-foreground">
             Includes both workflows, seven visual references, the grammar,
             shared tokens, helpers, and examples. No coss checkout required.
           </p>
         </div>
         <div className="sheet-cell flex flex-col gap-4">
-          <p className="flex items-center gap-2 font-medium text-sm">
+          <p className="flex items-center gap-2 text-sm font-medium">
             <FolderIcon
               aria-hidden="true"
               className="size-4 text-muted-foreground"
             />
             Keep the folder intact
           </p>
-          <pre className="overflow-x-auto font-mono text-muted-foreground text-xs leading-relaxed">{`plotter/
+          <pre className="overflow-x-auto font-mono text-xs leading-relaxed text-muted-foreground">{`plotter/
   SKILL.md       ← your agent starts here
   references/    ← workflows and visual grammar
   assets/        ← shared tokens and examples
   scripts/       ← generation and static export
   agents/        ← skill discovery metadata`}</pre>
-          <p className="text-pretty text-muted-foreground text-xs">
+          <p className="text-xs text-pretty text-muted-foreground">
+            For Claude Code, use{" "}
+            <code className="break-all text-foreground">
+              ~/.claude/skills/plotter/
+            </code>
+            .
+          </p>
+          <p className="text-xs text-pretty text-muted-foreground">
             For Codex, the default destination is{" "}
             <code className="break-all text-foreground">
               ~/.codex/skills/plotter/
@@ -73,42 +85,30 @@ export function PlotterUsage() {
             . If you use a custom <code>CODEX_HOME</code>, place it under that
             directory’s <code>skills/</code> folder.
           </p>
-          <p className="text-pretty text-muted-foreground text-xs">
-            For Claude Code, use{" "}
-            <code className="break-all text-foreground">
-              ~/.claude/skills/plotter/
-            </code>
-            .
-          </p>
-          <details className="border-t pt-4 text-sm">
-            <summary className="cursor-pointer font-medium">
+          <Collapsible className="border-t pt-2 text-sm">
+            <CollapsibleTrigger className="inline-flex min-h-10 items-center gap-2 text-sm font-medium [&_svg]:transition-transform data-panel-open:[&_svg]:rotate-180">
               Use it without installing
-            </summary>
-            <p className="pt-3 text-pretty text-muted-foreground">
-              Open the extracted folder in your coding agent. Ask it to read{" "}
-              <code className="text-foreground">plotter/SKILL.md</code> from the
-              parent folder, then give it your brief. Keep the linked references
-              and assets accessible.
-            </p>
-          </details>
+              <ChevronDownIcon aria-hidden="true" className="size-4" />
+            </CollapsibleTrigger>
+            <CollapsiblePanel>
+              <p className="pb-1 text-pretty text-muted-foreground">
+                Open the extracted folder in your coding agent. Ask it to read{" "}
+                <code className="text-foreground">plotter/SKILL.md</code> from
+                the parent folder, then give it your brief. Keep the linked
+                references and assets accessible.
+              </p>
+            </CollapsiblePanel>
+          </Collapsible>
         </div>
       </div>
-      <div className="sheet-row sheet-cell flex flex-col gap-5">
-        <h3 className="font-medium text-lg">
-          2. Choose a workflow and copy a brief.
-        </h3>
-        <PlotterPrompts
-          drawing={registration.illustration}
-          animation={
-            <EngineeringMotionPreview
-              animated={<ProductionChainMotionDrawing />}
-              caption="Load · Seat · Advance"
-            >
-              <ProductionChainStudy />
-            </EngineeringMotionPreview>
-          }
-        />
-      </div>
+      <PlotterPrompts
+        animation={
+          <EngineeringMotionPreview animated={<ProductionChainMotionDrawing />}>
+            <ProductionChainStudy />
+          </EngineeringMotionPreview>
+        }
+        drawing={registration.illustration}
+      />
     </section>
   );
 }
