@@ -1,6 +1,7 @@
-import { ArrowRightIcon, ArrowUpRightIcon } from "lucide-react";
+import { ArrowRightIcon, ArrowUpRightIcon, GithubIcon } from "lucide-react";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { ModeSwitcher } from "@/components/mode-switcher";
 import { PlotterWordmark } from "@/components/plotter-wordmark";
 import { Button } from "@/components/ui/button";
 
@@ -41,6 +42,23 @@ export function SiteShell({
           <Button render={<Link href="/docs/installation" />} variant="outline">
             Install <ArrowRightIcon aria-hidden="true" />
           </Button>
+          <Button
+            aria-label="Plotter on GitHub"
+            className="size-11 sm:size-8"
+            render={
+              <a
+                href="https://github.com/pasqualevitiello/plotter"
+                rel="noopener noreferrer"
+                target="_blank"
+              />
+            }
+            size="icon"
+            title="Plotter on GitHub"
+            variant="ghost"
+          >
+            <GithubIcon aria-hidden="true" className="size-4" />
+          </Button>
+          <ModeSwitcher />
         </nav>
       </header>
       <main id="main">{children}</main>

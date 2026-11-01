@@ -70,6 +70,7 @@ export default async function DocumentPage({
       {slug === "drawing" && (
         <figure className="max-w-140">
           <img
+            className="dark:invert"
             src="/plotter/downloads/agent-registration.svg"
             alt="An identity, name, and tools become one registered agent."
             width="560"
