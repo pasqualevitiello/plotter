@@ -10,6 +10,7 @@ Read this material only when revisiting a named study, tracing a decision, or ma
 | A record cites an older code such as P00, K09, or AG01. | [Code map](code-map.md): former and current codes, and the drawings retired on 2026-11-01. |
 | What was technically inspected at the October 25 snapshot? | [Source audit](source-audit.md) and [remaining-source audit](remaining-source-audit.md). These are revision-specific results, not current certification. |
 | Why are forms transparent, and which highlights or crossing guides are intentional? | [Catalogue consistency review — 2026-11-01](catalogue-consistency-2026-11-01.md), covering all 100 drawings, compact variants, grammar, and sampled motion. |
+| Why does the motion workflow focus on staging and timing rather than player controls? | [Motion workflow revision — 2026-11-01](motion-workflow-2026-11-01.md), with a bounded fresh-run pilot and its limitations. |
 | What did the coss.com proposals claim at that time? | [Product concepts](coss-product-concepts.md). Re-establish current product facts before reusing their claims. |
 
 These records describe the historical coss host. The bundled evidence can be read independently. Repository commits, routes, and evaluation directories mentioned inside it are provenance, not active standalone paths or required resources for the portable workflows. The seven SVG composition anchors remain available in the [reference index](../approved-references.md).

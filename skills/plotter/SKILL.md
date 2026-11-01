@@ -17,7 +17,7 @@ Resolve this skill’s installed directory first. All links below are relative t
 | Animate an illustration; refine timing, transitions, or a loop | [Animation workflow](references/motion.md). If no usable static composition exists, complete the drawing workflow first.                                                       |
 | Deliver only a static drawing from an animation                | Use the selected static composition and the [foundation's static export](references/foundation.md#standalone-static-export). Time zero is not automatically the right drawing. |
 
-One Plotter entrypoint serves both workflows: `$plotter` in Codex and `/plotter` in Claude Code. “Animate this illustration” should reach the animation workflow directly while retaining the same grammar and tokens. Motion uses the same visual rules.
+One Plotter entrypoint serves both workflows: `$plotter` in Codex and `/plotter` in Claude Code. “Animate this illustration” should reach the animation workflow directly while retaining the same grammar and tokens. Motion uses the same visual rules. Choose the change, stage its events, and review its rhythm before deciding how to package it; playback UI follows the delivery context.
 
 ## Load the shared references
 
