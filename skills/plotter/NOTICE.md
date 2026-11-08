@@ -4,6 +4,8 @@ This package is maintained at `skills/plotter` in the private `pasqualevitiello/
 
 The bundled reference manifest preserves the source revisions of the approved SVG snapshots. Files under `references/history/` preserve dated coss feedback and audits; their paths and routes describe that historical host.
 
-The accompanying `LICENSE` is copied verbatim from the source repository’s root GNU Affero General Public License, version 3. At extraction, the source `apps/ui/package.json` declared `"license": "MIT"`. These are recorded as found; this package does not select a replacement license or resolve their scope.
+This package uses the accompanying MIT `LICENSE`, selected by the maintainer on 2026-11-08. It retains the coss.com and Origin UI copyright and includes Pasquale Vitiello’s copyright for Plotter. Third-party materials retain their own notices.
+
+The original extraction’s differing license declarations are recorded in the repository’s `ATTRIBUTION.md`; they describe that historical extraction rather than this package’s current license.
 
 Keep the complete package and its provenance together when copying or updating an installation.
