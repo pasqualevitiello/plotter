@@ -21,7 +21,9 @@ import { ProductionChainMotionDrawing } from "@/components/plotter/production-ch
 import { PageIntro, SheetBar } from "@/components/sheet";
 import { SiteShell } from "@/components/site-shell";
 
-const iris = illustrations.find((illustration) => illustration.code === "MEC-01");
+const iris = illustrations.find(
+  (illustration) => illustration.code === "MEC-01",
+);
 if (!iris) throw new Error("Missing animation fallback illustration: MEC-01");
 
 const studies: {

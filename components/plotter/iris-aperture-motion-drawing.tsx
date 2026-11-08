@@ -86,7 +86,9 @@ const frames = beats.flatMap((beat, index) => {
     const eased = progress * progress * (3 - 2 * progress);
     return {
       time: (previous.time + progress * duration) / iris.duration,
-      ...irisGeometry(previous.radius + (beat.radius - previous.radius) * eased),
+      ...irisGeometry(
+        previous.radius + (beat.radius - previous.radius) * eased,
+      ),
     };
   });
 });
