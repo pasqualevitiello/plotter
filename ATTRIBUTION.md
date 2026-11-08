@@ -10,8 +10,8 @@ The skill’s bundled reference manifest records the source revisions of its app
 
 ## License record
 
-The root [LICENSE](LICENSE) is copied verbatim from the source repository’s root license file, which contains the GNU Affero General Public License, version 3.
+Plotter and its portable skill package use the [MIT license](LICENSE), selected by the maintainer on 2026-11-08. The notices retain the coss.com and Origin UI copyright and add Pasquale Vitiello’s copyright for Plotter. The current coss source also uses MIT.
 
-At extraction, the source `apps/ui/package.json` declared `"license": "MIT"`. That declaration and the root license are recorded here as they appeared in the source. This extraction does not replace them with a newly selected license or resolve their scope.
+For historical provenance, the initial extraction carried an AGPL-3.0 root license alongside an MIT declaration in `apps/ui/package.json`. That was the extraction record; the current project and packaged skill licenses are MIT.
 
 Cal Sans is credited to Mark Davis, WORDMARK × Cal.com. The site’s font package and any bundled third-party assets retain their own accompanying license information. Reference images and historical material remain part of the preserved source record.
