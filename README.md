@@ -50,4 +50,4 @@ Open [localhost:3000](http://localhost:3000). See [Contributing](CONTRIBUTING.md
 
 Made by [Pasquale Vitiello · @pacovitiello](https://x.com/pacovitiello). Built with [coss ui](https://coss.com/ui).
 
-See [LICENSE](LICENSE) and [ATTRIBUTION.md](ATTRIBUTION.md) for the preserved source and third-party licensing record.
+Licensed under [MIT](LICENSE). See [ATTRIBUTION.md](ATTRIBUTION.md) for source credits and third-party notices.
