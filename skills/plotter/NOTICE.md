@@ -1,6 +1,6 @@
 # Plotter package provenance
 
-This package is maintained at `skills/plotter` in the private `pasqualevitiello/plotter` repository. It was extracted from `apps/ui/skills/plotter` in the coss repository.
+This package is maintained at `skills/plotter` in the public `pasqualevitiello/plotter` repository. It was extracted from `apps/ui/skills/plotter` in the coss repository.
 
 The bundled reference manifest preserves the source revisions of the approved SVG snapshots. Files under `references/history/` preserve dated coss feedback and audits; their paths and routes describe that historical host.
 

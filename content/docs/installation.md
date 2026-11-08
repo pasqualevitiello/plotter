@@ -6,7 +6,7 @@ Install the complete Plotter skill to draw, critique, refine, or animate constru
 
 [Download the Plotter skill](/plotter/downloads/plotter.zip) and extract the archive. Keep the folder named `plotter`, with `SKILL.md`, `agents/`, `assets/`, `references/`, and `scripts/` inside it.
 
-The canonical source is `skills/plotter` in the private `pasqualevitiello/plotter` repository. If you already have authenticated access, you can copy that folder from your checkout. A single copied `SKILL.md` file is incomplete: the instructions load the bundled SVG references, geometry helpers, examples, and exporter.
+The canonical source is [`skills/plotter`](https://github.com/pasqualevitiello/plotter/tree/main/skills/plotter) in the public repository. You can also copy that folder from a checkout. A single copied `SKILL.md` file is incomplete: the instructions load the bundled SVG references, geometry helpers, examples, and exporter.
 
 ## Choose your agent
 
