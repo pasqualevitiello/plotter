@@ -36,7 +36,7 @@ After a shared-standard change, regenerate the drawing components that consume i
 
 The [website integration guide](skills/plotter/references/implementation.md) maps individual adapters and export paths. Generation produces files; it does not establish visual correctness.
 
-Repository preview images live in `.github/assets/`. Their editable sources remain in the bundled catalogue and animation components; refresh the previews when the featured artwork changes.
+Repository previews live in `.github/assets/`. The cover combines **OBJ-05** and **NAT-01**; the animation comes from **MEC-01**. Preview SVGs outline typography for consistent rendering and have 3200-pixel-wide PNG companions. The iris GIF is exported at twice its displayed size and has a static SVG fallback for reduced motion. Editable text and drawing sources remain in the catalogue and animation components; refresh these presentation exports when the featured artwork changes.
 
 ## Formatting and checks
 

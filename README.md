@@ -4,7 +4,7 @@ A skill for drawing and animating editable blueprint illustrations with your cod
 
 [plotter.pasqualevitiello.com](https://plotter.pasqualevitiello.com) · [Illustrations](https://plotter.pasqualevitiello.com/illustrations) · [Animations](https://plotter.pasqualevitiello.com/animations) · [Visual grammar](https://plotter.pasqualevitiello.com/grammar) · [Docs](https://plotter.pasqualevitiello.com/docs)
 
-[![A selection of Plotter’s monochrome construction illustrations](.github/assets/plotter-overview.png)](https://plotter.pasqualevitiello.com/illustrations)
+[![Newton’s cradle and a branching leaf, drawn in Plotter’s blueprint style](.github/assets/plotter-overview.svg)](https://plotter.pasqualevitiello.com/illustrations)
 
 ## Use the skill
 
@@ -35,7 +35,12 @@ Deliver standalone HTML with a reduced-motion static fallback.
 
 For Claude Code, replace `$plotter` with `/plotter`.
 
-[![MEC-01’s iris animation with an updating aperture readout](.github/assets/iris-aperture.gif)](https://plotter.pasqualevitiello.com/animations#iris-aperture-animation)
+<a href="https://plotter.pasqualevitiello.com/animations#iris-aperture-animation">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset=".github/assets/iris-aperture.svg">
+    <img src=".github/assets/iris-aperture.gif" width="640" height="500" alt="MEC-01’s iris animation with an updating aperture readout">
+  </picture>
+</a>
 
 ## Run the website
 
