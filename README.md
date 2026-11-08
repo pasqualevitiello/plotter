@@ -121,8 +121,8 @@ Get editable SVG for stills, or standalone HTML with a static fallback for motio
 
 [Download the complete skill](https://plotter.pasqualevitiello.com/plotter/downloads/plotter.zip), extract it, and place the `plotter` folder in your agent’s skills directory:
 
-| Agent       | Install at               | Invoke with |
-| ----------- | ------------------------ | ----------- |
+| Agent       | Install at                 | Invoke with |
+| ----------- | -------------------------- | ----------- |
 | Codex       | `~/.codex/skills/plotter`  | `$plotter`  |
 | Claude Code | `~/.claude/skills/plotter` | `/plotter`  |
 
