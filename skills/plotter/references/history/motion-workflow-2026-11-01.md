@@ -20,6 +20,6 @@ The assembly finding prompted a narrow correction: an exploded/assembled compari
 
 ## Scope of the evidence
 
-The root checkout retains briefs, input SVGs, raw self-contained outputs, author notes, instruction snapshots, hashes, the independent review, and a comparison viewer under `evaluations/motion-2026-11-01/`. Those experimental artifacts are intentionally outside the portable skill package. That path is provenance; an installed skill needs no evaluation checkout.
+The briefs, input SVGs, raw outputs, author notes, instruction snapshots, hashes, independent review, and comparison viewer are [archived in Git history at commit `d0041c3`](https://github.com/pasqualevitiello/plotter/tree/d0041c36bb7e5a2888914605db1f268b7a202732/evaluations/motion-2026-11-01). The experiment folder was removed from the current checkout on 2026-11-08; the findings above remain as historical evidence. Those raw artifacts are outside the portable skill package and are not required to use Plotter.
 
 Review used source, sampled browser poses, and focused runtime/geometry checks. Continuous normal-speed playback was not visually watched, and exact host-font metrics were not verified in the pilot. The sample used one model/settings combination and one run per case/condition, plus the follow-up. It did not compare the prior workflow as a third condition or isolate the new motion text from the shared static guidance. No output was promoted to the catalogue or approved reference set.
