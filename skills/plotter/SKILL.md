@@ -9,7 +9,7 @@ Make one construction relationship carry the idea: alignment, proportion, assemb
 
 ## Choose the workflow
 
-Resolve this skill’s installed directory first. All links below are relative to it. The complete folder includes visual references, helper implementation, examples, and export tools; standalone work needs no website checkout or prior conversation. The canonical package is `skills/plotter` in the private `pasqualevitiello/plotter` repository.
+Resolve this skill’s installed directory first. All links below are relative to it. The complete folder includes visual references, helper implementation, examples, and export tools; standalone work needs no website checkout or prior conversation. The canonical package is `skills/plotter` in the public `pasqualevitiello/plotter` repository.
 
 | Request                                                        | Read and follow                                                                                                                                                                |
 | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

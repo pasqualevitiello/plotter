@@ -1,6 +1,6 @@
 # Source and attribution
 
-Plotter was extracted from the coss repository into the private [pasqualevitiello/plotter](https://github.com/pasqualevitiello/plotter) repository.
+Plotter was extracted from the coss repository into the standalone [pasqualevitiello/plotter](https://github.com/pasqualevitiello/plotter) repository.
 
 Extraction baseline: coss commit `54c5a6dd2527d91127bd5efd0dfe2ee055570f27` on `codex/blueprint-illustration-studies`.
 
