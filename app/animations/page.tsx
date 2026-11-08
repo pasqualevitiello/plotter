@@ -5,6 +5,8 @@ import {
   NewtonsCradleStudy,
   ProductionChainStudy,
 } from "@/components/plotter/engineering-studies";
+import { illustrations } from "@/components/plotter/illustrations";
+import { IrisApertureMotionDrawing } from "@/components/plotter/iris-aperture-motion-drawing";
 import { NewtonsCradleMotionDrawing } from "@/components/plotter/newtons-cradle-motion-drawing";
 import { NotFoundMotion } from "@/components/plotter/not-found-motion";
 import {
@@ -18,6 +20,11 @@ import { PrimitivesMotionPreview } from "@/components/plotter/primitives-motion-
 import { ProductionChainMotionDrawing } from "@/components/plotter/production-chain-motion-drawing";
 import { PageIntro, SheetBar } from "@/components/sheet";
 import { SiteShell } from "@/components/site-shell";
+
+const iris = illustrations.find(
+  (illustration) => illustration.code === "MEC-01",
+);
+if (!iris) throw new Error("Missing animation fallback illustration: MEC-01");
 
 const studies: {
   id: string;
@@ -57,6 +64,18 @@ const studies: {
     description:
       "A request follows a curved route, reaches the closed end, and returns. The destination stays absent, one unit beyond its reach.",
     preview: <NotFoundMotion />,
+  },
+  {
+    id: "iris-aperture-animation",
+    label: "MEC-01",
+    title: "Three apertures, one sequence",
+    description:
+      "The iris adjusts, settles, and steps through f/4, f/8, and f/16 before slowly reopening. The aperture readout follows the opening.",
+    preview: (
+      <EngineeringMotionPreview animated={<IrisApertureMotionDrawing />}>
+        {iris.illustration}
+      </EngineeringMotionPreview>
+    ),
   },
   {
     id: "production-chain-animation",
@@ -101,8 +120,9 @@ export default function AnimationsPage() {
   return (
     <SiteShell current="/animations">
       <PageIntro label="02 — Animations" title="An idea, in motion.">
-        Watch the relationships unfold. Six animated studies keep their original
-        geometry, and each becomes a still drawing when reduced motion is on.
+        Watch the relationships unfold. {studies.length} animated studies keep
+        their original geometry, and each becomes a still drawing when reduced
+        motion is on.
       </PageIntro>
       <section
         aria-labelledby="animations-heading"
