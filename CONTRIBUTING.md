@@ -38,11 +38,13 @@ The [website integration guide](skills/plotter/references/implementation.md) map
 
 Repository previews live in `.github/assets/`. The README’s galleries are in `showcase/`:
 
-- `overview`: **MEC-01**, **TYP-06**, **OBJ-01**, **GEO-07**, **NAT-02**, and **CRF-01**.
-- `agents`: **AGT-01** and **AGT-03**.
-- `interfaces`: **INT-04** and **SRV-06**.
-- `emptystates`: **EMP-05** and **EMP-06**.
-- `concepts`: **TIM-06** and **CRF-06**.
+- `overview`: **GEO-01**, **TYP-01**, **EMP-04**, **GEO-03**, **INT-03**, and **SRV-04**.
+- `interfaces`: **INT-02** and **INT-09**.
+- `systems`: **SYS-02** and **SRV-09**.
+- `emptystates`: **EMP-01** and **EMP-03**.
+- `time`: **TIM-03** and **TIM-05**.
+
+The fourteen static selections come from the existing [approved reference set](skills/plotter/references/approved-references.md).
 
 These are presentation compositions of the original catalogue SVGs, with unused margins cropped and each drawing scaled proportionally. Preview SVGs outline typography for consistent rendering and have 3200-pixel-wide PNG companions. The **MEC-01** iris GIF is exported at twice its displayed size and has a static SVG fallback for reduced motion. Editable text and drawing sources remain in the catalogue and animation components; refresh these presentation exports when the featured artwork changes.
 

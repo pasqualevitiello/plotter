@@ -6,82 +6,85 @@ Give your coding agent a brief. Plotter helps it draw precise, editable illustra
 
 [Explore the catalogue](https://plotter.pasqualevitiello.com/illustrations) · [Install the skill](#install-plotter) · [See it move](#make-it-move) · [Visual grammar](https://plotter.pasqualevitiello.com/grammar) · [Docs](https://plotter.pasqualevitiello.com/docs)
 
-[![A selection of Plotter illustrations spanning mechanisms, typography, objects, patterns, and geometry](.github/assets/showcase/overview.svg)](https://plotter.pasqualevitiello.com/illustrations)
+[![Geometry, lettering, an unfinished arch, interface modules, and a measured work cycle](.github/assets/showcase/overview.svg)](https://plotter.pasqualevitiello.com/illustrations)
 
 Use the catalogue as a reference, then ask for a drawing that fits your product. Try the example briefs below with `$plotter` in Codex or `/plotter` in Claude Code.
 
-## Explain agent workflows
+## Explain interfaces
 
-Show what an agent knows, which tools it can use, and how context passes to the next agent. Useful for onboarding, agent directories, and workflow documentation.
+Expose the alignment behind a reusable control or the spacing that makes a conversation readable. Useful for design-system docs, component libraries, and messaging features.
 
-[![Agent registration and a context handoff between two agents](.github/assets/showcase/agents.svg)](https://plotter.pasqualevitiello.com/illustrations)
+[![An icon, label, and status pill aligned into a row, beside a conversation built from avatars and message blocks](.github/assets/showcase/interfaces.svg)](https://plotter.pasqualevitiello.com/illustrations)
 
-[An agent, registered](skills/plotter/references/catalogue/AGT-01.svg) · [Context, carried forward](skills/plotter/references/catalogue/AGT-03.svg)
+[An assembly of parts](skills/plotter/references/catalogue/INT-02.svg) · [A conversation, constructed](skills/plotter/references/catalogue/INT-09.svg)
 
 <details>
-<summary>Try an agent illustration</summary>
+<summary>Try an interface illustration</summary>
 
 ```text
-$plotter Draw an agent registration flow: identity, name, and two tools
-become one registry record. Keep each part aligned as it joins.
-Deliver an editable SVG for an onboarding page.
+$plotter Draw an icon, label, and status pill as separate parts
+projecting into one interface row. Keep their sizes fixed and
+make the shared alignment clear. Deliver an editable SVG
+for a component-library page.
 ```
 
 </details>
 
-## Explain interfaces and workflows
+## Map connections and agent systems
 
-Reveal how components form a product, or how a change moves through a system. Use these in feature pages, design-system documentation, and technical explainers.
+A selected junction connects one input to one output; a shared key connects two table fragments. Adapt these relationships for tool routing, data models, and system documentation.
 
-[![Interface fragments assembling into a panel, and a Git change passing through review](.github/assets/showcase/interfaces.svg)](https://plotter.pasqualevitiello.com/illustrations)
+[![A selected junction in a three-by-three switching matrix, and two database tables linked by a shared key](.github/assets/showcase/systems.svg)](https://plotter.pasqualevitiello.com/illustrations)
 
-[Recombination](skills/plotter/references/catalogue/INT-04.svg) · [A change, brought together](skills/plotter/references/catalogue/SRV-06.svg)
+[A connection, located](skills/plotter/references/catalogue/SYS-02.svg) · [Supabase · A shared relation](skills/plotter/references/catalogue/SRV-09.svg)
 
 <details>
-<summary>Try a product explainer</summary>
+<summary>Try an agent-routing illustration</summary>
 
 ```text
-$plotter Draw three interface fragments—identity, visibility, and action—
-assembling into one compact panel. Show their shared spacing
-and corner rule. Deliver an editable SVG for a feature page.
+$plotter Draw three agents A–C opposite three tools 01–03,
+arranged as a switching matrix. Select only the junction
+connecting agent B to tool 02. Deliver an editable SVG
+for a tool-routing guide.
 ```
 
 </details>
 
 ## Give empty states something to say
 
-Make a missing destination or an unanswered search understandable through the drawing itself. Useful for 404 pages, search results, and first-use screens.
+Let a missing corner break a geometric whole, or an absent link interrupt a route. Use the construction itself to explain a 404 page or an unavailable destination.
 
-[![A route ending before a missing destination, and a search pointing to an absent record](.github/assets/showcase/emptystates.svg)](https://plotter.pasqualevitiello.com/illustrations)
+[![A missing corner in a geometric construction, and a paired route interrupted by an absent link](.github/assets/showcase/emptystates.svg)](https://plotter.pasqualevitiello.com/illustrations)
 
-[The missing destination](skills/plotter/references/catalogue/EMP-05.svg) · [A search, unanswered](skills/plotter/references/catalogue/EMP-06.svg)
+[The missing corner](skills/plotter/references/catalogue/EMP-01.svg) · [An interrupted path](skills/plotter/references/catalogue/EMP-03.svg)
 
 <details>
 <summary>Try an empty state</summary>
 
 ```text
-$plotter Draw a 404 illustration: a route reaches a closed end just
-before an unbuilt destination. Let the missing connection
-carry the idea. Deliver an editable SVG with a transparent background.
+$plotter Draw a paired-outline route interrupted by one missing link.
+Make the gap and unresolved destination the focal point.
+Deliver an editable SVG for a 404 page with transparent forms.
 ```
 
 </details>
 
-## Make an abstract feature tangible
+## Make schedules visible
 
-Turn time buffers into measured intervals, or repair into a joint that reconnects two parts. Use a clear construction relationship for feature announcements, help articles, and product pages.
+Locate a meeting within a measured week, or show where two people’s availability meets. Useful for scheduling features, booking pages, and coordination guides.
 
-[![An appointment between two buffers, and a repair key restoring a broken connection](.github/assets/showcase/concepts.svg)](https://plotter.pasqualevitiello.com/illustrations)
+[![A meeting located in a weekly grid, and two people’s availability intersecting at one shared slot](.github/assets/showcase/time.svg)](https://plotter.pasqualevitiello.com/illustrations)
 
-[Appointment buffers](skills/plotter/references/catalogue/TIM-06.svg) · [Rejoin](skills/plotter/references/catalogue/CRF-06.svg)
+[A week, constructed](skills/plotter/references/catalogue/TIM-03.svg) · [Where schedules meet](skills/plotter/references/catalogue/TIM-05.svg)
 
 <details>
-<summary>Try a visual metaphor</summary>
+<summary>Try a scheduling illustration</summary>
 
 ```text
-$plotter Draw a 30-minute appointment between two 10-minute buffers.
-Make the proportions visible and label the 50-minute total.
-Deliver an editable SVG for a scheduling feature announcement.
+$plotter Draw Alex’s and Sam’s availability as two measured bands
+meeting at one shared slot. Label the people and the meeting,
+and make the overlap the focal point. Deliver an editable SVG
+for a scheduling feature page.
 ```
 
 </details>
