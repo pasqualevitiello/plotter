@@ -6,7 +6,7 @@ Give your coding agent a brief. Plotter helps it draw precise, editable illustra
 
 [Explore the catalogue](https://plotter.pasqualevitiello.com/illustrations) · [Install the skill](#install-plotter) · [See it move](#make-it-move) · [Visual grammar](https://plotter.pasqualevitiello.com/grammar) · [Docs](https://plotter.pasqualevitiello.com/docs)
 
-[![Geometry, lettering, an unfinished arch, interface modules, and a measured work cycle](.github/assets/showcase/overview.svg)](https://plotter.pasqualevitiello.com/illustrations)
+[![Geometry, lettering, an unfinished arch, interface modules, and a measured work cycle](.github/assets/showcase/overview-preferred.svg)](https://plotter.pasqualevitiello.com/illustrations)
 
 Use the catalogue as a reference, then ask for a drawing that fits your product. Try the example briefs below with `$plotter` in Codex or `/plotter` in Claude Code.
 
@@ -14,7 +14,7 @@ Use the catalogue as a reference, then ask for a drawing that fits your product.
 
 Expose the alignment behind a reusable control or the spacing that makes a conversation readable. Useful for design-system docs, component libraries, and messaging features.
 
-[![An icon, label, and status pill aligned into a row, beside a conversation built from avatars and message blocks](.github/assets/showcase/interfaces.svg)](https://plotter.pasqualevitiello.com/illustrations)
+[![An icon, label, and status pill aligned into a row, beside a conversation built from avatars and message blocks](.github/assets/showcase/interfaces-preferred.svg)](https://plotter.pasqualevitiello.com/illustrations)
 
 [An assembly of parts](skills/plotter/references/catalogue/INT-02.svg) · [A conversation, constructed](skills/plotter/references/catalogue/INT-09.svg)
 
@@ -54,7 +54,7 @@ for a tool-routing guide.
 
 Let a missing corner break a geometric whole, or an absent link interrupt a route. Use the construction itself to explain a 404 page or an unavailable destination.
 
-[![A missing corner in a geometric construction, and a paired route interrupted by an absent link](.github/assets/showcase/emptystates.svg)](https://plotter.pasqualevitiello.com/illustrations)
+[![A missing corner in a geometric construction, and a paired route interrupted by an absent link](.github/assets/showcase/emptystates-preferred.svg)](https://plotter.pasqualevitiello.com/illustrations)
 
 [The missing corner](skills/plotter/references/catalogue/EMP-01.svg) · [An interrupted path](skills/plotter/references/catalogue/EMP-03.svg)
 

@@ -38,15 +38,15 @@ The [website integration guide](skills/plotter/references/implementation.md) map
 
 Repository previews live in `.github/assets/`. The README’s galleries are in `showcase/`:
 
-- `overview`: **GEO-01**, **TYP-01**, **EMP-04**, **GEO-03**, **INT-03**, and **SRV-04**.
-- `interfaces`: **INT-02** and **INT-09**.
+- `overview-preferred`: **GEO-01**, **TYP-01**, **EMP-04**, **GEO-03**, **INT-03**, and **SRV-04**.
+- `interfaces-preferred`: **INT-02** and **INT-09**.
 - `systems`: **SYS-02** and **SRV-09**.
-- `emptystates`: **EMP-01** and **EMP-03**.
+- `emptystates-preferred`: **EMP-01** and **EMP-03**.
 - `time`: **TIM-03** and **TIM-05**.
 
 The fourteen static selections come from the existing [approved reference set](skills/plotter/references/approved-references.md).
 
-These are presentation compositions of the original catalogue SVGs, with unused margins cropped and each drawing scaled proportionally. Preview SVGs outline typography for consistent rendering and have 3200-pixel-wide PNG companions. The **MEC-01** iris GIF is exported at twice its displayed size and has a static SVG fallback for reduced motion. Editable text and drawing sources remain in the catalogue and animation components; refresh these presentation exports when the featured artwork changes.
+These are presentation compositions of the original catalogue SVGs, with unused margins cropped and each drawing scaled proportionally. Preview SVGs outline typography for consistent rendering and have 3200-pixel-wide PNG companions. The **MEC-01** iris GIF is exported at twice its displayed size and has a static SVG fallback for reduced motion. Editable text and drawing sources remain in the catalogue and animation components; refresh these presentation exports when the featured artwork changes, and use new filenames so cached README images do not show the old artwork.
 
 ## Formatting and checks
 
