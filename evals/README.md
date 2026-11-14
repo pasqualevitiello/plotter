@@ -15,7 +15,7 @@ Each brief runs in its own fresh session in a temporary folder outside this chec
 | ------ | ------------------------------------------------------------------------------------------------------ |
 | 01–03  | README briefs. Each describes a catalogue drawing, so they mostly test retrieval.                      |
 | 04–05  | Open briefs. The agent should stop and offer three options.                                            |
-| 06–10  | Plain-language subjects with no catalogue match, including a small size and TSX.                       |
+| 06–10  | Plain-language subjects, including a small size and TSX.                                               |
 | 11     | Animating a supplied drawing into one self-contained HTML file.                                        |
 | 12     | Critique. `upload-card.svg` has eight planted faults, listed below; none may be fixed.                 |
 | 13–16  | Small placements and feature subjects. No pictogram as the main form; a compact version, not a redraw. |
