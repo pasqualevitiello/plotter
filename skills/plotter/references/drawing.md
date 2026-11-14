@@ -28,6 +28,20 @@ For a collection, establish this reference comparison on one representative comp
 
 **Complete when:** the forms and essential labels carry the idea, every supporting mark has a named purpose, and removing decorative detail does not destroy the subject.
 
+## Shape and object studies
+
+When the brief is a shape or an object, the drawing explains how that form is built. An outline with a width and a height is sparse: it shows what the object looks like, which the reader already knew. Catalogue studies such as [Anatomy of a letter](catalogue/TYP-01.svg), [The corner rule](catalogue/GEO-03.svg), and [An unbuilt arch](catalogue/EMP-04.svg) carry these layers, and a study needs most of them:
+
+- **Axes.** A centerline through every center and along each axis of symmetry, extended past the form.
+- **Generating geometry.** For each curve, its center mark and a radius leader labelled `R…` or `r`. Where the outline uses part of a circle, draw the rest of that circle, or its continuation, in guide weight.
+- **Construction points.** Small node marks where construction meets the outline: tangent points, anchors, and the ends of arcs.
+- **A module.** Level guides or a quiet grid that the form’s key edges sit on, with one dimension naming the unit `u`.
+- **Two or three dimensions** in that unit, relating the parts to each other. Never a chain along every edge.
+- **One or two callouts** naming parts the shape cannot name itself, each on a leader.
+- **One selected region**, hatched or highlighted, when a part needs singling out.
+
+Each layer still has to explain the construction. Do not add one the form does not have.
+
 ## Small placements
 
 A display width under about 400 px shrinks 11-unit labels below 8 px, and the full drawing stops reading. Never answer that by redrawing the idea on a small canvas: the result is an icon. Finish the `560 × 440` drawing first, then derive a compact version from the same geometry, as the Plotter website does for its empty states.
@@ -35,7 +49,7 @@ A display width under about 400 px shrinks 11-unit labels below 8 px, and the fu
 - Keep the main forms and the one mark that carries the idea. Remove the labels, dimensions, grids, and guides that cannot be read at the target size. Text is removed, never shrunk.
 - Crop the `viewBox` to the kept forms with a margin of about 16 units, still in the drawing’s own units. Do not rescale or redraw coordinates, and let no kept form touch or cross the crop edge.
 - Set `vector-effect="non-scaling-stroke"` on every stroked element, so each stroke stays one pixel wide at any size. Dash patterns then measure in screen pixels: use `2 2` where the full drawing used a longer dash.
-- Render the compact version at the target width and check that each kept form is still distinct.
+- Run `scripts/check.py --compact` on it, then render it at the target width and check that each kept form is still distinct.
 
 Deliver both files and say which is which. The compact version is a view of the drawing, not a second composition.
 
@@ -55,7 +69,14 @@ Use an accessible title and description for meaningful standalone output. In a h
 
 Render the candidate beside the selected reference at a common intended size, then inspect the thumbnail. For a revision, also compare with its own previous render. Inspect both themes when the host uses them and the actual narrow layout when embedding it.
 
-Render with the packaged script, resolved from the skill directory, and open the PNG it names:
+First run the checker, resolved from the skill directory, and fix every error. It catches what a glance at a render misses: stroked, bold, or full-ink text, a label outside 10 to 12 units or turned upside down, a stroke that is not 1 unit, a gradient, a skew, or the wrong canvas. A “sparse” warning means the drawing has fewer marks than nine in ten catalogue drawings. For a shape or object study it is an error: add the missing layers. For any other drawing, add the missing construction or say in the report why it is complete.
+
+```sh
+python3 scripts/check.py drawing.svg
+python3 scripts/check.py compact.svg --compact   # for a compact version
+```
+
+Then render with the packaged script and open the PNG it names:
 
 ```sh
 python3 scripts/render.py drawing.svg                        # native size, light surface

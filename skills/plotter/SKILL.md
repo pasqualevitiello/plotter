@@ -21,9 +21,9 @@ These hold for every drawing, option sheet, and animation frame. The references 
 8. **Every mark earns its place.** Name the relationship each guide, arrow, hatch, grid, or dimension explains. If removing it leaves that relationship equally clear, remove it.
 9. **Dimensions tell the truth.** Derive a label and its witnesses from the same geometry. A label that disagrees with the span it measures is an error.
 10. **Arrows mean change.** Use one only for movement or direction, with a solid head even on a dashed shaft. Alignment and equal size use projections or dimensions.
-11. **Text stays text.** Editable `<text>` in `Cal Sans, sans-serif`, never all caps, no letter-spacing, no synthesized bold or italic, typeset punctuation (’ – − “ ”). No title block or sheet number inside the drawing: the host page supplies those.
+11. **Every label looks the same: small, regular, and quiet.** Editable `<text>` in `Cal Sans, sans-serif` at weight 400 and 10 to 12 units, at 0.72 ink for names and 0.5 for values and notes, with `stroke="none"`: text inherits the drawing’s stroke unless you turn it off, and stroked letters read as bold. No label is ever bold, larger, full ink, all caps, letter-spaced, italic, or upside down, whatever it names. Use typeset punctuation (’ – − “ ”). No title block or sheet number inside the drawing: the host page supplies those.
 12. **One owner per edge, hatch inside its region.** Draw each coincident segment once, and clip hatching to the bounded region it identifies.
-13. **Look before delivering.** Render, inspect, and render again after the last edit. Without a render, say the visual review is pending.
+13. **Check and look before delivering.** Run `python3 scripts/check.py drawing.svg` and fix every error it reports. Then render, inspect, and do both again after the last edit. Without a render, say the visual review is pending.
 
 ## Numbers
 
@@ -39,7 +39,7 @@ Lengths are SVG units on a `560 × 440` canvas.
 - Hatch: **12**-unit pitch along an edge, at −45°.
 <!-- END GENERATED: numbers -->
 
-- Text is **10–12** units, as in every catalogue drawing.
+- Text is **10–12** units at weight **400**, filled and unstroked, at **0.72** ink for names and **0.5** for values and notes, as in every catalogue drawing.
 - A guide that does not connect to a contour stops **8** units short of it.
 
 These are the defaults behind the role tokens. In the editable source, apply them with `data-plotter-role` and the generated stylesheet, as the [foundation](references/foundation.md) describes, so the user can retheme the drawing; literal values belong in the resolved export.
@@ -84,7 +84,9 @@ Each of these appeared in drawings made from this skill. Check the render for th
 - A small display size answered with a new small canvas, thick strokes, and icon shapes instead of the compact version.
 - A subject the catalogue already covers, drawn without opening that drawing.
 - The composition pushed against one edge of the canvas, or the focal form off-center without a reason.
-- All-caps labels, a title block, or a sheet number.
+- Text that inherits the drawing’s stroke and reads bold, or any label that is bold, oversized, full ink, all caps, or upside down.
+- A title block or a sheet number.
+- A shape or object study that is only an outline and a dimension, with none of the geometry that builds it.
 - One highlight painted on two shapes, so the overlap reads twice.
 - An edit made after the last render.
 
