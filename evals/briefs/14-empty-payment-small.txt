@@ -1,0 +1,1 @@
+Small illustration for a “no payment methods yet” card, about 240px wide. SVG.

@@ -28,6 +28,17 @@ For a collection, establish this reference comparison on one representative comp
 
 **Complete when:** the forms and essential labels carry the idea, every supporting mark has a named purpose, and removing decorative detail does not destroy the subject.
 
+## Small placements
+
+A display width under about 400 px shrinks 11-unit labels below 8 px, and the full drawing stops reading. Never answer that by redrawing the idea on a small canvas: the result is an icon. Finish the `560 × 440` drawing first, then derive a compact version from the same geometry, as the Plotter website does for its empty states.
+
+- Keep the main forms and the one mark that carries the idea. Remove the labels, dimensions, grids, and guides that cannot be read at the target size. Text is removed, never shrunk.
+- Crop the `viewBox` to the kept forms with a margin of about 16 units, still in the drawing’s own units. Do not rescale or redraw coordinates, and let no kept form touch or cross the crop edge.
+- Set `vector-effect="non-scaling-stroke"` on every stroked element, so each stroke stays one pixel wide at any size. Dash patterns then measure in screen pixels: use `2 2` where the full drawing used a longer dash.
+- Render the compact version at the target width and check that each kept form is still distinct.
+
+Deliver both files and say which is which. The compact version is a view of the drawing, not a second composition.
+
 ## Implement the editable source
 
 Read [foundation.md](foundation.md) for shared roles, helpers, and export. Use native SVG for the composition and for unsupported constructions such as curved arrows or curved hatch regions. The helper API covers straight arrows, axis-aligned dimensions, and rectangular H1/H2 hatching; it does not choose the composition.

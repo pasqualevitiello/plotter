@@ -12,20 +12,22 @@ Make one construction relationship carry the idea: alignment, proportion, assemb
 These hold for every drawing, option sheet, and animation frame. The references explain them; they do not relax them.
 
 1. **One relationship, named before drawing.** State it in a sentence: what aligns, fits, overlaps, or is missing. A subject such as “agents” is not yet a composition, and marks added to a subject without a relationship are decoration.
-2. **Flat only.** Plan, elevation, or a conceptual plane. Never perspective, isometric depth, skew, gradients, shadows, or lighting: depth cues turn a construction into a rendering.
-3. **Transparent forms.** Shapes are `fill="none"`. The one exception is a translucent highlight on a named selection, intersection, or result, painted once. A drawing has to read on any page color, and an opaque patch hides what crosses it.
-4. **One ink, one weight.** Draw in `currentColor` with 1-unit strokes. Opacity sets the hierarchy and a dash pattern carries a meaning; never thicken a line for emphasis.
-5. **Main form first.** The main form reads first, construction second, sparse dimensions and labels third. The drawing must still read with every supporting mark removed.
-6. **Every mark earns its place.** Name the relationship each guide, arrow, hatch, grid, or dimension explains. If removing it leaves that relationship equally clear, remove it.
-7. **Dimensions tell the truth.** Derive a label and its witnesses from the same geometry. A label that disagrees with the span it measures is an error.
-8. **Arrows mean change.** Use one only for movement or direction, with a solid head even on a dashed shaft. Alignment and equal size use projections or dimensions.
-9. **Text stays text.** Editable `<text>` in `Cal Sans, sans-serif`, never all caps, no letter-spacing, no synthesized bold or italic, typeset punctuation (’ – − “ ”). No title block or sheet number inside the drawing: the host page supplies those.
-10. **One owner per edge, hatch inside its region.** Draw each coincident segment once, and clip hatching to the bounded region it identifies.
-11. **Look before delivering.** Render, inspect, and render again after the last edit. Without a render, say the visual review is pending.
+2. **Never the feature’s pictogram.** A magnifier for search, a bell for notifications, a gear for settings: an icon names the feature and explains nothing. Draw the structure the feature works on and what is absent from it, such as an ordered index with one position unfilled. An object is the subject only when its own construction is drawn: its fold, pitch, tangency, or fit. A glyph may sit inside a UI fragment at its real size, as a magnifier does inside a search field.
+3. **A small size never changes the canvas or the language.** Compose at `560 × 440` whatever the display size, then derive a [compact version](references/drawing.md#small-placements) from the same geometry. Redrawing the idea on a small canvas produces an icon.
+4. **Flat only.** Plan, elevation, or a conceptual plane. Never perspective, isometric depth, skew, gradients, shadows, or lighting: depth cues turn a construction into a rendering.
+5. **Transparent forms.** Shapes are `fill="none"`. The one exception is a translucent highlight on a named selection, intersection, or result, painted once. A drawing has to read on any page color, and an opaque patch hides what crosses it.
+6. **One ink, one weight.** Draw in `currentColor` with 1-unit strokes. Opacity sets the hierarchy and a dash pattern carries a meaning; never thicken a line for emphasis.
+7. **Main form first.** The main form reads first, construction second, sparse dimensions and labels third. The drawing must still read with every supporting mark removed.
+8. **Every mark earns its place.** Name the relationship each guide, arrow, hatch, grid, or dimension explains. If removing it leaves that relationship equally clear, remove it.
+9. **Dimensions tell the truth.** Derive a label and its witnesses from the same geometry. A label that disagrees with the span it measures is an error.
+10. **Arrows mean change.** Use one only for movement or direction, with a solid head even on a dashed shaft. Alignment and equal size use projections or dimensions.
+11. **Text stays text.** Editable `<text>` in `Cal Sans, sans-serif`, never all caps, no letter-spacing, no synthesized bold or italic, typeset punctuation (’ – − “ ”). No title block or sheet number inside the drawing: the host page supplies those.
+12. **One owner per edge, hatch inside its region.** Draw each coincident segment once, and clip hatching to the bounded region it identifies.
+13. **Look before delivering.** Render, inspect, and render again after the last edit. Without a render, say the visual review is pending.
 
 ## Numbers
 
-Lengths are SVG units on a `560 × 440` canvas, used unless the brief fixes another size.
+Lengths are SVG units on a `560 × 440` canvas.
 
 <!-- BEGIN GENERATED: numbers -->
 - Every stroke is **1** unit wide.
@@ -58,7 +60,7 @@ Resolve this skill’s installed directory first. All links below are relative t
 
 For drawing, critique, or animation:
 
-1. Read [current direction](references/direction.md) and the [approved reference index](references/approved-references.md). Select and inspect the closest **bundled SVG** by its construction relationship. When the brief names a catalogue code such as `TIM-06`, also open that drawing from the [catalogue](references/catalogue/index.md); it is an example of a relationship, not a style reference.
+1. Read [current direction](references/direction.md) and the [approved reference index](references/approved-references.md). Select and inspect the closest **bundled SVG** by its construction relationship. Then search the [catalogue index](references/catalogue/index.md), which gives each of its drawings one line, for the brief’s subject: search, schedule, upload, 404, and so on. When a catalogue drawing already covers the subject, or the brief names a code such as `TIM-06`, open that SVG and start from its relationship. It shows how this subject has been solved, not a layout to copy.
 2. Read the [visual grammar](references/visual-grammar.md) to choose meaningful marks. Inspect the linked teaching SVG for each mark you add or revise. Existing unchanged marks do not require loading every teaching example.
 3. Read the [drafting standard](references/drafting-standard.md): scope, stroke palette, and geometry/dimensions; include hatch grammar when hatching is involved and symbols/topology when making connectivity or product-behavior claims.
 
@@ -78,7 +80,9 @@ Each of these appeared in drawings made from this skill. Check the render for th
 - A dimension, guide, or leader running through a label, including the dimension’s own value. Split the line around the text or move the label.
 - Labels touching each other or a contour.
 - A dimension on every part. Keep the two or three that explain the construction; a full chain of measurements buries the relationship.
-- A familiar icon with drafting marks around it and no relationship between its parts.
+- The feature’s pictogram as the main form: a magnifier, bell, gear, or envelope outline with nothing constructed.
+- A small display size answered with a new small canvas, thick strokes, and icon shapes instead of the compact version.
+- A subject the catalogue already covers, drawn without opening that drawing.
 - The composition pushed against one edge of the canvas, or the focal form off-center without a reason.
 - All-caps labels, a title block, or a sheet number.
 - One highlight painted on two shapes, so the overlap reads twice.
