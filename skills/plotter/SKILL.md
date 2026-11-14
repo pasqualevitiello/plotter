@@ -12,7 +12,7 @@ Make one construction relationship carry the idea: alignment, proportion, assemb
 These hold for every drawing, option sheet, and animation frame. The references explain them; they do not relax them.
 
 1. **One relationship, named before drawing.** State it in a sentence: what aligns, fits, overlaps, or is missing. A subject such as “agents” is not yet a composition, and marks added to a subject without a relationship are decoration.
-2. **Never the feature’s pictogram.** A magnifier for search, a bell for notifications, a gear for settings: an icon names the feature and explains nothing. Draw the structure the feature works on and what is absent from it, such as an ordered index with one position unfilled. An object is the subject only when its own construction is drawn: its fold, pitch, tangency, or fit. A glyph may sit inside a UI fragment at its real size, as a magnifier does inside a search field.
+2. **An object is never a sign for an idea.** A magnifier for search, a bell for notifications, a gear for settings: a conventional icon names the concept and explains nothing, with or without drafting marks around it. For a concept, draw the structure it works on and what happens to that structure, such as an ordered index with one position unfilled. Draw an object as the main form only when the brief is that object and the drawing shows how its shape is built. A glyph may sit inside a UI fragment at its real size, as a magnifier does inside a search field.
 3. **A small size never changes the canvas or the language.** Compose at `560 × 440` whatever the display size, then derive a [compact version](references/drawing.md#small-placements) from the same geometry. Redrawing the idea on a small canvas produces an icon.
 4. **Flat only.** Plan, elevation, or a conceptual plane. Never perspective, isometric depth, skew, gradients, shadows, or lighting: depth cues turn a construction into a rendering.
 5. **Transparent forms.** Shapes are `fill="none"`. The one exception is a translucent highlight on a named selection, intersection, or result, painted once. A drawing has to read on any page color, and an opaque patch hides what crosses it.
@@ -80,7 +80,7 @@ Each of these appeared in drawings made from this skill. Check the render for th
 - A dimension, guide, or leader running through a label, including the dimension’s own value. Split the line around the text or move the label.
 - Labels touching each other or a contour.
 - A dimension on every part. Keep the two or three that explain the construction; a full chain of measurements buries the relationship.
-- The feature’s pictogram as the main form: a magnifier, bell, gear, or envelope outline with nothing constructed.
+- An object standing in for a concept, such as a magnifier for search or a bell for notifications, however carefully it is constructed.
 - A small display size answered with a new small canvas, thick strokes, and icon shapes instead of the compact version.
 - A subject the catalogue already covers, drawn without opening that drawing.
 - The composition pushed against one edge of the canvas, or the focal form off-center without a reason.

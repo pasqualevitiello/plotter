@@ -1,6 +1,6 @@
 # Cold-run briefs
 
-Sixteen briefs that show what the downloadable skill produces for someone who has never seen this repository. Run them after any change to `skills/plotter`, then compare the drawings with the previous run and with the catalogue.
+Seventeen briefs that show what the downloadable skill produces for someone who has never seen this repository. Run them after any change to `skills/plotter`, then compare the drawings with the previous run and with the catalogue.
 
 ```sh
 bun run downloads        # rebuild the archive under test
@@ -19,6 +19,7 @@ Each brief runs in its own fresh session in a temporary folder outside this chec
 | 11     | Animating a supplied drawing into one self-contained HTML file.                                        |
 | 12     | Critique. `upload-card.svg` has eight planted faults, listed below; none may be fixed.                 |
 | 13–16  | Small placements and feature subjects. No pictogram as the main form; a compact version, not a redraw. |
+| 17     | “Draw a magnifying glass.” The object is the brief, so a large constructed magnifier is correct here.  |
 
 Planted faults in `attachments/upload-card.svg`: a gradient and drop shadow on the card; a skewed icon; hatching that leaves its region; a 240-unit span labelled 200; a dashed arrowhead on an arrow used for alignment; a heavy unexplained grid with every stroke at full weight; a letter-spaced bold title with straight quotes and a hyphen; a rule through the title.
 
