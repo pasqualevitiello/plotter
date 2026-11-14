@@ -1,0 +1,1 @@
+Draw an icon, label, and status pill as separate parts projecting into one interface row. Keep their sizes fixed and make the shared alignment clear. Deliver an editable SVG for a component-library page.

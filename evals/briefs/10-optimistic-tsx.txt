@@ -1,0 +1,1 @@
+Illustrate optimistic UI updates (the interface changes before the server confirms). I need it as a React component in TSX with no dependencies. It should inherit the text color because it sits on a dark docs page.

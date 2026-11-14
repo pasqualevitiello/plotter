@@ -1,0 +1,1 @@
+Animate parts.svg for our homepage: the separate parts come together into the finished row, hold for a moment, then come apart again. It should loop. Give me one self-contained HTML file.

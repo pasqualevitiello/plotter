@@ -1,0 +1,1 @@
+Empty state for a search with no results. It will sit above the text “No results found” at about 240px wide, so it has to read at that size. SVG.
