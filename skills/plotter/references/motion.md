@@ -62,7 +62,7 @@ Revise the weakest observed issue and replay the affected sequence. Review the c
 
 ## Delivery and host behavior
 
-The brief determines the artifact. A request to animate a site component is not a request for a standalone HTML player. Preserve the host’s existing controls and playback conventions; read [website integration](implementation.md) for this repository.
+The brief determines the artifact. A request to animate a site component is not a request for a standalone HTML player. Preserve the host’s existing controls and playback conventions.
 
 - **Embedded illustration:** integrate the timeline with the host’s playback. Plotter’s website loops have no visible controls; they pause off-screen or while the page is hidden.
 - **Standalone animation or review file:** include the editable timeline and its actual resources. A player with pause/resume, replay, and a way to inspect the selected still is useful here. For one-file HTML, inline the generated role stylesheet and, when the page should not depend on an installed font, the bundled Cal Sans as a data-URI `@font-face`; for a folder, preserve all relative dependencies.

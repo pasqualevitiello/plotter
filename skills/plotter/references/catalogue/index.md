@@ -4,7 +4,7 @@
 
 Every drawing in the Plotter catalogue, exported as a resolved static SVG at its native 560 × 440. Codes match the website. When a brief names a code (“like TIM-06”), open that file and borrow its construction relationship, not its subject.
 
-Codes are a three-letter family prefix and a number, without gaps within a family. Drawings retired as near-duplicates keep their former codes in the repository’s code map and are not exported here. The [approved references](../approved-references.md) remain the style anchors; a catalogue drawing is an example, not a new reference selection.
+Codes are a three-letter family prefix and a number, without gaps within a family. Drawings retired as near-duplicates keep their codes reserved and are not exported here. The [approved references](../approved-references.md) remain the style anchors; a catalogue drawing is an example, not a new reference selection.
 
 ## Geometry (GEO)
 

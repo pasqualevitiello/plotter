@@ -18,7 +18,6 @@ if (metadata.name !== "plotter" || typeof metadata.description !== "string") {
   throw new Error("Plotter needs a name and description for skill discovery.");
 }
 
-const historyRoot = resolve(skillRoot, "references/history");
 function checkLinks(directory: string) {
   for (const entry of readdirSync(directory, { withFileTypes: true })) {
     const file = resolve(directory, entry.name);
@@ -30,17 +29,7 @@ function checkLinks(directory: string) {
       if (!target) continue;
       if (/^[a-z][a-z\d+.-]*:/i.test(target) || target.startsWith("#"))
         continue;
-      const resolved = resolve(dirname(file), target.replace(/#.*/, ""));
-      statSync(resolved);
-      // The download omits the historical record, so nothing outside it may link in.
-      if (
-        !file.startsWith(`${historyRoot}/`) &&
-        (resolved === historyRoot || resolved.startsWith(`${historyRoot}/`))
-      ) {
-        throw new Error(
-          `${file}: links into references/history, which the download omits.`,
-        );
-      }
+      statSync(resolve(dirname(file), target.replace(/#.*/, "")));
     }
   }
 }

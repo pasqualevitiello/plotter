@@ -34,7 +34,6 @@ Load additional material only for its branch:
 | When                                                                                         | Reference                                                                                          |
 | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | Writing role-based SVG, using arrow/dimension/hatch helpers, overriding tokens, or exporting | [Portable foundation](references/foundation.md), including its supported cases and examples        |
-| Editing the Plotter website or its components                                                | [Website integration](references/implementation.md), then the checkout’s applicable instructions   |
 | Explicitly asked for technical verification                                                  | [Verification prompt](references/verification-prompt.md), supplied with current source and renders |
 
 ## Finish the requested artifact

@@ -161,11 +161,6 @@ with zipfile.ZipFile(destination, "w", compression=zipfile.ZIP_DEFLATED, compres
             raise ValueError(f"Skill archives must contain files rather than symlinks: {relative}")
         if not path.is_file() or path.suffix == ".pyc":
             continue
-        # The dated review record and its captures stay in the repository.
-        if relative.parts[:2] == ("references", "history") or (
-            relative.parent == Path("references") and path.suffix == ".png"
-        ):
-            continue
         entry = zipfile.ZipInfo((Path("plotter") / relative).as_posix(), date_time=(1980, 1, 1, 0, 0, 0))
         entry.compress_type = zipfile.ZIP_DEFLATED
         entry.external_attr = 0o100644 << 16
