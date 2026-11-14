@@ -109,6 +109,25 @@ if (fontCopies[0] !== fontCopies[1]) {
   throw new Error("The skill's bundled Cal Sans differs from the website's.");
 }
 statSync(resolve(skillRoot, "assets/fonts/OFL.txt"));
+// The drawing checker must accept every current catalogue and grammar drawing.
+const checked = Bun.spawnSync([
+  "python3",
+  resolve(skillRoot, "scripts/check.py"),
+  ...["references/catalogue", "references/grammar"].flatMap((folder) =>
+    readdirSync(resolve(skillRoot, folder))
+      .filter((file) => file.endsWith(".svg"))
+      .map((file) => resolve(skillRoot, folder, file)),
+  ),
+]);
+if (checked.exitCode !== 0) {
+  throw new Error(
+    `scripts/check.py rejects a bundled drawing:\n${checked.stdout
+      .toString()
+      .split("\n")
+      .filter((line) => line.includes(": error"))
+      .join("\n")}`,
+  );
+}
 const bundled = readdirSync(catalogueRoot).filter((file) =>
   file.endsWith(".svg"),
 );

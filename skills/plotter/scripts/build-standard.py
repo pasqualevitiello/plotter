@@ -80,4 +80,45 @@ for name, table in [("stroke-palette", solid), ("line-patterns", pattern), ("fil
     if count != 1:
         raise ValueError(f"Expected one {name} table marker in {guide}.")
 guide.write_text(text)
+
+# The entry file repeats the numbers an agent needs before it opens a reference.
+names = {
+    "primary": "primary form", "section": "section cut", "secondary": "secondary form",
+    "dimension": "dimension", "leader": "leader", "transfer": "transfer",
+    "hidden": "hidden, absent, or proposed outline", "hatch": "hatch",
+    "guide": "reference guide", "centerline": "centerline", "grid": "grid",
+}
+widths = {tokens[role["width"]] for role in roles.values()}
+if len(widths) != 1:
+    raise ValueError("SKILL.md states one stroke width; the standard now has several.")
+by_opacity = {}
+for key, name in names.items():
+    by_opacity.setdefault(tokens[roles[key]["opacity"]], []).append(name)
+opacities = "; ".join(
+    f"**{number(value)}** {', '.join(by_opacity[value])}" for value in sorted(by_opacity, reverse=True)
+)
+dashes = "; ".join(
+    f"`{roles[key]['dash']}` {label}"
+    for key, label in (("centerline", "centerline"), ("hidden", "hidden, absent, or proposed"), ("transfer", "movement or transfer"))
+)
+geometry = standard["geometry"]
+numbers = [
+    f"- Every stroke is **{number(widths.pop())}** unit wide.",
+    f"- Opacity: {opacities}.",
+    f"- Region highlight: `fill-opacity` **{number(tokens['--plotter-opacity-highlight'])}**.",
+    f"- Dashes: {dashes}. Everything else is continuous.",
+    f"- Arrowhead: two solid **{number(geometry['arrow']['legLength'])}**-unit legs at **{number(geometry['arrow']['angle'])}°**, meeting the shaft’s last dash at the tip.",
+    f"- Dimension: **{number(geometry['dimension']['slashExtent'])}**-unit slashes; at least **{number(geometry['dimension']['labelClearance'])}** units clear around every label’s glyphs.",
+    f"- Hatch: **{number(geometry['hatch']['edgePitch'])}**-unit pitch along an edge, at −45°.",
+]
+entry = ROOT / "SKILL.md"
+begin, end = "<!-- BEGIN GENERATED: numbers -->", "<!-- END GENERATED: numbers -->"
+entry_text, count = re.subn(
+    re.escape(begin) + r"[\s\S]*?" + re.escape(end),
+    lambda _: begin + "\n" + "\n".join(numbers) + "\n" + end,
+    entry.read_text(),
+)
+if count != 1:
+    raise ValueError(f"Expected one numbers marker in {entry}.")
+entry.write_text(entry_text)
 print("Generated Plotter role CSS, runtime standard, and numeric reference tables.")
