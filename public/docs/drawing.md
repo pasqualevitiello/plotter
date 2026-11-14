@@ -73,6 +73,6 @@ Download the resolved [AGT-01 registration SVG](/plotter/downloads/agent-registr
 
 ## Review the result
 
-Compare the candidate with its chosen reference at the intended size and as a thumbnail. For a revision, compare with the previous drawing too. Inspect the host’s themes and narrow layout when those are part of delivery.
+Render the candidate with `python3 scripts/render.py drawing.svg`, adding `--width` for the size it will be shown at and `--theme both` for a dark host. Compare it with its chosen reference at the intended size and as a thumbnail. For a revision, compare with the previous drawing too. Inspect the host’s themes and narrow layout when those are part of delivery.
 
 Confirm that the focal relationship reads, guides remain subordinate, labels have space, transparent forms keep their meaning, and numeric or behavioral claims match their evidence. Deliver the editable source and requested export, naming any visual review that remains pending. Source generation alone does not establish visual approval.

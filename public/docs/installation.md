@@ -41,9 +41,9 @@ For an existing drawing, attach its editable source and describe the change. To 
 
 ## What you need
 
-Reading the skill and opening its bundled SVGs needs no package manager or website checkout. The registration authoring example uses Node.js; the resolved static SVG exporter uses Python 3. The animation example opens in a modern browser with its packaged local stylesheet.
+Reading the skill and opening its bundled SVGs needs no package manager or website checkout. The registration authoring example uses Node.js; the resolved static SVG exporter and the preview renderer use Python 3. The renderer needs a Chromium-based browser such as Chrome, Edge, or Brave, or another SVG renderer such as `rsvg-convert`; without one, the agent delivers the drawing with its visual review marked as pending. The animation example opens in a modern browser with its packaged local stylesheet.
 
-Recipients opening an exported SVG need neither Node.js nor Python. Cal Sans is optional for opening the files; a sans-serif fallback keeps labels editable, while exact text metrics depend on the font being available.
+Recipients opening an exported SVG need neither Node.js nor Python. The skill bundles Cal Sans, so previews show the intended typography. A delivered SVG still names the font without containing it: load Cal Sans on your site, or ask for an export with the font embedded (`--embed-font`, about 200 KB). Otherwise labels fall back to a sans-serif and stay editable.
 
 ## Run the website
 

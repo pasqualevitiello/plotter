@@ -101,6 +101,14 @@ for (const [prefix, values] of numbers) {
     }
   });
 }
+const fontCopies = [
+  resolve(skillRoot, "assets/fonts/CalSansVF.woff2"),
+  resolve(import.meta.dir, "../public/fonts/CalSansVF.woff2"),
+].map((file) => createHash("sha256").update(readFileSync(file)).digest("hex"));
+if (fontCopies[0] !== fontCopies[1]) {
+  throw new Error("The skill's bundled Cal Sans differs from the website's.");
+}
+statSync(resolve(skillRoot, "assets/fonts/OFL.txt"));
 const bundled = readdirSync(catalogueRoot).filter((file) =>
   file.endsWith(".svg"),
 );

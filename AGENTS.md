@@ -17,9 +17,9 @@ Keep static drawings, timelines, and playback responsibilities separate. Preserv
 
 ## Typography and records
 
-Use Cal Sans with no added letter-spacing, `font-optical-sizing: auto`, one `GEOM` value per role, and `font-synthesis: none`. Keep text editable and use typeset punctuation (’ – − “ ”).
+Use Cal Sans with no added letter-spacing, `font-optical-sizing: auto`, one `GEOM` value per role, and `font-synthesis: none`. The skill’s bundled `skills/plotter/assets/fonts/CalSansVF.woff2` stays identical to `public/fonts/CalSansVF.woff2`. Keep text editable and use typeset punctuation (’ – − “ ”).
 
-Treat coss paths and evaluations under `skills/plotter/references/history/` as historical evidence. Keep current integration paths in `skills/plotter/references/implementation.md`. Report only inspection and verification actually performed; source generation does not establish visual approval.
+Skill documents address a stranger’s agent, so maintainer rules belong here. The dated coss review record that lived under `skills/plotter/references/history/` was removed from the tree after commit `37f3464`; read it from git history when tracing an old decision. Keep revision IDs stable unless alternatives are requested. Appearance approval applies to a particular revision; gallery inclusion, production placement, and style-reference selection are separate decisions. `skills/plotter/references/drawings/manifest.json` records the reference snapshots’ source revisions and hashes. Keep current integration paths in [CONTRIBUTING.md](CONTRIBUTING.md#website-integration). Report only inspection and verification actually performed; source generation does not establish visual approval.
 
 <!-- BEGIN:nextjs-agent-rules -->
 

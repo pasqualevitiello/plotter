@@ -1,0 +1,1 @@
+Draw Alex’s and Sam’s availability as two measured bands meeting at one shared slot. Label the people and the meeting, and make the overlap the focal point. Deliver an editable SVG for a scheduling feature page.

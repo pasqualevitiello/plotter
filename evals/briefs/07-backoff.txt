@@ -1,0 +1,1 @@
+Draw webhook retries with exponential backoff: wait 1s, 2s, 4s, 8s, then give up. It's for a docs page. SVG.

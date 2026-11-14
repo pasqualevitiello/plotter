@@ -1,6 +1,6 @@
 # Approved references
 
-On 2026-10-25, the user explicitly identified these 27 drawings as the best illustrations and asked that they be used as references. This list supersedes earlier broad endorsements and pending-review labels. Keep reference selection separate from revision identity: a later edit to a drawing does not silently inherit approval.
+Plotter’s author selected these 27 drawings on 2026-10-25 as the best illustrations and the references for new work. A later edit to one of them does not silently inherit that approval.
 
 ## Bundled starting points
 
@@ -16,11 +16,11 @@ Choose by construction relationship, then render and inspect the linked SVG. The
 | Conversation expressed with a few UI fragments    | [INT-09](drawings/INT-09.svg) | Recognition through avatars, tail-free messages, and spacing                 |
 | Absence interrupting a structure                  | [EMP-03](drawings/EMP-03.svg) | A missing connection that affects the construction itself                    |
 
-[The manifest](drawings/manifest.json) records source revision and snapshot hashes; a reference-level `source_commit` overrides the manifest's shared revision. These are source snapshots of selected compositions, not newly normalized or technically certified drawings. Historical background fills and line-role variations may remain; use the [drafting standard](drafting-standard.md) for new work. Render the snapshots on a light surface to inspect their original presentation. Bundling INT-02 adds access to an already approved composition; the 27-reference selection remains unchanged.
+These are source snapshots of selected compositions, not newly normalized or technically certified drawings. Historical background fills and line-role variations may remain; use the [drafting standard](drafting-standard.md) for new work. Render the snapshots on a light surface to inspect their original presentation.
 
 ## Full reference set
 
-The following selection remains unchanged. Every catalogue drawing, including these, is bundled as a resolved static SVG in the [catalogue](catalogue/index.md). Codes were renumbered on 2026-11-01; older records use the former codes listed in the [code map](history/code-map.md). A familiar subject alone is not a sufficient reference match. The original coss route and source locations are historical provenance, recorded in [history](history/index.md).
+Every catalogue drawing, including these, is bundled as a resolved static SVG in the [catalogue](catalogue/index.md). A familiar subject alone is not a sufficient reference match.
 
 | Code   | Drawing                                 | Study ID                     |
 | ------ | --------------------------------------- | ---------------------------- |
@@ -52,4 +52,4 @@ The following selection remains unchanged. Every catalogue drawing, including th
 | EMP-04 | An unbuilt arch                         | `404-unbuilt-arch`           |
 | EMP-01 | The missing corner                      | `404-reference`              |
 
-The [selection evidence](history/reference-selection.md) preserves the original exclusions and working interpretations. A later revision still needs its own visual assessment; inclusion here is not technical certification.
+A later revision still needs its own visual assessment; inclusion here is not technical certification.

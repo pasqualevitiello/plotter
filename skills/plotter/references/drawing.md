@@ -34,6 +34,8 @@ Read [foundation.md](foundation.md) for shared roles, helpers, and export. Use n
 
 Separate geometry from presentation and file writing. Derive paths from named parameters; retain calculation precision until serialization. Preserve opacity grouping, solid arrowheads, transparent forms, and single ownership of shared strokes. Keep IDs local and unique when drawings repeat in one document.
 
+When the deliverable is a component or other host code, compose and inspect the drawing as SVG first, then translate it, and say that the inspected render was the SVG.
+
 Use an accessible title and description for meaningful standalone output. In a host where adjacent copy supplies all meaning, decorative SVG may be hidden from accessibility APIs. Typography follows [current direction](direction.md#typography-and-presentation).
 
 **Complete when:** the source remains editable, every dimension agrees with its witnesses, and role adoption has preserved the intended hierarchy and exceptions.
@@ -41,6 +43,16 @@ Use an accessible title and description for meaningful standalone output. In a h
 ## Inspect and deliver
 
 Render the candidate beside the selected reference at a common intended size, then inspect the thumbnail. For a revision, also compare with its own previous render. Inspect both themes when the host uses them and the actual narrow layout when embedding it.
+
+Render with the packaged script, resolved from the skill directory, and open the PNG it names:
+
+```sh
+python3 scripts/render.py drawing.svg                        # native size, light surface
+python3 scripts/render.py drawing.svg --theme both           # when the host has a dark theme
+python3 scripts/render.py drawing.svg small.png --width 240  # the width it will be shown at
+```
+
+The script uses an installed Chromium-based browser and falls back to other SVG renderers. A dark render recolors a themeable source that draws in `currentColor`; a resolved export keeps the ink it was exported with. When a sandbox blocks the renderer, ask to run this one command outside it. Render again after the last edit: a drawing changed since its render has not been inspected. Previews use the bundled Cal Sans, so say when the delivered file will fall back to another font on its host.
 
 Resolve these concrete questions:
 
@@ -65,6 +77,7 @@ From the copied `plotter` directory, with Node.js and Python 3 available:
 ```sh
 node assets/examples/registration.mjs > registration.svg
 python3 scripts/export-svg.py registration.svg registration-export.svg --id-prefix registration
+python3 scripts/render.py registration-export.svg
 ```
 
-The first file is editable, themeable SVG with embedded generated role CSS. The second has resolved appearance and no coss, JavaScript, or external CSS dependency. Opening it does not require Node or Python. Adapt the example's parameters and labels to a new brief; preserve the relationship only if it fits that brief. The width witnesses come from the record rectangle; the label clearance and surrounding composition are authored explicitly and need adjustment when text or layout changes.
+The first file is editable, themeable SVG with embedded generated role CSS. The second has resolved appearance and no host application, JavaScript, or external CSS dependency. Opening it does not require Node or Python. The third command writes `registration-export.png` for inspection. Adapt the example's parameters and labels to a new brief; preserve the relationship only if it fits that brief. The width witnesses come from the record rectangle; the label clearance and surrounding composition are authored explicitly and need adjustment when text or layout changes.

@@ -1,0 +1,1 @@
+Illustrate a token-bucket rate limiter for our API docs: tokens refill at a steady rate, each request spends one, and requests get rejected when the bucket is empty. SVG please.

@@ -11,7 +11,7 @@ Copy this **complete `plotter` directory** into the agent’s personal skills di
 | Codex       | `~/.codex/skills/plotter`  | `$plotter` |
 | Claude Code | `~/.claude/skills/plotter` | `/plotter` |
 
-The canonical source is `skills/plotter` in the private `pasqualevitiello/plotter` repository. Obtain it through authenticated repository access or the complete skill download. Update installed copies as complete folders. Standalone work needs no website checkout, conversation history, package manager, or external font download.
+The canonical source is `skills/plotter` in the public [`pasqualevitiello/plotter`](https://github.com/pasqualevitiello/plotter) repository. Download the complete skill from the Plotter website, or copy that folder from a checkout. Update installed copies as complete folders. Standalone work needs no website checkout, conversation history, package manager, or external font download.
 
 Example briefs for Codex:
 
@@ -24,22 +24,19 @@ In Claude Code, start the same request with `/plotter`. One entrypoint routes to
 
 ## What is portable
 
-Seven bundled SVG anchors support construction-reference selection, and the [catalogue](references/catalogue/index.md) bundles every website drawing by code, so a brief can say “like TIM-06”. The [visual grammar](references/visual-grammar.md) includes teaching SVGs; the [foundation](references/foundation.md) contains dependency-free geometry helpers and generated role styles. [Website integration](references/implementation.md) and dated feedback are optional branches.
+Seven bundled SVG anchors support construction-reference selection, and the [catalogue](references/catalogue/index.md) bundles every website drawing by code, so a brief can say “like TIM-06”. The [visual grammar](references/visual-grammar.md) includes teaching SVGs; the [foundation](references/foundation.md) contains dependency-free geometry helpers and generated role styles.
 
 | Example                                                       | Open or generate it from the copied skill directory                                                           |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | Static registration, using the shared arrow/dimension helpers | `node assets/examples/registration.mjs > registration.svg`                                                    |
 | Resolved static SVG with editable labels                      | `python3 scripts/export-svg.py registration.svg registration-export.svg --id-prefix registration`             |
+| PNG preview for inspection, light and dark                    | `python3 scripts/render.py registration-export.svg --theme both`                                              |
 | Animation and static fallback, with shared role CSS           | Open `assets/examples/assembly-motion.html` in a modern browser; keep `assets/foundation/roles.css` in place. |
 
-Node.js is needed for the authoring example; Python 3 is needed for the static exporter. Recipients opening a resolved SVG need neither. The motion example uses browser SVG animation and a small player without a build or server. Keep its local stylesheet alongside it, or inline that generated stylesheet when delivering one HTML file. Exact Cal Sans typography depends on the font being available; the fallback is sans-serif.
+Node.js is needed for the authoring example; Python 3 is needed for the static exporter and the preview renderer. The renderer uses an installed Chromium-based browser such as Chrome, Edge, or Brave, and falls back to `rsvg-convert`, `resvg`, Inkscape, ImageMagick, or macOS Quick Look. Recipients opening a resolved SVG need neither. The motion example uses browser SVG animation and a small player without a build or server. Keep its local stylesheet alongside it, or inline that generated stylesheet when delivering one HTML file. Cal Sans is bundled under the SIL Open Font License at `assets/fonts/`: previews render with it, and `export-svg.py --embed-font` carries it inside a standalone SVG. Without it on the host, labels fall back to sans-serif.
 
 The [annotated motion studies](references/motion-examples.md) explain staging and timing using three existing animations; open `assets/examples/motion-studies.html` to inspect them. The examples are teaching material, not additional approved style references. The static exporter handles the selected still, not active animation.
 
-## Maintain the package
-
-[`standard.json`](assets/foundation/standard.json) owns shared numeric defaults; `scripts/build-standard.py` generates runtime data, CSS, and marked drafting tables. Generated or example-embedded styles are outputs, not separate palettes. Regenerate an example’s SVG before export when the standard changes. Website token adoption currently covers AGT-01, MEC-05, GEO-11, SYS-06, and CRF-06; all current illustrations use 1-unit visible strokes while legacy catalogue drawings retain their authored opacity and dash patterns.
-
-Current instructions live outside [history](references/history/index.md). Preserve the seven reference snapshots and their revision manifest. Historical coss records establish only their original tasks and revisions; coss paths in those records are provenance, not active dependencies. Update general guidance from specific evidence rather than extending every past preference to all drawings.
+## Licenses
 
 See [NOTICE.md](NOTICE.md) and [LICENSE](LICENSE) for the preserved source and licensing record.
