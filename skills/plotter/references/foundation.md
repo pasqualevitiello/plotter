@@ -2,7 +2,7 @@
 
 Use the foundation when implementing straight transfer arrows, horizontal/vertical dimensions, or rectangular hatching. Compose the illustration with ordinary SVG; use native paths for constructions these helpers do not cover. The helpers do not choose a composition or establish a mark's meaning.
 
-The complete skill folder contains the implementation. Resolve paths from the installed `plotter` directory, not a repository root. The ESM entrypoint is `assets/foundation/index.mjs`; it runs in a JavaScript authoring script or a host such as React without coss imports. It exports `arrow`, `dimension`, `hatch`, `highlightOpacity`, read-only `standard`, and `roleCss`. Its adjacent declaration file documents inputs and outputs. The import below assumes an authoring file at the skill root; examples in subdirectories use their own relative paths.
+The complete skill folder contains the implementation. Resolve paths from the installed `plotter` directory, not a repository root. The ESM entrypoint is `assets/foundation/index.mjs`; it runs in a JavaScript authoring script or a host such as React, with no imports from a host application. It exports `arrow`, `dimension`, `hatch`, `highlightOpacity`, read-only `standard`, and `roleCss`. Its adjacent declaration file documents inputs and outputs. The import below assumes an authoring file at the skill root; examples in subdirectories use their own relative paths.
 
 ```js
 import { arrow, dimension, hatch } from "./assets/foundation/index.mjs";
@@ -76,13 +76,13 @@ python3 scripts/export-svg.py drawing.svg exported.svg \
 
 Existing SVG titles/descriptions are used when those arguments are omitted. Optional `--ink '#171717'` selects the output ink; `--token=--plotter-opacity-guide=0.14` supplies an explicit token value. The exporter resolves generated roles at their original grouping level, embeds no application dependency, and prefixes local IDs and their references. It preserves authored inline overrides. Supply the token values needed for an export; a detached SVG cannot read the host's computed theme.
 
-The output has literal appearance values, local defs, editable labels, native dimensions, and accessible meaning. Cal Sans uses a sans-serif fallback when the font is unavailable. Exact typography needs the same font; no font download is required. The exporter accepts Plotter's generated stylesheet and supported inline styles, and reports unsupported classes, external resources, or stylesheets rather than silently dropping them.
+The output has literal appearance values, local defs, editable labels, native dimensions, and accessible meaning. Cal Sans uses a sans-serif fallback when the font is unavailable. Add `--embed-font` to carry the bundled Cal Sans inside the SVG, at about 200 KB, when the host will not load the font; text stays editable either way. The exporter accepts Plotter's generated stylesheet and supported inline styles, and reports unsupported classes, external resources, or stylesheets rather than silently dropping them.
 
 Export the selected static drawing. Active animation is intentionally unsupported by this static exporter; time zero is not necessarily the intended static fallback. Animation timelines and playback remain separate from the drafting helpers.
 
 ## Portable examples
 
-- [Registration authoring](../assets/examples/registration.mjs) reads the adjacent [editable template](../assets/examples/registration.svg), regenerates its shared arrow/dimension fragments and embedded role styles, and emits SVG. The [drawing workflow](drawing.md#portable-starting-example) gives Node.js and Python commands. It reads no coss files.
+- [Registration authoring](../assets/examples/registration.mjs) reads the adjacent [editable template](../assets/examples/registration.svg), regenerates its shared arrow/dimension fragments and embedded role styles, and emits SVG. The [drawing workflow](drawing.md#portable-starting-example) gives Node.js and Python commands. It reads nothing outside this package.
 - [Seat and withdraw](../assets/examples/assembly-motion.html) opens directly in a browser and uses the package's generated `roles.css`. It demonstrates hatch attachment, contact ownership, and playback separately from geometry. Read the [animation workflow](motion.md#portable-example) for its delivery boundary. If delivering one HTML file, inline that generated CSS rather than copying role numbers into a new stylesheet.
 
 These are implementation examples, not composition references. Regenerate registration output when the shared standard changes; keep example geometry and text intentional. Helpers centralize construction arithmetic, not the semantic decision to add a mark.

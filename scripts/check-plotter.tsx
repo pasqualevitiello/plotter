@@ -18,6 +18,7 @@ if (metadata.name !== "plotter" || typeof metadata.description !== "string") {
   throw new Error("Plotter needs a name and description for skill discovery.");
 }
 
+const historyRoot = resolve(skillRoot, "references/history");
 function checkLinks(directory: string) {
   for (const entry of readdirSync(directory, { withFileTypes: true })) {
     const file = resolve(directory, entry.name);
@@ -29,7 +30,17 @@ function checkLinks(directory: string) {
       if (!target) continue;
       if (/^[a-z][a-z\d+.-]*:/i.test(target) || target.startsWith("#"))
         continue;
-      statSync(resolve(dirname(file), target.replace(/#.*/, "")));
+      const resolved = resolve(dirname(file), target.replace(/#.*/, ""));
+      statSync(resolved);
+      // The download omits the historical record, so nothing outside it may link in.
+      if (
+        !file.startsWith(`${historyRoot}/`) &&
+        (resolved === historyRoot || resolved.startsWith(`${historyRoot}/`))
+      ) {
+        throw new Error(
+          `${file}: links into references/history, which the download omits.`,
+        );
+      }
     }
   }
 }
@@ -101,6 +112,14 @@ for (const [prefix, values] of numbers) {
     }
   });
 }
+const fontCopies = [
+  resolve(skillRoot, "assets/fonts/CalSansVF.woff2"),
+  resolve(import.meta.dir, "../public/fonts/CalSansVF.woff2"),
+].map((file) => createHash("sha256").update(readFileSync(file)).digest("hex"));
+if (fontCopies[0] !== fontCopies[1]) {
+  throw new Error("The skill's bundled Cal Sans differs from the website's.");
+}
+statSync(resolve(skillRoot, "assets/fonts/OFL.txt"));
 const bundled = readdirSync(catalogueRoot).filter((file) =>
   file.endsWith(".svg"),
 );

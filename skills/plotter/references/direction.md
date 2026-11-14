@@ -1,6 +1,6 @@
 # Current visual direction
 
-Shared by drawing and animation. This is the active art direction; dated review conversations live in [history](history/index.md). Numerical roles belong to the [drafting standard](drafting-standard.md) and its generated source, not this file.
+Shared by drawing and animation. This is the active art direction. Numerical roles belong to the [drafting standard](drafting-standard.md) and its generated source, not this file.
 
 ## Composition
 
@@ -20,7 +20,7 @@ Preserve the original grouping level of opacity during role adoption. At the sha
 
 ## Typography and presentation
 
-Use the host font or `Cal Sans, sans-serif`. Use automatic optical sizing, no added letter-spacing, no synthesized bold/italic, and one GEOM value per text role where the font supports it: 25 for ordinary illustration text, 0 for identifiers. Use typeset punctuation. Editable text with a sans-serif fallback is portable; exact Cal Sans metrics require that font to be available.
+Use the host font or `Cal Sans, sans-serif`. Use automatic optical sizing, no added letter-spacing, no synthesized bold/italic, and one GEOM value per text role where the font supports it: 25 for ordinary illustration text, 0 for identifiers. Use typeset punctuation. Editable text with a sans-serif fallback is portable; exact Cal Sans metrics require that font to be available. The package bundles [Cal Sans](../assets/fonts/CalSansVF.woff2): previews render with it, and `export-svg.py --embed-font` carries it inside a standalone SVG for a host that will not load the font.
 
 Bundled references use a `560 × 440` viewBox. Inspect at the intended output size and as a thumbnail; preserve essential labels when adapting a composition. The website displays drawings at native size when space permits and scales them proportionally to fit narrower containers.
 

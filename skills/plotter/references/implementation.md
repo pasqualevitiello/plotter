@@ -46,11 +46,11 @@ Generation produces artifacts; visual correctness depends on inspecting the affe
 
 The standalone website owns its layout. Its homepage introduces the drawing and animation workflows. Keep study IDs stable and keep removed studies out of active metadata.
 
-Catalogue codes are a three-letter family prefix (`familyPrefix` in `components/plotter/study-types.ts`) and a number, without gaps within a family. A new drawing takes the next number in its family; a retired drawing keeps its code reserved in `retiredStudies` and the [code map](history/code-map.md). After any catalogue change, run `bun run catalogue` so the bundled SVGs and index match the website.
+Catalogue codes are a three-letter family prefix (`familyPrefix` in `components/plotter/study-types.ts`) and a number, without gaps within a family. A new drawing takes the next number in its family; a retired drawing keeps its code reserved in `retiredStudies` and the code map (`references/history/code-map.md`). After any catalogue change, run `bun run catalogue` so the bundled SVGs and index match the website.
 
 Present catalogue art at native `560 × 440` dimensions when space permits. Scale it proportionally to fit narrower containers instead of requiring horizontal scrolling; preserve its SVG viewBox and geometry. Preserve grammar isolation behavior: focused marks retain their original appearance, and supplemental grid segments restore only portions hidden with a form. Keep hover, keyboard, and touch access to that behavior.
 
-Static drawings and animation timelines remain separate. MEC-05’s static and animated core faces share a hatch component; its carrier frames remain unhatched. Playback owns pause/resume, static fallback, reduced motion, and visibility. On the website, looping drawings show no controls; they pause off-screen and fall back to the still drawing under reduced motion. Timeline edits preserve the chosen still unless redesign is requested. Current source owns exact timing; [historical feedback](history/direction.md) explains particular revisions.
+Static drawings and animation timelines remain separate. MEC-05’s static and animated core faces share a hatch component; its carrier frames remain unhatched. Playback owns pause/resume, static fallback, reduced motion, and visibility. On the website, looping drawings show no controls; they pause off-screen and fall back to the still drawing under reduced motion. Timeline edits preserve the chosen still unless redesign is requested. Current source owns exact timing; historical feedback (`references/history/direction.md`) explains particular revisions.
 
 ## Portable delivery from the website
 
@@ -66,4 +66,4 @@ Resolved static SVG carries its appearance values and local definitions. Animate
 
 ## Historical coss integration
 
-The original coss implementation lived under `apps/ui/app/plotter`, with the skill at `apps/ui/skills/plotter` and an unlinked `/ui/plotter` showcase. Its production hero selections and routes describe that earlier host. Preserve those details in [history](history/index.md); they are not active standalone repository paths.
+The original coss implementation lived under `apps/ui/app/plotter`, with the skill at `apps/ui/skills/plotter` and an unlinked `/ui/plotter` showcase. Its production hero selections and routes describe that earlier host. Preserve those details in `references/history/`; they are not active standalone repository paths.

@@ -58,14 +58,14 @@ Within the permitted review scope, watch a complete cycle at normal speed and in
 - Does the return preserve meaning and continuity? Compare position **and speed**, except at an intentional impact or reversal.
 - At approach, contact, and separation, do edges remain single, hatches attached, labels clear, and dimensions truthful?
 
-Revise the weakest observed issue and replay the affected sequence. Review the chosen still independently. Sampled frames can establish poses and clearances; they do not establish rhythm. If playback inspection is unavailable, name that gap rather than calling motion visually verified. Respect a request to skip automated checks.
+Revise the weakest observed issue and replay the affected sequence. Review the chosen still independently. Sampled frames can establish poses and clearances; they do not establish rhythm. `python3 scripts/render.py page.html` captures a page as it loads, so give a review file a way to open at a chosen time when you need a later pose. If playback inspection is unavailable, name that gap rather than calling motion visually verified. Respect a request to skip automated checks.
 
 ## Delivery and host behavior
 
 The brief determines the artifact. A request to animate a site component is not a request for a standalone HTML player. Preserve the host’s existing controls and playback conventions; read [website integration](implementation.md) for this repository.
 
 - **Embedded illustration:** integrate the timeline with the host’s playback. Plotter’s website loops have no visible controls; they pause off-screen or while the page is hidden.
-- **Standalone animation or review file:** include the editable timeline and its actual resources. A player with pause/resume, replay, and a way to inspect the selected still is useful here. For one-file HTML, inline the generated role stylesheet; for a folder, preserve all relative dependencies.
+- **Standalone animation or review file:** include the editable timeline and its actual resources. A player with pause/resume, replay, and a way to inspect the selected still is useful here. For one-file HTML, inline the generated role stylesheet and, when the page should not depend on an installed font, the bundled Cal Sans as a data-URI `@font-face`; for a folder, preserve all relative dependencies.
 - **Still export:** export the selected static composition with the packaged exporter. Active animation is outside that exporter’s contract.
 
 Respect reduced motion, including preference changes while the page is open, by showing the selected still. Keep it readable before JavaScript runs and when animation is unavailable. A paused intermediate frame is not the same as that deliberately chosen fallback.

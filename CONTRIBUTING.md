@@ -68,8 +68,8 @@ Generated drawing components, foundation outputs, public assets, and historical 
 
 ## Review and portable output
 
-Include the brief and relevant before/after drawings when proposing visual changes. Inspect the drawing at its intended size and, for motion, watch a complete cycle and inspect its fallback. Report the review actually performed; sampled frames establish poses, not playback rhythm.
+Include the brief and relevant before/after drawings when proposing visual changes. Inspect the drawing at its intended size with `python3 skills/plotter/scripts/render.py` and, for motion, watch a complete cycle and inspect its fallback. Report the review actually performed; sampled frames establish poses, not playback rhythm.
 
-Keep exports independent of the website. Resolved static SVG carries its own appearance and definitions. Standalone animation includes its editable timeline and required local resources, or inlines them in one HTML file. Exact Cal Sans appearance requires the font to be available; SVG text remains editable with a sans-serif fallback.
+Keep exports independent of the website. Resolved static SVG carries its own appearance and definitions. Standalone animation includes its editable timeline and required local resources, or inlines them in one HTML file. Exact Cal Sans appearance requires the font to be available; SVG text remains editable with a sans-serif fallback. The skill bundles the font for previews and for exports made with `--embed-font`.
 
-The skill’s historical coss paths and review records remain as provenance. Preserve [ATTRIBUTION.md](ATTRIBUTION.md), [LICENSE](LICENSE), and accompanying third-party license information.
+The skill’s historical coss paths and review records remain as provenance under `skills/plotter/references/history/`. The downloadable archive omits that folder, so current skill documents never link into it; `bun run plotter:check` enforces this. Preserve [ATTRIBUTION.md](ATTRIBUTION.md), [LICENSE](LICENSE), and accompanying third-party license information.

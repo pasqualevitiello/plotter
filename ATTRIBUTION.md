@@ -14,4 +14,4 @@ Plotter and its portable skill package use the [MIT license](LICENSE), selected 
 
 For historical provenance, the initial extraction carried an AGPL-3.0 root license alongside an MIT declaration in `apps/ui/package.json`. That was the extraction record; the current project and packaged skill licenses are MIT.
 
-Cal Sans is credited to Mark Davis, WORDMARK × Cal.com. The site’s font package and any bundled third-party assets retain their own accompanying license information. Reference images and historical material remain part of the preserved source record.
+Cal Sans is credited to Mark Davis, WORDMARK × Cal.com. The skill bundles one copy of the variable font with its SIL Open Font License 1.1 at `skills/plotter/assets/fonts/`. The site’s font package and any bundled third-party assets retain their own accompanying license information. Reference images and historical material remain part of the preserved source record.

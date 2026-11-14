@@ -14,9 +14,9 @@ Inputs
 - Claimed units, scale, equations, behavior, and external sources:
 
 Resolve the installed Plotter skill directory, then read its SKILL.md and
-references/drafting-standard.md and references/approved-references.md. For an
-existing study, also read only its relevant revision entries in
-references/history/direction.md. Current direction is in references/direction.md.
+references/drafting-standard.md and references/approved-references.md. Read
+references/standards-background.md before judging a claim about an external
+standard. Current direction is in references/direction.md.
 Treat appearance approval as art-direction evidence, not as proof of
 mathematical or product accuracy.
 

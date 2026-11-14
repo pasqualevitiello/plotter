@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Resolve a Plotter-authored static SVG without depending on the coss stylesheet."""
+"""Resolve a Plotter-authored static SVG without depending on a host stylesheet."""
 
 import argparse
+import base64
 import json
 import math
 import re
@@ -12,6 +13,7 @@ from pathlib import Path
 SVG = "http://www.w3.org/2000/svg"
 XLINK = "http://www.w3.org/1999/xlink"
 FOUNDATION = Path(__file__).resolve().parents[1] / "assets" / "foundation"
+FONT = Path(__file__).resolve().parents[1] / "assets" / "fonts" / "CalSansVF.woff2"
 ET.register_namespace("", SVG)
 ET.register_namespace("xlink", XLINK)
 
@@ -153,7 +155,7 @@ def namespace_references(root, prefix):
                 node.set(name, URL.sub(lambda match: f"url(#{target(match[2][1:])})", value))
 
 
-def export_svg(source, *, ink=None, title=None, description=None, id_prefix="plotter", tokens=None):
+def export_svg(source, *, ink=None, title=None, description=None, id_prefix="plotter", tokens=None, embed_font=False):
     if re.search(r"<!DOCTYPE|<!ENTITY|<\?xml-stylesheet", source, re.IGNORECASE):
         raise ValueError("External document declarations and stylesheet instructions are unsupported.")
     standard = json.loads((FOUNDATION / "standard.json").read_text())
@@ -258,6 +260,13 @@ def export_svg(source, *, ink=None, title=None, description=None, id_prefix="plo
     root.attrib.setdefault("height", view_box[3])
     set_accessibility(root, title, description)
     namespace_references(root, id_prefix)
+    if embed_font:
+        data = base64.b64encode(FONT.read_bytes()).decode("ascii")
+        face = ET.SubElement(root, f"{{{SVG}}}style")
+        face.text = (
+            '@font-face{font-family:"Cal Sans";font-weight:400 700;'
+            f'src:url("data:font/woff2;base64,{data}") format("woff2")}}'
+        )
     return ET.tostring(root, encoding="unicode") + "\n"
 
 
@@ -270,6 +279,7 @@ def main():
     parser.add_argument("--description")
     parser.add_argument("--id-prefix", default="plotter")
     parser.add_argument("--token", action="append", default=[], metavar="NAME=VALUE")
+    parser.add_argument("--embed-font", action="store_true", help="Carry the bundled Cal Sans inside the SVG, adding about 200 KB.")
     args = parser.parse_args()
     try:
         tokens = {}
@@ -281,6 +291,7 @@ def main():
         result = export_svg(
             args.input.read_text(), ink=args.ink, title=args.title,
             description=args.description, id_prefix=args.id_prefix, tokens=tokens,
+            embed_font=args.embed_font,
         )
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(result)
