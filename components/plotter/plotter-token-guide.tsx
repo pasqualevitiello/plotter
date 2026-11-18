@@ -22,7 +22,7 @@ import {
   FieldLabel,
 } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import { Slider, SliderValue } from "@/components/ui/slider";
+import { Slider } from "@/components/ui/slider";
 import {
   highlightOpacity,
   roleCss,
@@ -90,6 +90,20 @@ const groups = [
   { label: "Opacity", prefix: "--plotter-opacity-" },
 ];
 
+function buildCss(values: Values, ink: string) {
+  const declarations = tokens
+    .map((token) => `  ${token}: ${values[token]};`)
+    .join("\n");
+  return `.illustration {\n  --plotter-ink: ${ink};\n${declarations}\n}`;
+}
+
+function getSliderConfig(token: ControlToken) {
+  return {
+    max: token.startsWith("--plotter-opacity-") ? 1 : defaults[token] * 2,
+    step: token === "--plotter-opacity-highlight" ? 0.005 : 0.01,
+  };
+}
+
 export function PlotterTokenGuide({ children }: { children: ReactNode }) {
   const id = useId();
   const cssRef = useRef<HTMLTextAreaElement>(null);
@@ -100,9 +114,7 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
   const [copyState, setCopyState] = useState<"idle" | "copied" | "manual">(
     "idle",
   );
-  const css = `.illustration {\n  --plotter-ink: ${ink};\n${tokens
-    .map((token) => `  ${token}: ${values[token]};`)
-    .join("\n")}\n}`;
+  const css = buildCss(values, ink);
   const previewStyle: CSSProperties & Values & { "--plotter-ink": string } = {
     ...values,
     "--plotter-ink": ink,
@@ -148,8 +160,9 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
         </h2>
         <p className="text-sm text-pretty text-muted-foreground">
           Adjust ink, stroke widths, and opacity without changing the drawing.
-          Try every token on MEC-05 and the samples below it, then copy the CSS
-          to a wrapper around your inline SVG.
+          Drag a slider, or hover a value and click to type an exact number. Try
+          every token on MEC-05 and the samples below it, then copy the CSS to a
+          wrapper around your inline SVG.
         </p>
       </div>
 
@@ -186,40 +199,24 @@ export function PlotterTokenGuide({ children }: { children: ReactNode }) {
                   .filter((token) => token.startsWith(prefix))
                   .map((token) => {
                     const { label, hint } = controls[token];
-                    const max = token.startsWith("--plotter-opacity-")
-                      ? 1
-                      : defaults[token] * 2;
+                    const { max, step } = getSliderConfig(token);
                     return (
                       <Field className="min-w-0" key={token}>
                         <Slider
-                          format={{
-                            minimumFractionDigits: 2,
-                            maximumFractionDigits:
-                              token === "--plotter-opacity-highlight" ? 3 : 2,
-                          }}
+                          label={label}
                           largeStep={0.1}
                           max={max}
                           min={0}
                           onValueChange={(value) => {
                             setValues((current) => ({
                               ...current,
-                              [token]:
-                                typeof value === "number" ? value : value[0],
+                              [token]: value,
                             }));
                             setCopyState("idle");
                           }}
-                          step={
-                            token === "--plotter-opacity-highlight"
-                              ? 0.005
-                              : 0.01
-                          }
+                          step={step}
                           value={values[token]}
-                        >
-                          <div className="mb-3 flex items-baseline justify-between gap-4">
-                            <FieldLabel>{label}</FieldLabel>
-                            <SliderValue className="font-mono text-xs text-muted-foreground tabular-nums" />
-                          </div>
-                        </Slider>
+                        />
                         <FieldDescription className="mt-1">
                           {hint}
                         </FieldDescription>

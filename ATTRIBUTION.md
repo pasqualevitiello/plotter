@@ -8,6 +8,10 @@ The extraction preserves the Plotter skill package originally located at `apps/u
 
 The skill’s bundled reference manifest records the source revisions of its approved SVG snapshots. Dated feedback and audits from the coss period were removed from the tree after commit `37f3464` and remain in git history.
 
+## Component attribution
+
+The customization token controls adapt DialKit’s slider component (MIT, Copyright (c) 2026 Josh Puckett, [joshpuckett/dialkit](https://github.com/joshpuckett/dialkit)). `components/ui/slider.tsx` keeps DialKit’s label-and-value-in-track layout, hover-to-edit value, and decile snapping, adapted to Plotter’s theme tokens and Base UI version.
+
 ## License record
 
 Plotter and its portable skill package use the [MIT license](LICENSE), selected by the maintainer on 2026-11-08. The notices retain the coss.com and Origin UI copyright and add Pasquale Vitiello’s copyright for Plotter. The current coss source also uses MIT.
