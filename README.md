@@ -6,7 +6,13 @@ Give your coding agent a brief. Plotter helps it draw precise, editable illustra
 
 [Explore the catalogue](https://plotter.pasqualevitiello.com/illustrations) · [Install the skill](#install-plotter) · [See it move](#make-it-move) · [Visual grammar](https://plotter.pasqualevitiello.com/grammar) · [Docs](https://plotter.pasqualevitiello.com/docs)
 
-[![Geometry, lettering, an unfinished arch, interface modules, and a measured work cycle](.github/assets/showcase/overview-preferred.svg)](https://plotter.pasqualevitiello.com/illustrations)
+<a href="https://plotter.pasqualevitiello.com/illustrations">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/showcase/overview-preferred-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset=".github/assets/showcase/overview-preferred.svg">
+    <img alt="Geometry, lettering, an unfinished arch, interface modules, and a measured work cycle" src=".github/assets/showcase/overview-preferred.svg">
+  </picture>
+</a>
 
 Use the catalogue as a reference, then ask for a drawing that fits your product. Try the example briefs below with `$plotter` in Codex or `/plotter` in Claude Code.
 
@@ -14,7 +20,13 @@ Use the catalogue as a reference, then ask for a drawing that fits your product.
 
 Expose the alignment behind a reusable control or the spacing that makes a conversation readable. Useful for design-system docs, component libraries, and messaging features.
 
-[![An icon, label, and status pill aligned into a row, beside a conversation built from avatars and message blocks](.github/assets/showcase/interfaces-preferred.svg)](https://plotter.pasqualevitiello.com/illustrations)
+<a href="https://plotter.pasqualevitiello.com/illustrations">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/showcase/interfaces-preferred-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset=".github/assets/showcase/interfaces-preferred.svg">
+    <img alt="An icon, label, and status pill aligned into a row, beside a conversation built from avatars and message blocks" src=".github/assets/showcase/interfaces-preferred.svg">
+  </picture>
+</a>
 
 [An assembly of parts](skills/plotter/references/catalogue/INT-02.svg) · [A conversation, constructed](skills/plotter/references/catalogue/INT-09.svg)
 
@@ -34,7 +46,13 @@ for a component-library page.
 
 A selected junction connects one input to one output; a shared key connects two table fragments. Adapt these relationships for tool routing, data models, and system documentation.
 
-[![A selected junction in a three-by-three switching matrix, and two database tables linked by a shared key](.github/assets/showcase/systems.svg)](https://plotter.pasqualevitiello.com/illustrations)
+<a href="https://plotter.pasqualevitiello.com/illustrations">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/showcase/systems-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset=".github/assets/showcase/systems.svg">
+    <img alt="A selected junction in a three-by-three switching matrix, and two database tables linked by a shared key" src=".github/assets/showcase/systems.svg">
+  </picture>
+</a>
 
 [A connection, located](skills/plotter/references/catalogue/SYS-02.svg) · [Supabase · A shared relation](skills/plotter/references/catalogue/SRV-09.svg)
 
@@ -54,7 +72,13 @@ for a tool-routing guide.
 
 Let a missing corner break a geometric whole, or an absent link interrupt a route. Use the construction itself to explain a 404 page or an unavailable destination.
 
-[![A missing corner in a geometric construction, and a paired route interrupted by an absent link](.github/assets/showcase/emptystates-preferred.svg)](https://plotter.pasqualevitiello.com/illustrations)
+<a href="https://plotter.pasqualevitiello.com/illustrations">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/showcase/emptystates-preferred-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset=".github/assets/showcase/emptystates-preferred.svg">
+    <img alt="A missing corner in a geometric construction, and a paired route interrupted by an absent link" src=".github/assets/showcase/emptystates-preferred.svg">
+  </picture>
+</a>
 
 [The missing corner](skills/plotter/references/catalogue/EMP-01.svg) · [An interrupted path](skills/plotter/references/catalogue/EMP-03.svg)
 
@@ -73,7 +97,13 @@ Deliver an editable SVG for a 404 page with transparent forms.
 
 Locate a meeting within a measured week, or show where two people’s availability meets. Useful for scheduling features, booking pages, and coordination guides.
 
-[![A meeting located in a weekly grid, and two people’s availability intersecting at one shared slot](.github/assets/showcase/time.svg)](https://plotter.pasqualevitiello.com/illustrations)
+<a href="https://plotter.pasqualevitiello.com/illustrations">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/showcase/time-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset=".github/assets/showcase/time.svg">
+    <img alt="A meeting located in a weekly grid, and two people’s availability intersecting at one shared slot" src=".github/assets/showcase/time.svg">
+  </picture>
+</a>
 
 [A week, constructed](skills/plotter/references/catalogue/TIM-03.svg) · [Where schedules meet](skills/plotter/references/catalogue/TIM-05.svg)
 
