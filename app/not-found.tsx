@@ -29,10 +29,17 @@ export default function NotFound() {
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-2">
-            <Button render={<Link href="/illustrations" />} size="lg">
+            <Button
+              render={<Link href="/illustrations" prefetch={false} />}
+              size="lg"
+            >
               Explore the illustrations <ArrowRightIcon aria-hidden="true" />
             </Button>
-            <Button render={<Link href="/docs" />} size="lg" variant="ghost">
+            <Button
+              render={<Link href="/docs" prefetch={false} />}
+              size="lg"
+              variant="ghost"
+            >
               Read the docs <ArrowRightIcon aria-hidden="true" />
             </Button>
           </div>

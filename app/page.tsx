@@ -66,11 +66,14 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-2">
-            <Button render={<Link href="/docs/installation" />} size="lg">
+            <Button
+              render={<Link href="/docs/installation" prefetch={false} />}
+              size="lg"
+            >
               Install the skill <ArrowRightIcon aria-hidden="true" />
             </Button>
             <Button
-              render={<Link href="/illustrations" />}
+              render={<Link href="/illustrations" prefetch={false} />}
               size="lg"
               variant="ghost"
             >
@@ -99,6 +102,7 @@ export default function Home() {
             <Link
               className="border-s px-5 py-3 underline-offset-4 hover:underline"
               href="/animations#newtons-cradle-animation"
+              prefetch={false}
             >
               Newton’s cradle
             </Link>
@@ -112,7 +116,7 @@ export default function Home() {
       <section aria-labelledby="home-library">
         <SheetBar
           action={
-            <Link className="text-link" href="/illustrations">
+            <Link className="text-link" href="/illustrations" prefetch={false}>
               View all {illustrations.length}{" "}
               <ArrowRightIcon aria-hidden="true" />
             </Link>
@@ -144,7 +148,11 @@ export default function Home() {
             <p className="mono-label">{chapter.label}</p>
             <h2 className="mt-3 text-2xl leading-tight">{chapter.title}</h2>
             <p className="max-w-[38ch] text-muted-foreground">{chapter.copy}</p>
-            <Link className="text-link mt-auto" href={chapter.href}>
+            <Link
+              className="text-link mt-auto"
+              href={chapter.href}
+              prefetch={false}
+            >
               {chapter.link} <ArrowRightIcon aria-hidden="true" />
             </Link>
           </article>
