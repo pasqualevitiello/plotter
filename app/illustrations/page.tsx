@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { CossConcepts } from "@/components/plotter/coss-concepts";
 import { IllustrationGallery } from "@/components/plotter/illustration-gallery";
 import {
   illustrations,
@@ -64,7 +63,6 @@ export default function IllustrationsPage() {
           />
         </Suspense>
       </section>
-      <CossConcepts />
     </SiteShell>
   );
 }

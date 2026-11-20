@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 
 // One family per code prefix: GEO, TYP, INT, TIM, SYS, SRV, AGT, EMP, OBJ, MEC,
 // CRF, NAT. Codes are numbered without gaps within each family.
+// COS-01 and COS-02 retain their original codes in Services and Systems.
 export type StudyCategory =
   | "Geometry"
   | "Typography"

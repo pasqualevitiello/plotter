@@ -10,9 +10,7 @@ import {
 } from "node:fs";
 import { tmpdir } from "node:os";
 import { resolve } from "node:path";
-import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { concepts } from "../components/plotter/coss-concepts";
 import { illustrations } from "../components/plotter/illustrations";
 import {
   familyPrefix,
@@ -41,22 +39,13 @@ type Entry = {
   markup: string;
 };
 
-const entries: Entry[] = [
-  ...illustrations.map((item) => ({
-    code: item.code,
-    title: item.title,
-    description: item.description,
-    family: item.category,
-    markup: standalone(renderToStaticMarkup(item.illustration)),
-  })),
-  ...concepts.map((concept) => ({
-    code: concept.code,
-    title: concept.title,
-    description: concept.description,
-    family: "coss.com concepts",
-    markup: standalone(renderToStaticMarkup(createElement(concept.Drawing))),
-  })),
-];
+const entries: Entry[] = illustrations.map((item) => ({
+  code: item.code,
+  title: item.title,
+  description: item.description,
+  family: item.category,
+  markup: standalone(renderToStaticMarkup(item.illustration)),
+}));
 
 mkdirSync(destination, { recursive: true });
 for (const file of readdirSync(destination)) {
@@ -90,15 +79,12 @@ try {
   rmSync(temporary, { recursive: true, force: true });
 }
 
-const families = [
-  ...(Object.keys(familyPrefix) as StudyCategory[]),
-  "coss.com concepts",
-];
+const families = Object.keys(familyPrefix) as StudyCategory[];
 const sections = families
   .map((family) => {
     const rows = entries.filter((entry) => entry.family === family);
     if (!rows.length) return "";
-    const prefix = rows[0]?.code.slice(0, 3);
+    const prefix = familyPrefix[family];
     return [
       `## ${family} (${prefix})`,
       "",
@@ -122,7 +108,7 @@ writeFileSync(
 
 Every drawing in the Plotter catalogue, exported as a resolved static SVG at its native 560 × 440. Codes match the website. When a brief names a code (“like TIM-06”), open that file and borrow its construction relationship, not its subject.
 
-Codes are a three-letter family prefix and a number, without gaps within a family. Drawings retired as near-duplicates keep their codes reserved and are not exported here. The [approved references](../approved-references.md) remain the style anchors; a catalogue drawing is an example, not a new reference selection.
+Codes are a three-letter family prefix and a number, without gaps within a family. COS-01 and COS-02 retain their original codes within Services and Systems. Drawings retired as near-duplicates keep their codes reserved and are not exported here. The [approved references](../approved-references.md) remain the style anchors; a catalogue drawing is an example, not a new reference selection.
 
 ${sections}`,
 );

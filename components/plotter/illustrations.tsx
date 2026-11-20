@@ -15,6 +15,7 @@ import { OriginalParticlesBlueprint } from "./original-particles-blueprint";
 import { popularServiceStudies } from "./popular-service-studies";
 import { PrimitivesBlueprint } from "./primitives-blueprint";
 import { serviceStudies } from "./service-studies";
+import { sharedInterfaceStudies } from "./shared-interface-studies";
 import { stateStudies } from "./state-studies";
 import type { IllustrationStudy } from "./study-types";
 import { systemStateStudies } from "./system-state-studies";
@@ -40,6 +41,7 @@ const collection: IllustrationStudy[] = [
     illustration: <OriginalParticlesBlueprint />,
   },
   ...systemStudies,
+  ...sharedInterfaceStudies,
   ...flatCalStudies,
   ...interfaceDetailStudies,
   ...flatSystemStudies,

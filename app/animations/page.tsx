@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import {
+  CrankPistonMotionDrawing,
+  CrankPistonStudy,
+} from "@/components/plotter/crank-piston-motion-drawing";
 import { EngineeringMotionPreview } from "@/components/plotter/engineering-motion-preview";
 import {
   NewtonsCradleStudy,
   ProductionChainStudy,
 } from "@/components/plotter/engineering-studies";
+import {
+  GenevaMechanismMotionDrawing,
+  GenevaMechanismStudy,
+} from "@/components/plotter/geneva-mechanism-motion-drawing";
 import { illustrations } from "@/components/plotter/illustrations";
 import { IrisApertureMotionDrawing } from "@/components/plotter/iris-aperture-motion-drawing";
 import { NewtonsCradleMotionDrawing } from "@/components/plotter/newtons-cradle-motion-drawing";
@@ -18,6 +26,7 @@ import { ParticlesMotion } from "@/components/plotter/particles-motion";
 import { PrimitivesBlueprint } from "@/components/plotter/primitives-blueprint";
 import { PrimitivesMotionPreview } from "@/components/plotter/primitives-motion-preview";
 import { ProductionChainMotionDrawing } from "@/components/plotter/production-chain-motion-drawing";
+import { SlottedLeverDrawing } from "@/components/plotter/slotted-lever-drawing";
 import { PageIntro, SheetBar } from "@/components/sheet";
 import { SiteShell } from "@/components/site-shell";
 
@@ -102,6 +111,30 @@ const studies: {
     ),
   },
   {
+    id: "geneva-mechanism-animation",
+    label: "Motion only",
+    title: "Geneva mechanism",
+    description:
+      "A rotating pin enters one of four slots, advances the wheel by a quarter-turn, and releases it into a rest before the next step.",
+    preview: (
+      <EngineeringMotionPreview animated={<GenevaMechanismMotionDrawing />}>
+        <GenevaMechanismStudy />
+      </EngineeringMotionPreview>
+    ),
+  },
+  {
+    id: "crank-piston-animation",
+    label: "Motion only",
+    title: "Crank and piston",
+    description:
+      "Continuous rotation becomes a back-and-forth stroke. The connecting rod keeps its length while the piston follows a fixed horizontal axis.",
+    preview: (
+      <EngineeringMotionPreview animated={<CrankPistonMotionDrawing />}>
+        <CrankPistonStudy />
+      </EngineeringMotionPreview>
+    ),
+  },
+  {
     id: "orbits-animation",
     label: "Motion only",
     title: "Three orbits, three speeds",
@@ -110,6 +143,18 @@ const studies: {
     preview: (
       <EngineeringMotionPreview animated={<OrbitsMotionDrawing />}>
         <OrbitsStudy />
+      </EngineeringMotionPreview>
+    ),
+  },
+  {
+    id: "slotted-lever-animation",
+    label: "Motion only",
+    title: "A rotation becomes a return",
+    description:
+      "A rotating crank slides a pin through a rocking lever. A short link carries that motion to a carriage, turning each revolution into a journey out and back.",
+    preview: (
+      <EngineeringMotionPreview animated={<SlottedLeverDrawing animated />}>
+        <SlottedLeverDrawing />
       </EngineeringMotionPreview>
     ),
   },

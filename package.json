@@ -10,7 +10,7 @@
     "build": "bun scripts/build-docs.ts && next build",
     "start": "next start --port 3000",
     "downloads": "bun scripts/build-plotter-catalogue.tsx && bun scripts/build-plotter-downloads.tsx && bun scripts/build-docs.ts",
-    "drawings": "node scripts/build-plotter-registration.mjs && python3 scripts/build-plotter-drawings.py",
+    "drawings": "node scripts/build-plotter-registration.mjs && python3 scripts/build-plotter-drawings.py && node examples/slotted-lever/build.mjs && python3 scripts/build-plotter-slotted-lever.py",
     "grammar": "python3 scripts/build-plotter-grammar.py",
     "format": "biome format --write .",
     "format:check": "biome format .",

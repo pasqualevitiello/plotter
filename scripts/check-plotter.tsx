@@ -5,7 +5,6 @@ import { readdirSync, readFileSync, statSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { YAML } from "bun";
 import { renderToStaticMarkup } from "react-dom/server";
-import { concepts } from "../components/plotter/coss-concepts";
 import { illustrations } from "../components/plotter/illustrations";
 import { familyPrefix } from "../components/plotter/study-types";
 
@@ -74,13 +73,12 @@ for (const study of illustrations) {
 // Every coded drawing is bundled in the skill, so a brief can cite it.
 const catalogueRoot = resolve(skillRoot, "references/catalogue");
 const catalogueIndex = readFileSync(resolve(catalogueRoot, "index.md"), "utf8");
-const coded = [
-  ...illustrations.map((study) => ({
-    code: study.code,
-    prefix: familyPrefix[study.category],
-  })),
-  ...concepts.map((concept) => ({ code: concept.code, prefix: "COS" })),
-];
+// These studies joined the main collection without changing their published codes.
+const legacyCodes = new Set(["COS-01", "COS-02"]);
+const coded = illustrations.map((study) => ({
+  code: study.code,
+  prefix: legacyCodes.has(study.code) ? "COS" : familyPrefix[study.category],
+}));
 const numbers = new Map<string, number[]>();
 for (const { code, prefix } of coded) {
   const match = code.match(/^([A-Z]{3})-(\d{2})$/);

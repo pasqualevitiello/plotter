@@ -1,4 +1,4 @@
-import { BlueprintDrawing } from "../blueprint-drawing";
+import { BlueprintDrawing } from "./blueprint-drawing";
 
 const unit = 60;
 const frame = { left: 160, top: 88, size: 4 * unit };

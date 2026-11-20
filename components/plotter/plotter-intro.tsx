@@ -42,12 +42,6 @@ export function PlotterIntro() {
         >
           Customization
         </a>
-        <a
-          className="underline underline-offset-4 hover:text-muted-foreground"
-          href="/illustrations#coss-concepts"
-        >
-          coss.com concepts
-        </a>
       </nav>
     </header>
   );

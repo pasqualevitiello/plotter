@@ -1,5 +1,21 @@
+.drawing {
+  container-type: inline-size;
+}
+
 .animation {
   display: none;
+}
+
+@container (max-width: 559px) {
+  .drawing [data-mechanical-study] text,
+  .drawing [data-mechanical-study] [data-plotter-role="dimension"],
+  .drawing [data-mechanical-study] [data-plotter-role="leader"] {
+    display: none;
+  }
+
+  .drawing [data-mechanical-study] * {
+    vector-effect: non-scaling-stroke;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

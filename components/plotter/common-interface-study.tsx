@@ -1,4 +1,4 @@
-import { BlueprintDrawing } from "../blueprint-drawing";
+import { BlueprintDrawing } from "./blueprint-drawing";
 
 // Conceptual assembly, not a physical part or infrastructure diagram.
 // Four outer profiles stand for the catalog services. Their common circular

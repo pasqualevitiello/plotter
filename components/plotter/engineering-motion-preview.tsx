@@ -28,8 +28,13 @@ export function EngineeringMotionPreview({
   useEffect(() => {
     const svg = animation.current?.querySelector("svg");
     if (!svg) return;
-    if (reducedMotion || !inView) svg.pauseAnimations();
-    else svg.unpauseAnimations();
+    const syncPlayback = () => {
+      if (reducedMotion || !inView || document.hidden) svg.pauseAnimations();
+      else svg.unpauseAnimations();
+    };
+    syncPlayback();
+    document.addEventListener("visibilitychange", syncPlayback);
+    return () => document.removeEventListener("visibilitychange", syncPlayback);
   }, [reducedMotion, inView]);
 
   return (

@@ -4,7 +4,7 @@
 
 Every drawing in the Plotter catalogue, exported as a resolved static SVG at its native 560 × 440. Codes match the website. When a brief names a code (“like TIM-06”), open that file and borrow its construction relationship, not its subject.
 
-Codes are a three-letter family prefix and a number, without gaps within a family. Drawings retired as near-duplicates keep their codes reserved and are not exported here. The [approved references](../approved-references.md) remain the style anchors; a catalogue drawing is an example, not a new reference selection.
+Codes are a three-letter family prefix and a number, without gaps within a family. COS-01 and COS-02 retain their original codes within Services and Systems. Drawings retired as near-duplicates keep their codes reserved and are not exported here. The [approved references](../approved-references.md) remain the style anchors; a catalogue drawing is an example, not a new reference selection.
 
 ## Geometry (GEO)
 
@@ -71,6 +71,7 @@ Codes are a three-letter family prefix and a number, without gaps within a famil
 
 | Code | Drawing | What it explains |
 | --- | --- | --- |
+| [COS-02](COS-02.svg) | A common boundary | Two complementary profiles form one system. A construction study of the interface between an app and coss. |
 | [SYS-02](SYS-02.svg) | A connection, located | Three inputs meet three outputs on a regular switching grid. A single closed junction connects B to 02, turning an abstract matrix into a precise route. |
 | [SYS-04](SYS-04.svg) | A measured distribution | A small cluster occupies a regular coordinate field. Two projected measurements locate one point and make the underlying rule visible. |
 | [SYS-01](SYS-01.svg) | A route, constructed | One selected route and two alternatives share a junction. A repeated bend radius establishes the spacing between the three outlets. |
@@ -83,6 +84,7 @@ Codes are a three-letter family prefix and a number, without gaps within a famil
 | Code | Drawing | What it explains |
 | --- | --- | --- |
 | [SRV-04](SRV-04.svg) | Linear · Work aligned to a cycle | Issue modules share a two-week construction grid. Their measured spans align the work within a common cycle boundary. |
+| [COS-01](COS-01.svg) | One interface, many services | Different parts, one shared opening. Email, SMS, video, and scheduling meet a common SDK contract. |
 | [SRV-01](SRV-01.svg) | Cloudflare · Between visitor and origin | An edge cache between visitor and origin: a hit returns locally, while a miss continues outward. A study of Cloudflare’s CDN role. |
 | [SRV-02](SRV-02.svg) | Vercel · From preview to production | Preview 02 is selected for production. Matching outlines identify the same source version; promotion rebuilds it for the production environment. |
 | [SRV-03](SRV-03.svg) | Stripe · Payments, combined | Four equal payments combine into one gross payment total, before fees, refunds, or availability. Their conserved width makes aggregation a visible construction rule. |
@@ -172,10 +174,3 @@ Codes are a three-letter family prefix and a number, without gaps within a famil
 | [NAT-01](NAT-01.svg) | A branching leaf | Paired veins follow a repeated pitch within a leaf formed by two intersecting arcs. |
 | [NAT-02](NAT-02.svg) | One edge, two cells | A selected hexagonal cell shares each of its walls with the surrounding six cells. |
 | [NAT-03](NAT-03.svg) | The summit in contours | Nested elevation lines tighten around one marked summit, with a consistent interval between levels. |
-
-## coss.com concepts (COS)
-
-| Code | Drawing | What it explains |
-| --- | --- | --- |
-| [COS-01](COS-01.svg) | One interface, many services | Different parts, one shared opening. Email, SMS, video, and scheduling meet a common SDK contract. |
-| [COS-02](COS-02.svg) | A common boundary | Two complementary profiles form one system. A construction study of the interface between an app and coss. |
