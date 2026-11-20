@@ -142,6 +142,9 @@
     font-synthesis: none;
     font-variation-settings: "GEOM" 25;
   }
+  :where(em, i, cite, dfn, var, address, .italic) {
+    font-family: var(--font-sans-italic), var(--font-sans);
+  }
   h1,
   h2,
   h3 {

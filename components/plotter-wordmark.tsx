@@ -2,7 +2,12 @@ import Link from "next/link";
 
 export function PlotterWordmark() {
   return (
-    <Link aria-label="Plotter home" className="site-logo" href="/">
+    <Link
+      aria-label="Plotter home"
+      className="site-logo"
+      href="/"
+      prefetch={false}
+    >
       <span className="site-logo-lockup">
         <svg
           aria-hidden="true"

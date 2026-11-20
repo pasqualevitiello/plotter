@@ -46,6 +46,7 @@ export function SiteShell({
                 aria-current={current === href ? "page" : undefined}
                 href={href}
                 key={href}
+                prefetch={false}
               >
                 {label}
               </Link>
@@ -74,7 +75,7 @@ export function SiteShell({
             <ModeSwitcher />
             <Button
               className="ms-2"
-              render={<Link href="/docs/installation" />}
+              render={<Link href="/docs/installation" prefetch={false} />}
               variant="outline"
             >
               Install
@@ -89,13 +90,21 @@ export function SiteShell({
           </div>
           <nav aria-label="Guides">
             <span className="mono-label">Guides</span>
-            <Link href="/docs/drawing">Drawing</Link>
-            <Link href="/docs/animation">Animation</Link>
-            <Link href="/docs/customization">Customization</Link>
+            <Link href="/docs/drawing" prefetch={false}>
+              Drawing
+            </Link>
+            <Link href="/docs/animation" prefetch={false}>
+              Animation
+            </Link>
+            <Link href="/docs/customization" prefetch={false}>
+              Customization
+            </Link>
           </nav>
           <div>
             <span className="mono-label">Skill</span>
-            <Link href="/docs/installation">Installation</Link>
+            <Link href="/docs/installation" prefetch={false}>
+              Installation
+            </Link>
             <a download href="/plotter/downloads/plotter.zip">
               Download plotter.zip
             </a>

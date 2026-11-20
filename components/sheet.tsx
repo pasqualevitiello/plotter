@@ -82,6 +82,7 @@ export function DrawingFigure({
             <Link
               className="decoration-1 underline-offset-4 hover:underline"
               href={href}
+              prefetch={false}
             >
               {title}
             </Link>

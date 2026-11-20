@@ -5,12 +5,18 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 const sans = localFont({
-  src: [
-    { path: "../public/fonts/CalSansVF.woff2", style: "normal" },
-    { path: "../public/fonts/CalSansVF-Italic.woff2", style: "italic" },
-  ],
+  src: "../public/fonts/CalSansVF.woff2",
   display: "swap",
   variable: "--font-sans",
+  weight: "400 700",
+});
+// A separate family so the italic file downloads only where italic text renders.
+const sansItalic = localFont({
+  src: "../public/fonts/CalSansVF-Italic.woff2",
+  display: "swap",
+  preload: false,
+  style: "italic",
+  variable: "--font-sans-italic",
   weight: "400 700",
 });
 const mono = localFont({
@@ -33,7 +39,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${sans.variable} ${mono.variable} bg-sidebar font-sans`}
+        className={`${sans.variable} ${sansItalic.variable} ${mono.variable} bg-sidebar font-sans`}
       >
         <ThemeProvider>{children}</ThemeProvider>
       </body>
